@@ -1,0 +1,1 @@
+Factoryパターンを解説。生成をFactoryに集約し、Composition Rootを整理。設定での切り替えや副作用の制御を知り、手動DIを保守しやすく保つ設計を学ぶ。

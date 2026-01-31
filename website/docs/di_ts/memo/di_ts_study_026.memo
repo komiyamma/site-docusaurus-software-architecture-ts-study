@@ -1,0 +1,1 @@
+MapによるDIコンテナ自作を通じ仕組みを解説。Singleton/Transientの差、Symbolでのtoken設計を学ぶ。依存差し替えを容易にする設計手法を習得する。
