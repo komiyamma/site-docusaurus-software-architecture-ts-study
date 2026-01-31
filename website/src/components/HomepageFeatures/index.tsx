@@ -14,18 +14,6 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
 
   {
-    title: 'ACL TS版',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        TypeScriptで学ぶ腐敗防止層（ACL）。<br/>
-        外部APIの"クセ"から内部ドメインを守る<br/>
-        翻訳・防御・変換の設計パターン。<br/>
-      </>
-    ),
-    link: '/docs/acl_ts/acl_ts_index',
-  },
-  {
     title: 'ADR TS版',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
@@ -260,6 +248,18 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
     link: '/docs/state_machine_ts/state_machine_ts_index',
+  },
+  {
+    title: 'ACL TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶ腐敗防止層（ACL）。<br/>
+        外部APIの"クセ"から内部ドメインを守る<br/>
+        翻訳・防御・変換の設計パターン。<br/>
+      </>
+    ),
+    link: '/docs/acl_ts/acl_ts_index',
   },
 ];
 
