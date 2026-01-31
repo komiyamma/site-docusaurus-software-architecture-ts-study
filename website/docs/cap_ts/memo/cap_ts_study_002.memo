@@ -1,0 +1,1 @@
+Node.js LTSとTypeScriptを用い、APIとWorkerを同時起動する実験環境を構築。npm workspacesやVS Code設定を含めた開発基盤の整備手順を解説する。

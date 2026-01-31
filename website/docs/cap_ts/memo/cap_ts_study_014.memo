@@ -1,0 +1,1 @@
+データの読み取り先（Primary、Replica、Cache）の特性と使い分けを解説。新しさが必要な場合はPrimary、一覧等はReplicaなど、要件に応じた選択戦略を学びます。
