@@ -80,6 +80,7 @@ function generateSidebarItems(folder: string, prefix: string, modules: { title?:
 
 const sidebars: SidebarsConfig = {
 
+
   entityObjTsSidebar: generateProjectSidebar('entity_obj_ts'),
 
   dryTsSidebar: generateProjectSidebar('dry_ts'),
@@ -112,6 +113,7 @@ const sidebars: SidebarsConfig = {
 
   svbcTsSidebar: generateProjectSidebar('svbc_ts'),
   stateMachineTsSidebar: generateProjectSidebar('state_machine_ts'),
+  aclTsSidebar: generateProjectSidebar('acl_ts'),
 
 };
 

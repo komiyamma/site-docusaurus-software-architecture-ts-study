@@ -98,6 +98,7 @@ const config: Config = {
           "docs/invariants_ts",
           "docs/svbc_ts",
           "docs/state_machine_ts",
+          "docs/acl_ts",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -293,6 +294,12 @@ const config: Config = {
           sidebarId: 'stateMachineTsSidebar',
           position: 'left',
           label: '状態機械 TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'aclTsSidebar',
+          position: 'left',
+          label: 'ACL TS版',
         },
 
         {
