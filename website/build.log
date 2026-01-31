@@ -1,0 +1,22 @@
+
+> website@0.0.0 build
+> docusaurus build
+
+[INFO] Website will be built for all these locales: 
+- ja
+- en
+[INFO] [ja] Creating an optimized production build...
+Warn: `blogDir` doesn't exist: "G:\repogitory\site-docusaurus-software-architecture-study\website\blog".
+[90m[[90mwebpackbar[90m][39m [36m邃ｹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [36m邃ｹ[39m Compiling Server
+[90m[[90mwebpackbar[90m][39m [32m笨・[39m Server: Compiled successfully in 1.99s
+[90m[[90mwebpackbar[90m][39m [32m笨・[39m Client: Compiled successfully in 21.13s
+[SUCCESS] Generated static files in "build".
+[INFO] [en] Creating an optimized production build...
+Warn: `blogDir` doesn't exist: "G:\repogitory\site-docusaurus-software-architecture-study\website\blog".
+[90m[[90mwebpackbar[90m][39m [36m邃ｹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [36m邃ｹ[39m Compiling Server
+[90m[[90mwebpackbar[90m][39m [32m笨・[39m Server: Compiled successfully in 19.54s
+[90m[[90mwebpackbar[90m][39m [32m笨・[39m Client: Compiled successfully in 29.23s
+[SUCCESS] Generated static files in "build\en".
+[INFO] Use `npm run serve` command to test your build locally.
