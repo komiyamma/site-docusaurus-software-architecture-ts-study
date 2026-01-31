@@ -261,6 +261,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/acl_ts/acl_ts_index',
   },
+  {
+    title: 'CAP定理 TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶCAP定理と最終的整合性。<br/>
+        分断・遅延・競合の現実に立ち向かう、<br/>
+        分散システムの設計思想と実装パターン。<br/>
+      </>
+    ),
+    link: '/docs/cap_ts/cap_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

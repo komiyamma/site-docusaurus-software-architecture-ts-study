@@ -114,6 +114,7 @@ const sidebars: SidebarsConfig = {
   svbcTsSidebar: generateProjectSidebar('svbc_ts'),
   stateMachineTsSidebar: generateProjectSidebar('state_machine_ts'),
   aclTsSidebar: generateProjectSidebar('acl_ts'),
+  capTsSidebar: generateProjectSidebar('cap_ts'),
 
 };
 
