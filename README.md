@@ -1,4 +1,4 @@
-# software-architecture-study.komiyamma.net
+# software-architecture-ts-study.komiyamma.net
 
 
 
