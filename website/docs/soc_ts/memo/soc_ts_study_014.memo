@@ -1,0 +1,1 @@
+DIの実践。本番とテストの切替、配線の集約（Composition Root）を解説。interfaceやFactoryでの分離、依存のまとめ方を学び、柔軟に差し替え可能な設計を身につける。

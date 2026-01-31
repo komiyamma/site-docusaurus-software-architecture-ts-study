@@ -1,0 +1,1 @@
+Stateの型定義を強化する。as constで文字列リテラルユニオンを生成し、switch文の網羅性をassertNever関数で保証、satisfiesで対応表の整合性を守る。

@@ -1,0 +1,1 @@
+async/awaitでのawait忘れやforEach非同期等の捕捉漏れを解説。Unhandled Rejectionを防ぐawait徹底や.catch、ESLint活用等で非同期エラーを確実に捉える技術を学びます。

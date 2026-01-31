@@ -1,0 +1,24 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  /* Calculate approx height to center (100vh - navbar - footer) */
+  /* Adjust 300px based on actual header/footer size if needed, but 300px is a safe bet to avoid scrollbar on smaller screens */
+  min-height: calc(100vh - 300px); 
+}
+
+.featureSvg {
+  height: 320px;
+  width: 320px;
+}
+
+.features h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.features p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}

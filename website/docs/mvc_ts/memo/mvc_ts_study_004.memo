@@ -1,0 +1,1 @@
+MVCのModel入門。TSでのTodoItem設計を解説。interfaceやブランド型、Factoryを活用し型安全なデータ構造を定義。設計の最小構成と表示用データ作成までを習得。

@@ -1,0 +1,1 @@
+Adapterを応用し外部との境界を強固に守る設計を学ぶ第14章。Client/Mapper/Adapterに役割を分担し、外部DTOと内部モデルの分離を徹底する。

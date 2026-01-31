@@ -1,0 +1,1 @@
+型で境界を保護するドメイン型構築。Branded TypesやValue Objectでの乱用防止、検証から変換のフロー、Result型やsatisfies活用を学び、SoCを支える型設計を身につける。

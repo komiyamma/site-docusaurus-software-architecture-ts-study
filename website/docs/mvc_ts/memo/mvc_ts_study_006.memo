@@ -1,0 +1,1 @@
+MVCのController入門。操作受付と交通整理を解説。Viewからイベントを受けModel更新と再描画を行うループを習得。イベント委任やe.preventDefault()の活用を学ぶ。

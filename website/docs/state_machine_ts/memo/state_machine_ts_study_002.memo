@@ -1,0 +1,1 @@
+TypeScript開発環境の構築。Node.js v24系、TS 5.9、Vitest、ESLint、Prettierをセットアップし、実行・テスト・Lintが即座に可能な雛形を作成。
