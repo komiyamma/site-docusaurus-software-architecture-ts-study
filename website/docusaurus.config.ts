@@ -9,7 +9,7 @@ import * as path from 'path';
 const config: Config = {
   title: 'software-architecture.komiyamma.net',
   tagline: 'ソフトウェアアーキテクチャ入門者用の学習教材',
-  favicon: 'img/react_logo.svg',
+  favicon: 'img/architecture_logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
