@@ -2,6 +2,7 @@
 description: How to add a new study section to the Docusaurus site
 ---
 
+// turbo-all
 # Add New Study Section
 
 This workflow describes the steps to integrate a new study section (e.g., `new_topic_cs`, `new_topic_ts`) into the Docusaurus website.

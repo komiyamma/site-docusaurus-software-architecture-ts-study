@@ -2,6 +2,7 @@
 description: Check if the Docusaurus site builds successfully
 ---
 
+// turbo-all
 1. Navigate to the website directory
 cd website
 
