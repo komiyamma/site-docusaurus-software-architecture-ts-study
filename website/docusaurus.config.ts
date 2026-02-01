@@ -101,6 +101,7 @@ const config: Config = {
           "docs/acl_ts",
           "docs/cap_ts",
           "docs/ab_tcb_ts",
+          "docs/dbc_ts",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -314,6 +315,12 @@ const config: Config = {
           sidebarId: 'abTcbTsSidebar',
           position: 'left',
           label: '集約/境界 TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'dbcTsSidebar',
+          position: 'left',
+          label: 'DbC TS版',
         },
 
         {

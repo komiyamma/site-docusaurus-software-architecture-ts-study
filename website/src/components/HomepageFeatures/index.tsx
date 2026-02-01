@@ -284,6 +284,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/ab_tcb_ts/ab_tcb_ts_index',
   },
+  {
+    title: 'Design by Contract（DbC）TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        契約による設計（DbC）の基礎を学びます。<br/>
+        事前条件・事後条件・不変条件の3点セットで、<br/>
+        バグを入口で止める設計手法を習得します。<br/>
+      </>
+    ),
+    link: '/docs/dbc_ts/dbc_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
