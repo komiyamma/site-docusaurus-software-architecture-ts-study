@@ -100,6 +100,7 @@ const config: Config = {
           "docs/state_machine_ts",
           "docs/acl_ts",
           "docs/cap_ts",
+          "docs/ab_tcb_ts",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -307,6 +308,12 @@ const config: Config = {
           sidebarId: 'capTsSidebar',
           position: 'left',
           label: 'CAP定理 TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'abTcbTsSidebar',
+          position: 'left',
+          label: '集約/境界 TS版',
         },
 
         {

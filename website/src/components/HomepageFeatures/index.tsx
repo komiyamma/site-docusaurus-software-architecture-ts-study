@@ -273,6 +273,17 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/cap_ts/cap_ts_index',
   },
+  {
+    title: '集約/境界 TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶ集約（Aggregate）とトランザクション境界。<br/>
+        不変条件の保護、一貫性の維持、そして分散システムへの発展。<br/>
+      </>
+    ),
+    link: '/docs/ab_tcb_ts/ab_tcb_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
