@@ -305,15 +305,15 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'abTcbTsSidebar',
-          position: 'left',
-          label: '集約/境界 TS版',
-        },
-        {
-          type: 'docSidebar',
           sidebarId: 'capTsSidebar',
           position: 'left',
           label: 'CAP定理 TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'abTcbTsSidebar',
+          position: 'left',
+          label: '集約/境界 TS版',
         },
 
         {
