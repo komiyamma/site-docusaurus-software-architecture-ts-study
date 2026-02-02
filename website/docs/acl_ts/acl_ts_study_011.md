@@ -148,7 +148,6 @@ export type Student = {
 ## 11-4-3. いよいよ変換（mapper）を書くよ 🔁🔥
 
 ```ts
-```ts
 // src/acl/mappers/student.mapper.ts
 import { Student, StudentId, StudentType } from "../../domain/student";
 import { StudentDirectoryStudentDto } from "../dto/student-directory.dto";
@@ -192,7 +191,6 @@ flowchart TD
     M1 -->|enum| Res["Student (Domain Model) 📘"]
     M2 -->|number| Res
     DTO -- id/name/date --> Res
-```
 ```
 
 ### ここが最高に大事ポイント 💎

@@ -175,13 +175,6 @@ export class Money {
     return new Money(amount, currency);
   }
 
-```mermaid
-flowchart TD
-    Raw["生データ (number, string)"] --> Create["Money.create() 🧪<br/>(不変条件の入口)"]
-    Create -- "不正 🛑" --> Error["Error! (存在させない)"]
-    Create -- "適正 ✅" --> Instance["Money インスタンス ✨<br/>(常に正しい状態)"]
-```
-
   public add(other: Money): Money {
     if (this.currency !== other.currency) {
       throw new Error("Money currency mismatch");
@@ -198,6 +191,13 @@ flowchart TD
     return Money.create(next, this.currency);
   }
 }
+```
+
+```mermaid
+flowchart TD
+    Raw["生データ (number, string)"] --> Create["Money.create() 🧪<br/>(不変条件の入口)"]
+    Create -- "不正 🛑" --> Error["Error! (存在させない)"]
+    Create -- "適正 ✅" --> Instance["Money インスタンス ✨<br/>(常に正しい状態)"]
 ```
 
 ここで起きてることを一言で言うと👇

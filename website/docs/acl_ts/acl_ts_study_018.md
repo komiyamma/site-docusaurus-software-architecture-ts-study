@@ -233,7 +233,6 @@ export const makeStudentDto = (overrides: Partial<StudentDto> = {}): StudentDto 
   grade_cd: "1",
   point_balance: "1200",
   updated_at: "2026-01-28T12:34:56+09:00",
-```ts
   ...overrides,
 });
 ```

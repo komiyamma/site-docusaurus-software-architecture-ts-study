@@ -225,13 +225,13 @@ export function handleCreateUser(raw: unknown) {
   // ここから先は、UserId/Email/DisplayName を信じて処理できる🧱🔒
   return { status: 200, body: { ok: true, userId: cmd.userId } };
 }
+```
 
 ```mermaid
 flowchart TD
     Input["入力"] -- "transform" --> Norm["正規化 🧼"]
     Norm -- "pipe" --> Revalidate["再検証 ✅"]
     Revalidate -- "fromDto" --> Brand["ブランド化/ドメイン型 🧱"]
-```
 ```
 
 ---

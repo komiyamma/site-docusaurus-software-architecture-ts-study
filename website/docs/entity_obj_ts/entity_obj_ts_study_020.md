@@ -304,6 +304,7 @@ export class OrderMapper {
     });
   }
 }
+```
 
 ```mermaid
 sequenceDiagram
@@ -325,8 +326,6 @@ sequenceDiagram
   end
   
   Mapper-->>DB: "Order Object (Ready to use)"
-```
-
 ```
 
 ---

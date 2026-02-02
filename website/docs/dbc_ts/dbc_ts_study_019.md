@@ -244,6 +244,7 @@ const logAppError = (err: AppError, context: { requestId: string }) => {
     console.warn("⚠️APP_ERROR", context, { err });
   }
 };
+```
 
 ## 境界でのテンプレ🧱🔁
 
@@ -264,7 +265,6 @@ async function handleRequest(input: unknown) {
     return { status: errorResponse.status, body: errorResponse.body };
   }
 }
-```
 
 export async function handleCreateUser(requestId: string, input: unknown): Promise<HttpResponse> {
   try {

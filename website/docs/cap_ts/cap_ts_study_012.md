@@ -212,20 +212,6 @@ async function chooseReadDb(source: ReadSource, sessionMinVersion: number) {
   return { db: picked === "replica" ? replica : primary, picked, primary, replica };
 }
 
-```mermaid
-flowchart TD
-    Start([読み取りリクエスト]) --> V{レプリカVersion ≧ 最小希望Version?}
-    V -- YES ✅ --> R[Replicaから読む 🪞]
-    V -- NO ❌ --> P[Primaryから読む 👑]
-    R --> End([レスポンス])
-    P --> End
-    
-    subgraph Session [セッション情報]
-        S[最小希望Version]
-    end
-    S -.-> V
-```
-
 // デバッグ：今のPrimary/Replicaのバージョンを見る👀
 app.get("/debug/versions", async (_req, res) => {
   const primary = await readDb(PRIMARY_PATH);
@@ -318,6 +304,21 @@ app.listen(3000, () => {
   console.log("GET  /orders/:id?read=auto|replica|primary");
 });
 ```
+
+```mermaid
+flowchart TD
+    Start([読み取りリクエスト]) --> V{レプリカVersion ≧ 最小希望Version?}
+    V -- YES ✅ --> R[Replicaから読む 🪞]
+    V -- NO ❌ --> P[Primaryから読む 👑]
+    R --> End([レスポンス])
+    P --> End
+    
+    subgraph Session [セッション情報]
+        S[最小希望Version]
+    end
+    S -.-> V
+```
+
 
 ✅ポイント：
 

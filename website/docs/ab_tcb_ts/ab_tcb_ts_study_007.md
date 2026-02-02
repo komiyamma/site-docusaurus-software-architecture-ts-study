@@ -300,6 +300,7 @@ export class Order extends Entity<string> {
     return this.lines; // readonlyで返す（外からpushさせない意識）🧱
   }
 }
+```
 
 ```mermaid
 classDiagram

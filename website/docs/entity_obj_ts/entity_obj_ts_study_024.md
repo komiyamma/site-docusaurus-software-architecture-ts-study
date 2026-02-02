@@ -541,6 +541,7 @@ export class PayOrder {
     return ok(undefined);
   }
 }
+```
 
 ```mermaid
 sequenceDiagram
@@ -565,8 +566,6 @@ sequenceDiagram
   else Payment Failed
     UseCase-->>Client: Error
   end
-```
-
 ```
 
 ---

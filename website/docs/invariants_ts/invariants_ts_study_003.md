@@ -166,7 +166,6 @@ function parseSignup(raw: unknown): { ok: true; value: SignupInput } | { ok: fal
   return { ok: true, value: { email, age, displayName } };
 }
 
-```ts
 // ドメイン側：もう「検証済み」しか来ない前提に寄せる
 function createUser(input: SignupInput) {
   // ここでは基本、検証しない（散らばり防止）

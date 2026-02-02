@@ -302,6 +302,7 @@ export class Order {
     }
   }
 }
+```
 
 ```mermaid
 sequenceDiagram
@@ -326,8 +327,6 @@ sequenceDiagram
     Order-->>Client: DomainError 💥
   end
   deactivate Order
-```
-
 ```
 
 ---

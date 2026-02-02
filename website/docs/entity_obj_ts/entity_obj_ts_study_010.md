@@ -159,24 +159,6 @@ export class DatePeriod {
     );
   }
 
-```mermaid
-flowchart LR
-    subgraph A [Period A]
-        StartA[Start A] --- EndA[End A]
-    end
-    subgraph B [Period B]
-        StartB[Start B] --- EndB[End B]
-    end
-
-    Cond1{"A.Start < B.End ?"}
-    Cond2{"B.Start < A.End ?"}
-
-    StartA --> Cond1
-    StartB --> Cond2
-    
-    Cond1 & Cond2 --> Result{両方 YESなら<br>重なってる！🔴}
-```
-
 
   /** ぴったり隣り合ってる？（Aの終わり＝Bの始まり） */
   isAdjacent(other: DatePeriod): boolean {
@@ -199,6 +181,25 @@ flowchart LR
   }
 }
 ```
+
+```mermaid
+flowchart LR
+    subgraph A [Period A]
+        StartA[Start A] --- EndA[End A]
+    end
+    subgraph B [Period B]
+        StartB[Start B] --- EndB[End B]
+    end
+
+    Cond1{"A.Start < B.End ?"}
+    Cond2{"B.Start < A.End ?"}
+
+    StartA --> Cond1
+    StartB --> Cond2
+    
+    Cond1 & Cond2 --> Result{両方 YESなら<br>重なってる！🔴}
+```
+
 
 ---
 

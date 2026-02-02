@@ -268,6 +268,7 @@ export function createOrderFromBoundary(input: unknown): Result<Order, DomainErr
 
   return ok(orderR.value);
 }
+```
 
 ```mermaid
 sequenceDiagram
@@ -291,8 +292,6 @@ sequenceDiagram
     
     Boundary-->>Client: Success / DomainError
   end
-```
-
 ```
 
 ---
