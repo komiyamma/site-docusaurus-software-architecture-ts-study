@@ -117,6 +117,7 @@ const sidebars: SidebarsConfig = {
   capTsSidebar: generateProjectSidebar('cap_ts'),
   abTcbTsSidebar: generateProjectSidebar('ab_tcb_ts'),
   dbcTsSidebar: generateProjectSidebar('dbc_ts'),
+  deTsSidebar: generateProjectSidebar('de_ts'),
 
 };
 

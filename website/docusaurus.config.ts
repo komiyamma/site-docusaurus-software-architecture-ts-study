@@ -102,6 +102,7 @@ const config: Config = {
           "docs/cap_ts",
           "docs/ab_tcb_ts",
           "docs/dbc_ts",
+          "docs/de_ts",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -321,6 +322,12 @@ const config: Config = {
           sidebarId: 'dbcTsSidebar',
           position: 'left',
           label: 'DbC TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'deTsSidebar',
+          position: 'left',
+          label: 'ドメインイベント TS版',
         },
 
         {

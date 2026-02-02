@@ -296,6 +296,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/dbc_ts/dbc_ts_index',
   },
+  {
+    title: 'ドメインイベント TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶドメインイベント。<br/>
+        業務の事実を「過去形」で表し、<br/>
+        仕様変更に強い疎結合な設計を学びます。<br/>
+      </>
+    ),
+    link: '/docs/de_ts/de_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
