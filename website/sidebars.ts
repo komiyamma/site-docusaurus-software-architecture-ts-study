@@ -55,7 +55,7 @@ export function generateStudyIds(folder: string, prefix: string, start: number, 
       ids.push(id);
     }
   }
-  return ids;
+  return ids || []; // Ensure always an array
 }
 
 export function generateSidebarItems(folder: string, prefix: string, modules: { title?: string; start: number; end: number }[]) {
@@ -78,6 +78,7 @@ export function generateSidebarItems(folder: string, prefix: string, modules: { 
     } as any));
   });
 }
+
 
 const sidebars: SidebarsConfig = {
 
