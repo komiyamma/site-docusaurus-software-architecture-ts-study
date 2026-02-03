@@ -1,0 +1,1 @@
+画面用Query APIの実装。ProjectionをDTOに整形して返す手法、一覧・詳細APIの設計、Expressでの実装例、入れすぎ・漏れDTOの回避を詳しく解説。

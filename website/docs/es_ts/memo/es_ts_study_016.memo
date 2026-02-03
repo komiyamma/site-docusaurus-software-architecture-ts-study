@@ -1,0 +1,1 @@
+Command処理の型化。Load・Decide・Appendの3ステップによるハンドラ実装、Result型での判断表現、InMemoryストアでの統合テスト手法を解説。

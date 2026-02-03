@@ -1,0 +1,1 @@
+復元（Rehydrate）の実装。Apply関数による状態更新、reduceでの畳み込み、satisfiesでの網羅性確認、Apply漏れを防ぐ仕組みを詳しく解説。

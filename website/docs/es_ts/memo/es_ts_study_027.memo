@@ -1,0 +1,1 @@
+性能計測入門。console.timeやperformance APIでの計測、復元・保存・投影の3大ボトルネック、Node.jsのプロファイリング活用、統計的測定の重要性を解説。

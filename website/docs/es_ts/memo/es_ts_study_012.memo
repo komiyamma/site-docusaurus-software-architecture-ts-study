@@ -1,0 +1,1 @@
+イベントの中身とメタデータの設計。Payload(事実)とMetadata(文脈)の役割分担、CloudEventsを参考にした型定義、satisfiesによる型安全性確保を解説。

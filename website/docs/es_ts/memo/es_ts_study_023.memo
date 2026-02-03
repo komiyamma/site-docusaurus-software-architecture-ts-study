@@ -1,0 +1,1 @@
+楽観ロックによる同時更新対策の実装。expectedVersionを用いた競合検知、EventStoreへのチェック機能追加、Vitestによるテスト、ConcurrencyErrorの扱いを解説。
