@@ -103,6 +103,7 @@ const config: Config = {
           "docs/ab_tcb_ts",
           "docs/dbc_ts",
           "docs/de_ts",
+          "docs/es_ts",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -328,6 +329,12 @@ const config: Config = {
           sidebarId: 'deTsSidebar',
           position: 'left',
           label: 'ドメインイベント TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'esTsSidebar',
+          position: 'left',
+          label: 'イベントソーシング TS版',
         },
 
         {

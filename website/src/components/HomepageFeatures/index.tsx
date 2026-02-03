@@ -308,6 +308,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/de_ts/de_ts_index',
   },
+  {
+    title: 'イベントソーシング TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶイベントソーシング。<br/>
+        「状態」ではなく「出来事」を積み上げる設計手法を学び、<br/>
+        履歴・監査・巻き戻しに強い核を作ります。<br/>
+      </>
+    ),
+    link: '/docs/es_ts/es_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

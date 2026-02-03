@@ -118,6 +118,24 @@ const sidebars: SidebarsConfig = {
   abTcbTsSidebar: generateProjectSidebar('ab_tcb_ts'),
   dbcTsSidebar: generateProjectSidebar('dbc_ts'),
   deTsSidebar: generateProjectSidebar('de_ts'),
+  esTsSidebar: [
+    {
+      type: 'doc',
+      id: 'es_ts/es_ts_index',
+    },
+    ...[
+      { title: "Part 0：準備と導入", start: 1, end: 6 },
+      { title: "Part 1：言葉と設計の芯", start: 7, end: 12 },
+      { title: "Part 2：最小実装で理解する", start: 13, end: 20 },
+      { title: "Part 3：現実っぽい課題", start: 21, end: 27 },
+      { title: "Part 4：Projection（読みモデル）を作る", start: 28, end: 32 },
+      { title: "Part 5：永続化・進化・運用", start: 33, end: 36 },
+    ].map(mod => ({
+      type: 'category' as const,
+      label: mod.title,
+      items: generateStudyIds('es_ts', 'es_ts', mod.start, mod.end),
+    })),
+  ],
 
 };
 
