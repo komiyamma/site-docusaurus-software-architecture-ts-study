@@ -332,6 +332,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/saga_ts/saga_ts_index',
   },
+  {
+    title: 'リファクタリング TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶリファクタリング。<br/>
+        コードの不吉な匂いを嗅ぎ取り、<br/>
+        安全に構造を改善する手法を学びます。<br/>
+      </>
+    ),
+    link: '/docs/refactoring_ts/refactoring_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

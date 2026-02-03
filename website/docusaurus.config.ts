@@ -105,6 +105,7 @@ const config: Config = {
           "docs/de_ts",
           "docs/es_ts",
           "docs/saga_ts",
+          "docs/refactoring_ts",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -342,6 +343,12 @@ const config: Config = {
           sidebarId: 'sagaTsSidebar',
           position: 'left',
           label: 'Saga TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'refactoringTsSidebar',
+          position: 'left',
+          label: 'リファクタリング TS版',
         },
 
         {
