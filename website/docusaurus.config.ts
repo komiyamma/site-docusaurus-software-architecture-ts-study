@@ -104,6 +104,7 @@ const config: Config = {
           "docs/dbc_ts",
           "docs/de_ts",
           "docs/es_ts",
+          "docs/saga_ts",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -335,6 +336,12 @@ const config: Config = {
           sidebarId: 'esTsSidebar',
           position: 'left',
           label: 'イベントソーシング TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'sagaTsSidebar',
+          position: 'left',
+          label: 'Saga TS版',
         },
 
         {

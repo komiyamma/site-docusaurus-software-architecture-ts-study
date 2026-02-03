@@ -121,6 +121,7 @@ const sidebars: SidebarsConfig = {
   dbcTsSidebar: generateProjectSidebar('dbc_ts'),
   deTsSidebar: generateProjectSidebar('de_ts'),
   esTsSidebar: generateProjectSidebar('es_ts'),
+  sagaTsSidebar: generateProjectSidebar('saga_ts'),
 };
 
 export default sidebars;

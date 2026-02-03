@@ -320,6 +320,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/es_ts/es_ts_index',
   },
+  {
+    title: 'Saga TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶSagaパターン。<br/>
+        分散トランザクションの補償と<br/>
+        整合性を保つための設計手法。<br/>
+      </>
+    ),
+    link: '/docs/saga_ts/saga_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
