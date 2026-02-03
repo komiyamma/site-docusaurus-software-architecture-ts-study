@@ -23,6 +23,15 @@
 
 ![Concept: Git Boxes](./picture/refactoring_ts_study_006_git_boxes.png)
 
+```mermaid
+graph LR
+    W["Working Tree\n(Unsaved)"]
+    S["Staging Area\n(Prepared)"]
+    R["Repository\n(Saved)"]
+    W -- "git add" --> S
+    S -- "git commit" --> R
+```
+
 Gitは「箱」が3つあると思うと分かりやすいよ〜！🧠✨
 
 1. **作業中（Working Tree）**📝

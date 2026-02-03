@@ -4,6 +4,15 @@
 
 ![Concept: Linter Robot](./picture/refactoring_ts_study_005_linter_robot.png)
 
+```mermaid
+graph LR
+    S["1. References (Shift + F12)"]
+    R["2. Safe Rename (F2)"]
+    J["3. Jump (F12 / Alt + Left)"]
+    S --> R
+    R --> J
+```
+
 リファクタで超よく使う **3大操作** を、手が勝手に動くレベルまで覚えるよ〜！😊🫶
 
 * ① 検索・置換（安全に！）🔎🧯

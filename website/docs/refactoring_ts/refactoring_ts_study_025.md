@@ -11,6 +11,19 @@
 
 ![Concept: Wizard Hat](./picture/refactoring_ts_study_025_wizard_hat.png)
 
+```mermaid
+graph LR
+    M1["0.1"]
+    M2["'paid'"]
+    M3["86400000"]
+    C1["TAX_RATE"]
+    C2["OrderStatus.Paid"]
+    C3["MS_PER_DAY"]
+    
+    M1 & M2 & M3 -- "Refactor: Constant" --> C1 & C2 & C3
+    C1 & C2 & C3 -- "Readability" --> Clear["Clear Meaning! 🏷️"]
+```
+
 コードの中に突然出てくる、**意味が分からない数字や文字列**のことだよ🌀
 
 * `0.08`（…税率？割引？なに？）

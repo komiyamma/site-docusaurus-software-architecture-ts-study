@@ -18,7 +18,33 @@
 
 ### まず結論：narrowing（型の絞り込み）って何？🧠✨
 
+![Concept: Gatekeeper](./picture/refactoring_ts_study_034_gatekeeper.png)
+
+```mermaid
+graph LR
+    Value["unknown"]
+    isGuard{"isUserDto?"}
+    Logic["Safe User Logic"]
+    Value --> isGuard
+    isGuard -- "true" --> Logic
+    isGuard -- "false" --> Exit["Exit/Error"]
+```
+
 ![Concept: Funnel](./picture/refactoring_ts_study_033_funnel.png)
+
+```mermaid
+graph TD
+    Input["unknown"]
+    F1["typeof x === 'string'"]
+    F2["'prop' in x"]
+    F3["x instanceof Date"]
+    S1["string"]
+    S2["{ prop: unknown }"]
+    S3["Date"]
+    Input --> F1 --> S1
+    Input --> F2 --> S2
+    Input --> F3 --> S3
+```
 
 TypeScript は、if / switch などの「実行時の判定」をヒントにして、変数の型を段階的に絞ってくれるよ〜！
 この仕組みが “Narrowing（型の絞り込み）” だよ📌 ([TypeScript][1])

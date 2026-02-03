@@ -2,7 +2,31 @@
 
 ### ねらい🎯
 
+![Concept: Toolbox](./picture/refactoring_ts_study_027_toolbox.png)
+
+```mermaid
+graph TD
+    subgraph "Where to put?"
+    Local["1. Local Helper\n(Inside File)"]
+    Feature["2. Feature Shared\n(Inside Feature)"]
+    Shared["3. Global Shared\n(shared/money, shared/date)"]
+    end
+    Local -- "Need more?" --> Feature
+    Feature -- "Need everywhere?" --> Shared
+```
+
 ![Concept: Copy Machine](./picture/refactoring_ts_study_026_copy_machine.png)
+
+```mermaid
+graph TD
+    subgraph "Duplication"
+    A["Feature A\n(Knowledge X)"]
+    B["Feature B\n(Knowledge X)"]
+    end
+    Source["Single Source\n(Extracted X)"]
+    A & B -- "Refactor" --> Source
+    Source -- "Update" --> All["Fixed Always ✨"]
+```
 
 * 「同じことを2回書いてる…😵」を見つけて、**修正漏れゼロ**に近づける✨
 * “コピペの安心感”を卒業して、**直しやすい形**にする🧹💕

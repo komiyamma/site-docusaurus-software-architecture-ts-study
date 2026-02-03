@@ -136,6 +136,17 @@ doStuff(input).then((msg) => console.log(msg));
 
 ![Concept: Refactoring Map](./picture/refactoring_ts_study_040_refactoring_map.png)
 
+```mermaid
+graph TD
+    Start["Smelly Code 👃"]
+    GM["Golden Master (Test) 👑"]
+    Rename["Rename (Clean) 🏷️"]
+    Split["Split Logic/IO ✂️"]
+    Type["Add Types/Guards 🧷"]
+    Result["Clean & Safe ✨"]
+    Start --> GM --> Rename --> Split --> Type --> Result
+```
+
 
 ### ステップ0：作業を小さく刻む準備💾🌿
 

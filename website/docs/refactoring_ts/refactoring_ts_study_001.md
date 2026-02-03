@@ -12,6 +12,18 @@
 
 ![Concept: Intro Tree](./picture/refactoring_ts_study_001_intro_tree.png)
 
+```mermaid
+graph LR
+    subgraph "Internal (Middle)"
+    A["Structure"]
+    B["Name"]
+    C["Logic"]
+    end
+    Clean["Clean Code"]
+    A & B & C -- "Refactoring" --> Clean
+    Clean -- "Observable Behavior" --> Same["No Change ✅"]
+```
+
 リファクタリングは、**外から見える動作は変えずに**、コードの中身（構造）を整えて、読みやすく・直しやすくすることだよ🧹✨
 
 有名な定義だと、こんな感じ👇（短い引用）

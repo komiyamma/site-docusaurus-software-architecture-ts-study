@@ -10,7 +10,34 @@
 
 ### 今日のキーワード🧩
 
+![Concept: Traffic Light](./picture/refactoring_ts_study_024_traffic_light.png)
+
+```mermaid
+graph LR
+    subgraph "Conditional Refactoring"
+    Raw["if ( a && !b || (c && d) )"]
+    Named["if ( isEligibleUser && hasValidCoupon )"]
+    Raw -- "Extract to Predicate" --> Named
+    end
+```
+
 ![Concept: Bouncer](./picture/refactoring_ts_study_023_bouncer.png)
+
+```mermaid
+graph TD
+    Start["Start"]
+    G1["Guard 1 (Error?)"]
+    G2["Guard 2 (Missing?)"]
+    HP["Happy Path 🌈\n(Main Logic)"]
+    End["Success ✅"]
+
+    Start --> G1
+    G1 -- "Yes" --> Err1["Exit 🛑"]
+    G1 -- "No" --> G2
+    G2 -- "Yes" --> Err2["Exit 🛑"]
+    G2 -- "No" --> HP
+    HP --> End
+```
 
 * Guard Clause（ガード節）🛡️
   → 「ここから先は進めない条件」を先に処理して、すぐ終わらせる

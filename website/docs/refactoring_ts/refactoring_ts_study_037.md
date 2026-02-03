@@ -10,7 +10,34 @@
 
 ## 1. SoCってなに？🤔🎭
 
+![Concept: Core vs Outer](./picture/refactoring_ts_study_038_sandwich_architecture.png)
+
+```mermaid
+graph LR
+    subgraph "Adapters (Outer)"
+    API["API/Fetch"]
+    Disk["File/DB"]
+    end
+    subgraph "Pure Core (Inner)"
+    Logic["Business Logic"]
+    end
+    API --> Logic
+    Disk --> Logic
+    Logic --> Result["Result"]
+```
+
 ![Concept: SoC Separation](./picture/refactoring_ts_study_037_soc_sorting.png)
+
+```mermaid
+graph TD
+    subgraph "Separation of Concerns"
+    UI["UI / CLI\n(Display)"]
+    Logic["Domain\n(Logic/Math)"]
+    IO["Infra\n(I/O/File)"]
+    UI --> Logic
+    UI --> IO
+    end
+```
 
 
 **SoC（Separation of Concerns＝関心の分離）**は、ざっくり言うと👇

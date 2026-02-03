@@ -63,7 +63,31 @@ export class UserService {
 
 ## アフター：interfaceを挟んで差し替え可能に✨
 
+![Concept: Refactoring Map](./picture/refactoring_ts_study_040_refactoring_map.png)
+
+```mermaid
+graph TD
+    Start["Smelly Code 👃"]
+    GM["Golden Master (Test) 👑"]
+    Rename["Rename (Clean) 🏷️"]
+    Split["Split Logic/IO ✂️"]
+    Type["Add Types/Guards 🧷"]
+    Result["Clean & Safe ✨"]
+    Start --> GM --> Rename --> Split --> Type --> Result
+```
+
 ![Concept: DIP Plug](./picture/refactoring_ts_study_039_dip_plug.png)
+
+```mermaid
+graph TD
+    Service["High Level Logic\n(Service)"]
+    Interface["<<interface>>\nRepository"]
+    Impl1["API Implementation"]
+    Impl2["DB Implementation"]
+    Service --> Interface
+    Impl1 -- "implements" --> Interface
+    Impl2 -- "implements" --> Interface
+```
 
 
 ### 1) 「必要なことだけ」をinterfaceにする📜

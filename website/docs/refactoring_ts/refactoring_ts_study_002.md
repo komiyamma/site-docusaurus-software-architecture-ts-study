@@ -20,6 +20,16 @@
 ## 1. リファクタリングって「掃除」のこと🧹✨
 
 ![Concept: Refactoring vs Rewrite](./picture/refactoring_ts_study_002_refactoring_vs_rewrite.png)
+
+```mermaid
+graph TD
+    subgraph "Different Goals"
+    F["Fix<br/>(Change Behavior)"]
+    A["Add<br/>(Add Behavior)"]
+    R["Refactor<br/>(Keep Behavior)"]
+    end
+    F & A & R -- "Commits" --> History["Clear History ✨"]
+```
 混ぜると、こんな事故が起きやすいよ👇
 
 * **バグ修正の差分に、見た目変更や命名変更が混ざる**

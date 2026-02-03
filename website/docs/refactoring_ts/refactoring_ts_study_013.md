@@ -4,6 +4,20 @@
 
 ![Concept: Snapshot Camera](./picture/refactoring_ts_study_013_snapshot_camera.png)
 
+```mermaid
+graph LR
+    subgraph "Golden Master"
+    Current["Current Output"]
+    Snap["Snapshot File\n(Saved)"]
+    Change["New Change"]
+    Diff["Compare"]
+    Current -- "Capture" --> Snap
+    Snap & Change --> Diff
+    Diff -- "Same" --> OK["Safe ✅"]
+    Diff -- "Diff" --> Review["Manual Review 👀"]
+    end
+```
+
 * 既存コードの「今の動き」を先に固定して、安心してリファクタできるようになる🛟✨
 * ゴールデンマスター（承認テスト／スナップショット）で、差分を“見て判断”できるようになる👀✅
 * スナップショットがブレる原因（日時・乱数・順序など）を潰して、安定したテストにする🧹🧷

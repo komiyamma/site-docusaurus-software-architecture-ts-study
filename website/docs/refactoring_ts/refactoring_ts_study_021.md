@@ -2,7 +2,32 @@
 
 ### ねらい🎯
 
+![Concept: Name Card](./picture/refactoring_ts_study_022_name_card.png)
+
+```mermaid
+graph LR
+    subgraph "Extract Variable"
+    Expr["complex + expression * messy"]
+    Var["const subtotal = ..."]
+    Clean["Read Clearly ✨"]
+    Expr -- "Label it" --> Var
+    Var --> Clean
+    end
+```
+
 ![Concept: Packing Box](./picture/refactoring_ts_study_021_packing_box.png)
+
+```mermaid
+graph TD
+    subgraph "Extract Function"
+    C["Commander\n(checkout)"]
+    V["validate()"]
+    S["calcSubtotal()"]
+    D["calcDiscount()"]
+    T["calcTax()"]
+    C --> V & S & D & T
+    end
+```
 
 * 長い関数を「目的ごと」に切り分けて、読みやすくする📖✨
 * 変更に強くして、バグの入り込みを減らす🛡️🐛

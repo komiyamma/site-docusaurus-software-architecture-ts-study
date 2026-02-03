@@ -2,7 +2,34 @@
 
 ### ねらい🎯
 
+![Concept: Snapshot Camera](./picture/refactoring_ts_study_013_snapshot_camera.png)
+
+```mermaid
+graph LR
+    subgraph "Golden Master"
+    Current["Current Output"]
+    Snap["Snapshot File\n(Saved)"]
+    Change["New Change"]
+    Diff["Compare"]
+    Current -- "Capture" --> Snap
+    Snap & Change --> Diff
+    Diff -- "Same" --> OK["Safe ✅"]
+    Diff -- "Diff" --> Review["Manual Review 👀"]
+    end
+```
+
 ![Concept: Safety Net](./picture/refactoring_ts_study_012_safety_net.png)
+
+```mermaid
+graph TD
+    subgraph "AAA Pattern"
+    A1["Arrange\n(Setup)"]
+    A2["Act\n(Execute)"]
+    A3["Assert\n(Verify)"]
+    A1 --> A2 --> A3
+    end
+    A3 -- "Green ✅" --> Safe["Refactor Ready!"]
+```
 
 * 「壊してない保証」を**テスト1本**で作る🛟✨
 * リファクタ前に、安心して触れる“お守り”を置けるようになる🧿✅

@@ -27,7 +27,34 @@ TypeScript の公式ドキュメントでも、`any` は型チェックを段階
 
 ## unknown って何？🧩❓（ざっくり：中身不明の箱📦）
 
+![Concept: Funnel](./picture/refactoring_ts_study_033_funnel.png)
+
+```mermaid
+graph TD
+    Input["unknown"]
+    F1["typeof x === 'string'"]
+    F2["'prop' in x"]
+    F3["x instanceof Date"]
+    S1["string"]
+    S2["{ prop: unknown }"]
+    S3["Date"]
+    Input --> F1 --> S1
+    Input --> F2 --> S2
+    Input --> F3 --> S3
+```
 ![Concept: Mystery Box](./picture/refactoring_ts_study_032_mystery_box_xray.png)
+
+```mermaid
+graph LR
+    Ext["External Data (any)"]
+    Boundary["Boundary (unknown)"]
+    Check["Type Check ✅"]
+    Inner["Inner Logic (Safe Type)"]
+    Ext --> Boundary
+    Boundary --> Check
+    Check -- "Success" --> Inner
+    Check -- "Fail" --> Error["Error/Default"]
+```
 
 * `unknown` は **「何が入ってるか分からない」**を表す型📦
 * どんな値でも入れられるけど、**そのままでは触れない**（= 安全）🛡️

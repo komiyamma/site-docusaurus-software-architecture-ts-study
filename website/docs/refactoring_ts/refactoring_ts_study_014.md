@@ -2,7 +2,15 @@
 
 ### ねらい🎯
 
-![Concept: Magnifying Glass](./picture/refactoring_ts_study_014_magnifying_glass.png)
+![Concept: Checklist](./picture/refactoring_ts_study_015_checklist.png)
+
+```mermaid
+graph TD
+    Log["Logger\n(Flow & Record)"]
+    Observation --> Debug & Log
+    Debug --> Instant["State Check 🛑"]
+    Log --> History["Sequence Check 🪵"]
+```
 
 * 「怖いコード」でも、まず状況を**観測**して安心して触れるようになる👀✨
 * ブレークポイントで**止めて見る**／ログで**流して見る**を使い分けられるようになる🧠🧷

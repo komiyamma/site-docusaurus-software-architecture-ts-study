@@ -253,6 +253,7 @@ src/
       StudentDirectoryClient.ts   # 外部からDTO取得だけ
       StudentDirectoryAcl.ts      # DTO→ドメイン変換＆防御
       StudentDirectoryAdapter.ts  # Port実装（client+aclを組み合わせ）
+```
 
 ```mermaid
 graph TD
@@ -266,7 +267,6 @@ graph TD
     adapters --> adapter["Adapter (結合)"]
     
     style acl fill:#FFF7E6,stroke:#FFAA33
-```
 ```
 
 ### DTO→ドメイン変換（ACLの中心）🔁🧱

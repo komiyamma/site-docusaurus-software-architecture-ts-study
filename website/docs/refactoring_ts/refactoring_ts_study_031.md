@@ -20,6 +20,21 @@
 
 ---
 
+![Concept: Empty Box](./picture/refactoring_ts_study_031_empty_box.png)
+
+```mermaid
+graph TD
+    Start["Value (null/undefined/exists)"]
+    OpCh["Optional Chaining (?.)"]
+    NullCo["Nullish Coalescing (??)"]
+    Safe["Safe Result ✨"]
+    Start --> OpCh
+    OpCh -- "null/undef" --> NullCo
+    OpCh -- "exists" --> Access["Access Value"]
+    Access --> Safe
+    NullCo --> Safe
+```
+
 ## まず覚える！安全な3点セット🧰✨
 
 ### ① オプショナルチェーン `?.`（無いならそこで止まる）⛔️➡️🫧

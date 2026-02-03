@@ -16,6 +16,19 @@
 
 ![Concept: Checklist](./picture/refactoring_ts_study_015_checklist.png)
 
+```mermaid
+graph TD
+    Change["1. Change"]
+    Type["2. Type Check 🧷"]
+    Test["3. Test 🧪"]
+    Run["4. Manual Run ▶️"]
+    Diff["5. Diff Check 👀"]
+    Commit["6. Commit 💾"]
+
+    Change --> Type --> Test --> Run --> Diff --> Commit
+    Commit --> Change
+```
+
 ### ✅ ① 型チェック（tsc）
 
 「型のズレ」「型の抜け」「危ないany」みたいなものを先に止めてくれるよ🧷✨

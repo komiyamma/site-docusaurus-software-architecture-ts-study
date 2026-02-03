@@ -2,7 +2,29 @@
 
 ### ねらい🎯
 
-![Concept: Shape Sorter](./picture/refactoring_ts_study_011_shape_sorter.png)
+![Concept: Safety Net](./picture/refactoring_ts_study_012_safety_net.png)
+
+```mermaid
+graph TD
+    subgraph "AAA Pattern"
+    A1["Arrange\n(Setup)"]
+    A2["Act\n(Execute)"]
+    A3["Assert\n(Verify)"]
+    A1 --> A2 --> A3
+    end
+    A3 -- "Green ✅" --> Safe["Refactor Ready!"]
+```
+
+```mermaid
+graph LR
+    Code["Code Change"]
+    Type["TypeScript\n(tsc)"]
+    Safe["Safe ✅"]
+    Error["Fix point! 🔔"]
+    Code --> Type
+    Type -- "OK" --> Safe
+    Type -- "Error" --> Error
+```
 
 型チェックを「うるさい先生」じゃなくて「守ってくれる味方」にして、リファクタ中に壊れた場所をすぐ見つけられるようになるよ〜🛟😊
 特に **関数を分割したり名前を変えたり**するとき、型エラーは「ここ直して！」って教えてくれる超便利アラーム🔔✨

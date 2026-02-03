@@ -12,6 +12,14 @@
 
 ![Concept: Safety Cycle](./picture/refactoring_ts_study_003_safety_cycle.png)
 
+```mermaid
+graph LR
+    S["1. Safe (Test)"]
+    M["2. Small Change"]
+    V["3. Verify"]
+    S --> M --> V --> S
+```
+
 ### ① 守りを置く（= 壊してない保証を先に作る）🛡️
 
 「変える前に、今の動きを固定」するのが最強です💪✨

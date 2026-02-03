@@ -12,7 +12,28 @@
 
 ## まず結論🌸：「型ガード」はこういうもの！
 
+![Concept: Traffic Colors](./picture/refactoring_ts_study_035_traffic_colors.png)
+
+```mermaid
+graph LR
+    S["string"]
+    U["'todo' | 'doing' | 'done'"]
+    S -- "Refactor" --> U
+    U -- "Typos" --> Catch["Compile Error 🛑"]
+    U -- "Correct" --> Pass["Pass ✅"]
+```
+
 ![Concept: Gatekeeper](./picture/refactoring_ts_study_034_gatekeeper.png)
+
+```mermaid
+graph LR
+    Value["unknown"]
+    isGuard{"isUserDto?"}
+    Logic["Safe User Logic"]
+    Value --> isGuard
+    isGuard -- "true" --> Logic
+    isGuard -- "false" --> Exit["Exit/Error"]
+```
 
 TypeScriptは、実行時（JavaScriptとして動く時）に“型”が消えちゃうんだよね🫧
 だから **「これは本当にUserっぽい形？」を実行時にチェックする関数** を自分で作るのが「ユーザー定義型ガード」だよ🧷✨ ([TypeScript][2])

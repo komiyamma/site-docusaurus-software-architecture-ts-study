@@ -2,7 +2,27 @@
 
 ### ねらい🎯
 
+![Concept: Small Commits](./picture/refactoring_ts_study_008_small_commits.png)
+
+```mermaid
+graph TD
+    Large["Huge Change 😱\n(Risky / Hard to Review)"]
+    S1["1. Rename"]
+    S2["2. Extract"]
+    S3["3. Formatter"]
+    Large -- "Split" --> S1 & S2 & S3
+    S1 & S2 & S3 -- "Small Commits" --> History["Safe History ✨"]
+```
+
 ![Concept: Scissors Split](./picture/refactoring_ts_study_007_scissors_split.png)
+
+```mermaid
+graph TD
+    M1["main"] --> M2["main"]
+    M1 -- "git switch -c" --> B1["experiment"]
+    B1 --> B2["safe!"]
+    B2 -- "git merge" --> M2
+```
 
 * 壊すのが怖い変更を、**安全に試せる場所（ブランチ）**でやれるようになる🙆‍♀️✨
 * 「作業 → いつでも戻れる → 良かったら取り込む」を、手で回せるようになる🔁✅

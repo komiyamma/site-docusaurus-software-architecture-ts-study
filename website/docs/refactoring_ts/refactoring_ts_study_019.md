@@ -9,7 +9,29 @@
 
 ## 1. リネームが効く理由🧠✨
 
+![Concept: Folder Labels](./picture/refactoring_ts_study_020_folder_labels.png)
+
+```mermaid
+graph TD
+    subgraph "Naming Categories"
+    F["Files (kebab-case)"]
+    M["Functions (動詞+目的語)"]
+    T["Types (PascalCase)"]
+    end
+    F --- F1["user-profile.ts"]
+    M --- M1["fetchUser()"]
+    T --- T1["UserDetail"]
+```
+
 ![Concept: Name Tag](./picture/refactoring_ts_study_019_name_tag.png)
+
+```mermaid
+graph LR
+    Bad["data / tmp / list"]
+    Good["shippingAddress\nvalidatedEmail\norderIds"]
+    Bad -- "Refactor: Rename" --> Good
+    Good -- "Quality" --> Win["No Confusion! ✅"]
+```
 
 コードって、読む時間のほうが圧倒的に長いのに、読者は未来の自分かもしれない…！😇
 だから **「名前＝説明書」** なんだよ📘💡

@@ -9,7 +9,36 @@
 
 ## 1. コードの「臭い」ってなに？👃🧠
 
+![Concept: Triage Tags](./picture/refactoring_ts_study_017_triage_tags.png)
+
+```mermaid
+graph TD
+    subgraph "Priority Score 🧮"
+    A["Change Frequency 🔁"]
+    B["Complexity 🌀"]
+    C["Bug History 🐛"]
+    end
+    A & B & C --> Hotspot["Hotspot 🔥\n(Priority 1)"]
+```
+
 ![Concept: Code Smell](./picture/refactoring_ts_study_016_code_smell.png)
+
+```mermaid
+mindmap
+  root((Code Smells👃))
+    Long Function
+      スクロールが長い
+      コメントだらけ
+    Duplication
+      コピペ
+      修正漏れ
+    Huge if
+      階層が深い
+      迷路
+    Mysterious Name
+      data / tmp
+      意味不明
+```
 
 **コードの臭い（Code Smell）**は、だいたいこんな感じ👇
 

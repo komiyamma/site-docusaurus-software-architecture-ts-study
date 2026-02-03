@@ -154,6 +154,15 @@ if (!button) {
 
 ![Concept: Null Map](./picture/refactoring_ts_study_030_null_map.png)
 
+```mermaid
+graph LR
+    Source["Source\n(find, get, ?)"]
+    Prop["Propagation\n(Passing around)"]
+    Sink["Sink 💥\n(x.y, x())"]
+    Source -- "undefined" --> Prop
+    Prop -- "Unchecked" --> Sink
+```
+
 null/undefined は、**1点で生まれて、川みたいに下流へ流れる**🌊
 だから、やることはシンプル👇
 

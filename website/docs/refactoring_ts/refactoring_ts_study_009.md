@@ -2,7 +2,29 @@
 
 ## ねらい🎯
 
-![Concept: VSCode Cockpit](./picture/refactoring_ts_study_009_vscode_cockpit.png)
+![Concept: Shortcuts Magic](./picture/refactoring_ts_study_010_shortcuts_magic.png)
+
+```mermaid
+graph TD
+    Code["Dirty Code"]
+    L["ESLint (Detect)"]
+    Fix["Auto Fix (--fix)"]
+    Manual["Manual Fix"]
+    Clean["Safe Code ✨"]
+
+    Code --> L
+    L -- "Fixable" --> Fix
+    L -- "Complex" --> Manual
+    Fix & Manual --> Clean
+```
+
+```mermaid
+graph LR
+    Save["Ctrl + S (Save)"]
+    P["Prettier"]
+    F["Formatted Code ✨"]
+    Save --> P --> F
+```
 
 * **見た目の揺れ（インデント・改行・クォートなど）をゼロにする**🧼✨
 * **保存したら自動で整う状態**を作って、リファクタの差分を読みやすくする👀📉

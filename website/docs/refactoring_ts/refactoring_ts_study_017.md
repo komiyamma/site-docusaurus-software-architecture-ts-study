@@ -2,7 +2,27 @@
 
 ## ねらい🎯
 
-![Concept: Triage Tags](./picture/refactoring_ts_study_017_triage_tags.png)
+![Concept: Stepping Stones](./picture/refactoring_ts_study_018_stepping_stones.png)
+
+```mermaid
+graph LR
+    S1["1. Protect (Test) 🛡️"]
+    S2["2. Rename 🏷️"]
+    S3["3. Extract ✂️"]
+    S4["4. Separate 🚪"]
+    S5["5. Improve ✨"]
+    S1 --> S2 --> S3 --> S4 --> S5
+```
+
+```mermaid
+graph TD
+    subgraph "Priority Score 🧮"
+    A["Change Frequency 🔁"]
+    B["Complexity 🌀"]
+    C["Bug History 🐛"]
+    end
+    A & B & C --> Hotspot["Hotspot 🔥\n(Priority 1)"]
+```
 
 * 「どこから直すか」を**迷わず決める**基準を持つ🧠✨
 * 効果が大きい場所（＝“痛い場所”）から直して、**バグと手戻りを減らす**🐛➡️😌

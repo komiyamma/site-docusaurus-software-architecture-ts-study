@@ -30,7 +30,34 @@ I/Oは、だいたいこういうやつ👇（覚えやすい！）
 
 ### 今日の合言葉🧙‍♀️✨：「コアは静かに、外側はうすく」
 
+![Concept: DIP Plug](./picture/refactoring_ts_study_039_dip_plug.png)
+
+```mermaid
+graph TD
+    Service["High Level Logic\n(Service)"]
+    Interface["<<interface>>\nRepository"]
+    Impl1["API Implementation"]
+    Impl2["DB Implementation"]
+    Service --> Interface
+    Impl1 -- "implements" --> Interface
+    Impl2 -- "implements" --> Interface
+```
+
 ![Concept: Core vs Outer](./picture/refactoring_ts_study_038_sandwich_architecture.png)
+
+```mermaid
+graph LR
+    subgraph "Adapters (Outer)"
+    API["API/Fetch"]
+    Disk["File/DB"]
+    end
+    subgraph "Pure Core (Inner)"
+    Logic["Business Logic"]
+    end
+    API --> Logic
+    Disk --> Logic
+    Logic --> Result["Result"]
+```
 
 
 * **コア（中心）**：データを受け取って計算し、結果を返すだけ（副作用なし）🧠

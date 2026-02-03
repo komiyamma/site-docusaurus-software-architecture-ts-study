@@ -4,6 +4,16 @@
 
 ![Concept: Conveyor Belt](./picture/refactoring_ts_study_029_conveyor_belt.png)
 
+```mermaid
+graph LR
+    Input["Array"]
+    F["filter"]
+    M["map"]
+    R["reduce"]
+    Output["Result"]
+    Input --> F --> M --> R --> Output
+```
+
 `for` や `forEach` の“やってることゴチャ混ぜ”をほどいて、**「何をしたいか」がパッと読める**形にするよ〜😊✨
 `map / filter / reduce / find / some / every` を使い分けて、ループをスッキリさせよう🧹🍃
 
@@ -266,6 +276,17 @@ const ys = xs.filter(notNull); // number[]
 ---
 
 ### 4-2) `forEach` と `async` の罠⚠️😱（超大事）
+
+![Concept: Null Map](./picture/refactoring_ts_study_030_null_map.png)
+
+```mermaid
+graph LR
+    Source["Source\n(find, get, ?)"]
+    Prop["Propagation\n(Passing around)"]
+    Sink["Sink 💥\n(x.y, x())"]
+    Source -- "undefined" --> Prop
+    Prop -- "Unchecked" --> Sink
+```
 
 ![Concept: Async Loop Trap](./picture/refactoring_ts_study_029_foreach_trap.png)
 

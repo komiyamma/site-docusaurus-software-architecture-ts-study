@@ -2,7 +2,29 @@
 
 ### ねらい🎯
 
-![Concept: Traffic Light](./picture/refactoring_ts_study_024_traffic_light.png)
+![Concept: Wizard Hat](./picture/refactoring_ts_study_025_wizard_hat.png)
+
+```mermaid
+graph LR
+    M1["0.1"]
+    M2["'paid'"]
+    M3["86400000"]
+    C1["TAX_RATE"]
+    C2["OrderStatus.Paid"]
+    C3["MS_PER_DAY"]
+    
+    M1 & M2 & M3 -- "Refactor: Constant" --> C1 & C2 & C3
+    C1 & C2 & C3 -- "Readability" --> Clear["Clear Meaning! 🏷️"]
+```
+
+```mermaid
+graph LR
+    subgraph "Conditional Refactoring"
+    Raw["if ( a && !b || (c && d) )"]
+    Named["if ( isEligibleUser && hasValidCoupon )"]
+    Raw -- "Extract to Predicate" --> Named
+    end
+```
 
 * 複雑な `if` を「日本語で読める」状態にする📖✨
 * 条件の“意味”を **名前** にして、読み間違い・直し間違いを減らす🛡️💡

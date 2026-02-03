@@ -20,6 +20,26 @@ Vite はテンプレが用意されてて、`vanilla-ts`（生TypeScript）が�
 
 ![Concept: Folder Drawers](./picture/refactoring_ts_study_004_folder_drawers.png)
 
+![Concept: Linter Robot](./picture/refactoring_ts_study_005_linter_robot.png)
+
+```mermaid
+graph LR
+    S["1. References (Shift + F12)"]
+    R["2. Safe Rename (F2)"]
+    J["3. Jump (F12 / Alt + Left)"]
+    S --> R
+    R --> J
+```
+
+```mermaid
+graph TD
+    P["Project Root"]
+    S["src/ (Source)"]
+    T["tests/ (Test)"]
+    C["package.json\n(Scripts)"]
+    P --> S & T & C
+```
+
 ターミナル（VS Code内でOK）で👇を打ってみてね💻✨
 
 ```bash

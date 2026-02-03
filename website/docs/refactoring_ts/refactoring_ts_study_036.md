@@ -55,7 +55,31 @@ function render(res: ApiResponse): string {
 
 ## アフター：判別可能Unionで「ありえない状態」を消す🧷✨
 
-![Concept: Tagged Folders](./picture/refactoring_ts_study_036_tagged_folders.png)
+![Concept: SoC Separation](./picture/refactoring_ts_study_037_soc_sorting.png)
+
+```mermaid
+graph TD
+    subgraph "Separation of Concerns"
+    UI["UI / CLI\n(Display)"]
+    Logic["Domain\n(Logic/Math)"]
+    IO["Infra\n(I/O/File)"]
+    UI --> Logic
+    UI --> IO
+    end
+```
+
+```mermaid
+graph TD
+    U["Union { type: ... }"]
+    S{"switch(type)"}
+    C1["case 'loading'"]
+    C2["case 'success'"]
+    C3["case 'error'"]
+    N["default: never"]
+    U --> S
+    S --> C1 & C2 & C3
+    S -- "Missing Case" --> N
+```
 
 ポイントはこれ👇
 

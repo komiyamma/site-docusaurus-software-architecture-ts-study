@@ -28,6 +28,16 @@
 
 ![Concept: Small Commits](./picture/refactoring_ts_study_008_small_commits.png)
 
+```mermaid
+graph TD
+    Large["Huge Change 😱\n(Risky / Hard to Review)"]
+    S1["1. Rename"]
+    S2["2. Extract"]
+    S3["3. Formatter"]
+    Large -- "Split" --> S1 & S2 & S3
+    S1 & S2 & S3 -- "Small Commits" --> History["Safe History ✨"]
+```
+
 ### 小さいコミットの良いところ💖
 
 * **レビューが秒速で読める**👀⚡（差分が少ない＝理解が早い）

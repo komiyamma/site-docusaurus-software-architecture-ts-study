@@ -4,6 +4,18 @@
 
 ![Concept: Folder Labels](./picture/refactoring_ts_study_020_folder_labels.png)
 
+```mermaid
+graph TD
+    subgraph "Naming Categories"
+    F["Files (kebab-case)"]
+    M["Functions (動詞+目的語)"]
+    T["Types (PascalCase)"]
+    end
+    F --- F1["user-profile.ts"]
+    M --- M1["fetchUser()"]
+    T --- T1["UserDetail"]
+```
+
 * 関数・ファイル・型（type/interface/class/enum）の名前を整えて、プロジェクト全体の読みやすさを爆上げする📈✨
 * 「名前＝設計の入口」って感覚を、やさしく体に覚えさせる🧠🌱
 * VS Codeのリネーム機能で、安全に一括置換できるようになる🛟🧑‍💻

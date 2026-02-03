@@ -47,6 +47,15 @@ const task: Task = {
 
 ![Concept: Traffic Colors](./picture/refactoring_ts_study_035_traffic_colors.png)
 
+```mermaid
+graph LR
+    S["string"]
+    U["'todo' | 'doing' | 'done'"]
+    S -- "Refactor" --> U
+    U -- "Typos" --> Catch["Compile Error 🛑"]
+    U -- "Correct" --> Pass["Pass ✅"]
+```
+
 status を「この中だけOK！」って固定するよ〜🚦
 
 ```ts

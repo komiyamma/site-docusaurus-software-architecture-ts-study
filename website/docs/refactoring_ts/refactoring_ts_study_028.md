@@ -2,7 +2,27 @@
 
 ### ねらい🎯
 
-![Concept: Tree Branch](./picture/refactoring_ts_study_028_tree_branch.png)
+![Concept: Conveyor Belt](./picture/refactoring_ts_study_029_conveyor_belt.png)
+
+```mermaid
+graph LR
+    Input["Array"]
+    F["filter"]
+    M["map"]
+    R["reduce"]
+    Output["Result"]
+    Input --> F --> M --> R --> Output
+```
+
+```mermaid
+graph TD
+    C["Dispatcher\n(switch/Map)"]
+    H1["Handler A"]
+    H2["Handler B"]
+    H3["Handler C"]
+    C --> H1 & H2 & H3
+    H1 & H2 & H3 -- "Clean" --> Goal["Small & Testable! ✅"]
+```
 
 分岐（if/switch）が増えても、**読める・直せる・追加できる**形に整えるよ✨
 「巨大switchで毎回ビクビク😵‍💫」を卒業しよう〜！🎓🌸

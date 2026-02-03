@@ -2,7 +2,30 @@
 
 ### ねらい🎯
 
+![Concept: Tree Branch](./picture/refactoring_ts_study_028_tree_branch.png)
+
+```mermaid
+graph TD
+    C["Dispatcher\n(switch/Map)"]
+    H1["Handler A"]
+    H2["Handler B"]
+    H3["Handler C"]
+    C --> H1 & H2 & H3
+    H1 & H2 & H3 -- "Clean" --> Goal["Small & Testable! ✅"]
+```
+
 ![Concept: Toolbox](./picture/refactoring_ts_study_027_toolbox.png)
+
+```mermaid
+graph TD
+    subgraph "Where to put?"
+    Local["1. Local Helper\n(Inside File)"]
+    Feature["2. Feature Shared\n(Inside Feature)"]
+    Shared["3. Global Shared\n(shared/money, shared/date)"]
+    end
+    Local -- "Need more?" --> Feature
+    Feature -- "Need everywhere?" --> Shared
+```
 
 重複をまとめたい気持ちは正しいんだけど…
 まとめ方を間違えると **`utils/` がなんでも入るゴミ箱** になって、逆に読みにくくなるの🥲🗑️

@@ -117,7 +117,7 @@ flowchart LR
 例：ステータスで絞って、新しい順に並べる  
 → **(status, createdAt)** の複合インデックスが強い💪
 
-Prismaなら `@@index` で作れるよ（公式ドキュメント）:contentReference[oaicite:0]{index=0}
+Prismaなら `@@index` で作れるよ（公式ドキュメント）[1]
 
 ---
 

@@ -12,7 +12,34 @@
 
 ### ✅ Extract Variable（変数を取り出す）
 
-![Concept: Name Card](./picture/refactoring_ts_study_022_name_card.png)
+![Concept: Bouncer](./picture/refactoring_ts_study_023_bouncer.png)
+
+```mermaid
+graph TD
+    Start["Start"]
+    G1["Guard 1 (Error?)"]
+    G2["Guard 2 (Missing?)"]
+    HP["Happy Path 🌈\n(Main Logic)"]
+    End["Success ✅"]
+
+    Start --> G1
+    G1 -- "Yes" --> Err1["Exit 🛑"]
+    G1 -- "No" --> G2
+    G2 -- "Yes" --> Err2["Exit 🛑"]
+    G2 -- "No" --> HP
+    HP --> End
+```
+
+```mermaid
+graph LR
+    subgraph "Extract Variable"
+    Expr["complex + expression * messy"]
+    Var["const subtotal = ..."]
+    Clean["Read Clearly ✨"]
+    Expr -- "Label it" --> Var
+    Var --> Clean
+    end
+```
 
 長い式や「何してるの？」が分かりにくい計算に、**名前を付ける**やつだよ👀🏷️
 → 目的：**読む人の脳の負担を減らす**🧠💤

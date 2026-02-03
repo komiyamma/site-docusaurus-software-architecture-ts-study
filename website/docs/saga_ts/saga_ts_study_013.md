@@ -170,7 +170,6 @@ classDiagram
         +compensate(ctx, out) Result~void, CompError~
     }
 ```
-```
 
 ポイントはここ👇
 

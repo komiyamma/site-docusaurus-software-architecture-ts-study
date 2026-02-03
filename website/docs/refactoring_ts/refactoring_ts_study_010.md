@@ -4,6 +4,20 @@
 
 ![Concept: Shortcuts Magic](./picture/refactoring_ts_study_010_shortcuts_magic.png)
 
+```mermaid
+graph TD
+    Code["Dirty Code"]
+    L["ESLint (Detect)"]
+    Fix["Auto Fix (--fix)"]
+    Manual["Manual Fix"]
+    Clean["Safe Code ✨"]
+
+    Code --> L
+    L -- "Fixable" --> Fix
+    L -- "Complex" --> Manual
+    Fix & Manual --> Clean
+```
+
 * 「動くけど危ない」書き方を、早めに見つけられるようになる🔍✨
 * Lintの警告の読み方＆直し方に慣れる🧠💡
 * “直せるものは自動で直す”流れを作る🤖🧹

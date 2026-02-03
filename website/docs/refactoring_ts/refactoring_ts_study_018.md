@@ -2,7 +2,27 @@
 
 ## ねらい🎯
 
+![Concept: Name Tag](./picture/refactoring_ts_study_019_name_tag.png)
+
+```mermaid
+graph LR
+    Bad["data / tmp / list"]
+    Good["shippingAddress\nvalidatedEmail\norderIds"]
+    Bad -- "Refactor: Rename" --> Good
+    Good -- "Quality" --> Win["No Confusion! ✅"]
+```
+
 ![Concept: Stepping Stones](./picture/refactoring_ts_study_018_stepping_stones.png)
+
+```mermaid
+graph LR
+    S1["1. Protect (Test) 🛡️"]
+    S2["2. Rename 🏷️"]
+    S3["3. Extract ✂️"]
+    S4["4. Separate 🚪"]
+    S5["5. Improve ✨"]
+    S1 --> S2 --> S3 --> S4 --> S5
+```
 
 * いきなり大改造しないで、**安全に“少しずつ”直せる**ようになる🛟✨
 * 「次に何を変える？」を迷わないための、**分割ロードマップ**を作れる🗺️🖊️
