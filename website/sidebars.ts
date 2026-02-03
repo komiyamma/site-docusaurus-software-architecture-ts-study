@@ -64,7 +64,7 @@ function generateSidebarItems(folder: string, prefix: string, modules: { title?:
       return [{
         type: 'category' as const,
         label: mod.title,
-        items: items,
+        items: items.map(itemId => ({ type: 'doc' as const, id: itemId })),
       }];
     }
 
