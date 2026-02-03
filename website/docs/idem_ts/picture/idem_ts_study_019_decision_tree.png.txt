@@ -1,0 +1,19 @@
+A clean 2D flat vector decision flowchart for saving error responses.
+Style: Clean line art, geometric, tech editorial style.
+Uniform bold outlines, flat colors, no gradients, white background.
+
+Target Audience: Japanese learners.
+Text Rendering:
+- The image MUST contain specific Japanese text.
+- Font should be clean and rounded sans-serif.
+
+Labels to Render:
+- Error Occurred: "エラー発生"
+- Is it retryable?: "再試行していい？ (503/Timeout)"
+- Is it fatal?: "恒久的な失敗？ (400/402)"
+- Discard & Retry: "保存せず再試行"
+- Save & Replay: "エラーを保存して固定"
+- Decision Tree: "エラー保存の判断軸"
+
+Visual Details:
+A logical flowchart starting with "エラー発生". Decision diamonds ask "再試行していい？" and "恒久的な失敗？". Paths lead to either discarding the error to allow a fresh retry or saving the error response to replay it on next requests. Logic-focused, professional Indigo theme.

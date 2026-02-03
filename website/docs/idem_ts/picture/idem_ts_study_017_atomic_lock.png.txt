@@ -1,0 +1,17 @@
+A modern flat vector illustration of a digital "Turnstile" representing an Atomic Lock.
+Style: Clean line art, geometric, tech editorial style.
+Uniform bold outlines, flat colors, no gradients, white background.
+
+Target Audience: Japanese learners.
+Text Rendering:
+- The image MUST contain specific Japanese text.
+- Font should be clean and rounded sans-serif.
+
+Labels to Render:
+- Request: "リクエスト"
+- Processing: "処理中..."
+- Wait: "待機"
+- Atomic Lock: "アトミックロック"
+
+Visual Details:
+A high-tech digital turnstile gate allows only one person (representing a Request) to pass at a time. The person who has just passed is holding a glowing ball labeled "処理中...". The next person in line has a "待機" (Wait) thought bubble. Indigo and Amber color palette. The gate is clearly labeled "アトミックロック".

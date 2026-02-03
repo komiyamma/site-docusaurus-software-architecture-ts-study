@@ -1,0 +1,19 @@
+A modern 2D vector sequence diagram showing a Consumer ACK failure.
+Style: Clean line art, geometric, tech editorial style.
+Uniform bold outlines, flat colors, no gradients, white background.
+
+Target Audience: Japanese learners.
+Text Rendering:
+- The image MUST contain specific Japanese text.
+- Font should be clean and rounded sans-serif.
+
+Labels to Render:
+- Broker: "ブローカー (SQS等)"
+- Consumer: "コンシューマー"
+- Success: "処理成功！"
+- ACK Failed: "ACK失敗（届かない）"
+- Message Retry: "再送（重複）"
+- ACK Failure Flow: "ACK失敗による重複の流れ"
+
+Visual Details:
+Step-by-step sequence: 1. Broker sends a message to Consumer. 2. Consumer processes it successfully (shown with a green check). 3. Consumer tries to send an "ACK" (Acknowledgment) back, but it's hit by a "Red X" and doesn't reach the Broker. 4. Broker, not seeing the ACK, sends the exact same message again labeled "再送（重複）". Very clear and educational diagram.

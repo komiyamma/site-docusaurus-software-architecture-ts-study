@@ -1,0 +1,17 @@
+A professional flat vector graph showing Exponential Backoff with Jitter.
+Style: Clean line art, geometric, tech editorial style.
+Uniform bold outlines, flat colors, no gradients, white background.
+
+Target Audience: Japanese learners.
+Text Rendering:
+- The image MUST contain specific Japanese text.
+- Font should be clean and rounded sans-serif.
+
+Labels to Render:
+- Attempts: "試行回数"
+- Wait Time: "待ち時間"
+- Jitter: "ゆらぎ (Jitter)"
+- Exponential Backoff: "指数バックオフ"
+
+Visual Details:
+A bar graph where the X-axis is "試行回数" (Attempts) and the Y-axis is "待ち時間" (Wait Time). The bars show wait times doubling in height for each attempt (e.g., 1s, 2s, 4s, 8s). Small "sparkle" or "variation" marks are drawn around the top of each bar to represent "ゆらぎ (Jitter)". Indigo and Amber highlights.

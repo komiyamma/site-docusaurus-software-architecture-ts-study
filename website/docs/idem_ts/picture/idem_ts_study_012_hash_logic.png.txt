@@ -1,0 +1,16 @@
+A modern flat vector illustration of a "Meat Grinder" style data processor.
+Style: Clean line art, geometric, tech editorial style.
+Uniform bold outlines, flat colors, no gradients, white background.
+
+Target Audience: Japanese learners.
+Text Rendering:
+- The image MUST contain specific Japanese text.
+- Font should be clean and rounded sans-serif.
+
+Labels to Render:
+- Request Body: "リクエスト（JSON）"
+- SHA-256 Hash: "指紋 (ハッシュ値)"
+- Deduplication Filter: "重複排除フィルター"
+
+Visual Details:
+On the left side, a paper document representing a complex JSON request enters the machine. The machine is designed with Indigo and Cyan colors, resembling a high-tech processor or grinder. On the right side, a short, elegant string of hex characters emerges, representing the SHA-256 hash. The machine has a visible label "重複排除フィルター".

@@ -1,0 +1,18 @@
+A professional flat vector illustration of an idempotency testing laboratory.
+Style: Clean line art, geometric, tech editorial style.
+Uniform bold outlines, flat colors, no gradients, white background.
+
+Target Audience: Japanese learners.
+Text Rendering:
+- The image MUST contain specific Japanese text.
+- Font should be clean and rounded sans-serif.
+
+Labels to Render:
+- Confirm Order: "注文確定"
+- Fast Clicks: "連打！ (Concurrent)"
+- Creation Count: "作成回数: 1"
+- Status: "成功 (PASSED)"
+- Idempotency Test: "冪等性テスト"
+
+Visual Details:
+A "Testing Robot" is seen pressing a "注文確定" button 10 times very rapidly, with motion lines indicating speed. A dashboard monitor nearby displays "作成回数: 1" and a large green "成功 (PASSED)" badge. Amber and Indigo palette. Professional and clean aesthetic.

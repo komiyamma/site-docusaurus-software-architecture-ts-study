@@ -1,0 +1,20 @@
+A tiered professional flat vector diagram of the Transactional Outbox pattern.
+Style: Clean line art, geometric, tech editorial style.
+Uniform bold outlines, flat colors, no gradients, white background.
+
+Target Audience: Japanese learners.
+Text Rendering:
+- The image MUST contain specific Japanese text.
+- Font should be clean and rounded sans-serif.
+
+Labels to Render:
+- App Logic: "アプリのロジック"
+- Transaction: "同一トランザクション"
+- Main Data: "注文データ"
+- Outbox Table: "送信トレイ (Outbox)"
+- Publisher: "中継役 (Publisher)"
+- Event Bus: "メッセージブローカー"
+- Outbox Pattern: "Outboxパターンの詳細"
+
+Visual Details:
+The diagram is organized in vertical layers. Top layer: App Logic. Second layer: A box labeled "同一トランザクション" containing "注文データ" and "送信トレイ (Outbox)". Third layer: A "Publisher" character polling the Outbox table. Fourth layer: The Publisher sending the message to the "メッセージブローカー". Arrows show the forward progress of data. Indigo and Deep Purple theme.
