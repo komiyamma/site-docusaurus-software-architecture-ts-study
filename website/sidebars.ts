@@ -123,6 +123,7 @@ const sidebars: SidebarsConfig = {
   esTsSidebar: generateProjectSidebar('es_ts'),
   sagaTsSidebar: generateProjectSidebar('saga_ts'),
   refactoringTsSidebar: generateProjectSidebar('refactoring_ts'),
+  modMonoTsSidebar: generateProjectSidebar('mod_mono_ts'),
 };
 
 export default sidebars;
