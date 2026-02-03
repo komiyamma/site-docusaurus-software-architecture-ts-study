@@ -90,6 +90,25 @@ export type OrderSagaState =
 
 ![Type-safe State](./picture/saga_ts_study_019_discriminated_union.png)
 
+```mermaid
+classDiagram
+    class INIT {
+        +status: "INIT"
+    }
+    class PAYMENT_RESERVED {
+        +status: "PAYMENT_RESERVED"
+        +paymentId: PaymentId
+    }
+    class STOCK_RESERVED {
+        +status: "STOCK_RESERVED"
+        +paymentId: PaymentId
+        +reservationId: ReservationId
+    }
+    INIT <|-- OrderSagaState
+    PAYMENT_RESERVED <|-- OrderSagaState
+    STOCK_RESERVED <|-- OrderSagaState
+```
+
 
 ---
 
@@ -129,6 +148,15 @@ export const transitions = {
   COMPENSATED: [],
   FAILED: [],
 } as const satisfies TransitionTable;
+
+```mermaid
+graph LR
+    INIT -- PaymentSuccess --> PR[PAY_RESERVED]
+    PR -- StockSuccess --> SR[STOCK_RESERVED]
+    SR -- ShipSuccess --> COMPLETED
+    PR -- StockFail --> CP[COMPENSATING]
+    SR -- ShipFail --> CP
+```
 ```
 
 ## ✅ 「状態Sで許されるイベントtype」を型で取り出す
@@ -211,6 +239,15 @@ export function reduce(state: OrderSagaState, event: Event): OrderSagaState {
 * `default: return assertNever(state)` みたいにしておくと、状態を増やした時に「未対応」が見つかりやすい✅
 * さらにイベント側も同じ仕組みにすると漏れに強い💪✨
 
+```mermaid
+flowchart TD
+    State["state.status"] --> Case1["case #quot;INIT#quot;"]
+    State --> Case2["case #quot;PAYMENT_RESERVED#quot;"]
+    State --> CaseN[...]
+    State --> Default["default: assertNever"]
+    Default -- "もし抜け漏れがあれば" --> Error["コンパイルエラー!! 🔨"]
+```
+
 ---
 
 # 6) ガード関数で「今この状態？」を安全に判定する🔍🧠
@@ -238,6 +275,13 @@ function doSomething(state: OrderSagaState) {
 ```
 
 「ifの中で急に型が賢くなる」感じが気持ちいいよ😆✨
+
+```mermaid
+graph TD
+    S1[OrderSagaState] -- "isPaymentReserved?" --> Check{Check Tag}
+    Check -- Yes --> S2[PaymentReservedState]
+    S2 -- "paymentId が保証される ✅" --> S2
+```
 
 ---
 

@@ -48,6 +48,15 @@ Sagaの世界は「外部I/O（ネットワーク・別サービス）」が前�
 3. **人手/運用フローへエスカレーション**する🧑‍💼📣
 4. **補償へ入る**（ただし「相手が成功してるかも」を踏まえて慎重に）🧯⚖️
 
+```mermaid
+flowchart TD
+    Run[外部リクエスト] --> TO{タイムアウト⏰}
+    TO -- 結果不明 --> Choice{どうする?}
+    Choice -- "安全なら" --> Retry[リトライ 🔁]
+    Choice -- "慎重なら" --> Query[成功してるか確認 🔎]
+    Choice -- "困ったら" --> Esc[人手対応 🧑‍💼]
+```
+
 ---
 
 ## 21.4 “3段階タイムアウト”で考えると迷子にならない🧠🗺️
@@ -61,6 +70,17 @@ Sagaでのおすすめ思考はコレ👇（超よく効きます✨）
 (A)が短くても、(B)と(C)があると「しつこく粘る/諦める」を整理できます🙂✨
 
 ![Timeout Levels](./picture/saga_ts_study_021_timeouts.png)
+
+```mermaid
+graph TD
+    subgraph SagaDead ["Saga全体デッドライン (C)"]
+        subgraph StepTO ["Step全体タイムアウト (B)"]
+            subgraph CallTO ["1回の呼び出しタイムアウト (A)"]
+                Work[APIリクエスト]
+            end
+        end
+    end
+```
 逆に(C)が無いと、永遠に “保留Saga” が溜まっていきます📚😇
 
 ---
@@ -267,6 +287,14 @@ Sagaは途中で止まることがあるので、**放置しない仕組み**が
 * 超えてたら `TimedOut` にして、運用通知 or 自動補償（慎重に）📣🧯
 
 これだけで「永遠にPendingが溜まる」事故が激減します✨
+
+```mermaid
+graph LR
+    Job[監視ジョブ 🐶] -- "1. 期限切れ検索" --> DB[(Saga Log)]
+    DB -- "expired" --> Log
+    Job -- "2. TIMEOUTへ変更" --> Log
+    Job -- "3. 通知" --> Ops[運用者/通知 📣]
+```
 
 ---
 

@@ -18,6 +18,23 @@ Choreographyは、ざっくり言うと…
 つまり、**中央の司令塔（オーケストレーター）がいない**のが特徴だよ💡
 
 ![Choreography Flow](./picture/saga_ts_study_011_choreography.png)
+
+```mermaid
+flowchart LR
+    subgraph Srv_Order ["Orderサービス"]
+        O1[注文作成]
+    end
+    subgraph Srv_Payment ["Paymentサービス"]
+        P1[決済実行]
+    end
+    subgraph Srv_Inventory ["Inventoryサービス"]
+        I1[在庫確保]
+    end
+
+    O1 -- "order.placed 📣" --> P1
+    P1 -- "payment.authorized 📣" --> I1
+    I1 -- "inventory.reserved 📣" --> Next[...]
+```
 各サービスが **「イベントを受け取る → 自分の処理（ローカルトランザクション）をする → 次のイベントを出す」** を繰り返して、Sagaが前に進む感じ🙌
 
 Choreographyは「疎結合になりやすい」一方で「全体の流れが見えにくい」っていうトレードオフがある、とよく説明されるよ📌 ([temporal.io][1])
@@ -66,6 +83,18 @@ Choreographyは「疎結合になりやすい」一方で「全体の流れが�
 Choreographyの学習では、基本は **イベント中心**で考えるのが分かりやすいよ😊
 （コマンドを多用すると、イベントバスが“RPCっぽく”なって破綻しやすい⚠️）
 
+```mermaid
+graph TD
+    subgraph Event ["イベント (Fact) 📣"]
+        A[サービス] -- "起きたことを放送" --> Bus1((バス))
+        Bus1 --> B[購読者A]
+        Bus1 --> C[購読者B]
+    end
+    subgraph Command ["コマンド (Request) 📩"]
+        D[依頼者] -- "特定の相手にお願い" --> E[担当者]
+    end
+```
+
 ---
 
 # 11.4 イベントは「封筒（メタ情報）」が命📮🔎
@@ -96,8 +125,19 @@ export type EventEnvelope<TType extends string, TData> = {
   subject?: string;         // e.g. orderId
   correlationId: string;    // 追跡用
   sagaId: string;           // Saga(例: 注文)のID
-  data: TData;              // 本文
 };
+```
+
+```mermaid
+classDiagram
+    class EventEnvelope {
+        +string id
+        +string type
+        +string source
+        +string sagaId
+        +string correlationId
+        +object data
+    }
 ```
 
 ---
@@ -198,6 +238,17 @@ Choreographyでも補償はできるよ😊
 * **補償は“逆順で起きやすい”**（最後にやったことから戻る）🔁
 * でも「誰がどこまで戻すか」は、イベント設計が雑だとすぐ崩壊する😵‍💫
   → だからイベント名と責務が超大事なんだ🧠✨
+
+```mermaid
+flowchart LR
+    S1[Order] -- order.placed --> S2[Payment]
+    S2 -- payment.authorized --> S3[Inventory]
+    S3 -- "inventory.failed ❌" --> S2
+    S2 -- "payment.refunded 🧯" --> S1
+    S1 -- "order.cancelled 🧯" --> End((終了))
+    
+    style S3 fill:#fdd,stroke:#f66
+```
 
 ---
 

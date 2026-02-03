@@ -22,6 +22,18 @@ Sagaで冪等性を作るときの基本セットはこれです👇
 
 ![Idempotency 3-piece Set](./picture/saga_ts_study_017_idempotency_set.png)
 
+```mermaid
+graph LR
+    Key[1. 冪等キー 🔑] --> Store[2. 実行済みストア 𗄄]
+    Store --> Result[3. 結果の保存 📦]
+    subgraph Goal ["ゴール: 二重実行の防止 🛡️"]
+        direction TB
+        Key
+        Store
+        Result
+    end
+```
+
 
 この考え方は、決済APIなどでも超重要で、たとえばStripeは **Idempotency-Key** を使い、同じキーの再送は「最初の結果（成功でも失敗でも）」を返す仕組みを説明しています。([Stripe ドキュメント][1])
 AWSの設計ガイドでも「トークンを見て、既に処理済みなら保存したレスポンスを返す」という形が推奨されています。([AWS ドキュメント][2])
@@ -52,6 +64,16 @@ SagaのStepは「注文ID」「SagaID」があるので、だいたいこれでO
 * `order-123:ChargePayment`
 
 こうすると、同じSagaの同じStepは、何回リトライしても同じキーになります🔁✨
+
+```mermaid
+graph TD
+    SagaID["SagaID (order-123)"]
+    StepName["StepName (ChargePayment)"]
+    Key["冪等キー: order-123:ChargePayment"]
+    
+    SagaID -- 結合 --> Key
+    StepName -- 結合 --> Key
+```
 
 ### B. 外部API（決済など）に投げるキー：**UUID推奨**🪪✨
 
@@ -130,6 +152,16 @@ type IdempotencyRecord = {
 
 だから、**“IN_PROGRESS” を先に保存して席取り**するのが強いです💪✨
 （そして最後に SUCCEEDED/FAILED へ更新）
+
+```mermaid
+flowchart TD
+    Start[リクエスト開始] --> Check{DBにキーはある?}
+    Check -- No --> Insert[IN_PROGRESS で挿入 席取り]
+    Insert --> Do[実際の処理へ]
+    Check -- Yes --> Status{状態は?}
+    Status -- IN_PROGRESS --> Wait[他の完了を待つ/エラー]
+    Status -- SUCCEEDED --> Return[保存された結果を返す]
+```
 
 ---
 
@@ -212,6 +244,20 @@ async function runStepIdempotent<T>(
     throw e;
   }
 }
+
+```mermaid
+sequenceDiagram
+    participant App as アプリ
+    participant Store as IdempotencyStore
+    participant Step as ステップ本体
+
+    App->>Store: getOrStart(key)
+    Store-->>App: { status: 'PENDING' }
+    App->>Step: 実際の処理実行
+    Step-->>App: 結果 (Result)
+    App->>Store: markSucceeded(key, Result)
+    App-->>App: 完了
+```
 ```
 
 ✅ これで「同じキーなら結果が固定」になります✨

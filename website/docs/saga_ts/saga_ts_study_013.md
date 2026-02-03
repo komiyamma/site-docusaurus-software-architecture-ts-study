@@ -21,6 +21,16 @@ Sagaは、だいたいこの考え方でできています👇
 
 ![Saga Step Pair](./picture/saga_ts_study_013_types.png)
 
+```mermaid
+graph LR
+    subgraph Pair ["ステップと補償のペア 🧱"]
+        S[順方向 Step] <--> C[逆方向 Comp]
+    end
+    S -- "成功時" --> Next[次のStepへ]
+    S -- "失敗時" --> C
+    C -- "完了" --> Prev[前のStepの補償へ]
+```
+
 ---
 
 ## 13.3 設計の3ルール（これ守ると一気に事故が減る）🚧🛡️
@@ -61,6 +71,13 @@ export type Result<T, E> = Ok<T> | Err<E>;
 
 export const ok = <T>(value: T): Ok<T> => ({ ok: true, value });
 export const err = <E>(error: E): Err<E> => ({ ok: false, error });
+```
+
+```mermaid
+flowchart TD
+    Run[ステップ実行] --> Res{結果は?}
+    Res -- "Ok(value)" --> Save[成果を記録] --> Next[次へ]
+    Res -- "Err(error)" --> Fail[失敗処理] --> Comp[補償フェーズへ]
 ```
 
 ---
@@ -109,6 +126,17 @@ export type OrderSagaContext = {
   orderId: string;
   memo: OrderSagaMemo;
 };
+
+```mermaid
+graph LR
+    subgraph Storage ["SagaContext / Memo 📌"]
+        M1[inventory: reservationId]
+        M2[payment: chargeId]
+        M3[shipping: shipmentId]
+    end
+    Execute[Step.execute] -- "成果を保存" --> Storage
+    Storage -- "IDを渡す" --> Compensate[Step.compensate]
+```
 ```
 
 ---
@@ -129,6 +157,15 @@ export type SagaStep<Ctx, Out> = {
   // 補償：戻すこと 🧯
   compensate: (ctx: Ctx, out: Out) => Promise<Result<void, CompensationError>>;
 };
+
+```mermaid
+classDiagram
+    class SagaStep~Ctx, Out~ {
+        +string name
+        +execute(ctx) Result~Out, StepError~
+        +compensate(ctx, out) Result~void, CompError~
+    }
+```
 ```
 
 ポイントはここ👇

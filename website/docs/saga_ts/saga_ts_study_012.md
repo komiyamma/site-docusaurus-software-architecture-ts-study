@@ -34,6 +34,18 @@ MicrosoftのAzure Architecture Centerでも、オーケストレーターが**�
 
 ![Orchestrator Role](./picture/saga_ts_study_012_orchestrator.png)
 
+```mermaid
+graph TD
+    Orch[Orchestrator 🎻]
+    O[Order Srv] -- Request --> Orch
+    Orch -- "1. 決済せよ" --> P[Payment Srv]
+    P -- "2. OK/NG" --> Orch
+    Orch -- "3. 在庫確保せよ" --> I[Inventory Srv]
+    I -- "4. OK/NG" --> Orch
+    
+    style Orch fill:#fff9c4,stroke:#fbc02d
+```
+
 ---
 
 # 3) 司令塔が判断すること（超重要）🧠✅
@@ -54,6 +66,18 @@ MicrosoftのAzure Architecture Centerでも、オーケストレーターが**�
 * いま状態は何？（実行中／補償中／完了…）
 
 AzureのSagaパターン説明でも、オーケストレーターが状態を保存して判断するとされてるよ🗂️ ([Microsoft Learn][1])
+
+```mermaid
+graph LR
+    Orch[Orchestrator]
+    DB[(Saga Log DB)]
+    Command[Command]
+    
+    Orch -- "1. 状態保存" --> DB
+    Orch -- "2. 送信" --> Command
+    Command -- "3. 完了通知" --> Orch
+    Orch -- "4. 次の状態保存" --> DB
+```
 
 ## 3.3 失敗時に「補償」を発動する🧯🔁
 
@@ -78,6 +102,20 @@ AzureのSagaパターン説明でも、オーケストレーターが状態を�
 * 次のStepの選択
 * 状態の記録
 * 補償の開始と順番
+
+```mermaid
+flowchart TD
+    Start([開始]) --> Step1[Step 1: 決済]
+    Step1 -- 成功 --> Step2[Step 2: 在庫]
+    Step2 -- 成功 --> Step3[Step 3: 発送]
+    Step3 -- 成功 --> End([完了])
+    
+    Step1 -- 失敗 --> Comp1[Comp 1: 返金]
+    Step2 -- 失敗 --> Comp2[Comp 2: 在庫戻し]
+    Comp2 --> Comp1
+    Step3 -- 失敗 --> Comp3[Comp 3: 発送停止]
+    Comp3 --> Comp2
+```
 
 ---
 
@@ -187,6 +225,22 @@ async function runSaga(sagaId: string, steps: Step[]): Promise<SagaLog> {
     return log;
   }
 }
+
+```mermaid
+sequenceDiagram
+    participant Orch as Orchestrator
+    participant Executed as [Log] executedSteps
+    participant Service as 各サービス
+
+    Note over Orch: 失敗発生！❌
+    Orch->>Executed: 履歴をロード (reverse)
+    loop 逆順に補償
+        Executed-->>Orch: 次の補償対象 (Step X)
+        Orch->>Service: compensate(Step X)
+        Service-->>Orch: OK
+    end
+    Note over Orch: 補償完了 (COMPENSATED)
+```
 ```
 
 ## ここで押さえるポイント✅✨

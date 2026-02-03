@@ -49,6 +49,19 @@
 > relay が落ちると「publish したのに記録前に死んだ」みたいなことがあり、**二重publish**が起こり得るよ⚠️
 > だから次の Inbox が超重要！([microservices.io][2])
 
+```mermaid
+graph TD
+    subgraph DB [Database]
+        Business[業務データ更新]
+        OutboxTable[Outboxテーブル書込]
+    end
+    TX[Transaction] --- Business
+    TX --- OutboxTable
+    
+    OutboxTable -- "Polling / CDC" --> Relay[Relayプロセス]
+    Relay -- "Publish" --> Broker((Message Broker))
+```
+
 ---
 
 # 23.3 Inboxパターン：重複処理を止める最短ルート📥🛡️
@@ -70,6 +83,22 @@ Inbox では、受信したメッセージの **messageId / eventId をDBに記�
 > （同じIDは2回入らない → “二重実行を物理的に防ぐ”）
 
 ![Outbox/Inbox Pattern](./picture/saga_ts_study_023_outbox.png)
+
+```mermaid
+sequenceDiagram
+    participant P as Publisher (Outbox)
+    participant B as Broker
+    participant S as Subscriber (Inbox)
+    participant DB as Subscriber DB
+
+    P->>B: 1. イベント送信
+    B->>S: 2. イベント配信
+    Note over S: 二重配信の可能性😈
+    S->>DB: 3. InboxにID挿入 (Unique)
+    Note over DB: 重複ならエラー/スキップ 🛑
+    DB-->>S: 4. OK (初見)
+    S->>S: 5. 業務処理実行 ✅
+```
 
 ---
 
@@ -151,6 +180,15 @@ Saga を運用するとき、エラーはだいたい次の2軸で考えると�
 * 技術エラー（リトライ可） → **バックオフ付きリトライ**🔁📉
 * 技術エラー（リトライ不可） → **失敗確定 → 補償 or 手動対応**🛑🧯
 
+```mermaid
+flowchart TD
+    E[エラー発生] --> Q1{技術エラー?}
+    Q1 -- No --> Biz[業務エラー: 補償/失敗]
+    Q1 -- Yes --> Q2{リトライ可能?}
+    Q2 -- Yes --> R[バックオフリトライ]
+    Q2 -- No --> F[補償/手動対応]
+```
+
 ---
 
 # 23.8 観測性：相関IDがないと、調査が地獄👻🔎
@@ -173,6 +211,24 @@ Saga を運用するとき、エラーはだいたい次の2軸で考えると�
 OpenTelemetry を使うと、HTTPやバックグラウンド処理を **trace（追跡）**でつなげられます。Node.js/JS の入門も公式にまとまってるよ📚✨ ([OpenTelemetry][4])
 
 特に重要なのが **trace context（traceparent など）**をリクエストやメッセージに載せて渡すこと。これで「このログ、どのリクエスト由来？」が追えるようになります🔗🧠 ([OpenTelemetry][5])
+
+```mermaid
+graph LR
+    subgraph Service_A ["Service A"]
+        L1[Log: 123]
+    end
+    subgraph Event ["Event Envelope"]
+        CID[CorrelationId: 123]
+    end
+    subgraph Service_B ["Service B"]
+        L2[Log: 123]
+    end
+    
+    L1 --- CID
+    CID --- L2
+    Footer["IDが共通だから横断調査ができる🔎"]
+    style Footer stroke-dasharray: 5 5
+```
 
 ---
 

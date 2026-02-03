@@ -43,6 +43,22 @@ Microsoftの説明でも、Sagaは「ローカルトランザクションの並�
 
 だからSagaは、**分散で現実的に運用しやすい「進め方」**として使われることが多いよ🧠✨ ([Microsoft Learn][1])
 
+```mermaid
+graph LR
+  subgraph DB["DBトランザクション (ACID)"]
+    A[開始] --> B[処理1]
+    B --> C[処理2]
+    C --> D{失敗?}
+    D -- Yes --> E[ロールバック<br/>なかったことに✨]
+    D -- No --> F[コミット<br/>全部確定✅]
+  end
+  subgraph Saga["Sagaパターン"]
+    S1[Step 1] -- 成功 --> S2[Step 2]
+    S2 -- 失敗💥 --> C1[補償 1<br/>帳尻を合わせる🧯]
+    S1 -.-> C1
+  end
+```
+
 ---
 
 ## ストーリーで理解：注文フロー🛒💳📦🚚
@@ -115,6 +131,29 @@ MicrosoftのSaga説明でも「失敗したら補償トランザクションで�
 
 * 先にやったことほど後で戻す（スタックみたいなイメージ）📚
 
+```mermaid
+flowchart TD
+    subgraph Steps ["順方向 (Step)"]
+        S1["1. 注文作成"] --> S2["2. 決済"]
+        S2 --> S3["3. 在庫確保"]
+        S3 --> S4["4. 発送手配"]
+    end
+    subgraph Comp ["補償 (Compensation)"]
+        C2["返金"]
+        C3["在庫戻し"]
+        C4["発送キャンセル"]
+    end
+
+    S1 --- C1["(なし)"]
+    S2 -.-> C2
+    S3 -.-> C3
+    S4 -.-> C4
+
+    S3 -- 失敗💥 --> C2
+    C2 --> C1
+    style S3 fill:#f96,stroke:#333
+```
+
 ---
 
 ## ちょい見せ：超ミニSagaの形（雰囲気だけ）🧪✨
@@ -152,6 +191,19 @@ async function runSaga(steps: Step[]) {
 
 * **成功した分だけ**覚えておいて🧠
 * 失敗したら**逆順で補償**する🧯🔁
+
+```mermaid
+flowchart TD
+    Start([開始]) --> Loop{全Step実行?}
+    Loop -- 未完了 --> Exec[step.run]
+    Exec --> Success{成功?}
+    Success -- Yes --> Log[doneに保存]
+    Log --> Loop
+    Success -- No💥 --> Reverse[doneを逆順にする]
+    Reverse --> Comp[step.compensate]
+    Comp --> End([終了])
+    Loop -- 完了 --> End
+```
 
 ---
 

@@ -59,6 +59,21 @@ MicrosoftのSaga解説では、これを **Pivot（ピボット）**として説
 
 ![Pivot Point](./picture/saga_ts_study_020_pivot.png)
 
+```mermaid
+graph LR
+    subgraph Phase1 ["補償可能フェーズ (Compensable)"]
+        S1[Step 1] --> S2[Step 2]
+    end
+    S2 --> Pivot{Pivot Point 📍}
+    subgraph Phase2 ["完走前提フェーズ (Retryable)"]
+        Pivot -- "ここを越えたら戻れない" --> S3[Step 3]
+        S3 --> S4[Step 4]
+    end
+    
+    S1 -.-> C1[Comp 1 🧯]
+    S2 -.-> C2[Comp 2 🧯]
+```
+
 ---
 
 # 4. 戻せないならどうする？補償戦略4つ🧠🧯✨
@@ -100,6 +115,23 @@ TCC（Try-Confirm-Cancel）は、リソースをまず**予約状態（Try）**�
 
 これ、逃げじゃなくて**現実的に最強**なこと多いよ😌✨
 
+```mermaid
+mindmap
+  root((補償の戦略))
+    逆操作 (Reverse)
+      在庫解放
+      予約取消
+    訂正 (Correct)
+      返金
+      訂正メール
+    予約-確定 (TCC型)
+      仮押さえ
+      本確定
+    人手対応 (Escalate)
+      サポート通知
+      要確認ステータス
+```
+
 ---
 
 # 5. 事故らない補償設計のチェックリスト✅🧯
@@ -139,6 +171,18 @@ TCC（Try-Confirm-Cancel）は、リソースをまず**予約状態（Try）**�
 
 「不可逆を遅らせる」だけで、補償がめちゃラクになるよ〜！🥹✨ ([Microsoft Learn][3])
 
+```mermaid
+flowchart LR
+    subgraph Srv ["サービス境界"]
+        T[Try: 予約/取り置き]
+        C[Confirm: 本確定]
+        Can[Cancel: 取消]
+    end
+    Orch[Orchestrator] -- "1. 席取り依頼" --> T
+    Orch -- "2. 全員成功なら" --> C
+    Orch -- "2. 誰か失敗なら" --> Can
+```
+
 ---
 
 # 7. TypeScriptでの表現：補償を「3タイプ」に分けて設計する🧠🛠️
@@ -171,6 +215,14 @@ type SagaStep = {
   // Escalate の時に使う（例：チケット起票）
   escalate?: (ctx: Record<string, unknown>) => Promise<void>;
 };
+
+```mermaid
+graph TD
+    Result[処理失敗] --> Check{戦略は?}
+    Check -- Reverse --> R[逆操作実行]
+    Check -- Correct --> Cr[訂正処理実行]
+    Check -- Escalate --> E[人手対応エスカレーション]
+```
 ```
 
 ポイントはこれ👇

@@ -382,6 +382,25 @@ main().catch((e) => {
 npm run dev
 ```
 
+```mermaid
+sequenceDiagram
+    participant Main
+    participant Runner as SagaRunner
+    participant Step as Steps
+    participant Store as LogStore
+
+    Main->>Runner: execute(sagaId, ctx)
+    Runner->>Store: init()
+    loop Steps
+        Runner->>Store: save(StepStarted)
+        Runner->>Step: run(ctx)
+        Step-->>Runner: OK
+        Runner->>Store: save(StepSucceeded)
+    end
+    Runner->>Store: save(SagaSucceeded)
+    Runner-->>Main: Log
+```
+
 ---
 
 ## 14.10 ログの“見どころ”👀📌

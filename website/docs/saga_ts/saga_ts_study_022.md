@@ -28,6 +28,15 @@ Google Cloudのガイドも「一時的エラーだけをリトライしてね�
 
 こういうのは、待っても直らないから「原因を直す」方向に進むのが正解だよ🛠️✨([Google Cloud Documentation][2])
 
+```mermaid
+flowchart TD
+    Err[エラー発生] --> Type{種類は?}
+    Type -- "一時的 (Transient)" --> Retry[リトライ対象 ✅]
+    Type -- "永続的 (Permanent)" --> Stop[リトライしない ❌]
+    Retry -- "例" --> T1[503 / 429 / TO]
+    Stop -- "例" --> S1[400 / 401 / 404]
+```
+
 ---
 
 ## 3) リトライの“三点セット”🎁✨（タイムアウト＋バックオフ＋ジッター）
@@ -50,6 +59,15 @@ Azureのガイドでも、タイムアウトとリトライ間隔と回数を合
 だから“ちょいランダム”を混ぜて、再試行タイミングをバラけさせるのがコツだよ🎯([Amazon Web Services, Inc.][4])
 
 ![Backoff & Jitter](./picture/saga_ts_study_022_backoff.png)
+
+```mermaid
+graph LR
+    subgraph Backoff ["指数バックオフ + ジッター 📈🎲"]
+        B1[1回目: 200ms] --> B2[2回目: 400ms ± α]
+        B2 --> B3[3回目: 800ms ± α]
+        B3 --> B4[...上限まで]
+    end
+```
 
 ---
 
@@ -107,6 +125,18 @@ AWSは「レイヤーごとに勝手にリトライが増えると、負荷が�
 
 AWSの解説では、ジッターの入れ方として **Full Jitter** みたいなバリエーションが紹介されてるよ✨([Amazon Web Services, Inc.][4])
 
+```mermaid
+graph TD
+    subgraph Constant ["ジッターなし (連打) 💥"]
+        direction LR
+        R1[複数人が] -- 同時に --> R2[再試行]
+    end
+    subgraph Jitter ["ジッターあり (分散) ✅"]
+        direction LR
+        J1[複数人が] -- バラバラに --> J2[再試行]
+    end
+```
+
 イメージ（ざっくり）👇
 
 * 指数バックオフで上限まで増やす（capあり）📈🧢
@@ -122,6 +152,15 @@ HTTPを想定するなら、とりあえずこの方針が安全寄り👇
 
 * 408 / 429 / 5xx → リトライ候補✅
 * それ以外 → 原因修正・補償・失敗確定へ❌([Google Cloud Documentation][2])
+
+```mermaid
+graph TD
+    subgraph Log ["Sagaログ & 試行履歴 📒"]
+        A[attemptCount: 3]
+        B[nextRetryAt: 14:00:05]
+        C[lastError: Timeout]
+    end
+```
 
 ### 7-2) 実装例（指数バックオフ＋Full Jitter）🔁🎲
 

@@ -59,6 +59,18 @@
 
 ✅ 合言葉：**Controllerは薄く！**（ビジネス判断を置かない） ([GitHub][2])
 
+```mermaid
+graph TD
+    Client[クライアント] -- Request --> Controller[Controller]
+    Controller -- calls --> Service[Service]
+    Service -- calls --> Repository[Repository]
+    Repository -- SQL --> DB[(DB)]
+    
+    style Controller fill:#e1f5fe,stroke:#01579b
+    style Service fill:#fff9c4,stroke:#fbc02d
+    style Repository fill:#e8f5e9,stroke:#2e7d32
+```
+
 ---
 
 ## Service（手順・判断の中心）🧠🧑‍🍳
@@ -106,6 +118,15 @@ Sagaって「複数ステップの手順＋失敗時の戻し」だから、放�
   * “実行済み”などの記録
 
 「層を分けて、Web層が勝手に下層へ侵入しない」みたいな設計指針は、Nodeのベストプラクティスでも強調されがちだよ🔒 ([GitHub][2])
+
+```mermaid
+graph LR
+    subgraph Saga_Layers ["Sagaの責務と層の対応"]
+        BC[POST /orders] --> Layer1[Controller]
+        Step[手順の実行/補償判断] --> Layer2[Service / Orchestrator]
+        State[進捗・状態の保存] --> Layer3[Repository]
+    end
+```
 
 ---
 
@@ -218,6 +239,25 @@ export class OrderRepository {
     return row;
   }
 }
+
+```mermaid
+sequenceDiagram
+    participant User as クライアント
+    participant C as Controller
+    participant S as Service
+    participant R as Repository
+    participant DB as データベース
+
+    User->>C: POST /orders (reqBody)
+    C->>S: startOrderSaga(input)
+    S->>R: createDraftOrder(userId, items)
+    R->>DB: INSERT order
+    DB-->>R: OK
+    R-->>S: orderRow
+    Note over S: Saga開始 (Orchestrator呼び出し)
+    S-->>C: { orderId, sagaId }
+    C-->>User: 201 Created
+```
 ```
 
 ---

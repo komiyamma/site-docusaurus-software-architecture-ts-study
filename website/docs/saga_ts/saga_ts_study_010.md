@@ -46,6 +46,18 @@ Sagaは「複数サービスの処理を、失敗しても壊れないように�
 3. Inventoryサービス：`PaymentCompleted` を購読→ 在庫確保 → `InventoryReserved` 発行📦
 4. Shippingサービス：`InventoryReserved` を購読→ 発送準備 → `ShippingArranged` 発行🚚
 
+```mermaid
+flowchart LR
+    O[Order] -- OrderCreated --> P[Payment]
+    P -- PaymentCompleted --> I[Inventory]
+    I -- InventoryReserved --> S[Shipping]
+    S -- ShippingArranged --> Done((完了))
+    style O fill:#e1f5fe
+    style P fill:#e1f5fe
+    style I fill:#e1f5fe
+    style S fill:#e1f5fe
+```
+
 ### 😵 失敗したら？
 
 * どこかが失敗イベント（例：`PaymentFailed`）を出して
@@ -80,6 +92,18 @@ Sagaは「複数サービスの処理を、失敗しても壊れないように�
 3. Payment → Orchestratorへ「成功/失敗」を返信📩
 4. 成功なら Orchestrator → Inventoryへ「在庫確保してね」📦
 5. …というふうに司令塔が順番に進める🎻
+
+```mermaid
+graph TD
+    Orch[Orchestrator 🎻]
+    O[Order Srv] -- Request --> Orch
+    Orch -- "1. 決済せよ" --> P[Payment Srv]
+    P -- "2. OK/NG" --> Orch
+    Orch -- "3. 在庫確保せよ" --> I[Inventory Srv]
+    I -- "4. OK/NG" --> Orch
+    
+    style Orch fill:#fff9c4,stroke:#fbc02d
+```
 
 ### 😵 失敗したら？
 

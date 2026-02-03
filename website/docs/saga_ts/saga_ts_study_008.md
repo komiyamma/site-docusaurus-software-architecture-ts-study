@@ -17,6 +17,17 @@ Sagaは、複数サービスにまたがる処理を **小さな取引（ロー�
 
 ![Saga Journey](./picture/saga_ts_study_008_journey.png)
 
+```mermaid
+stateDiagram-v2
+    [*] --> RUNNING: 開始
+    RUNNING --> COMPLETED: 全ステップ成功 ✅
+    RUNNING --> COMPENSATING: 途中失敗 ❌💥
+    COMPENSATING --> ROLLED_BACK: 補償完了 🧯🔁
+    COMPENSATING --> NEEDS_MANUAL: 補償失敗 / 要確認 🧑‍💼
+    COMPLETED --> [*]
+    ROLLED_BACK --> [*]
+```
+
 ---
 
 # 2. ストーリーで理解しよ🛒💳📦（1注文＝1つのSagaインスタンス）
@@ -64,6 +75,16 @@ Sagaの状態って、難しく聞こえるけど、ざっくりこの3つがわ
 
 オーケストレーション型だと、オーケストレーターがこの状態を **保存して解釈して進行** するよ🎻🧠 ([Microsoft Learn][2])
 
+```mermaid
+graph TD
+    subgraph SagaInstance ["Sagaインスタンス (1件の注文)"]
+        direction LR
+        State["【状態ログ】<br/>ID: saga_123<br/>Status: RUNNING<br/>Done: [CreateOrder, Payment]"]
+        NextStep["次やるべきこと:<br/>ReserveInventory"]
+        State --> NextStep
+    end
+```
+
 ---
 
 # 4. 状態がないと、どんな事故が起きる？😱💥（超重要）
@@ -83,6 +104,15 @@ Sagaの状態って、難しく聞こえるけど、ざっくりこの3つがわ
 
 補償もステップの一種。
 補償側の進捗も状態で持たないと、戻しが中途半端で詰む…🥶
+
+```mermaid
+graph TD
+    subgraph Danger ["状態がない場合のリスク 💀"]
+        A[アプリ停止/再起動] -- "再実行" --> B{どこまでやった?}
+        B -- "最初からやる" --> C["二重決済!! 💳💳"]
+        B -- "飛ばして次やる" --> D["未決済なのに在庫確保!! 📦💥"]
+    end
+```
 
 ---
 

@@ -44,6 +44,17 @@ Sagaは、ざっくり言うとこういう発想です👇
 
 Azureの「Compensating Transaction」やSagaの説明でも、失敗回復は“補償トランザクション”で行うって整理されてます。([Microsoft Learn][2])
 
+```mermaid
+graph LR
+    subgraph Pairs ["ステップと補償はペア 🧩"]
+        direction TB
+        S1[Step 1] <--> C1[Comp 1]
+        S2[Step 2] <--> C2[Comp 2]
+        S3[Step 3] <--> C3[Comp 3]
+    end
+```
+
+---
 ![Step/Compensation Pairs](./picture/saga_ts_study_005_step_pair.png)
 
 ---
@@ -59,9 +70,18 @@ Step1 → Step2 → Step3 → 完了🎉
 ## ❌ 失敗パス（補償は逆向きが基本）
 
 ```
-Step1 → Step2 → Step3(失敗💥)
-          ↑       ↓
       Comp2 ← Comp1（逆順で戻す🔁）
+```
+
+```mermaid
+graph TD
+    Start([開始]) --> S1[Step 1: 成功 ✅]
+    S1 --> S2[Step 2: 成功 ✅]
+    S2 --> S3[Step 3: 失敗 ❌💥]
+    S3 -- 補償開始 --> C2[Comp 2: 実行 🧯]
+    C2 --> C1[Comp 1: 実行 🧯]
+    C1 --> End([終了: ロールバック完了])
+    style S3 fill:#f96,stroke:#333
 ```
 
 「失敗したら、すでに終わった分の変更を補償で取り消す」っていう説明はAWSのSagaパターンでも同じです。([AWS ドキュメント][3])
@@ -172,6 +192,21 @@ export type SagaStep = {
   // 補償（戻す / 打ち消す）
   compensate: (ctx: SagaContext) => Promise<void>;
 };
+
+```mermaid
+classDiagram
+    class SagaContext {
+        +string sagaId
+        +string orderId
+        +string[] logs
+    }
+    class SagaStep {
+        +string name
+        +execute(ctx)
+        +compensate(ctx)
+    }
+    SagaStep --> SagaContext : uses
+```
 ```
 
 ## “実行→失敗したら逆順に補償”の超ミニ実装🔁🧯

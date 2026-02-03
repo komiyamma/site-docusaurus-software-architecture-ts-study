@@ -30,6 +30,15 @@
 
 ![Reverse Compensation](./picture/saga_ts_study_015_reverse_flow.png)
 
+```mermaid
+flowchart TD
+    S1[Step 1: 成功 ✅] --> S2[Step 2: 成功 ✅]
+    S2 --> S3[Step 3: 失敗 ❌💥]
+    S3 -- 補償開始 --> C2[Comp 2: 戻す 🧯]
+    C2 --> C1[Comp 1: 戻す 🧯]
+    C1 --> End([終了: 失敗状態で一貫性確保])
+```
+
 ---
 
 # 今日使う“最新より”の小ネタ🧩🆕
@@ -49,6 +58,22 @@
 * **バグ**：想定外の例外（泣ける）😭
 
 この章では、わざとスイッチで発生させるよ🎛️✨
+
+```mermaid
+mindmap
+  root((失敗の種類))
+    業務エラー (Business)
+      決済NG
+      在庫不足
+      バリデーション
+    技術エラー (Tech)
+      タイムアウト
+      ネットワーク遮断
+      DBダウン
+    バグ (Crash)
+      想定外のNull
+      ロジックミス
+```
 
 ---
 
@@ -179,6 +204,26 @@ async function runSaga(sagaId: string, steps: SagaStep[], log: SagaLog): Promise
     throw new SagaFailedError("Saga failed; compensation executed.", e, log.compensationErrors);
   }
 }
+
+```mermaid
+sequenceDiagram
+    participant Orch as Runner
+    participant S1 as Step 1
+    participant S2 as Step 2
+    participant S3 as Step 3
+
+    Orch->>S1: run()
+    S1-->>Orch: OK
+    Orch->>S2: run()
+    S2-->>Orch: OK
+    Orch->>S3: run()
+    S3-->>Orch: Error ❌
+    Note over Orch: 補償開始 (逆順)
+    Orch->>S2: compensate()
+    S2-->>Orch: OK
+    Orch->>S1: compensate()
+    S1-->>Orch: OK
+```
 
 /* =========================================
    ここから “注文Saga” を組み立てる🛒💳📦
@@ -340,6 +385,14 @@ npx tsx src/ch15_failure_demo.ts
 
 `case-3` では返金（補償）をわざと失敗させてるけど、そこで止めずに次の補償へ進むよ⚠️➡️🧯
 （現実でも「返金できなかった！でも注文キャンセルはする！」みたいな判断が必要になること多い😵‍💫）
+
+```mermaid
+graph TD
+    subgraph Resilient ["補償も止まらない設計 ✅"]
+        C2[Comp 2: 返金] -- "失敗しても" --> C1[Comp 1: 注文消去]
+        C1 --> Note[人手介入へ 🧑‍💼]
+    end
+```
 
 ---
 

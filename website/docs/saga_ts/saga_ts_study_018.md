@@ -69,8 +69,19 @@ Sagaの状態は、だいたい **“戻れる／戻れない”の境目**が�
 * **イベント名は“過去形の事実”**に寄せる（Succeeded/Failed/Reserved みたいに）📝
 * 「コマンド（やって！）」と「イベント（起きた！）」をごっちゃにしない🙅‍♀️
 
-  * コマンド：ChargePayment（やって）
   * イベント：PaymentSucceeded（起きた）
+
+```mermaid
+graph LR
+    subgraph Event ["イベント (Fact) 📣"]
+        E[PaymentSucceeded]
+    end
+    subgraph Command ["コマンド (Request) 📩"]
+        C[ChargePayment]
+    end
+    C -- "命令" --> Target[サービス]
+    Target -- "結果" --> E
+```
 
 ---
 
@@ -129,10 +140,35 @@ Sagaの状態は、だいたい **“戻れる／戻れない”の境目**が�
 
 ![State Machine](./picture/saga_ts_study_018_state_machine.png)
 
+```mermaid
+stateDiagram-v2
+    [*] --> NEW
+    NEW --> PAYMENT_PENDING: Start
+    PAYMENT_PENDING --> INVENTORY_PENDING: PaymentSucceeded
+    PAYMENT_PENDING --> COMPENSATING: PaymentFailed / Timeout
+    INVENTORY_PENDING --> SHIPPING_PENDING: InventoryReserved
+    INVENTORY_PENDING --> COMPENSATING: InventoryFailed / Timeout
+    SHIPPING_PENDING --> COMPLETED: ShippingSucceeded
+    SHIPPING_PENDING --> COMPENSATING: ShippingFailed / Timeout
+    COMPENSATING --> CANCELED: CompensationDone
+    COMPENSATING --> FAILED: CompensationFailed
+    COMPLETED --> [*]
+    CANCELED --> [*]
+    FAILED --> [*]
+```
+
 ここで大事なのが👇
 
 * COMPLETED / CANCELED / FAILED は **終端状態**（基本、そこから先に進ませない）🏁
 * “禁止遷移”を明確にすることで、「二重決済」みたいな地獄を減らせる👻🔁
+
+```mermaid
+graph TD
+    NEW -- ShippingSucceeded --> Forbidden((禁止!!))
+    style Forbidden fill:#f66,stroke:#333
+    COMPLETED -- Start --> Forbidden2((禁止!!))
+    style Forbidden2 fill:#f66,stroke:#333
+```
 
 ---
 
@@ -237,6 +273,16 @@ export function transition(current: SagaStatus, event: SagaEventType): SagaStatu
   }
   return next;
 }
+
+```mermaid
+graph LR
+    subgraph Map ["遷移コードのイメージ"]
+        direction LR
+        S1[NEW] -- Start --> S2[PAY_PEND]
+        S2 -- Success --> S3[INV_PEND]
+        S2 -- Fail --> S_COMP[COMPENSATING]
+    end
+```
 ```
 
 試しに動かす（ダメ遷移をわざと起こす）👇

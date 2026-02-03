@@ -25,6 +25,23 @@ Sagaログに入れる情報は、大きく3カテゴリに分けるとスッキ
 
 ![Saga Log Structure](./picture/saga_ts_study_009_log_structure.png)
 
+```mermaid
+mindmap
+  root((Sagaログ))
+    識別(ID系)
+      sagaId
+      businessId
+    進捗(状態)
+      status
+      steps (EXECUTED等)
+      nextStepIndex
+    運用(調査・安全)
+      lastError
+      version (楽観ロック)
+      correlationId
+      timestamps
+```
+
 ---
 
 ## 9-2. 最小で必須：Sagaログに入れる項目（これだけは外せない）✅📒
@@ -213,6 +230,17 @@ export type SagaLog = {
 * どこで失敗した？（AuthorizePayment）💥
 * 次にどうする？（補償に行く？リトライ？判断材料がある）🧠
 
+```mermaid
+sequenceDiagram
+    participant Orch as オーケストレーター
+    participant DB as SagaログDB
+    Note over Orch, DB: 1. クラッシュ😱 -> 2. 再起動🚀
+    Orch->>DB: 3. 実行中のSagaを検索 (status='RUNNING')
+    DB-->>Orch: saga_123 (Done: [Step1, Step2])
+    Note over Orch: 4. ログを解釈: Step2まで成功済み
+    Orch->>Orch: 5. Step3から再開する！
+```
+
 ---
 
 ## 9-7. DBに落とす最小設計（例：2テーブル構成）🗄️✨
@@ -258,6 +286,24 @@ CREATE TABLE saga_steps (
 
 -- Stepの冪等キーをユニークにして「二重実行」を抑止する案（DBにより方言あり）
 -- CREATE UNIQUE INDEX uq_step_idempotency_key ON saga_steps(idempotency_key);
+```
+
+```mermaid
+erDiagram
+    SAGAS ||--o{ SAGA_STEPS : contains
+    SAGAS {
+        string saga_id PK
+        string business_id
+        string status
+        int next_step_idx
+        int version
+    }
+    SAGA_STEPS {
+        string saga_id FK
+        string step_name PK
+        string status
+        string idempotency_key
+    }
 ```
 
 ---
