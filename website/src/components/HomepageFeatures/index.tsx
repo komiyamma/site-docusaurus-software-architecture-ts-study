@@ -356,6 +356,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/mod_mono_ts/mod_mono_ts_index',
   },
+  {
+    title: '冪等性 TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶ冪等性（Idempotency）。<br/>
+        二重実行防止、冪等キー設計、同時実行制御など、<br/>
+        堅牢なAPIと分散システムを構築する手法を学びます。<br/>
+      </>
+    ),
+    link: '/docs/idem_ts/idem_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

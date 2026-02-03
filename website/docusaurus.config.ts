@@ -107,6 +107,7 @@ const config: Config = {
           "docs/saga_ts",
           "docs/refactoring_ts",
           "docs/mod_mono_ts",
+          "docs/idem_ts",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -356,6 +357,12 @@ const config: Config = {
           sidebarId: 'modMonoTsSidebar',
           position: 'left',
           label: 'モジュラーモノリス TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'idemTsSidebar',
+          position: 'left',
+          label: '冪等性 TS版',
         },
 
         {
