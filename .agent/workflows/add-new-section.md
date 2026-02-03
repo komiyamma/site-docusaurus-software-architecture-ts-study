@@ -37,7 +37,17 @@ Define the sidebar structure for the new section.
 
 1.  Open `website/sidebars.ts`.
 2.  Add a new property to the `sidebars` object matching the `sidebarId` defined in step 1.
-3.  Use the `generateStudyIds` helper and map the chapters.
+3.  **Check File Count**: Count the number of `.md` files in the `website/docs/<topic_name>/` directory.
+    -   **If <= 60 files**: Use the simplified flat structure with `generateProjectSidebar`.
+    -   **If > 60 files**: Use the grouped structure with `generateStudyIds`.
+
+#### Option A: 60 Files or Less (Flat Structure)
+
+```typescript
+  <topicName>Sidebar: generateProjectSidebar('<topic_name>'),
+```
+
+#### Option B: More than 60 Files (Grouped Structure)
 
 ```typescript
   <topicName>Sidebar: [
@@ -46,7 +56,7 @@ Define the sidebar structure for the new section.
       id: '<topic_name>/<topic_name>_index',
     },
     ...[
-      { title: "第1章：...", start: 1, end: 1 },
+      { title: "Part 0：準備と導入", start: 1, end: 1 },
       // ... more chapters
     ].map(mod => ({
       type: 'category' as const,
