@@ -45,7 +45,7 @@ function generateProjectSidebar(dirName: string) {
 
 
 // Helper for DDD which uses manual grouping
-export function generateStudyIds(folder: string, prefix: string, start: number, end: number): string[] {
+function generateStudyIds(folder: string, prefix: string, start: number, end: number): string[] {
   const ids: string[] = [];
   for (let i = start; i <= end; i++) {
     const idStr = i.toString().padStart(3, '0');
@@ -58,7 +58,7 @@ export function generateStudyIds(folder: string, prefix: string, start: number, 
   return ids || []; // Ensure always an array
 }
 
-export function generateSidebarItems(folder: string, prefix: string, modules: { title?: string; start: number; end: number }[]) {
+function generateSidebarItems(folder: string, prefix: string, modules: { title?: string; start: number; end: number }[]) {
   return modules.flatMap(mod => {
     const items = generateStudyIds(folder, prefix, mod.start, mod.end);
 
