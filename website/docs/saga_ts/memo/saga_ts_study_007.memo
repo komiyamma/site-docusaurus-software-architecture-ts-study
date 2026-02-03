@@ -1,0 +1,1 @@
+システム設計において、Controller、Service、Repositoryといった責務の分離を行うことで、Sagaのロジックを整理し、保守性を高める手法を学びます。
