@@ -127,6 +127,8 @@ export type OrderSagaContext = {
   memo: OrderSagaMemo;
 };
 
+```
+
 ```mermaid
 graph LR
     subgraph Storage ["SagaContext / Memo 📌"]
@@ -137,7 +139,7 @@ graph LR
     Execute[Step.execute] -- "成果を保存" --> Storage
     Storage -- "IDを渡す" --> Compensate[Step.compensate]
 ```
-```
+
 
 ---
 
@@ -157,6 +159,8 @@ export type SagaStep<Ctx, Out> = {
   // 補償：戻すこと 🧯
   compensate: (ctx: Ctx, out: Out) => Promise<Result<void, CompensationError>>;
 };
+
+```
 
 ```mermaid
 classDiagram

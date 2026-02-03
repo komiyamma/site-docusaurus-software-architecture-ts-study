@@ -205,25 +205,6 @@ async function runSaga(sagaId: string, steps: SagaStep[], log: SagaLog): Promise
   }
 }
 
-```mermaid
-sequenceDiagram
-    participant Orch as Runner
-    participant S1 as Step 1
-    participant S2 as Step 2
-    participant S3 as Step 3
-
-    Orch->>S1: run()
-    S1-->>Orch: OK
-    Orch->>S2: run()
-    S2-->>Orch: OK
-    Orch->>S3: run()
-    S3-->>Orch: Error ❌
-    Note over Orch: 補償開始 (逆順)
-    Orch->>S2: compensate()
-    S2-->>Orch: OK
-    Orch->>S1: compensate()
-    S1-->>Orch: OK
-```
 
 /* =========================================
    ここから “注文Saga” を組み立てる🛒💳📦
@@ -354,6 +335,27 @@ main().catch((e) => {
   console.error("FATAL:", e);
 });
 ```
+
+```mermaid
+sequenceDiagram
+    participant Orch as Runner
+    participant S1 as Step 1
+    participant S2 as Step 2
+    participant S3 as Step 3
+
+    Orch->>S1: run()
+    S1-->>Orch: OK
+    Orch->>S2: run()
+    S2-->>Orch: OK
+    Orch->>S3: run()
+    S3-->>Orch: Error ❌
+    Note over Orch: 補償開始 (逆順)
+    Orch->>S2: compensate()
+    S2-->>Orch: OK
+    Orch->>S1: compensate()
+    S1-->>Orch: OK
+```
+
 
 ---
 

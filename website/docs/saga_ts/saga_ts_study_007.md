@@ -239,6 +239,7 @@ export class OrderRepository {
     return row;
   }
 }
+```
 
 ```mermaid
 sequenceDiagram
@@ -257,7 +258,6 @@ sequenceDiagram
     Note over S: Saga開始 (Orchestrator呼び出し)
     S-->>C: { orderId, sagaId }
     C-->>User: 201 Created
-```
 ```
 
 ---

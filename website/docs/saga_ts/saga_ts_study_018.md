@@ -274,6 +274,8 @@ export function transition(current: SagaStatus, event: SagaEventType): SagaStatu
   return next;
 }
 
+```
+
 ```mermaid
 graph LR
     subgraph Map ["遷移コードのイメージ"]
@@ -283,7 +285,7 @@ graph LR
         S2 -- Fail --> S_COMP[COMPENSATING]
     end
 ```
-```
+
 
 試しに動かす（ダメ遷移をわざと起こす）👇
 

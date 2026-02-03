@@ -215,6 +215,7 @@ type SagaStep = {
   // Escalate の時に使う（例：チケット起票）
   escalate?: (ctx: Record<string, unknown>) => Promise<void>;
 };
+```
 
 ```mermaid
 graph TD
@@ -223,7 +224,7 @@ graph TD
     Check -- Correct --> Cr[訂正処理実行]
     Check -- Escalate --> E[人手対応エスカレーション]
 ```
-```
+
 
 ポイントはこれ👇
 

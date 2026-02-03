@@ -149,6 +149,8 @@ export const transitions = {
   FAILED: [],
 } as const satisfies TransitionTable;
 
+```
+
 ```mermaid
 graph LR
     INIT -- PaymentSuccess --> PR[PAY_RESERVED]
@@ -157,7 +159,7 @@ graph LR
     PR -- StockFail --> CP[COMPENSATING]
     SR -- ShipFail --> CP
 ```
-```
+
 
 ## ✅ 「状態Sで許されるイベントtype」を型で取り出す
 

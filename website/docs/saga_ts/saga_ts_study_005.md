@@ -192,6 +192,7 @@ export type SagaStep = {
   // 補償（戻す / 打ち消す）
   compensate: (ctx: SagaContext) => Promise<void>;
 };
+```
 
 ```mermaid
 classDiagram
@@ -206,7 +207,6 @@ classDiagram
         +compensate(ctx)
     }
     SagaStep --> SagaContext : uses
-```
 ```
 
 ## “実行→失敗したら逆順に補償”の超ミニ実装🔁🧯

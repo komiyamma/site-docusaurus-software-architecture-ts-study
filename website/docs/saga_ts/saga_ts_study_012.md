@@ -225,6 +225,7 @@ async function runSaga(sagaId: string, steps: Step[]): Promise<SagaLog> {
     return log;
   }
 }
+```
 
 ```mermaid
 sequenceDiagram
@@ -241,7 +242,7 @@ sequenceDiagram
     end
     Note over Orch: 補償完了 (COMPENSATED)
 ```
-```
+
 
 ## ここで押さえるポイント✅✨
 

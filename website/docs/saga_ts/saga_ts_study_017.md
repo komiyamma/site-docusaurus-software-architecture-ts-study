@@ -245,6 +245,8 @@ async function runStepIdempotent<T>(
   }
 }
 
+```
+
 ```mermaid
 sequenceDiagram
     participant App as アプリ
@@ -257,7 +259,6 @@ sequenceDiagram
     Step-->>App: 結果 (Result)
     App->>Store: markSucceeded(key, Result)
     App-->>App: 完了
-```
 ```
 
 ✅ これで「同じキーなら結果が固定」になります✨
