@@ -28,6 +28,22 @@
 
 ![イベント通知 (Event Notification)](./picture/mod_mono_ts_study_030_event_propagation.png)
 
+```mermaid
+graph LR
+    subgraph ModA [Source Module]
+        AggA[Aggregate A]
+        Bus[Event Bus📣]
+        AggA -->|Publish| Bus
+    end
+    
+    subgraph ModB [Dest Module]
+        Handler[Handler]
+        Bus -.->|Subscribe| Handler
+    end
+    
+    style Bus fill:#fff9c4,stroke:#fbc02d
+```
+
 ## 1-1. ドメインイベントってなに？🤔✨
 
 **「ドメインで意味のある出来事が起きた」**を表すものです🎊
@@ -233,6 +249,29 @@ await createEvent.execute({ id: "ev_001", title: "学内LT会🎤" });
 # 2) ACLで外部連携を“汚さない”🧼🔌
 
 ![防腐層 (Anti-Corruption Layer)](./picture/mod_mono_ts_study_030_acl_filter.png)
+
+```mermaid
+graph TD
+    subgraph Core [My Domain💎]
+        Logic[Logic]
+        Interface["Port (My Interface)"]
+    end
+    
+    subgraph ACL [Anti-Corruption Layer🧼]
+        Adapter[Adapter / Translator]
+    end
+    
+    subgraph External [External System / Dirty API🧟]
+        ExtAPI[External API]
+    end
+    
+    Logic --> Interface
+    Adapter -- implements --> Interface
+    Adapter -->|Calls & Translates| ExtAPI
+    
+    style ACL fill:#e1bee7,stroke:#4a148c
+    style External fill:#cfd8dc
+```
 
 ## 2-1. ACLってなに？🤔
 

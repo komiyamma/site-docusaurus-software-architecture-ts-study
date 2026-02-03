@@ -39,6 +39,16 @@
 
 ![純粋なルール (Pure Rules)](./picture/mod_mono_ts_study_019_pure_domain.png)
 
+```mermaid
+graph TD
+    Input["不純な入力<br/>(-100円など)"] -->|Validation| Barrier{不変条件の壁🛡️}
+    Barrier -->|OK| Pure["純粋なDomain<br/>(正しい値のみ)💎"]
+    Barrier -->|NG| Error[エラー🔥]
+    
+    style Pure fill:#e1bee7,stroke:#4a148c
+    style Error fill:#ffcdd2,stroke:#c62828
+```
+
 不正な値（例：参加費-100円）を **作れない** ようにするのが最強💪✨
 「チェックし忘れ」がなくなるよ🥹💖
 
@@ -52,6 +62,24 @@
 # 3) Entity と Value Object の使い分け🧩🔍
 
 ![EntityとValue Object (Entity vs VO)](./picture/mod_mono_ts_study_019_entity_vo.png)
+
+```mermaid
+graph TD
+    subgraph Entity ["Entity (同一性)"]
+        E1["User ID:001<br/>Name: A"]
+        E2["User ID:001<br/>Name: B"]
+        E1 == Same ==o E2
+    end
+    
+    subgraph VO ["Value Object (等価性)"]
+        V1[Money: 1000JPY]
+        V2[Money: 1000JPY]
+        V1 == Equal ==o V2
+    end
+    
+    style Entity fill:#bbdefb,stroke:#0d47a1
+    style VO fill:#c8e6c9,stroke:#1b5e20
+```
 
 ## Entity（エンティティ）🧑‍🎓🏷️
 

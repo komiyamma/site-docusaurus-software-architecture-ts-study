@@ -99,6 +99,24 @@
 
 ![依存ルール (Dependency Rules)](./picture/mod_mono_ts_study_013_dependency_matrix.png)
 
+```mermaid
+graph TD
+    User[User]
+    Event[Event]
+    Ticket[Ticket]
+    Payment[Payment]
+    
+    Event --> User
+    Ticket --> Event
+    Ticket --> User
+    Payment --> Ticket
+    
+    style User fill:#e1f5fe,stroke:#0277bd
+    style Event fill:#e1f5fe,stroke:#0277bd
+    style Ticket fill:#fff3e0,stroke:#e65100
+    style Payment fill:#e8f5e9,stroke:#2e7d32
+```
+
 題材アプリ例として、モジュールをこう分けたとするね👇
 
 * `user`（ユーザー）👩‍🎓

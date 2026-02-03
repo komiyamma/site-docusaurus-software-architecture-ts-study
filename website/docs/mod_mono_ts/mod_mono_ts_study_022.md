@@ -41,6 +41,25 @@ Bの`index.ts`（公開API）**だけ**をAが使う。
 
 ![依存の反転 (Dependency Inversion)](./picture/mod_mono_ts_study_022_dependency_inversion.png)
 
+```mermaid
+graph TD
+    subgraph Before [Before: 直接依存]
+        App1[Application] -->|Direct call| Infra1["Infrastructure<br/>(Specific DB)"]
+    end
+    
+    subgraph After ["After: 依存の反転 (DIP)"]
+        App2[Application] -->|Uses| Port["Port<br/>(Interface)"]
+        Infra2[Infrastructure] -.->|Implements| Port
+    end
+    
+    style App1 fill:#ffccbc
+    style Infra1 fill:#ffe0b2
+    
+    style App2 fill:#c8e6c9
+    style Port fill:#fff9c4,stroke:#fbc02d
+    style Infra2 fill:#e1bee7
+```
+
 ポイントはこれ👇
 **Aが欲しい“形（契約）”をA側で定義する**
 → Bはその契約を満たす“実装者”になる

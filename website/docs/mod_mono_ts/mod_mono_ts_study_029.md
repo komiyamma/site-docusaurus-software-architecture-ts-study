@@ -12,6 +12,31 @@
 
 ![共通化の罠 (Trap of Shared)](./picture/mod_mono_ts_study_029_shared_trap.png)
 
+```mermaid
+graph TD
+    subgraph Trap [❌ Shared Utils Hell]
+        ModA[Module A]
+        ModB[Module B]
+        Shared["Shared Utils<br/>(Everything Mixed)🌀"]
+        
+        ModA --> Shared
+        ModB --> Shared
+    end
+    
+    subgraph Ideal [✅ Separated]
+        MA[Module A]
+        MB[Module B]
+        Tech["Foundation<br/>(Log, Date)🧰"]
+        
+        MA --> Tech
+        MB --> Tech
+        MA -- No Dep --> MB
+    end
+    
+    style Shared fill:#ffcdd2,stroke:#c62828
+    style Tech fill:#e1bee7,stroke:#4a148c
+```
+
 **症状あるある**👇
 
 * `shared/utils/` に何でも入ってる（日時・金額・割引・権限・注文…）📦🌀
@@ -35,6 +60,19 @@ DRY（重複を避けよう）は大事なんだけど、**「似てるから同
 ## 29.3 “共通化していいもの / ダメなもの” ざっくり判定表⚖️✨
 
 ![共通化の判断 (Sharing Criteria)](./picture/mod_mono_ts_study_029_shared_classification.png)
+
+```mermaid
+graph TD
+    Code[Common Code]
+    Check{Is it Domain Logic?💎}
+    
+    Code --> Check
+    Check -- Yes --> Split["❌ Do Not Share<br/>(Keep in Module/Duplicate)"]
+    Check -- No (Tech/Infra) --> Share[✅ Share in Foundation🧰]
+    
+    style Split fill:#ffcdd2,stroke:#c62828
+    style Share fill:#c8e6c9,stroke:#2e7d32
+```
 
 ### ✅ 共通化しやすい（技術・インフラ寄り）🧰
 

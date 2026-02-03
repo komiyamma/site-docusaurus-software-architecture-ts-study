@@ -46,6 +46,23 @@ DDDの整理でも、Application Layer は「プレゼン層とドメイン層�
 
 ![監督の役割 (Director's Role)](./picture/mod_mono_ts_study_018_director.png)
 
+```mermaid
+graph TD
+    subgraph Scene [ユースケースのシーン]
+        Director[監督 UseCase🎬]
+        Actor[俳優 Domain💎]
+        Stage[裏方/舞台 Infra🗄️]
+        
+        Director -->|指示: 演技して| Actor
+        Director -->|指示: セット用意| Stage
+        Stage -.->|保存| Actor
+    end
+    
+    style Director fill:#fff9c4,stroke:#fbc02d
+    style Actor fill:#f48fb1,stroke:#880e4f
+    style Stage fill:#cfd8dc,stroke:#546e7a
+```
+
 ユースケースは **監督** みたいな感じ！
 
 * 監督（UseCase）🎬：誰を呼ぶ？どの順で？を決める

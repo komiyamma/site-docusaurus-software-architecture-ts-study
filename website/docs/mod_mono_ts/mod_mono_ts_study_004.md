@@ -39,6 +39,17 @@ VS Codeの保存時自動処理は主に2つあります👇
 * **Format on Save**：フォーマッタ（Prettierなど）で整形🧽
 * **Code Actions on Save**：ESLintなどで修正アクション実行🔧
 
+```mermaid
+flowchart TD
+    Save[Ctrl+S 保存] -->|Format on Save| Prettier["Prettier<br/>(見た目を整える)"]
+    Prettier -->|Code Actions| ESLint["ESLint<br/>(ルール違反を直す)"]
+    ESLint --> Disk[ファイル書き込み]
+    
+    style Save fill:#ffcdd2,stroke:#c62828
+    style Prettier fill:#e1bee7,stroke:#6a1b9a
+    style ESLint fill:#c5cae9,stroke:#283593
+```
+
 `editor.codeActionsOnSave` は最近のVS Codeでは **`"explicit" / "always" / "never"`** で指定する流れが明確です（`explicit` は“手動保存したときだけ”） ([Visual Studio Code][3])
 
 ### ✅ オススメ設定（迷ったらこれでOK💯）

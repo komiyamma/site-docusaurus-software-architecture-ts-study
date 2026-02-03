@@ -27,6 +27,24 @@
 
 ![4つの層 (4 Layers)](./picture/mod_mono_ts_study_017_layers_stack.png)
 
+```mermaid
+graph TD
+    Pres["Presentation Layer<br/>(UI / Controller)"]
+    App["Application Layer<br/>(UseCase)"]
+    Dom["Domain Layer<br/>(Rule)"]
+    Infra["Infrastructure Layer<br/>(DB / API)"]
+    
+    Pres --> App
+    App --> Dom
+    Infra -.->|Implement| App
+    Infra -.->|Implement| Dom
+    
+    style Pres fill:#e3f2fd,stroke:#1565c0
+    style App fill:#fff3e0,stroke:#e65100
+    style Dom fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+    style Infra fill:#f3e5f5,stroke:#4a148c
+```
+
 この章ではこの4層でいくよ👇
 
 1. **Presentation（表示・入口）**🚪🧑‍💻

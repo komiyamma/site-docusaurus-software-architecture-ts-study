@@ -48,6 +48,26 @@ DDDの「集約」は、ふわっとした“まとまり”じゃなくて、
 
 ![集約の守護者 (Guardian of Aggregate)](./picture/mod_mono_ts_study_027_aggregate_guardian.png)
 
+```mermaid
+graph TD
+    User[User / UseCase]
+    
+    subgraph Aggregate ["Aggregate (Consistency Boundary)"]
+        Root[Aggregate Root 👑🛡️]
+        Child1[Child Entity]
+        Child2[Child Entity]
+        
+        Root --> Child1
+        Root --> Child2
+    end
+    
+    User -->|Update| Root
+    User -.->|❌ Direct Update| Child1
+    
+    style Root fill:#fff9c4,stroke:#fbc02d
+    style Aggregate fill:#e1bee7,stroke:#4a148c
+```
+
 * 集約には **ルートが1つ**いて、外からは基本ルートだけを入り口にする🚪
 * ルートが「集約内の整合性の守護者」になる🛡️
 * 集約内の更新は、**ルートのメソッド経由**でやるのが基本（子を直でいじらない） ([マイクロソフト ラーン][3])

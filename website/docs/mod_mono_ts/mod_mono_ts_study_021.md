@@ -32,6 +32,27 @@
 
 ![読み書き分離 (Read/Write Separation)](./picture/mod_mono_ts_study_021_cqs_separation.png)
 
+```mermaid
+graph TD
+    User((User))
+    
+    subgraph CQS [Command Query Separation]
+        Cmd["Command API<br/>(書く: 更新系)✍️"]
+        Qry["Query API<br/>(読む: 参照系)📖"]
+        
+        DB[(Database)]
+    end
+    
+    User -->|Action: 参加する| Cmd
+    User -->|View: 詳細を見る| Qry
+    
+    Cmd -->|Update| DB
+    Qry -.->|Read| DB
+    
+    style Cmd fill:#ffcdd2,stroke:#c62828
+    style Qry fill:#bbdefb,stroke:#0d47a1
+```
+
 CQSはざっくりこう👇
 
 * **Query**：結果を返すけど、**観測できる状態を変えない**（副作用なし）

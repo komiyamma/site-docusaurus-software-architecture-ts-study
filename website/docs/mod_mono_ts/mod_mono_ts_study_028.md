@@ -34,6 +34,22 @@
 
 ![壊れたものは作らない (Build Only Valid)](./picture/mod_mono_ts_study_028_invariant_shield.png)
 
+```mermaid
+graph TD
+    Input[Input Data] -->|Validate| Factory{Factory/Root🛡️}
+    Factory -->|OK| Valid[Valid Object💎]
+    Factory -->|NG| Error[Throw Error🔥]
+    
+    Valid -->|Method Call| Methods{Update Method🛡️}
+    Methods -->|OK| Valid2[New Valid State💎]
+    Methods -->|NG| Error
+    
+    style Factory fill:#fff9c4,stroke:#fbc02d
+    style Valid fill:#c8e6c9,stroke:#2e7d32
+    style Valid2 fill:#c8e6c9,stroke:#2e7d32
+    style Error fill:#ffcdd2,stroke:#c62828
+```
+
 一言でいうと👇
 
 > **そのオブジェクトが“正しい存在”でいるために、絶対に守らないといけない約束**🤝✨

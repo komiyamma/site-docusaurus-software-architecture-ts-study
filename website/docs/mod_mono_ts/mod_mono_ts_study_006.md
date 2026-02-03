@@ -52,14 +52,18 @@ DBや外部APIが絡むと、テストの準備が重くなる🧪💦
 
 まずはこの一枚絵でOK！
 
-```
-[ UI / Controller ]   ← 表示・入力（人間向け）
-        ↓
-[ Usecase ]           ← 手順の組み立て（アプリ都合）
-        ↓
-[ Domain ]            ← ルールの中心💎（いちばん守りたい）
-        ↑
 [ DB / 外部API ]      ← 道具🛠️（入れ替わりやすい）
+```
+
+```mermaid
+flowchart TD
+    Req[Req: HTTPリクエスト] -->|整える| A[A: 入力変換<br/>parseInput]
+    A -->|判断する| B[B: ルール判定<br/>validateCreateEvent]
+    B -->|保存する| C[C: DB保存<br/>saveEvent]
+    
+    style A fill:#f1f8e9,stroke:#33691e
+    style B fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style C fill:#fff3e0,stroke:#e65100
 ```
 
 この「内側ほど大事、外側ほど道具」って発想は、クリーンアーキテクチャ系でもよく語られるよ🌀 ([blog.cleancoder.com][2])

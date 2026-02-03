@@ -16,6 +16,18 @@
 
 ![依存性の注入 (Dependency Injection)](./picture/mod_mono_ts_study_024_di_gift.png)
 
+```mermaid
+graph TD
+    Me["自分 (UseCase)"]
+    External["親/工場 (Composition Root)"]
+    Item["依存オブジェクト (Repo)🎁"]
+    
+    External -- "はい、これ使って！" --> Me
+    External -.-> Item
+    
+    style Item fill:#fff9c4,stroke:#fbc02d
+```
+
 **DIは「必要な道具を、自分で買いに行かずに、渡してもらう」ことだよ〜🛍️➡️🎁**
 
 * ❌悪い例：クラスの中で勝手に `new` して、道具を自前調達しちゃう

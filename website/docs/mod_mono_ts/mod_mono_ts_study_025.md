@@ -18,6 +18,29 @@
 
 ![代役でテスト (Testing with Doubles)](./picture/mod_mono_ts_study_025_test_double.png)
 
+```mermaid
+graph TD
+    Test[Test Code🧪]
+    UseCase["UseCase (Target)🎯"]
+    
+    subgraph Doubles [Test Doubles]
+        Fake[Fake DB🧺]
+        Spy[Spy Notifier👀]
+    end
+    
+    Test -->|Setup| Fake
+    Test -->|Setup| Spy
+    Test -->|Execute| UseCase
+    
+    UseCase -->|Save| Fake
+    UseCase -->|Notify| Spy
+    
+    Test -->|Assert| Fake
+    Test -->|Assert| Spy
+    
+    style Doubles fill:#e0f2f1,stroke:#00695c
+```
+
 中心ロジックが外部（DB/HTTP/メール）に直接くっついてると…
 
 * テストが遅い🐢

@@ -129,6 +129,24 @@ export default tseslint.config(
 
 ![直輸入禁止 (No Direct Imports)](./picture/mod_mono_ts_study_015_eslint_police.png)
 
+```mermaid
+flowchart TD
+    Code[コードを書く] --> Save[保存]
+    Save --> Lint[ESLintチェック]
+    Lint -->|ルール①| NoInternal[internal直参照？]
+    Lint -->|ルール②| DeepImport[他モジュール深掘り？]
+    
+    NoInternal -- Yes --> Err1[❌ エラー：公開API経由にして！]
+    DeepImport -- Yes --> Err2[❌ エラー：入口以外は禁止！]
+    
+    NoInternal -- No --> OK
+    DeepImport -- No --> OK[✅ OK]
+    
+    style Err1 fill:#ffcdd2,stroke:#c62828
+    style Err2 fill:#ffcdd2,stroke:#c62828
+    style OK fill:#c8e6c9,stroke:#2e7d32
+```
+
 ESLint公式の `no-restricted-imports` は、**「このimport禁止！」**を素直に書けるルールだよ👮‍♀️✨ ([eslint.org][5])
 
 ### 例：internal直importを禁止する🚫

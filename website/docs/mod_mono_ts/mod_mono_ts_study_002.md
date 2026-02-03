@@ -54,6 +54,24 @@
 
 ➡️ **“イベント”と“参加”が別物**なので、境界の練習にピッタリ🙆‍♀️✨
 
+```mermaid
+graph TD
+    E[Events<br/>イベント管理]
+    R[Registrations<br/>参加登録]
+    N[Notifications<br/>通知]
+    A[Accounts<br/>アカウント]
+
+    R -->|どのイベント？| E
+    R -->|誰が？| A
+    N -->|誰に送る？| A
+    E -->|主催者は？| A
+    
+    style E fill:#e3f2fd,stroke:#1565c0
+    style R fill:#f3e5f5,stroke:#7b1fa2
+    style N fill:#fff3e0,stroke:#ef6c00
+    style A fill:#e8f5e9,stroke:#2e7d32
+```
+
 ---
 
 ### ② サークル会計💰🧾

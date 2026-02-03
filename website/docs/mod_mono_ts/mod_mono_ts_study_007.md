@@ -57,6 +57,29 @@ Martin Fowler も「モノリスで“十分にモジュール化された状態
 
 “1つの巨大な塊”じゃなくて、**“仕切りのある1つの建物”**って感じです🏢🧱
 
+```mermaid
+graph TD
+    subgraph App["アプリ全体 (デプロイ単位は1つ)"]
+        subgraph ModA[Module A]
+            API_A["index.ts<br/>(受付)"]
+            Internal_A[内部実装]
+            API_A --- Internal_A
+        end
+        subgraph ModB[Module B]
+            API_B["index.ts<br/>(受付)"]
+            Internal_B[内部実装]
+            API_B --- Internal_B
+        end
+        
+        API_A -->|OK: 受付経由| API_B
+        Internal_A -.->|NG: 直アクセス| Internal_B
+    end
+    style API_A fill:#e0f7fa,stroke:#006064
+    style API_B fill:#e0f7fa,stroke:#006064
+    style Internal_A fill:#ffebee,stroke:#b71c1c
+    style Internal_B fill:#ffebee,stroke:#b71c1c
+```
+
 ---
 
 ## 4) 基本思想その②：境界は“気合い禁止”🙅‍♀️ → ルールで守る📜👮‍♀️

@@ -73,6 +73,24 @@
 
 ![入口はひとつ (Single Entrance)](./picture/mod_mono_ts_study_011_index_door.png)
 
+```mermaid
+graph TD
+    subgraph Module [モジュール]
+        subgraph Internal ["内部 (Internal)"]
+            App[Application]
+            Dom[Domain]
+            Infra[Infrastructure]
+        end
+        Index["index.ts<br/>(唯一の入口)"]
+        Internal --> Index
+    end
+    External[他モジュール] -->|OK: 入口経由| Index
+    External -.->|NG: 直接アクセス| Internal
+    
+    style Index fill:#d1c4e9,stroke:#512da8,stroke-width:2px
+    style Internal fill:#ffebee,stroke:#c62828
+```
+
 モジュールの入口はだいたいこう👇
 
 * `modules/<moduleName>/index.ts` ← **ここが唯一の入口**🚪✨

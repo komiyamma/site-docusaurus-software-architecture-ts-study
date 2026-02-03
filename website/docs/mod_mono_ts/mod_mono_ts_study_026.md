@@ -24,6 +24,29 @@
 
 ![直触り禁止 (No Direct Access)](./picture/mod_mono_ts_study_026_data_ownership.png)
 
+```mermaid
+graph TD
+    subgraph ModuleA ["Module A (Owner)👑"]
+        TableA[(Table A)]
+        RepoA[Repository A]
+        ApiA[Public API / DTO]
+        
+        RepoA --> TableA
+        ApiA --> RepoA
+    end
+    
+    subgraph ModuleB ["Module B (Consumer)"]
+        LogicB[Logic]
+    end
+    
+    LogicB -->|Call Public API| ApiA
+    LogicB -.->|❌ Direct Access| TableA
+    
+    style ModuleA fill:#e3f2fd,stroke:#1565c0
+    style TableA fill:#bbdefb,stroke:#0d47a1
+    style ApiA fill:#fff9c4,stroke:#fbc02d
+```
+
 モジュラーモノリスでも基本はこれ👇
 
 * **各モジュールは自分のデータを“所有”する**
@@ -80,6 +103,33 @@
 ## 26-4. 超重要：横断JOIN（別スキーマをまたぐSQL）を禁止しよ🚫🍭
 
 ![横断JOIN禁止 (No Cross-Joins)](./picture/mod_mono_ts_study_026_cross_join_ban.png)
+
+```mermaid
+graph TD
+    subgraph Invalid [❌ Cross Join]
+        SQL[SQL Query]
+        T1[(Table 1)]
+        T2[(Table 2)]
+        SQL -->|JOIN| T1
+        SQL -->|JOIN| T2
+    end
+    
+    subgraph Valid [✅ API Composition]
+        App[Application Logic]
+        API1[API 1]
+        API2[API 2]
+        DT1[(Data 1)]
+        DT2[(Data 2)]
+        
+        App --> API1
+        App --> API2
+        API1 --> DT1
+        API2 --> DT2
+    end
+    
+    style Invalid fill:#ffcdd2,stroke:#c62828
+    style Valid fill:#c8e6c9,stroke:#2e7d32
+```
 
 DBが1つだと、ついこうしたくなる👇
 

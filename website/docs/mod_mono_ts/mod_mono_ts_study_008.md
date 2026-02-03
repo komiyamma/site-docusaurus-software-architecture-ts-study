@@ -122,6 +122,31 @@ git log --name-only --pretty=format: -- src/modules | sort | uniq -c | sort -nr 
 * **Registrations**（参加申し込み・キャンセル・定員）📝
 * **Notifications**（メール・アプリ通知）🔔
 
+```mermaid
+graph TD
+    subgraph Events[Eventsモジュール]
+        Create[作成]
+        Detail[詳細]
+        Publish[公開]
+    end
+    subgraph Accounts[Accountsモジュール]
+        Login[ログイン]
+        Profile[プロフィール]
+    end
+    subgraph Registrations[Registrationsモジュール]
+        Apply[申込み]
+        Cancel[キャンセル]
+    end
+    
+    Registrations -->|どのイベント？| Events
+    Registrations -->|誰が？| Accounts
+    Events -->|主催者| Accounts
+    
+    style Events fill:#e1f5fe
+    style Accounts fill:#fff3e0
+    style Registrations fill:#e8f5e9
+```
+
 ### 「小さすぎ」になりがちな例🐜
 
 * `CreateEventModule`

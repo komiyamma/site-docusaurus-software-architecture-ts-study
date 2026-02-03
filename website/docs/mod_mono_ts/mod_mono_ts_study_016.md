@@ -11,6 +11,34 @@
 
 ![自動門番 (Automated Gatekeeper)](./picture/mod_mono_ts_study_016_ci_gatekeeper.png)
 
+```mermaid
+graph TD
+    Dev[開発者] -->|Push/PR| GH[GitHub Actions]
+    
+    subgraph CI [CI Gatekeeper]
+        Lint[Lint Check🧹]
+        Type[Type Check🧠]
+        Test[Test🧪]
+        Bound[Boundary Check🛡️]
+    end
+    
+    GH --> Lint
+    GH --> Type
+    GH --> Test
+    GH --> Bound
+    
+    Lint --> Result{判定}
+    Type --> Result
+    Test --> Result
+    Bound --> Result
+    
+    Result -->|Pass| Merge[Merge OK✅]
+    Result -->|Fail| Reject[Reject🚫]
+    
+    style Merge fill:#c8e6c9,stroke:#2e7d32
+    style Reject fill:#ffcdd2,stroke:#c62828
+```
+
 PRを出したら自動で👇が走って、**違反があれば赤く落ちる**状態にする！
 
 * 境界チェック（例：内部ファイル直import禁止）🚫📦

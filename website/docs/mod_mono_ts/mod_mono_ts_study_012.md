@@ -29,6 +29,25 @@
 
 ![中身は秘密 (Internal is Private)](./picture/mod_mono_ts_study_012_internal_hidden.png)
 
+```mermaid
+graph TD
+    subgraph EventsModule [Eventsモジュール]
+        Index["index.ts<br/>(公開API)"]
+        Internal["internal/<br/>(非公開)"]
+        App["application/<br/>(一部公開)"]
+        
+        Index -->|export| App
+        Index -.->|no export| Internal
+    end
+    
+    Other[他モジュール]
+    Other -->|import| Index
+    Other -.->|❌ import禁止| Internal
+    
+    style Index fill:#e0f7fa,stroke:#006064
+    style Internal fill:#eceff1,stroke:#546e7a
+```
+
 例（Eventsモジュール）👇
 
 ```text

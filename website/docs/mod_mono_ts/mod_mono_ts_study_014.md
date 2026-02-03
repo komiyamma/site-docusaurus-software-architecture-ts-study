@@ -61,6 +61,28 @@
 
 ![公開するもの (Public Items)](./picture/mod_mono_ts_study_014_public_types.png)
 
+```mermaid
+graph LR
+    subgraph Billing [Billingモジュール]
+        Charge[chargeForEvent.ts]
+    end
+    
+    subgraph Events [Eventsモジュール]
+        Index["index.ts<br/>(入口)"]
+        DTs["publicTypes.ts<br/>(公開型)"]
+        Internal[internal/...]
+        
+        Index --> DTs
+    end
+    
+    Charge -->|"import { createEvent }"| Index
+    Charge -->|"import type { EventId }"| Index
+    Charge -.->|❌ import ...| Internal
+    
+    style Index fill:#d1c4e9,stroke:#512da8
+    style Charge fill:#fff9c4,stroke:#fbc02d
+```
+
 題材：`events` モジュールと `billing` モジュールがあるとするね📦
 
 ### フォルダ構成イメージ📁🧩

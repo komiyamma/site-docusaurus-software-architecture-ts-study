@@ -50,18 +50,23 @@
 「modules/ を中心」に据える形だよ🧩🧭
 
 ```text
-.
-├─ src/
-│  ├─ app/                      # 起動・組み立て（後で育てる🌱）
-│  ├─ modules/                   # ← 主役✨ ここが本丸！
-│  │  ├─ events/
-│  │  ├─ users/
-│  │  └─ payments/
-│  └─ shared/                    # 共通（最小限に⚠️）
-├─ tests/                        # テスト置き場🧪
-├─ docs/                         # 方針・メモ📝
-├─ package.json
 └─ tsconfig.json
+```
+
+```mermaid
+graph LR
+    Src[src/] --> Mod[modules/]
+    Mod --> Ev[events/]
+    Mod --> Us[users/]
+    Mod --> Pay[payments/]
+    
+    Ev --> Idx["index.ts<br/>(入口)"]
+    Ev --> Dom[domain/]
+    Ev --> App[application/]
+    Ev --> Infra[infrastructure/]
+    
+    style Mod fill:#fff9c4,stroke:#fbc02d
+    style Idx fill:#d1c4e9,stroke:#512da8
 ```
 
 ### ✅ ここがポイント

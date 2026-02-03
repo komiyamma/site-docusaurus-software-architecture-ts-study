@@ -170,6 +170,25 @@ export function createEventsApi(deps: {
 
 ![疎結合な連携 (Loose Coupling)](./picture/mod_mono_ts_study_020_dto_handshake.png)
 
+```mermaid
+graph LR
+    subgraph ModA [Module A]
+        LogicA[Logic]
+        DTO_A[DTO📦]
+    end
+    
+    subgraph ModB [Module B]
+        LogicB[Logic]
+        DTO_B[DTO📦]
+    end
+    
+    LogicA -->|Call| DTO_B
+    LogicB -->|Call| DTO_A
+    
+    style DTO_A fill:#fff9c4,stroke:#fbc02d
+    style DTO_B fill:#fff9c4,stroke:#fbc02d
+```
+
 アプリ起動時にモジュール同士をつなぐ場所を1つ作るよ〜🙂
 
 ```ts

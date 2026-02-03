@@ -26,11 +26,34 @@
 * 機能ごとに **別々にデプロイ** できる（強い！）
 * その代わり **運用・監視・通信・障害対応** が一気に難しくなることも…😵‍💫 ([martinfowler.com][2])
 
-> ざっくりイメージ：
->
-> * モノリス：一枚岩🪨
-> * モジュラーモノリス：**お弁当箱**🍱（箱は1つ、仕切りが強い）
 > * マイクロサービス：**屋台がいっぱいのフェス**🎪（自由だけど運営が大変）
+
+```mermaid
+graph TD
+    User((ユーザー))
+    subgraph Monolith [モノリス 🧱]
+        All["全機能混在<br/>(境界なし)"]
+    end
+    subgraph ModMono [モジュラーモノリス 🍱]
+        Event[イベント機能]
+        UserMod[ユーザー機能]
+        Acct[会計機能]
+        Event --- UserMod --- Acct
+        style Event fill:#e1f5fe,stroke:#01579b
+        style UserMod fill:#fff3e0,stroke:#e65100
+        style Acct fill:#e8f5e9,stroke:#1b5e20
+    end
+    subgraph Microservices [マイクロサービス 🎪]
+        Svc1[イベントService]
+        Svc2[ユーザーService]
+        Svc3[会計Service]
+        Svc1 -.- Svc2 -.- Svc3
+    end
+    
+    User --> Monolith
+    User --> ModMono
+    User --> Microservices
+```
 
 ---
 

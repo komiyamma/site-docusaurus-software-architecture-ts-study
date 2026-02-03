@@ -29,6 +29,26 @@
 
 ![差し替え可能 (Pluggable)](./picture/mod_mono_ts_study_023_dip_plug.png)
 
+```mermaid
+graph LR
+    subgraph Core [Core Logic]
+        UseCase[UseCase]
+        Socket((Interface<br/>Socket))
+        UseCase --> Socket
+    end
+    
+    subgraph Plugins [Pluggable Implementations]
+        Real[Real DB Plugin]
+        Fake[Test Fake Plugin]
+    end
+    
+    Real -- Plug in --> Socket
+    Fake -- Plug in --> Socket
+    
+    style Core fill:#e3f2fd,stroke:#1565c0
+    style Plugins fill:#f3e5f5
+```
+
 Dependency Inversion Principle（依存関係逆転の原則）は、ざっくり言うとこう👇
 
 * **上位（大事なルール・手順）は、下位（DB/外部I/O）に直接依存しない**

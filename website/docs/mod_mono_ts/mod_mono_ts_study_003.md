@@ -95,6 +95,15 @@ npm i -D @types/node
 ⬇️ `node`（実行）
 ✅ **実行結果が出る🎉**
 
+```mermaid
+flowchart LR
+    TS["Main.ts<br/>(TypeScript)"] -->|tscでコンパイル| JS["Main.js<br/>(JavaScript)"]
+    JS -->|nodeで実行| Run["実行結果<br/>(Console)"]
+    
+    style TS fill:#3178c6,color:white
+    style JS fill:#f7df1e,color:black
+```
+
 ---
 
 ## 3-4. Hello TS を動かす（最短で成功する手順）🚀✅
