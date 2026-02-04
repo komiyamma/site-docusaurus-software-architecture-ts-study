@@ -380,6 +380,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/bc_ts/bc_ts_index',
   },
+  {
+    title: 'Outbox TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶTransactional Outboxパターン。<br/>
+        二重書き込み問題を解決し、<br/>
+        メッセージの一貫性を保つ設計手法を学びます。<br/>
+      </>
+    ),
+    link: '/docs/outbox_ts/outbox_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

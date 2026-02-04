@@ -109,6 +109,7 @@ const config: Config = {
           "docs/mod_mono_ts",
           "docs/idem_ts",
           "docs/bc_ts",
+          "docs/outbox_ts",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -370,6 +371,12 @@ const config: Config = {
           sidebarId: 'bcTsSidebar',
           position: 'left',
           label: 'BC TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'outboxTsSidebar',
+          position: 'left',
+          label: 'Outbox TS版',
         },
 
         {
