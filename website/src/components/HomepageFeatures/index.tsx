@@ -368,6 +368,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/idem_ts/idem_ts_index',
   },
+  {
+    title: 'BC TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶ境界づけられたコンテキスト（BC）。<br/>
+        言葉の境界を定義し、<br/>
+        大規模なシステムを疎結合に保つ設計手法。<br/>
+      </>
+    ),
+    link: '/docs/bc_ts/bc_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

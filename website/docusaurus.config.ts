@@ -108,6 +108,7 @@ const config: Config = {
           "docs/refactoring_ts",
           "docs/mod_mono_ts",
           "docs/idem_ts",
+          "docs/bc_ts",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -363,6 +364,12 @@ const config: Config = {
           sidebarId: 'idemTsSidebar',
           position: 'left',
           label: '冪等性 TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'bcTsSidebar',
+          position: 'left',
+          label: 'BC TS版',
         },
 
         {
