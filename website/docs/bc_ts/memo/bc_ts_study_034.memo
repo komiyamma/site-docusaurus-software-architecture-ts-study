@@ -1,0 +1,1 @@
+EntityとValue Objectの実装。IDで同一性を判定するEntityと、値そのものが意味を持つVO（Money等）を使い分け、堅牢なモデルを作る手法を学びます。

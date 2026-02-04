@@ -1,0 +1,1 @@
+Anti-Corruption Layer (ACL) の設計手法。外部DTOと内部モデルの差分（名前・単位・状態）を棚卸しし、変換ルール表とTranslatorコードで境界を守る方法を学びます。

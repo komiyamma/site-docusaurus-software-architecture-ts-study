@@ -1,0 +1,1 @@
+Bounded Contextごとの型定義。同じ「User」でもBCごとに役割が異なるため、別々の型（ListingUser等）として定義し、混在を防ぐ手法を学びます。

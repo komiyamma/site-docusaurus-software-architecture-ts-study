@@ -1,0 +1,1 @@
+Node.jsとTypeScriptの環境構築手法。package.jsonやtsconfigの設定、ESLint導入、src/dist構成など、堅牢なバックエンド開発の基盤を作成します。

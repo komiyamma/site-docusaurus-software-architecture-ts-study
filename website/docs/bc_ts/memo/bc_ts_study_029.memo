@@ -1,0 +1,1 @@
+Bounded Contextのフォルダ構成。BCごとのディレクトリにdomain/app/index.tsを配置し、入口を制限することで、コードレベルで境界を可視化する手法を学びます。

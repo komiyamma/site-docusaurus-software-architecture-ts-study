@@ -1,0 +1,1 @@
+ユースケース（アプリ層）の実装とCQS（Command-Query Separation）。読み取りと書き込みを分離し、DTOやResult型を用いて責務を整理する方法を学びます。

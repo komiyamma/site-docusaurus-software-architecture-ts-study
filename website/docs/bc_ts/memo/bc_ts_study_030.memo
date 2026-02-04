@@ -1,0 +1,1 @@
+各Bounded Contextの公開API設計。内部実装（Entity等）を隠蔽し、ユースケースとDTOのみを「public/index.ts」から公開して、堅牢な境界（玄関）を構築します。

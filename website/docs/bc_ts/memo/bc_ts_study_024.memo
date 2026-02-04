@@ -1,0 +1,1 @@
+Customer/Supplier関係のパターン。上流（Supplier）と下流（Customer）の影響関係を定義し、公開API（契約）と契約テストで連携を守る手法を学びます。
