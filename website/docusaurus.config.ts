@@ -7,7 +7,7 @@ import * as path from 'path';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'software-architecture.komiyamma.net',
+  title: 'software-architecture-ts-study.komiyamma.net',
   tagline: 'ソフトウェアアーキテクチャ入門者用の学習教材',
   favicon: 'img/architecture_logo.svg',
 
@@ -17,7 +17,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://software-architecture-cs.komiyamma.net',
+  url: 'https://software-architecture-ts-study.komiyamma.net',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -25,7 +25,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'komiyamma', // Usually your GitHub org/user name.
-  projectName: 'site-docusaurus-software-architecture-cs-study', // Usually your repo name.
+  projectName: 'site-docusaurus-software-architecture-ts-study', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -386,7 +386,7 @@ const config: Config = {
         },
 
         {
-          href: 'https://github.com/komiyamma/site-docusaurus-software-architecture-cs-study',
+          href: 'https://github.com/komiyamma/site-docusaurus-software-architecture-ts-study',
           label: 'GitHub',
           position: 'right',
         },

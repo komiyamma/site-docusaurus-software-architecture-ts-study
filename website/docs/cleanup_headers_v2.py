@@ -27,7 +27,7 @@ def remove_leading_blank_lines(filepath):
     return True
 
 def main():
-    base_dir = r"g:\repogitory\site-docusaurus-software-architecture-cs-study\website\docs"
+    base_dir = r"g:\repogitory\site-docusaurus-software-architecture-ts-study\website\docs"
     # Find all *_index.md files recursively
     search_pattern = os.path.join(base_dir, "**", "*_index.md")
     files = glob.glob(search_pattern, recursive=True)

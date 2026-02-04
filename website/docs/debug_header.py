@@ -1,6 +1,6 @@
 import os
 
-filepath = r"g:\repogitory\site-docusaurus-software-architecture-cs-study\website\docs\dry_cs\dry_cs_index.md"
+filepath = r"g:\repogitory\site-docusaurus-software-architecture-ts-study\website\docs\dry_ts\dry_ts_index.md"
 
 with open(filepath, 'r', encoding='utf-8') as f:
     lines = f.readlines()
