@@ -24,7 +24,7 @@
 
 ## 2. 同じUserでも中身が違う🧸🏷️
 
-![イメージ](./picture/bc_ts_study_006_word_meaning_diff.png)
+<!-- ![イメージ](./picture/bc_ts_study_006_word_meaning_diff.png) -->
 
 たとえば「User」という言葉。
 プロジェクトが大きくなると、同じ「User」や「Order」という言葉でも、**場所によって意味がズレる** ことがあるよ😵‍💫
