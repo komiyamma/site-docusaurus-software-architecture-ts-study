@@ -378,6 +378,12 @@ const config: Config = {
           position: 'left',
           label: 'Outbox TS版',
         },
+        {
+          type: 'docSidebar',
+          sidebarId: 'apiContractTsSidebar',
+          position: 'left',
+          label: 'API Contract TS版',
+        },
 
         {
           href: 'https://github.com/komiyamma/site-docusaurus-software-architecture-cs-study',

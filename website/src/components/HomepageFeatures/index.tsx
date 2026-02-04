@@ -392,6 +392,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/outbox_ts/outbox_ts_index',
   },
+  {
+    title: 'API Contract TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶAPIコントラクト。<br/>
+        スキーマ駆動開発と型安全性、<br/>
+        コンシューマーサイド契約テストの実践。<br/>
+      </>
+    ),
+    link: '/docs/api_contract_ts/api_contract_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

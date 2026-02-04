@@ -127,6 +127,7 @@ const sidebars: SidebarsConfig = {
   idemTsSidebar: generateProjectSidebar('idem_ts'),
   bcTsSidebar: generateProjectSidebar('bc_ts'),
   outboxTsSidebar: generateProjectSidebar('outbox_ts'),
+  apiContractTsSidebar: generateProjectSidebar('api_contract_ts'),
 };
 
 export default sidebars;
