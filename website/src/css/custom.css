@@ -124,3 +124,13 @@
   transform: translateY(-50%);
   z-index: 10;
 }
+
+
+/* 三本線ボタン自体の色（アイコンの色） */
+.navbar__toggle {
+  color: white; /* ここで好きな色を指定 */
+}
+/* ホバーした時の色 */
+.navbar__toggle:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
