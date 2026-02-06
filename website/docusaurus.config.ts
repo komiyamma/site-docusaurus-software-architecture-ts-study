@@ -110,6 +110,7 @@ const config: Config = {
           "docs/idem_ts",
           "docs/bc_ts",
           "docs/outbox_ts",
+          "docs/gof_ts",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -385,6 +386,12 @@ const config: Config = {
           sidebarId: 'apiContractTsSidebar',
           position: 'left',
           label: 'API Contract TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'gofTsSidebar',
+          position: 'left',
+          label: 'GoFデザインパターン TS版',
         },
 
         {

@@ -404,6 +404,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/api_contract_ts/api_contract_ts_index',
   },
+  {
+    title: 'GoFデザインパターン TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶGoFデザインパターン。<br/>
+        「パターン暗記」ではなく実務での判断軸を養います。<br/>
+        AIとの共生、関数型の活用まで。<br/>
+      </>
+    ),
+    link: '/docs/gof_ts/gof_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

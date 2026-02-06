@@ -128,6 +128,24 @@ const sidebars: SidebarsConfig = {
   bcTsSidebar: generateProjectSidebar('bc_ts'),
   outboxTsSidebar: generateProjectSidebar('outbox_ts'),
   apiContractTsSidebar: generateProjectSidebar('api_contract_ts'),
+  gofTsSidebar: [
+    {
+      type: 'doc',
+      id: 'gof_ts/gof_ts_index',
+    },
+    ...[
+      { title: "Part 0：はじめに・環境・学び方", start: 1, end: 10 },
+      { title: "Part 1：GoFに入る前の土台", start: 11, end: 15 },
+      { title: "Part 2：生成パターン (Creational)", start: 16, end: 35 },
+      { title: "Part 3：構造パターン (Structural)", start: 36, end: 56 },
+      { title: "Part 4：振る舞いパターン (Behavioral)", start: 57, end: 89 },
+      { title: "Part 5：仕上げ", start: 90, end: 90 },
+    ].map(mod => ({
+      type: 'category' as const,
+      label: mod.title,
+      items: generateStudyIds('gof_ts', 'gof_ts', mod.start, mod.end),
+    })),
+  ],
 };
 
 export default sidebars;
