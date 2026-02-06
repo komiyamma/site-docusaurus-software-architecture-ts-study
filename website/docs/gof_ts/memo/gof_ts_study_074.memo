@@ -1,0 +1,1 @@
+Iteratorパターンは、要素の列挙手段を統一的に提供する。TypeScriptではIterableとIteratorインタフェースを実装し、for..ofで扱うのが標準的である。

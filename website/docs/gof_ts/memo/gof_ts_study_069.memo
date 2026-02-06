@@ -1,0 +1,1 @@
+Chain of ResponsibilityをTypeScriptの関数配列で実現する手法を解説。処理を小さなステップに分割し、Contextを順次受け渡す設計を示す。

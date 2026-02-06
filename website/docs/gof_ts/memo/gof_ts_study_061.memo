@@ -1,0 +1,1 @@
+Observer実装におけるEventTargetとEventEmitterの使い分けが解説されています。EventTargetは標準準拠で自動解除が強力であり、環境に適した選択が重要です。

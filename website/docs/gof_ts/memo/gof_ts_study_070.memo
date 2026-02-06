@@ -1,0 +1,1 @@
+Chain of Responsibilityの実装詳細として、Result型を用いた直列パイプラインと、next関数によるミドルウェア形式の二つのパターンを比較解説する。

@@ -1,0 +1,1 @@
+Mementoパターンは、状態のスナップショットを保存し、復元する仕組みである。TypeScriptではプレーンなデータとstructuredCloneを用いる実装が簡潔で安全。

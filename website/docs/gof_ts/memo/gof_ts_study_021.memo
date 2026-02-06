@@ -1,0 +1,1 @@
+Abstract FactoryをTypeScriptらしくinterfaceと関数で実装する手法を解説。製品群の整合性を型で保証し、宛先型などの安全性を高める設計を学ぶ。

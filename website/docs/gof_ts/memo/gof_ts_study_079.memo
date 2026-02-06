@@ -1,0 +1,1 @@
+Mementoパターンは、オブジェクトの状態を保存し復元する手法。TypeScriptでは不変データと履歴配列を用い、structuredCloneで状態を保存するのが定石。

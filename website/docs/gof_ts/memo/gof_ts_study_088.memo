@@ -1,0 +1,1 @@
+データ構造を判別Union、処理を関数オブジェクトで記述するTypeScript流Visitorパターンを解説。switch文の網羅性チェックやsatisfiesの活用も紹介します。

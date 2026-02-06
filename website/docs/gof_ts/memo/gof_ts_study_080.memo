@@ -1,0 +1,1 @@
+CommandとMementoを組み合わせると、操作意図と状態を保持でき、堅牢なUndo/Redoが実現する。TypeScriptでは不変データとstructuredCloneを活用すると良い。

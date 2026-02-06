@@ -1,0 +1,1 @@
+Flyweightの基礎となるMap/Setを用いた共有手法を解説。キー設計やキャッシュ寿命、WeakMapによるメモリ管理、Readonlyでの事故防止を学ぶ。

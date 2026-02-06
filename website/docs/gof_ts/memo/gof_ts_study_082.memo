@@ -1,0 +1,1 @@
+Template Methodでは、共通手順を親で固定し、差分を子で実装する。TypeScriptではoverride修飾子により、意図しない上書きを防ぐ実装が推奨される。

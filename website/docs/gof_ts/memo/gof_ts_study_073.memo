@@ -1,0 +1,1 @@
+TypeScriptのジェネレータとSymbol.iteratorを用いたカスタムIteratorの実装法を解説。yieldで処理を中断・再開し、木構造を柔軟に走査する。
