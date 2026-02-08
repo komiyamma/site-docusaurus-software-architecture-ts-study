@@ -401,6 +401,18 @@ const config: Config = {
           label: 'DDD TS版',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'tddTsSidebar',
+          position: 'left',
+          label: 'TDD TS版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'testableTsSidebar',
+          position: 'left',
+          label: 'テスタブル TS版',
+        },
+        {
           href: 'https://github.com/komiyamma/site-docusaurus-software-architecture-ts-study',
           label: 'GitHub',
           position: 'right',

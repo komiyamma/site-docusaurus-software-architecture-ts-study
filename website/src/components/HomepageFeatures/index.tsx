@@ -428,6 +428,30 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/ddd_ts/ddd_ts_index',
   },
+  {
+    title: 'TDD TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶテスト駆動開発。<br/>
+        Red-Green-Refactorのリズムと、<br/>
+        設計を駆動するテストの書き方。<br/>
+      </>
+    ),
+    link: '/docs/tdd_ts/tdd_ts_index',
+  },
+  {
+    title: 'テスタブル TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶテスタブルコード。<br/>
+        テスト容易性を高める設計手法と、<br/>
+        モック/スタブの適切な活用。<br/>
+      </>
+    ),
+    link: '/docs/testable_ts/testable_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

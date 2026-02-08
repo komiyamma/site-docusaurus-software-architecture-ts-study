@@ -168,6 +168,49 @@ const sidebars: SidebarsConfig = {
       items: generateStudyIds('gof_ts', 'gof_ts', mod.start, mod.end),
     })),
   ],
+  tddTsSidebar: [
+    {
+      type: 'doc',
+      id: 'tdd_ts/tdd_ts_index',
+    },
+    ...[
+      { title: "Part 1", start: 1, end: 10 },
+      { title: "Part 2", start: 11, end: 20 },
+      { title: "Part 3", start: 21, end: 30 },
+      { title: "Part 4", start: 31, end: 40 },
+      { title: "Part 5", start: 41, end: 50 },
+      { title: "Part 6", start: 51, end: 60 },
+      { title: "Part 7", start: 61, end: 70 },
+      { title: "Part 8", start: 71, end: 80 },
+      { title: "Part 9", start: 81, end: 90 },
+      { title: "Part 10", start: 91, end: 100 },
+      { title: "Part 11", start: 101, end: 110 },
+      { title: "Part 12", start: 111, end: 120 },
+    ].map(mod => ({
+      type: 'category' as const,
+      label: mod.title,
+      items: generateStudyIds('tdd_ts', 'tdd_ts', mod.start, mod.end),
+    })),
+  ],
+  testableTsSidebar: [
+    {
+      type: 'doc',
+      id: 'testable_ts/testable_ts_index',
+    },
+    ...[
+      { title: "Part 1", start: 1, end: 10 },
+      { title: "Part 2", start: 11, end: 20 },
+      { title: "Part 3", start: 21, end: 30 },
+      { title: "Part 4", start: 31, end: 40 },
+      { title: "Part 5", start: 41, end: 50 },
+      { title: "Part 6", start: 51, end: 60 },
+      { title: "Part 7", start: 61, end: 70 },
+    ].map(mod => ({
+      type: 'category' as const,
+      label: mod.title,
+      items: generateStudyIds('testable_ts', 'testable_ts', mod.start, mod.end),
+    })),
+  ],
 };
 
 export default sidebars;
