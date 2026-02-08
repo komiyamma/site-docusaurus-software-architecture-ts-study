@@ -416,6 +416,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/gof_ts/gof_ts_index',
   },
+  {
+    title: 'DDD TS版',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        TypeScriptで学ぶドメイン駆動設計。<br/>
+        戦略的設計から戦術的設計まで。<br/>
+        モデルと実装のギャップを埋める実践ガイド。<br/>
+      </>
+    ),
+    link: '/docs/ddd_ts/ddd_ts_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

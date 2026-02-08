@@ -395,6 +395,12 @@ const config: Config = {
         },
 
         {
+          type: 'docSidebar',
+          sidebarId: 'dddTsSidebar',
+          position: 'left',
+          label: 'DDD TS版',
+        },
+        {
           href: 'https://github.com/komiyamma/site-docusaurus-software-architecture-ts-study',
           label: 'GitHub',
           position: 'right',

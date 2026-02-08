@@ -128,6 +128,28 @@ const sidebars: SidebarsConfig = {
   bcTsSidebar: generateProjectSidebar('bc_ts'),
   outboxTsSidebar: generateProjectSidebar('outbox_ts'),
   apiContractTsSidebar: generateProjectSidebar('api_contract_ts'),
+  dddTsSidebar: [
+    {
+      type: 'doc',
+      id: 'ddd_ts/ddd_ts_index',
+    },
+    ...[
+      { title: "Part 1：準備と全体像", start: 1, end: 10 },
+      { title: "Part 2：ドメイン理解と言葉づくり", start: 11, end: 20 },
+      { title: "Part 3：TypeScriptでDDDしやすい基礎体力", start: 21, end: 30 },
+      { title: "Part 4：Value Object", start: 31, end: 40 },
+      { title: "Part 5：Entity", start: 41, end: 50 },
+      { title: "Part 6：Aggregate", start: 51, end: 60 },
+      { title: "Part 7：ユースケース（Application）を作る", start: 61, end: 70 },
+      { title: "Part 8：Repository / Factory / Domain Service", start: 71, end: 80 },
+      { title: "Part 9：Specification / Policy / 時間 / エラー", start: 81, end: 90 },
+      { title: "Part 10：Domain Event と連携", start: 91, end: 100 },
+    ].map(mod => ({
+      type: 'category' as const,
+      label: mod.title,
+      items: generateStudyIds('ddd_ts', 'ddd_ts', mod.start, mod.end),
+    })),
+  ],
   gofTsSidebar: [
     {
       type: 'doc',
