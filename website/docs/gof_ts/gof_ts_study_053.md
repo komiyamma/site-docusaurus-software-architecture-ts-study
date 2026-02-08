@@ -50,6 +50,15 @@ Flyweightの効果は、だいたいこの3つで見えます👇
 > ここでは「アイコンの定義オブジェクト」を Flyweight（共有）にします🎨
 > “位置”や“表示対象の注文ID”みたいな **個別情報は共有しない（外在状態）**のがコツです💡
 
+```mermaid
+flowchart TD
+    Setup["Setup Data\n(Fixed Input)"] --> Naive["Run Naive\n(Create Everytime)"]
+    Naive --> Measure1["Measure Memory/Time"]
+    Measure1 --> Fly["Run Flyweight\n(Use Map Cache)"]
+    Fly --> Measure2["Measure Memory/Time"]
+    Measure2 --> Compare["Compare Results\nHit/Miss/Count"]
+```
+
 ---
 
 ## 2-1) 計測コード（TypeScript）📄✨

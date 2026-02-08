@@ -76,10 +76,32 @@ export type Template = (input: OrderPlaced) => string;
 ### Step 2️⃣：「工場（家族のまとめ役）」を定義する👨‍👩‍👧‍👦✨
 
 ```ts
-export type NotificationFactory = {
   createSender: () => Sender;
   createTemplate: () => Template;
 };
+
+```
+
+```mermaid
+classDiagram
+    class NotificationFactory {
+        &lt;&lt;interface&gt;&gt;
+        createSender()
+        createTemplate()
+    }
+    class EmailFactory {
+        createSender() : EmailSender
+        createTemplate() : EmailTemplate
+    }
+    class InAppFactory {
+        createSender() : InAppSender
+        createTemplate() : InAppTemplate
+    }
+
+    NotificationFactory <|.. EmailFactory
+    NotificationFactory <|.. InAppFactory
+    
+    note "家族（Sender+Template）を\nセットで作ることを保証✨"
 ```
 
 ここが超大事💡

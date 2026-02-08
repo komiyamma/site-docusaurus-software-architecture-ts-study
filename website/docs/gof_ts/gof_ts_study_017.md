@@ -241,6 +241,21 @@ export function createOrder(
     }
   }
 }
+
+```
+
+```mermaid
+flowchart TD
+    Start(createOrder) --> Norm[正規化 help: normalizeItems]
+    Norm --> Check{OK?}
+    Check -- No --> Err[Error Return]
+    Check -- Yes --> Switch{req.type?}
+    
+    Switch -- eatIn --> Eat[EatIn生成<br>tableNo check]
+    Switch -- takeout --> Take[Takeout生成<br>pickupAt parse]
+    
+    Eat --> Ret[Return Result]
+    Take --> Ret
 ```
 
 ---

@@ -25,6 +25,15 @@
 
 ## まずは共通の型（ドメイン）を用意しよう🧩
 
+```mermaid
+flowchart TD
+    Start(["引数どうする？"]) --> Q1{"引数 3個以下？"}
+    Q1 -- Yes --> A["A: 並び (Positional)"]
+    Q1 -- No --> Q2{"順番/手順が大事？<br>or 補完が命？"}
+    Q2 -- Yes --> C["C: Builder"]
+    Q2 -- No --> B["B: Options Object<br>(TS王道🏆)"]
+```
+
 ※ この章は“比較”が目的なので、型はシンプルでOKです😊
 
 ```ts

@@ -36,6 +36,17 @@
 **テンプレは“原本”だから絶対に汚さない！**
 編集は必ず **draft（複製物）** に対してだけやる🧼✨
 
+```mermaid
+flowchart LR
+    Tmpl["Template\n(ReadOnly)"] -->|Clone| Draft["Draft\n(Editable)"]
+    Draft -->|Edit| Draft
+    Draft -->|Save| Order["Order\n(Final)"]
+    
+    style Tmpl fill:#eee,stroke:#333
+    style Draft fill:#cfc,stroke:#333
+    style Order fill:#ccf,stroke:#333
+```
+
 ---
 
 ## データ設計（最小＆実務っぽい形）🧾📦

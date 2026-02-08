@@ -182,7 +182,23 @@ const factory = chooseNotificationFactory(config);
 
 const app = createApp({ notificationFactory: factory });
 
+const app = createApp({ notificationFactory: factory });
+
 await app.confirmOrder({ orderId: "A-100", totalYen: 1280 });
+
+```
+
+```mermaid
+flowchart TD
+    Env[config: .env] --> Load[loadConfig]
+    Load --> Select{chooseNotificationFactory}
+    Select -- "email" --> Email[EmailFactory]
+    Select -- "inapp" --> InApp[InAppFactory]
+    
+    Email --> Inject[Appに注入💉]
+    InApp --> Inject
+    
+    Inject --> Run[App実行]
 ```
 
 ---

@@ -30,6 +30,25 @@ Strategy をこうする👇
 
 * 「この注文を入れたら割引いくら？」を **assert** するだけ🧪
 
+```mermaid
+flowchart TD
+    subgraph Dirty [Dirty World - IO/Config]
+        DB[(Database)] -->|Fetch Config| Config
+        Time["Date.now()"] -->|Current Time| Ctx
+    end
+    
+    subgraph Pure [Pure World - Strategy]
+        Input[Order Context] -->|Pass Data| Strategy[Discount Logic]
+        Strategy -->|Return| Result[Discount Amount]
+    end
+    
+    Config --> Input
+    Ctx --> Input
+    
+    style Pure fill:#dfd,stroke:#333
+    style Dirty fill:#fdd,stroke:#333
+```
+
 ![戦略ごとの独立テスト。](./picture/gof_ts_study_059_strategy_test.png)
 
 

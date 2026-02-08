@@ -45,6 +45,27 @@ Observerにすると👇
 * 発行側は「注文確定イベントを出す」だけでOK✨
 * 受け取り側は「必要なら購読する」「不要なら購読解除する」でOK✨ ([ウィキペディア][1])
 
+```mermaid
+sequenceDiagram
+    participant Subject as OrderService
+    participant Obs1 as Inventory
+    participant Obs2 as Logger
+    participant Obs3 as UI
+
+    Note over Subject: 1. Confirm Order
+    Subject->>Subject: Output Event (Dispatch)
+
+    par Notify Observers
+        Subject-->>Obs1: order:confirmed
+        Subject-->>Obs2: order:confirmed
+        Subject-->>Obs3: order:confirmed
+    end
+
+    Obs1->>Obs1: Decrease Stock
+    Obs2->>Obs2: Log Info
+    Obs3->>Obs3: Re-render
+```
+
 ---
 
 ## 3. TypeScriptでの最短ルート：`EventTarget` でObserverを体験しよう🎀

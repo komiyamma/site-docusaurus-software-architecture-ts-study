@@ -165,6 +165,19 @@ AIの提案をコピペする前に、これだけは毎回やろうね！🥺
 4. **読みやすい？**（未来の自分が読める？）📖
 5. **テストで確かめた？**（最低でも代表＋境界）✅
 
+```mermaid
+flowchart TD
+    Start([AIの提案コード]) --> Check1{型は安全？<br>any禁止/Union守った？}
+    Check1 -- Yes --> Check2{境界値は？<br>0件/Null/最大値}
+    Check1 -- No --> Fix1[型修正]
+    Check2 -- Yes --> Check3{責務は適切？<br>余計なことしてない？}
+    Check2 -- No --> Fix2[ガード追加]
+    Check3 -- Yes --> Check4{読みやすい？}
+    Check3 -- No --> Fix3[削除/分割]
+    Check4 -- Yes --> Test[テスト実行🧪]
+    Test --> Finish([採用🎉])
+```
+
 ---
 
 ## 「AI拡張」最新の使い勝手（大事ポイントだけ）📌✨

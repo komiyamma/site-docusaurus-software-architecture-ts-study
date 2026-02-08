@@ -130,6 +130,27 @@ export function calcTotal(items: Item[], membership: Membership): number {
 この“やり方を差し替える”感じが、あとで出てくる **Strategy系の発想**につながるよ🧠🎭
 （この章では「名前」より「感覚」を大事にするよ〜😊）
 
+```mermaid
+flowchart LR
+    subgraph Before ["Before: 複雑な分岐"]
+        Input --> Check{会員ランクは？}
+        Check -->|Gold| Calc1[0.85倍]
+        Check -->|Silver| Calc2[0.90倍]
+        Check -->|Normal| Calc3[そのまま]
+        Calc1 --> Return
+        Calc2 --> Return
+        Calc3 --> Return
+    end
+
+    subgraph After ["After: 表引き(Strategy)"]
+        Input2[Input] --> Map{ルール表}
+        Map -->|Gold| Logic1[Goldの計算式]
+        Map -->|Silver| Logic2[Silverの計算式]
+        Logic1 --> Return2[Return]
+        Logic2 --> Return2
+    end
+```
+
 ---
 
 ## ハンズオン🛠️：自分のコードで「つらい所」を3つメモする📝✨

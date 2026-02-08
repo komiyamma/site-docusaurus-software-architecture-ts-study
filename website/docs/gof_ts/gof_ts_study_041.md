@@ -40,6 +40,21 @@ Bridgeはね、
 
 つまり：**依存が隠れてる設計はテストしんどい**ってこと💡
 
+```mermaid
+sequenceDiagram
+    participant Test as Test runner
+    participant Notifier
+    participant Mock as MockSender (Spy)
+
+    Note right of Test: Network is NOT used!🚫
+    Test->>Notifier: sendReceipt(id, to)
+    Notifier->>Mock: send(note)
+    Mock-->>Notifier: ok
+    Notifier-->>Test: result
+
+    Note right of Test: Verify "sent" array✅
+```
+
 ![Bridgeによるテスト差し替え（本番パーツとテスト用パーツ）。](./picture/gof_ts_study_041_bridge_test.png)
 
 

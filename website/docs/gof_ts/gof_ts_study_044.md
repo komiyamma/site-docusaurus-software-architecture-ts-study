@@ -60,6 +60,21 @@
 * 「最短距離っぽいもの（近いものから見つけたい）」に強い✨
 * キュー（待ち行列）で実装するよ📬
 
+```mermaid
+flowchart TD
+    subgraph DFS [DFS: Depth First]
+        Stack["Stack 📚"] -->|Pop| Node
+        Node -->|Children| Stack
+        Note1["Deepest first\n(LIFO)"]
+    end
+
+    subgraph BFS [BFS: Breadth First]
+        Queue["Queue 🚇"] -->|Shift/Index| Node2[Node]
+        Node2 -->|Children| Queue
+        Note2["Closest first\n(FIFO)"]
+    end
+```
+
 ![DFS（深さ優先）とBFS（幅優先）の探査イメージ。](./picture/gof_ts_study_044_dfs_bfs.png)
 
 

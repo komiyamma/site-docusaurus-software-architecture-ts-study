@@ -12,6 +12,19 @@
 
 ## 浅いコピー（Shallow copy）🫧
 
+```mermaid
+graph TD
+    subgraph Shallow Copy
+    Orig[元オブジェクト] -->|参照| Nested[中身のオブジェクト]
+    Copy[コピー] -->|共有参照⚠️| Nested
+    end
+
+    subgraph Deep Copy
+    Orig2[元オブジェクト] -->|参照| Nested2[中身のオブジェクト]
+    Copy2[コピー] -->|別参照✨| NestedNew[複製された中身]
+    end
+```
+
 * **外側だけ** 新しくなる
 * 中に入ってる **オブジェクトや配列は同じ参照** を共有しがち
 * だから「複製したつもりが、元も一緒に変わる😱」が起きる

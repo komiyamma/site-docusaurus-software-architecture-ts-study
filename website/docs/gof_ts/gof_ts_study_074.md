@@ -72,6 +72,16 @@ export type MenuNode =
 * DFS：**スタック（LIFO）** 🥞
 * BFS：**キュー（FIFO）** 🧺
 
+```mermaid
+flowchart TD
+    Request["traverse(root, type)"] --> Check{Type?}
+    Check -- "dfs" --> DFS["Use Stack (LIFO)"]
+    Check -- "bfs" --> BFS["Use Queue (FIFO)"]
+    
+    DFS --> Yield[Yield Nodes]
+    BFS --> Yield
+```
+
 ![DFS（縦）とBFS（横）の違い](./picture/gof_ts_study_074_dfs_bfs_compare.png)
 
 ## traversal.ts（DFS/BFS/切替API）🧁

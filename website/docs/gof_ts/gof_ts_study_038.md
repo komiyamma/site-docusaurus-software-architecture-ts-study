@@ -71,6 +71,22 @@ Adapterに入れたい観点を、コピペで使える形にするね📌
 * Adapterで「割引計算」「在庫引当」みたいな業務判断をやらない
   👉 Adapterは **掃除**、業務は **別の層**へ🧼➡️🏠
 
+```mermaid
+sequenceDiagram
+    participant External
+    participant Adapter
+    participant Domain
+
+    External->>Adapter: Raw Data (JSON)
+    rect rgb(240, 240, 240)
+    Note over Adapter: Boundary (Border Check)
+    Adapter->>Adapter: 1. Validate (Shape?)
+    Adapter->>Adapter: 2. Normalize (fmt/null)
+    Adapter->>Adapter: 3. Map (-> Domain)
+    end
+    Adapter->>Domain: Clean Object
+```
+
 ---
 
 ## ハンズオン🛠️：外部の金額（文字列）→内部の数値へ正規化💴✨

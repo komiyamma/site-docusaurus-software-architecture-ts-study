@@ -189,6 +189,21 @@ export function calcTotal(order: Order, discountStrategy: DiscountStrategy): Mon
 
 ✨これで、合計計算は「割引の中身」を知らなくてOKになりました！🎉
 
+```mermaid
+flowchart LR
+    Input[Order + Strategy] --> Calc[Calc Total]
+    
+    Calc -->|Call| Strat{Discount Strategy}
+    
+    Strat -->|Option A| None[No Discount]
+    Strat -->|Option B| Member[Member Discount]
+    Strat -->|Option C| Coupon[Coupon Discount]
+    
+    None -->|Result| Final[Final Price]
+    Member -->|Result| Final
+    Coupon -->|Result| Final
+```
+
 ---
 
 ## “どのStrategyを使うか”は、1か所にまとめる📌🧠

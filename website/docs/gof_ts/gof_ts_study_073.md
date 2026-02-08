@@ -63,6 +63,23 @@ for (const n of range(3, 5)) {
 * `yield x`：値 x を1個返して一時停止
 * `yield* iterable`：**別の iterable を丸ごと委譲**（再帰と相性よすぎ）✨
 
+```mermaid
+sequenceDiagram
+    participant ForLoop as for..of Loop
+    participant Gen as Generator
+
+    ForLoop->>Gen: next()
+    Gen->>Gen: Run code...
+    Gen-->>ForLoop: "{ value: 1, done: false } (yield 1)"
+    
+    ForLoop->>Gen: next()
+    Gen->>Gen: Run code...
+    Gen-->>ForLoop: "{ value: 2, done: false } (yield 2)"
+
+    ForLoop->>Gen: next()
+    Gen-->>ForLoop: "{ value: undefined, done: true } (return)"
+```
+
 ---
 
 ## ハンズオン🛠️：木構造（メニュー）をDFSで `yield` する🌳🔁

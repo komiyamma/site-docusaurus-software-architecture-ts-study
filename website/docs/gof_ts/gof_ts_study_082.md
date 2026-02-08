@@ -50,6 +50,31 @@ TypeScriptの抽象クラス自体は公式に「抽象クラスは直接newで�
 
 ![親クラスの骨組みと子クラスの埋め合わせ](./picture/gof_ts_study_082_inheritance_holes.png)
 
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Printer as ReceiptPrinter (Parent)
+    participant Sub as SubClass
+
+    Client->>Printer: print(order)
+    activate Printer
+    Printer->>Printer: validate()
+    
+    Printer->>Sub: renderHeader()
+    Sub-->>Printer: lines...
+    
+    Printer->>Printer: renderBody()
+    
+    Printer->>Sub: renderOptionalSection()
+    Sub-->>Printer: lines... (hook)
+    
+    Printer->>Sub: renderFooter()
+    Sub-->>Printer: lines...
+    
+    Printer-->>Client: Final String
+    deactivate Printer
+```
+
 ---
 
 ## 3) TypeScript流の“安全装備”🛡️（`override` 推し）

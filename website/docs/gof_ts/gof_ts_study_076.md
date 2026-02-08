@@ -10,7 +10,26 @@
 
 ## 学ぶこと📌
 
-* **Observer**：通知（発行→購読）の仕組み。発行側は「誰が聞いてるか」を知らない📣
+* **Observer**：通知（発行→購読）の仕組み。発行側は「誰**UI部品が“誰に影響するか”を知らなくてよくなる**＝変更がラク🎉
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant QtyInput
+    participant Mediator
+    participant CouponInput
+
+    User->>QtyInput: setValue(0)
+    QtyInput->>Mediator: emit("ui:qty-changed", {qty:0})
+    
+    activate Mediator
+    Mediator->>Mediator: Rule: qty=0 => coupon=""
+    Mediator->>CouponInput: emit("state:update", {code:""})
+    deactivate Mediator
+    
+    CouponInput-->>User: Update Display
+```
+
 * **Mediator**：通知を受けて、**“調停ルール”を実行する司令塔**（Aが変わったらBをこう更新…みたいなルールを持つ）🕹️
 * TypeScriptでは **EventTarget / CustomEvent** を使って“イベント中心”にまとめるのが自然🌸
   ※ `dispatchEvent()` はリスナーを**同期的**に呼び出す仕様なので、テストもしやすいよ✅ ([MDNウェブドキュメント][1])

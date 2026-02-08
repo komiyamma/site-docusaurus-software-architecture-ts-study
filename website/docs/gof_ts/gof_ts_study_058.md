@@ -76,6 +76,24 @@ export function calcTotalAfterDiscount(rank: MemberRank, order: Order): number {
 * 利用側は `calcTotalAfterDiscount(...)` を呼ぶだけ📞
 * `if/switch` が育たない🌱
 
+```mermaid
+classDiagram
+    class Registry {
+        +Map&lt;Rank, Strategy&gt;
+        +get(rank)
+    }
+    class Strategies {
+        <<Functions>>
+        noDiscount
+        silverDiscount
+        goldDiscount
+    }
+    
+    Registry --> Strategies : holds
+    Client --> Registry : get(rank)
+    Client --> Strategies : executes found strategy
+```
+
 ---
 
 ## 2) キー設計が命🔑✨（型安全を上げる“王道”）

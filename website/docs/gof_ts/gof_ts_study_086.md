@@ -23,6 +23,23 @@
 
 ![Interpreterの安全ゲート（悪意ある入力をブロック）](./picture/gof_ts_study_086_interpreter_safety.png)
 
+```mermaid
+flowchart LR
+    Input[Raw String] --> Gate1{Length Check}
+    Gate1 -- OK --> Tokenizer
+    Gate1 -- Too Long --> Error1[Result: Error]
+    
+    Tokenizer --> Gate2{Token Count}
+    Gate2 -- OK --> Parser
+    Gate2 -- Too Many --> Error2[Result: Error]
+    
+    Parser --> Gate3{Depth Check}
+    Gate3 -- OK --> AST
+    Gate3 -- Too Deep --> Error3[Result: Error]
+    
+    AST --> Evaluator --> Result[Result: Value]
+```
+
 ---
 
 ## 2) ミニDSL題材：割引ルール式（Boolean式）☕🧾

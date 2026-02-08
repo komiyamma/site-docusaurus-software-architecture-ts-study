@@ -187,6 +187,21 @@ function cancel(order: OrderDraft | OrderConfirmed, reason: string): OrderCancel
 
 * 「確定してないのに支払う」みたいな順序事故が減るよ💥➡️🛡️
 
+```mermaid
+stateDiagram-v2
+    [*] --> Draft
+    Draft --> Confirmed : confirm()
+    Confirmed --> Paid : pay()
+    Draft --> Canceled : cancel()
+    Confirmed --> Canceled : cancel()
+    Paid --> [*]
+    Canceled --> [*]
+
+    note right of Draft
+        addItemが可能
+    end note
+```
+
 ---
 
 ## 13-7 `satisfies` で“ハンドラ表”も網羅チェックできる🗂️✨

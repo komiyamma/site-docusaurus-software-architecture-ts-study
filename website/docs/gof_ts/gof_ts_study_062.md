@@ -13,6 +13,26 @@
 * 互換性（あとから変更しても事故らない）🛡️
 * テスト観点（「イベントは仕様」だからテストしやすい）🧪
 
+```mermaid
+classDiagram
+    class EventDefinition {
+        +EventName: string
+        +Payload: Object
+    }
+    class OrderConfirmed {
+        +orderId: string
+        +totalYen: number
+        +occurredAt: string
+    }
+    class PaymentFailed {
+        +orderId: string
+        +reason: string
+    }
+    
+    EventDefinition <|-- OrderConfirmed : implements
+    EventDefinition <|-- PaymentFailed : implements
+```
+
 ---
 
 ## 0. まず大事な前提：イベントは「仕様書」🧾💡

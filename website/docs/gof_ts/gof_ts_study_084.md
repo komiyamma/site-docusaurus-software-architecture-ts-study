@@ -65,6 +65,18 @@ true / false
 
 ![Interpreterの処理パイプライン](./picture/gof_ts_study_084_interpreter_pipeline.png)
 
+```mermaid
+flowchart LR
+    Input[String Source] --> Tokenizer
+    Tokenizer --> Tokens["Token[]"]
+    Tokens --> Parser
+    Parser --> AST["AST (Expr)"]
+    AST --> Evaluator
+    Evaluator --> Context["Context Data"]
+    Context --> Evaluator
+    Evaluator --> Result["Result (bool/value)"]
+```
+
 この3段階ができたら、もうInterpreter入門クリアだよ🥳🎉
 
 ---

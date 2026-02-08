@@ -18,6 +18,21 @@ GoFのProxyでよくある用途（例：アクセス制御、ログ、キャッ
 
 `apply` トラップは「関数呼び出し」を捕まえるための仕組みだよ📞✨ ([MDNウェブドキュメント][1])
 
+```mermaid
+graph LR
+    User[User Code] -->|Call/Get/Set| Proxy
+    
+    subgraph Handler
+        Proxy -->|Trap Triggered| Trap[Trap: get/set/apply]
+        Trap -->|Custom Logic| Logic{Log/Limit?}
+    end
+
+    Logic -->|Reflect| Target[Target Object]
+    
+    style Proxy fill:#f9f,stroke:#333
+    style Target fill:#ccf,stroke:#333
+```
+
 ![JS標準Proxyのトラップ機構。](./picture/gof_ts_study_055_js_proxy.png)
 
 

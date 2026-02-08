@@ -60,6 +60,29 @@ UIは「Aが変わったらBこうしてCこうして…」が多いから、**M
 
 ![Mediatorのイベントフロー（UI→Mediator→UI）](./picture/gof_ts_study_077_mediator_event_flow.png)
 
+```mermaid
+classDiagram
+    class EventBus {
+        +emit(type, payload)
+        +on(type, handler)
+    }
+    class Mediator {
+        -state
+        +handle(event)
+    }
+    class ComponentA
+    class ComponentB
+
+    ComponentA --> EventBus : emit UI Event
+    ComponentB --> EventBus : emit UI Event
+    
+    EventBus --> Mediator : dispatch
+    
+    Mediator --> EventBus : emit State Event
+    EventBus --> ComponentA : update
+    EventBus --> ComponentB : update
+```
+
 ---
 
 ## 4) ハンズオン🛠️：EventTarget中心の“軽いMediator”

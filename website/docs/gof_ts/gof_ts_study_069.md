@@ -146,6 +146,19 @@ const err = (error: AppError): Result<never> => ({ ok: false, error });
 * **“途中経過”をContextに集める** と、各ステップがスッキリするよ😌
 * エラーは `AppError` で種類分けして、止め方を統一🛑✨
 
+```mermaid
+flowchart LR
+    Start((Start)) --> Step1[Validate]
+    Step1 -->|OK| Step2[Discount]
+    Step2 -->|OK| Step3[Stock]
+    Step3 -->|OK| Step4[Calc Total]
+    Step4 -->|OK| Step5[Notify]
+    Step5 --> End((End))
+
+    Step1 -->|Err| Fail[Return Error]
+    Step3 -->|Err| Fail
+```
+
 ---
 
 ## 3. Step（ステップ）＝小さな処理を定義する🧱

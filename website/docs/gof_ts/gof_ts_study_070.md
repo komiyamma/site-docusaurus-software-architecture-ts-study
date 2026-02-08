@@ -248,6 +248,24 @@ export function runPipelineWithReduce<T>(steps: Step<T>[], initial: T): Promise<
 この「止められる」がChainっぽさだね🛑
 `next()` の考え方はExpressの説明でも出てくるよ。([Express][1])
 
+```mermaid
+sequenceDiagram
+    participant Caller
+    participant MW1 as Timing
+    participant MW2 as Log
+    participant Logic as Core
+
+    Caller->>MW1: call(ctx, next)
+    MW1->>MW1: Start Timer
+    MW1->>MW2: await next()
+    MW2->>MW2: Log Request
+    MW2->>Logic: await next()
+    Logic-->>MW2: return
+    MW2-->>MW1: return
+    MW1->>MW1: Stop Timer & Log
+    MW1-->>Caller: return
+```
+
 ## 6.1 composeの最小版🧩
 
 ```ts

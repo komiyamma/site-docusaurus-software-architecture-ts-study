@@ -25,6 +25,16 @@ Observer（購読→通知）を「標準/デファクトの道具」でスッ�
 * `on/once/off/emit` が自然なコードになっている
 * **`error` イベントの扱い**など、Node流の作法で揃えたい([nodejs.org][1])
 
+```mermaid
+flowchart TD
+    Start{Which to choose?}
+    Start -->|Web Standards / Browser Compatible?| Web[EventTarget]
+    Start -->|Node.js Ecosystem Deep Dive?| Node[EventEmitter]
+    
+    Web -->|Features| F1[dispatchEvent / AbortController]
+    Node -->|Features| F2[on / emit / error handling]
+```
+
 ---
 
 ## 2) EventTargetって何？🌐🧩

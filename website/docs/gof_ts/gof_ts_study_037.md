@@ -50,6 +50,17 @@
 2. **変換（マッピング）**してドメイン型を作る🧩
 3. 失敗は **Result** で返す（例外にしない）🧯
 
+```mermaid
+flowchart TD
+    Input["Input: unknown"] --> Guard{"Type Guard\n(Is it object?)"}
+    Guard -- No --> Err1["Error: Invalid Shape"]
+    Guard -- Yes --> Val{"Validation\n(Check Values)"}
+    
+    Val -- No --> Err2["Error: Invalid Value"]
+    Val -- Yes --> Map["Mapping\n(Dto -> Domain)"]
+    Map --> Ok["Result.Ok"]
+```
+
 ---
 
 ## 5. 最小コード：型・Result・型ガード・マッピング関数🧁

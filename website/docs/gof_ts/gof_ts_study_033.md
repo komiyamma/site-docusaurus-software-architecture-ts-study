@@ -21,6 +21,19 @@ TypeScript（というかES Modules）では、**「ファイル（モジュー�
 Node.jsでも、ESMは公式の標準形式で、URLとして解決してキャッシュされる（＝同じURLなら同じモジュール扱い）って説明があるよ〜🧠([Node.js][2])
 TypeScript側も、ESMの「import/export」文法をそのまま理解して扱うよ〜📘([TypeScript][3])
 
+```mermaid
+flowchart LR
+    FileA[File A] -->|import logger| Cache
+    FileB[File B] -->|import logger| Cache
+    FileC[File C] -->|import logger| Cache
+    
+    subgraph NodeModuleCache
+    Cache["Logger Instance\n(Single Execution)"]
+    end
+    
+    note[みんな同じ実体を見る👀]
+```
+
 ---
 
 ## 3) いちばん定番：モジュールで共有インスタンスをexportする🧁📦

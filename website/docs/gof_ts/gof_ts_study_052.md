@@ -90,6 +90,31 @@ export function getIconStats() {
 }
 ```
 
+```mermaid
+sequenceDiagram
+    participant Client
+    participant GetIcon
+    participant Cache
+    participant Creator
+
+    Client->>GetIcon: getIcon(" Coffee ")
+    GetIcon->>GetIcon: normalize("coffee")
+    GetIcon->>Cache: get("coffee")
+    
+    rect rgb(240, 240, 240)
+        alt Hit
+            Cache-->>GetIcon: return Icon
+        else Miss
+            Cache-->>GetIcon: null
+            GetIcon->>Creator: "createIcon('coffee')"
+            Creator-->>GetIcon: new Icon
+            GetIcon->>Cache: set("coffee", Icon)
+        end
+    end
+
+    GetIcon-->>Client: return Icon
+```
+
 ## 3-3) extrinsic（毎回変わるやつ）を外から渡す🎀
 
 ```ts

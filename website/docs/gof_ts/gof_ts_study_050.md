@@ -17,6 +17,17 @@ Facadeの価値はこれ👇
 * ✅ 手順の抜け・順番ミスを防げる（誤用防止）🚫
 * ✅ テストがやりやすい（入口1個を叩けばOK）🧪
 
+```mermaid
+graph TD
+    UI[Web UI 🖥️] --> Facade[Facade: placeOrder]
+    CLI[CLI Tool ⌨️] --> Facade
+    API[REST API 🌐] --> Facade
+
+    Facade --> Logic[Business Logic & Steps]
+    
+    style Facade fill:#f9f,stroke:#333
+```
+
 ---
 
 ## 2) Before → After（短くなるの、体感しよっ）😆✨

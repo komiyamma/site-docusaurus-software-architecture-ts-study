@@ -101,6 +101,25 @@ type Order = {
 };
 ```
 
+```mermaid
+classDiagram
+    class Order {
+        +lines: OrderLine[]
+    }
+    class OrderLine {
+        +itemId: string
+        +quantity: number
+    }
+    class MenuItem {
+        +id: string
+        +name: string
+        +priceYen: number
+    }
+
+    Order *-- OrderLine : 持つ
+    OrderLine --> MenuItem : IDで参照
+```
+
 💡ここでのコツ
 
 * `priceYen` みたいに **単位を名前に入れる**と事故が減るよ💴✨

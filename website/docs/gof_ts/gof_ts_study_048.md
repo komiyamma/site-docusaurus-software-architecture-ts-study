@@ -50,6 +50,25 @@ async function onClickConfirm() {
 * 途中の失敗で片付けが地獄🧯
 * UIでもAPIでも同じ手順を使いたいのにコピペが増える📎
 
+```mermaid
+graph TD
+    subgraph Before [Before: Spaghetti🍝]
+        UI[UI] --> Val[Validate]
+        UI --> Price[Price]
+        UI --> Stock[Stock]
+        UI --> Pay[Payment]
+        NOTE1[UI knows everything...]
+    end
+
+    subgraph After [After: Facade Door🚪]
+        UI2[UI] --> Facade[Facade: placeOrder]
+        Facade --> Val2[Validate]
+        Facade --> Price2[Price]
+        Facade --> Stock2[Stock]
+        Facade --> Pay2[Payment]
+    end
+```
+
 ---
 
 ## 3) Facadeでこうする🚪✨（“入口API”を1個作る）

@@ -26,6 +26,20 @@ GoFの登場人物で言うとこんな感じ👇（でもTSではクラスに�
 * **Memento**：状態の保存物（＝注文のスナップショット📸）
 * **Caretaker**：保存を管理する人（＝履歴を持つ配列🗂️）
 
+```mermaid
+stateDiagram-v2
+    direction LR
+    Past : Past [Snap1, Snap2]
+    Present : Present [Snap3]
+    Future : Future []
+
+    [*] --> Present
+    Present --> Past : commit()
+    Past --> Present : undo()
+    Present --> Future : undo()
+    Future --> Present : redo()
+```
+
 ---
 
 ## 2) まず大事：状態は「プレーンなデータ」に寄せる🧼✨

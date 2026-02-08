@@ -158,6 +158,19 @@ type BuildStep = {
   → つまり「割引ステップを通らないと税に行けない」✅
 * AfterTaxStep まで来たら **もう割引には戻れない** ✅
 
+```mermaid
+stateDiagram-v2
+    [*] --> StartStep
+    StartStep --> AfterDiscountStep : discount(rule) / noDiscount()
+    AfterDiscountStep --> AfterTaxStep : tax(rate)
+    AfterTaxStep --> BuildStep : fee(rule)
+    BuildStep --> [*] : build()
+
+    note right of AfterTaxStep
+        戻れない！一方通行🚧
+    end note
+```
+
 ---
 
 ## 2) Builder本体（クラスを増やさず関数＋クロージャで）🍰

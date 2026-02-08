@@ -78,6 +78,39 @@ type Cancelled = {
 type OrderState = Draft | Confirmed | Paid | Served | Cancelled;
 ```
 
+```mermaid
+classDiagram
+    class OrderState {
+        <<Union>>
+    }
+    class Draft {
+        status: "draft"
+        items: Item[]
+    }
+    class Confirmed {
+        status: "confirmed"
+        orderId: string
+    }
+    class Paid {
+        status: "paid"
+        paidAt: number
+    }
+    class Served {
+        status: "served"
+        servedAt: number
+    }
+    class Cancelled {
+        status: "cancelled"
+        reason: string
+    }
+
+    OrderState <|-- Draft
+    OrderState <|-- Confirmed
+    OrderState <|-- Paid
+    OrderState <|-- Served
+    OrderState <|-- Cancelled
+```
+
 ---
 
 ## 4) “イベント（遷移の入力）”もUnionにする📩✨

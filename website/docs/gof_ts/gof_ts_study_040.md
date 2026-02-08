@@ -35,6 +35,37 @@ Bridge は、ここをスッキリ分けます✨
 
 ![Bridge構造（抽象と実装が橋でつながる）。](./picture/gof_ts_study_040_bridge_structure.png)
 
+```mermaid
+classDiagram
+    class Notifier {
+        <<Abstract>>
+        -sender: Sender
+        +notify(input)
+        #deliver(payload)
+    }
+    
+    class Sender {
+        <<Interface>>
+        +send(payload)
+    }
+    
+    class OrderConfirmedNotifier {
+        +notify(order)
+    }
+    
+    class EmailSender {
+        +send()
+    }
+    class ConsoleSender {
+        +send()
+    }
+
+    Notifier o-- Sender : Bridge
+    OrderConfirmedNotifier --|> Notifier
+    EmailSender ..|> Sender
+    ConsoleSender ..|> Sender
+```
+
 
 ---
 

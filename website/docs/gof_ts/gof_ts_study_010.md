@@ -124,6 +124,23 @@ tests/
   calcTotal.test.ts
 ```
 
+```mermaid
+graph TD
+    subgraph App ["App Layer"]
+        Index[index.ts] --> Logic[calcTotal.ts]
+    end
+    
+    subgraph Domain ["Domain Layer"]
+        Logic --> Types[order.ts]
+        Types
+        Money[money.ts]
+    end
+    
+    subgraph Test ["Tests"]
+        TestFile[calcTotal.test.ts] -.-> Logic
+    end
+```
+
 ---
 
 ## “できてる感”が出るチェックポイント✨（超重要）

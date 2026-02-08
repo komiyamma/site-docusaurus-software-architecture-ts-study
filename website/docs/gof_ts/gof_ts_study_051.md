@@ -40,6 +40,24 @@ Flyweightは一言でいうと…
 * **共有できない部分（Extrinsic / 外部状態）**：アイテムごとに違うデータ
   例）id、価格、在庫数、数量、ユーザーが選んだトッピング など
 
+```mermaid
+classDiagram
+    class ItemCard {
+        -id: string
+        -price: number
+        -visual: Visual
+    }
+    class Visual {
+        <<Shared>>
+        -icon: string
+        -accent: string
+        -label: string
+    }
+
+    ItemCard --> Visual : "references (Many-to-One)"
+    note for Visual "1 Instance per Kind<br/>(Coffee, Tea, Juice)"
+```
+
 ---
 
 ## 3. 「共有できる/できない」仕分け練習🧠✨

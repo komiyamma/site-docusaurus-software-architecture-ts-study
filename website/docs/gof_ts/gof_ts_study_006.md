@@ -45,6 +45,17 @@ npm i -D typescript vitest eslint @eslint/js typescript-eslint
 * **Lint**：ESLint v9以降は **flat config（`eslint.config.js`）が標準** 🧹 ([ESLint][3])
 * TS向けルール：typescript-eslint の推奨構成を使うよ🧩 ([Node.js][5])
 
+```mermaid
+flowchart TD
+    Start[プロジェクト作成] --> Step1[npm init -y]
+    Step1 --> Step2[依存インストール<br>TS / Vitest / ESLint]
+    Step2 --> Step3[設定ファイル作成<br>tsconfig / eslint.config]
+    Step3 --> Step4[最小コード作成<br>src/total.ts]
+    Step4 --> Step5[テスト作成<br>src/total.test.ts]
+    Step5 --> Check[動作確認<br>npm test / lint]
+    Check --> Goal[学習環境の完成🎉]
+```
+
 ---
 
 ## 6.5 手順③：`package.json` を整える🧾✨

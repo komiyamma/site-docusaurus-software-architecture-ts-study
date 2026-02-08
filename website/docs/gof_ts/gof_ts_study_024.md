@@ -54,6 +54,21 @@ export function createOrderPositional(
 ): Order {
   return { drink, size, temp, milk, sugar, extraShot, topping, takeout, note, customerId, couponCode };
 }
+
+```
+
+```mermaid
+flowchart LR
+    Caller[呼び出し側] -->|arg1| Fn[関数]
+    Caller -->|arg2| Fn
+    Caller -->|arg3| Fn
+    Caller -->|...| Fn
+    Caller -->|arg10| Fn
+    
+    note[どの引数が何だっけ？😵‍💫<br>順番間違えたら即死😇]
+    
+    style Caller fill:#f9f,stroke:#333
+    style Fn fill:#ccf,stroke:#333
 ```
 
 呼び出し側がこう👇

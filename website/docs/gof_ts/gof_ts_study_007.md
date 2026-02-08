@@ -134,6 +134,29 @@ export function renderReceipt(menuIndex: Map<MenuItemId, MenuItem>, order: Order
 }
 ```
 
+```mermaid
+classDiagram
+    direction LR
+    class Order {
+        +lines: OrderLine[]
+    }
+    class OrderLine {
+        +itemId
+        +qty
+    }
+    class MenuItem {
+        +id
+        +priceYen
+    }
+    class MenuIndex {
+        +Map&lt;id, MenuItem&gt;
+    }
+
+    Order *-- OrderLine
+    OrderLine ..> MenuIndex : "itemIdで検索"
+    MenuIndex o-- MenuItem
+```
+
 ---
 
 ## 実装②：動かしてみよう（consoleでOK）🖥️✨

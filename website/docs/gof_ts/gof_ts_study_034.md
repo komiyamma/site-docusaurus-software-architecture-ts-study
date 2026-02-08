@@ -38,6 +38,22 @@ Singleton（やグローバル）で `logger` を握ると、ありがちな困�
 
 DIにすると、これが **すーっと消える** よ🌈
 
+```mermaid
+sequenceDiagram
+    participant Test
+    participant App
+    participant RealLogger
+    participant FakeLogger
+
+    Note over App, RealLogger: Production
+    App->>RealLogger: info("log")
+
+    Note over Test, FakeLogger: Test (DI)
+    Test->>App: call( { logger: FakeLogger } )
+    App->>FakeLogger: info("log")
+    FakeLogger-->>Test: ログ内容を検証✅
+```
+
 ---
 
 ## 3. TypeScriptの定番DI：依存は「第2引数のdepsオブジェクト」で渡す🧁🎁

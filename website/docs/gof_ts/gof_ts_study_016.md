@@ -143,7 +143,32 @@ export function restoreOrder(saved: SavedOrder): Order {
 
 ### つらさ③：生成と関係ない処理まで混ざる🧃
 
+### つらさ③：生成と関係ない処理まで混ざる🧃
+
 復元処理に `Date` 変換やデフォルト値が混ざって、責務がぐちゃぐちゃ🍝
+
+```mermaid
+classDiagram
+    class Client1_PlaceOrder {
+        +placeOrder()
+    }
+    class Client2_RestoreOrder {
+        +restoreOrder()
+    }
+    class DineInOrder
+    class TakeoutOrder
+    class DeliveryOrder
+
+    Client1_PlaceOrder ..> DineInOrder : new
+    Client1_PlaceOrder ..> TakeoutOrder : new
+    Client1_PlaceOrder ..> DeliveryOrder : new
+    
+    Client2_RestoreOrder ..> DineInOrder : new
+    Client2_RestoreOrder ..> TakeoutOrder : new
+    Client2_RestoreOrder ..> DeliveryOrder : new
+
+    note "依存が散らばる！\n変更時に全部修正が必要😵"
+```
 
 ---
 

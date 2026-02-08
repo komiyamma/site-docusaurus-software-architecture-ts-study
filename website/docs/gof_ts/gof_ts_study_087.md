@@ -80,6 +80,30 @@ Visitorの考え方はこれ👇
 
 ![Visitorのメタファー（建物と訪問業務）](./picture/gof_ts_study_087_visitor_metaphor.png)
 
+```mermaid
+graph TD
+    subgraph Structure [Fixed Structure]
+        Item
+        Group
+    end
+    
+    subgraph Visitors [Growing Operations]
+        V1[Renderer]
+        V2[Calculator]
+        V3[Validator]
+        V4[Exporter...]
+    end
+    
+    V1 --> Item
+    V1 --> Group
+    V2 --> Item
+    V2 --> Group
+    V3 --> Item
+    
+    style Structure fill:#f9f,stroke:#333
+    style Visitors fill:#ccf,stroke:#333
+```
+
 一般的な説明でも、Visitorは「オブジェクト構造を変えずに、新しい操作（振る舞い）を追加したい」時に使う…って言われるやつだよ💡 ([GeeksforGeeks][2])
 
 ### GoFの“教科書版”Visitorはダブルディスパッチ🧠

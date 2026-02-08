@@ -109,6 +109,23 @@ State のコアはこれ👇
 
 これで「できる/できない」が **仕様として見える化** できたね👀✨
 
+```mermaid
+stateDiagram-v2
+    [*] --> editing : Start
+    editing --> submitted : SUBMIT
+    editing --> cancelled : CANCEL
+
+    submitted --> paid : PAY
+    submitted --> cancelled : CANCEL
+
+    paid --> served : SERVE
+    served --> [*]
+    cancelled --> [*]
+
+    note right of editing : Can add/remove items
+    note right of paid : Cannot cancel easily
+```
+
 ---
 
 ## 4. 実装（Stateのルールを“状態ごとに集約”する）🧩✨

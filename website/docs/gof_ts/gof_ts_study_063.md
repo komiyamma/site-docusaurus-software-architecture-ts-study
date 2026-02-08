@@ -50,6 +50,20 @@ Commandの良さは、「実行する側」が **中身を知らなくていい*
 * **Invoker**：命令を実行して履歴に積む係（UIやコントローラ）🎛️
 * **Client**：命令を作る係（UIイベントの中とか）🧑‍🍳
 
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Invoker
+    participant Command
+    participant Receiver as Order
+
+    Client->>Command: new AddTopping("Whip")
+    Client->>Invoker: run(Command)
+    Invoker->>Command: execute()
+    Command->>Receiver: update(toppings)
+    Invoker->>Invoker: push to history
+```
+
 ---
 
 ## TypeScriptでの“自然な”書き方（クラス地獄にしない）🧁

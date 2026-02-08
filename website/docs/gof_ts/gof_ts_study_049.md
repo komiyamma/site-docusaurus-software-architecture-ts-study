@@ -70,6 +70,28 @@ async function onClickConfirm(input: any) {
 * 在庫・決済・保存・通知は、Facadeが直接newしない
 * `deps`（依存まとめ）を引数で受け取るとテストが爆ラク🧪🎉
 
+```mermaid
+classDiagram
+    class Facade {
+        +placeOrder(input, deps)
+    }
+    class SubFuncs {
+        <<Internal>>
+        validate()
+        price()
+    }
+    class Deps {
+        <<Interface>>
+        stock
+        payment
+        repo
+        notify
+    }
+
+    Facade ..> SubFuncs : calls
+    Facade ..> Deps : uses (injected)
+```
+
 ---
 
 ## ハンズオン🛠️：`placeOrder(...)` を Facade にする☕🧾

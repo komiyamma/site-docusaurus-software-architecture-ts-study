@@ -25,6 +25,26 @@
 
 ![Composite, Iterator, Visitorの3者協力](./picture/gof_ts_study_089_trio_roles.png)
 
+```mermaid
+classDiagram
+    class Composite {
+        +Data Structure
+        +MenuNode
+    }
+    class Iterator {
+        +Traversal Logic
+        +DFS / BFS
+    }
+    class Visitor {
+        +Operation Logic
+        +Render / Total
+    }
+
+    Composite <.. Iterator : Walks
+    Composite <.. Visitor : Visits
+    Iterator --> Visitor : Feeds nodes to
+```
+
 ---
 
 ## 2) 題材：カフェのメニューを「木」で持つ☕🌳

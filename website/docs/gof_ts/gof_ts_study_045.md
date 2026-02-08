@@ -76,6 +76,20 @@ withMemoize(calcTotal)(order)
 
 // 重ねがけ（Decoratorの醍醐味）
 withMemoize(withTiming(withLogging(calcTotal)))(order)
+
+```
+
+```mermaid
+graph LR
+    Input[Order] --> Memo[Memoize Wrap]
+    Memo --> Timing[Timing Wrap]
+    Timing --> Log[Logging Wrap]
+    Log --> Core((Core: calcTotal))
+    
+    Core -->|Result| Log
+    Log -->|Result| Timing
+    Timing -->|Result| Memo
+    Memo -->|Result| Output
 ```
 
 ---

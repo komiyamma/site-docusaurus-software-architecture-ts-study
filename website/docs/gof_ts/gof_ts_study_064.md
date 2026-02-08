@@ -76,6 +76,19 @@ export function undo<S>(h: History<S>): void {
 
 ---
 
+```mermaid
+stateDiagram-v2
+    State1 : Order [ ]
+    State2 : Order [Whip]
+    State3 : Order [Whip, Choco]
+
+    [*] --> State1
+    State1 --> State2 : execute(Add Whip)
+    State2 --> State3 : execute(Add Choco)
+    State3 --> State2 : undo()
+    State2 --> State1 : undo()
+```
+
 ## 4) Commandを“作る”関数（トッピング追加/削除）🍓🧁
 
 ここが超大事💡

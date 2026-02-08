@@ -69,6 +69,26 @@ const fetchMenuReal = async (shopId: string): Promise<Menu> => {
 * **TTL（有効期限）**で古いキャッシュは捨てる⌛
 * **レート制限**は「前回呼び出しから○ms未満は拒否」でミニマムに🚦
 
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Proxy
+    participant Real as RealAPI
+
+    Client->>Proxy: call(args)
+    
+    alt Too Fast (Rate Limit)
+        Proxy-->>Client: Error 🚫
+    else Cached & Valid
+        Proxy-->>Client: Return Cached 🗃️
+    else Cache Expired / First Call
+        Proxy->>Real: call(args) 🐢
+        Real-->>Proxy: result
+        Proxy->>Proxy: save cache
+        Proxy-->>Client: result
+    end
+```
+
 ```ts
 type AsyncFn = (...args: any[]) => Promise<any>;
 

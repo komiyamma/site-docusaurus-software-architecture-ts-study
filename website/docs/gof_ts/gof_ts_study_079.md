@@ -123,6 +123,20 @@ export function redo<T>(h: History<T>): History<T> {
 * **Undo後に編集したらRedoは捨てる**：これを忘れると「未来が分岐してカオス」になる🌪️
 * `max` を付けると、履歴が無限に増えなくて安心🧯
 
+```mermaid
+flowchart TD
+    Start["push(next)"] --> Slice["Slice History to Cursor"]
+    Slice --> Clone[Clone 'next']
+    Clone --> Push["Push to History"]
+    Push --> CheckMax{Length > Max?}
+    
+    CheckMax -- Yes --> Shift["Remove Oldest"]
+    CheckMax -- No --> UpdateIndex["Update Cursor"]
+    
+    Shift --> UpdateIndex
+    UpdateIndex --> End[Return New History]
+```
+
 ---
 
 ## 4) カフェ注文の“編集”に繋げよう☕🧾✨

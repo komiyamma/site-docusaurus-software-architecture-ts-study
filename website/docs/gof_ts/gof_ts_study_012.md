@@ -159,6 +159,17 @@ function calcTotalV2(subtotal: number, rank: MemberRank, couponCode?: string) {
 }
 ```
 
+```mermaid
+flowchart LR
+    Input[Subtotal] --> Pipe1(Percent Rule)
+    Pipe1 -->|Price| Pipe2(Coupon Rule)
+    Pipe2 -->|Price| Output[Final Total]
+
+    subgraph Pipeline
+    Pipe1 -- Next --> Pipe2
+    end
+```
+
 **ポイント💡**
 
 * ルールは「小さな関数」にするほど強い💪✨

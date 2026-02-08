@@ -38,6 +38,16 @@ TypeScript は 6.0 を「橋渡し（bridge）」として 7.0（ネイティブ
 
 ポイント：**独自の巨大クラスは作らない**よ。型＋関数でいくよ🧁
 
+```mermaid
+flowchart TD
+    Start[Execute Command] --> Try{Success?}
+    Try -- Yes --> End[Return Result]
+    Try -- No --> Check{Retriable & < Max?}
+    Check -- No --> Fail[Return Error]
+    Check -- Yes --> Wait[Wait Backoff + Jitter]
+    Wait --> Try
+```
+
 ---
 
 ## 4) 最小の型：Result と Command（関数Command）🧩

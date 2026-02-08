@@ -38,6 +38,19 @@ Prototypeの発想はこう👇
 
 つまり… **「複製して編集」＝不変更新そのもの**なんだよね🌸
 
+```mermaid
+timeline
+    title 注文データの変化（履歴）
+    T0 : 初期作成 : { items: [] }
+    T1 : 商品追加 : { items: [Coffee] }
+    T2 : メモ変更 : { items: [Coffee], note: "急ぎ" }
+    
+    section ポイント
+      どの時点も
+      壊れてない
+      スナップショット📸
+```
+
 ![書き換えずに新しいスナップショットを作る（不変）。](./picture/gof_ts_study_030_immutable_snapshot.png)
 
 

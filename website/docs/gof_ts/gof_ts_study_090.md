@@ -13,6 +13,31 @@
 
 ![総合演習：カフェアプリのパターン連携マップ](./picture/gof_ts_study_090_architecture_map.png)
 
+```mermaid
+sequenceDiagram
+    participant User
+    participant Facade
+    participant Chain as Pipeline (Validation)
+    participant State as StateMachine
+    participant Observer as EventBus
+
+    User->>Facade: place(draft)
+    Facade->>Chain: runPipeline(draft)
+    Chain-->>Facade: Result (Valid/Calc)
+    
+    alt is OK
+        Facade->>State: placeOrder(status change)
+        State-->>Facade: PlacedOrder
+        
+        Facade->>Observer: emit("order:placed")
+        Observer-->>User: (Async notifications)
+        
+        Facade-->>User: Result: OK (PlacedOrder)
+    else is Error
+        Facade-->>User: Result: Error
+    end
+```
+
 ---
 
 ## 0) 2026っぽい“今どき”セットアップメモ 🧰✨

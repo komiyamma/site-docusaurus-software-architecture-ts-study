@@ -30,6 +30,29 @@
 * 仕様変更（税率、表示名、商品ID…）が来たとき、**全部探して直す**羽目になる🔍💦
 * “ついで修正”で内容がズレて、バグが混ざる（しかも気づきにくい）😱
 
+```mermaid
+flowchart TD
+    subgraph CopyHell [コピペ地獄🔥]
+        Src[元データ] -->|Copy| A[注文A]
+        Src -->|Copy| B[注文B]
+        A -->|Copy| C[注文C]
+        
+        style A fill:#f9f,stroke:#333
+        style B fill:#f9f,stroke:#333
+        style C fill:#f9f,stroke:#333
+        
+        note1[修正したら...\nAだけ直してB,C忘れる😇]
+    end
+
+    subgraph Prototype [Prototype✨]
+        Tmpl[マスターテンプレ] -->|Clone| New1[新規A]
+        Tmpl -->|Clone| New2[新規B]
+        
+        style Tmpl fill:#ccf,stroke:#333
+        note2[テンプレ直せば\n次は全部反映✅]
+    end
+```
+
 ---
 
 ## 3. Prototypeって、超ざっくり何？🧬✨

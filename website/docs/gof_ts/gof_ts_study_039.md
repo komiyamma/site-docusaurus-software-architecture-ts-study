@@ -106,6 +106,24 @@ async function enqueueDigest(_msg: string) {}
 
 この2つは別方向の増え方だから、混ぜると爆発💥
 
+```mermaid
+graph TD
+    subgraph Explosion [Bad: Combination Explosion💥]
+        N1[Now x Log]
+        N2[Now x Email]
+        N3[Digest x Log]
+        N4[Digest x Email]
+        note1[掛け算でクラスが増える...\nM x N]
+    end
+
+    subgraph Bridge [Good: Bridge🌉]
+        A["Timing (Now/Digest)"]
+        B["Channel (Log/Email)"]
+        A -.->|Uses| B
+        note2[足し算で済む！\nM + N]
+    end
+```
+
 ---
 
 ## Bridgeの発想🌉（超ざっくり）

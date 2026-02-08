@@ -189,6 +189,19 @@ function applyTax(amount: number) {
 * まだ if はあるけどOK！まずは「責務が見える」ことが勝ち🏁
 * 後で Strategy につながる“下ごしらえ”になってるよ（割引が独立した！）🍳✨
 
+```mermaid
+flowchart TD
+    Main[calculateOrderTotal] --> Sub[calculateSubtotal<br>小計計算]
+    Main --> Disc[applyDiscount<br>割引適用]
+    Main --> Tax[applyTax<br>税計算]
+    
+    subgraph Refactoring Result
+        Sub
+        Disc
+        Tax
+    end
+```
+
 ---
 
 ## 4.6 Move to file で「ファイル分割」を怖がらない📦✨

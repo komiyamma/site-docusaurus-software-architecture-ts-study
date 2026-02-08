@@ -113,6 +113,21 @@ const b = createOrder({ drink: "tea", temp: "ice", takeout: true });
 const c = createOrder({ drink: "mocha", size: "L", shots: 2, note: "甘さ控えめ" });
 ```
 
+```mermaid
+flowchart TD
+    Input[Options Object] -->|drink| Drink
+    Input -->|size?| SizeCheck{指定あり？}
+    SizeCheck -- Yes --> Size[指定値]
+    SizeCheck -- No --> DefSize[Default: M]
+    
+    Input -->|takeout?| TakeCheck{指定あり？}
+    TakeCheck -- Yes --> Take[指定値]
+    TakeCheck -- No --> DefTake[Default: false]
+    
+    Drink & Size & DefSize & Take & DefTake --> Output[完成したOrder]
+```
+
+
 ### うれしいこと🎉
 
 * 引数の順番ミスが消える🧼

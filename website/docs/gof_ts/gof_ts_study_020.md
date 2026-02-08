@@ -90,7 +90,24 @@ function notifyOrderConfirmed(
 * **if/switchが増える**：`channel × tone × (今後の追加条件)` で爆発💥
 * **“ちぐはぐ”が混ざる**：メール用テンプレなのにアプリ内のリンク前提…みたいな事故が起きる
 * **安全にするために`as any`が出てくる**：これ、危険信号🚨（型安全を捨ててる）
+* **型安全にするために`as any`が出てくる**：これ、危険信号🚨（型安全を捨ててる）
 * **追加に弱い**：SMS通知📩を足したら、あちこち修正になりがち
+
+```mermaid
+graph TD
+    subgraph Mismatch Risk
+        Src1[Email Channel]
+        Src2[App Channel]
+        
+        Tmpl1[Polite Template]
+        Tmpl2[Casual Template]
+        
+        Src1 -.->|Dangerous Mix?| Tmpl2
+        Src2 -.->|Dangerous Mix?| Tmpl1
+        
+        note[組み合わせ爆発 & 不整合の温床💥]
+    end
+```
 
 ---
 

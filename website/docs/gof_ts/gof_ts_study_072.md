@@ -43,6 +43,24 @@ TypeScript/JavaScriptの世界では、だいたいこう理解でOK✅
 つまり最初の一歩はこれだけでOK👇
 ✅ **「走査したいものを Iterable として提供する」**（中身は隠す）
 
+```mermaid
+classDiagram
+    class Client {
+        +for-of loop
+    }
+    class Iterable {
+        <<Interface>>
+        +[Symbol.iterator]()
+    }
+    class ConcreteCollection {
+        -data: Tree/Array
+        +iterate(): Iterable
+    }
+
+    Client --> Iterable : uses
+    ConcreteCollection ..|> Iterable : implements
+```
+
 ---
 
 ## 3. まず“つらいコード”をわざと作る🛠️😵‍💫

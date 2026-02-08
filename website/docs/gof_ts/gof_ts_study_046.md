@@ -254,6 +254,21 @@ const enhancedSubmitOrder = pipe<[string], { ok: true }>(
 
 この形だと「何を付けたか」が一瞬で読める👀✨
 
+```mermaid
+flowchart LR
+    Input -->|Arg| Logging
+    Logging -->|Arg| Timing
+    Timing -->|Arg| Retry
+    Retry -->|Arg| Core[SubmitOrder]
+    
+    Core -->|Result| Retry
+    Retry -->|Result| Timing
+    Timing -->|Result| Logging
+    Logging -->|Result| Output
+    
+    style Core fill:#f9f,stroke:#333
+```
+
 ---
 
 ## 9) テストで安心する🧪✨（Node標準の`node:test`）

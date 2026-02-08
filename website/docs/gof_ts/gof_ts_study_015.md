@@ -192,6 +192,19 @@ export async function confirmOrder(order: Order): Promise<Result<ConfirmedOrder,
     confirmedAt: new Date().toISOString(),
   });
 }
+
+```
+
+```mermaid
+flowchart TD
+    Start(confirmOrder) --> Val{validateOrder}
+    Val -- Error --> RetErr1[Return Error]
+    Val -- OK --> Stock{reserveStock}
+    Stock -- Error --> RetErr2[Return Error]
+    Stock -- OK --> Pay{chargePayment}
+    Pay -- Error --> RetErr3[Return Error]
+    Pay -- OK --> Calc[Total計算]
+    Calc --> RetOK[Return OK]
 ```
 
 ---

@@ -67,6 +67,23 @@ Mediatorは **部品（Colleague）同士が直接やり取りしない** ため
   `A → Mediator ← B`
   `C ← Mediator → D`
 
+```mermaid
+classDiagram
+    class Mediator {
+        +notify(event)
+    }
+    class SizeSelector
+    class ToppingSelector
+    class TotalView
+    class SubmitButton
+
+    SizeSelector --> Mediator : ui-change
+    ToppingSelector --> Mediator : ui-change
+    
+    Mediator --> TotalView : state-update
+    Mediator --> SubmitButton : state-update
+```
+
 ---
 
 ## 4. TypeScriptで“イベント中心Mediator”が超ラク📣✨

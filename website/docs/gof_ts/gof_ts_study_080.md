@@ -23,6 +23,23 @@
 * Undo/Redoが**安全**（“逆操作”を頑張って書かなくていい場面が増える）🧯
 * 途中から要件が増えても、設計が**育てやすい**🌱
 
+```mermaid
+classDiagram
+    class HistoryEntry {
+        +label: string
+        +before: Snapshot
+        +after: Snapshot
+        +at: number
+    }
+    class Command {
+        +label: string
+        +apply(state): State
+    }
+    
+    HistoryEntry ..> Command : Represents execution of
+    HistoryEntry -- Snapshot : Holds Before/After
+```
+
 ---
 
 ## 2) Undo/Redoの3つの作り方（比較メモ）📝

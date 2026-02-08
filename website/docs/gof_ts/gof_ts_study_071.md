@@ -62,6 +62,24 @@ Chain は「最後まで回す」より、**早期停止**が気持ちいいで�
 Chainは「どのステップで何が起きた？」が分からなくなると辛い😭
 だから最初から **trace（足跡）** を残します🐾
 
+```mermaid
+sequenceDiagram
+    participant Runner
+    participant Step1
+    participant Step2
+    participant TraceLog
+
+    Runner->>Step1: run(ctx)
+    Step1->>TraceLog: push("start Step1")
+    Step1-->>Runner: continue
+    Step1->>TraceLog: push("end Step1")
+
+    Runner->>Step2: run(ctx)
+    Step2->>TraceLog: push("start Step2")
+    Step2-->>Runner: stop("Reason X")
+    Step2->>TraceLog: push("stop Step2: Reason X")
+```
+
 * ✅ step開始/終了/停止が分かる
 * ✅ どこで止まったか一発で分かる
 * ✅ 後から “順番依存” の理由づけにも使える🧭

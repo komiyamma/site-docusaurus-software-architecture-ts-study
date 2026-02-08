@@ -37,6 +37,16 @@
 * アプリ本体は **綺麗な型だけを信じて動く**
 * 変換が散らばらないから、変更に強い💪
 
+```mermaid
+flowchart LR
+    External["External API\n(Dirty/Unknown)"] -->|JSON| Adapter["Adapter\n(Cleaning)"]
+    Adapter -->|Clean Object| Internal["Internal App\n(Safe Domain)"]
+    
+    style External fill:#f9f,stroke:#333/
+    style Adapter fill:#ff9,stroke:#333
+    style Internal fill:#9f9,stroke:#333
+```
+
 ---
 
 ## 4) まず「散らばる地獄」を見よう😇（やらない例）

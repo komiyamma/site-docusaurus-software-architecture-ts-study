@@ -58,6 +58,26 @@ export type MenuItem = {
 * **kind** を「固定文字列（"group" / "item"）」にするのがコツ✨（これが判別キー）
 * children を **readonly** にしておくと、うっかり破壊的変更しにくくて事故りにくいよ🧯
 
+```mermaid
+classDiagram
+    class MenuNode {
+        <<Union>>
+        MenuGroup | MenuItem
+    }
+    class MenuGroup {
+        kind: "group"
+        children: MenuNode[]
+    }
+    class MenuItem {
+        kind: "item"
+        priceYen: number
+    }
+
+    MenuNode <|-- MenuGroup
+    MenuNode <|-- MenuItem
+    MenuGroup o-- MenuNode : recursive
+```
+
 ---
 
 ## 3. 例データを作る（satisfiesで型チェック強め）✅🍓

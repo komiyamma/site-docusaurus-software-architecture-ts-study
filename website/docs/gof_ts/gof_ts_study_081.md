@@ -43,6 +43,30 @@ Template Methodはこういう設計👇
 
 ![Template Methodのメタファー（穴あきクッキー）](./picture/gof_ts_study_081_template_cookie.png)
 
+```mermaid
+classDiagram
+    class ReceiptRenderer {
+        <<Abstract>>
+        +render(order)
+        #formatHeader(order)*
+        #formatItemLine(item)*
+        #formatFooter(order)
+    }
+    class TextReceipt {
+        #formatHeader(order)
+        #formatItemLine(item)
+    }
+    class MarkdownReceipt {
+        #formatHeader(order)
+        #formatItemLine(item)
+    }
+
+    ReceiptRenderer <|-- TextReceipt
+    ReceiptRenderer <|-- MarkdownReceipt
+    
+    note for ReceiptRenderer "render() defines the skeleton.\nProtected methods are hooks."
+```
+
 ---
 
 ## 3. 2026の“現実ライン”メモ🧠📌（最新情報）

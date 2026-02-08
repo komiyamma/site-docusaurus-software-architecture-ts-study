@@ -34,6 +34,20 @@ Singletonは「インスタンスを1つだけにして、どこからでも同�
 * 差し替えがしにくい🔁
 * いつの間にか“なんでも屋”になりやすい🧟‍♂️
 
+```mermaid
+graph TD
+    subgraph Bad[Singletonの闇]
+    Func1[関数A] -.->|隠れた依存| Singleton[Global Logger]
+    Func2[関数B] -.->|隠れた依存| Singleton
+    style Singleton fill:#f99,stroke:#333
+    end
+
+    subgraph Good[引数の光]
+    Arg[引数: logger] -->|明示的| Func3[関数C]
+    style Arg fill:#9f9,stroke:#333
+    end
+```
+
 ### 落とし穴B：グローバル状態になる（順番で壊れる）🧨
 
 Singletonが内部に状態（配列、カウンタ、キャッシュ）を持つと、

@@ -142,6 +142,25 @@ export type NotificationFactory<K extends Channel> = {
   createTemplate(): TemplateByChannel[K];
   createSender(): SenderByChannel[K];
 };
+
+```
+
+```mermaid
+graph LR
+    subgraph EmailFamily
+    EF[EmailFactory] --> ET[EmailTemplate]
+    EF --> ES[EmailSender]
+    ET -.->|Compatible| ES
+    end
+
+    subgraph InAppFamily
+    IF[InAppFactory] --> IT[InAppTemplate]
+    IF --> IS[InAppSender]
+    IT -.->|Compatible| IS
+    end
+
+    EF --x|Type Error!| IS
+    IF --x|Type Error!| ES
 ```
 
 ### ✅ Factoryを2つ用意（メール / アプリ内）📩📲

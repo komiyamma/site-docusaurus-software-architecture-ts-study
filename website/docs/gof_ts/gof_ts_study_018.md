@@ -116,6 +116,28 @@ export function createOrder(kind: OrderKind, input: OrderInput) {
 
   return { ok: true as const, value: creator(input) };
 }
+
+```
+
+```mermaid
+classDiagram
+    class RegistryMap {
+        +Map&lt;kind, Creator&gt;
+        +set(kind, fn)
+        +get(kind)
+    }
+    class Creators {
+        +dineInCreator()
+        +takeoutCreator()
+        +deliveryCreator()
+    }
+    class Client {
+        createOrder(kind)
+    }
+
+    Client --> RegistryMap : "1. kindで検索"
+    RegistryMap --> Creators : "2. 関数を取得"
+    Client --> Creators : "3. 実行して生成"
 ```
 
 ### 3-3) 実際に登録して使う🍰

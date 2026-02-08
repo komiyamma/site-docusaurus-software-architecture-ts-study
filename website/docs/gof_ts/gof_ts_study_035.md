@@ -205,6 +205,26 @@ export async function placeOrder(deps: Deps, order: Order): Promise<number> {
 }
 ```
 
+```mermaid
+classDiagram
+    class Deps {
+        +config: AppConfig
+        +logger: Logger
+        +productCache: Cache
+        +fetchProduct(id)
+    }
+    
+    class AppConfig {
+        taxRate
+        currency
+    }
+
+    Deps --> AppConfig
+    Deps --> Logger
+    Deps --> Cache
+```
+
+
 ここで最高に大事なのは👇
 
 * `placeOrder` が **「どれに依存してるか」丸見え**（後から困らない）😆✨

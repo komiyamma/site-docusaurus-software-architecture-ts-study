@@ -83,6 +83,23 @@ Proxyは最終手段寄り。先にこれを疑うと勝ちやすいよ✨
 > Proxy は「呼び出し側を一切変えずに差し込む」から強い。
 > でも同時に「気づかれずに副作用を増やせる」から危ない😇
 
+```mermaid
+graph TD
+    subgraph Implicit [Implicit Proxy Magic]
+        Client1[Client] -->|Calls obj.prop| Proxy
+        Proxy -->|Hidden Side Effect| Log[Logic/Log]
+        Proxy -->|Forward| Real[Real Object]
+        style Proxy fill:#f9d,stroke:#333,stroke-dasharray: 5 5
+    end
+
+    subgraph Explicit [Explicit Wrapper Safe]
+        Client2[Client] -->|"Calls wrapper.do()"| Wrapper
+        Wrapper -->|Explicit Call| Log2[Logic/Log]
+        Wrapper -->|Explicit Call| Real2[Real Object]
+        style Wrapper fill:#dfd,stroke:#333
+    end
+```
+
 ---
 
 ## 5) Proxyを使ってもいい“狭い範囲”🎯✨

@@ -57,6 +57,17 @@ TypeScript は **判別 Union（discriminated union）** と **制御フロー�
 
 この章では **B（遷移テーブル）** をメインにいくよ〜🙌💕
 
+```mermaid
+flowchart LR
+    Input[Input: State + Event] --> Lookup{Lookup Table}
+    
+    Lookup -->|Found| Fn[Execute Transition Fn]
+    Lookup -->|Not Found| Err1[Error: Invalid Transition]
+    
+    Fn -->|Guard Pass| NewState[New State]
+    Fn -->|Guard Fail| Err2[Error: Guard Failed]
+```
+
 ---
 
 ## 4) ハンズオン🛠️：遷移テーブルで「禁止遷移はエラー」にする🔥

@@ -34,6 +34,25 @@ TypeScriptは「データの形」を **判別Union**（discriminated union）�
 
 ![タグによる振り分け（判別UnionとVisitor）](./picture/gof_ts_study_088_visitor_dispatch.png)
 
+```mermaid
+sequenceDiagram
+    participant Client
+    participant VisitFn as visit(node, visitor)
+    participant VisitorObj as Visitor Implementation
+
+    Client->>VisitFn: call(node)
+    
+    alt node is Item
+        VisitFn->>VisitorObj: item(node)
+        VisitorObj-->>VisitFn: result
+    else node is Group
+        VisitFn->>VisitorObj: group(node)
+        VisitorObj-->>VisitFn: result
+    end
+    
+    VisitFn-->>Client: final result
+```
+
 ---
 
 ## ハンズオン🛠️：カフェの「メニュー木」を“訪問”して、表示/集計/検証を足していく☕🌳

@@ -302,6 +302,26 @@ async function demo() {
 
 用途で決めよう〜✨
 
+```mermaid
+sequenceDiagram
+    participant User
+    participant LogOuter
+    participant Cache
+    participant Core
+
+    Note over User, Core: Pattern A: Log is Outer (Log -> Cache)
+    User->>LogOuter: call
+    LogOuter->>Cache: call
+    Cache-->>LogOuter: return (Hit!)
+    Note right of Cache: Core NOT called🚫
+    LogOuter->>User: return (Logged "Success")
+
+    Note over User, Core: Pattern B: Cache is Outer (Cache -> Log)
+    User->>Cache: call
+    Cache-->>User: return (Hit!)
+    Note right of Cache: Log & Core NOT called🚫
+```
+
 ---
 
 ## 実験②：計測⏱️ と リトライ🔁 の順番

@@ -180,6 +180,18 @@ export function placeOrder(
 
   return { order, total };
 }
+
+```
+
+```mermaid
+flowchart LR
+    Real[Real Factory] -->|inject| App[PlaceOrder Logic]
+    Test[Test / Stub] -.->|inject| App
+    
+    App -->|calls| Fn{createOrder}
+    Fn --> Result[Order]
+    
+    style Test stroke-dasharray: 5 5
 ```
 
 ---

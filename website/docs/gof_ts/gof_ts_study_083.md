@@ -45,6 +45,22 @@ Template Methodはここを解決するよ👇
 
 ![レシート出力の共通フローと差分点](./picture/gof_ts_study_083_receipt_flow.png)
 
+```mermaid
+flowchart TD
+    Start[Analyze Logic] --> Check{Is it Fixed Order / Mandatory?}
+    
+    Check -- Yes --> Common["Template Method (Parent)"]
+    Check -- No --> Diff["Hook / Abstract Method (Child)"]
+    
+    Common --> Valid[Validation]
+    Common --> Calc[Calculation]
+    Common --> Flow[Control Flow]
+    
+    Diff --> Format[Formatting]
+    Diff --> Wording[Wording]
+    Diff --> Optional[Optional Features]
+```
+
 ---
 
 ## 3) 最終形のサンプル：レシート出力🧾✨

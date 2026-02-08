@@ -72,6 +72,22 @@ GoFパターンって、最初から当てにいくとしんどいの🥺
 * 「通知」「監視」「ログ」など横断が混ざる → **Observer / Decorator**📣🎁
 * 「外部I/Oの形」が混ざる → **Adapter**🔌
 
+```mermaid
+flowchart TD
+    Start([困りごと発生]) --> Step1{パターン未満で直る？<br>Extract / Map化 / Union}
+    Step1 -- Yes --> Fix1[関数・型で解決✨]
+    Step1 -- No --> Step2{Q1. 重複してる？}
+    Step2 -- Yes --> Cand1[Strategy / Template Method]
+    Step2 -- No --> Step3{Q2. 差し替えたい？}
+    Step3 -- Yes --> Cand2[Strategy / Factory / Bridge]
+    Step3 -- No --> Step4{Q3. 増え方は？}
+    Step4 -- 種類 --> Cand3[Registry / Factory]
+    Step4 -- 2軸 --> Cand4[Bridge / Abstract Factory]
+    Step4 -- 手順 --> Cand5[Chain / Facade]
+    
+    Cand1 & Cand2 & Cand3 & Cand4 & Cand5 --> Check[導入コスト確認✅]
+```
+
 ---
 
 ## ステップ3：採用前チェック（“導入コスト”確認）✅🧯

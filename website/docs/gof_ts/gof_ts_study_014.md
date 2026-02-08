@@ -101,6 +101,16 @@ console.log(a.product === b.product); // true になるのが理想✨
 console.log(productCache.size);        // 1 になるはず🌟
 ```
 
+```mermaid
+flowchart TD
+    Start(getProductMaster) --> Norm[Normalize ID]
+    Norm --> Check{Cacheにある？}
+    Check -- Yes --> RetCache[キャッシュを返す]
+    Check -- No --> Create[インスタンス生成]
+    Create --> Save[Cacheに保存]
+    Save --> RetNew[生成物を返す]
+```
+
 ## ここが大事💡
 
 * `Map.get()` で返る値は **コピーじゃなくて同じ参照**だよ🪞

@@ -143,6 +143,29 @@ const totalRegular = calcTotalYen(items, regularPricing);
 const totalMember = calcTotalYen(items, memberPricing);
 ```
 
+```mermaid
+classDiagram
+    class PricingPolicy {
+        &lt;&lt;interface&gt;&gt;
+        (items: OrderItem[]): Yen
+    }
+    class RegularPricing {
+        subtotal
+    }
+    class MemberPricing {
+        subtotal * 0.95
+    }
+    class StudentPricing {
+        subtotal * 0.90
+    }
+
+    PricingPolicy <|.. RegularPricing
+    PricingPolicy <|.. MemberPricing
+    PricingPolicy <|.. StudentPricing
+    
+    Client --> PricingPolicy : "使う (依存)"
+```
+
 ---
 
 ## 5) 「ルール表（Registry）」を作るとさらに実務っぽい🗂️✨

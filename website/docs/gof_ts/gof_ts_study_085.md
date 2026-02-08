@@ -77,8 +77,6 @@ const anyOf =
   (ctx) =>
     rules.some((r) => r(ctx));
 
-![関数合成のブロックパズル](./picture/gof_ts_study_085_functional_composition.png)
-
 const not =
   (rule: Rule): Rule =>
   (ctx) =>
@@ -113,6 +111,36 @@ const finalDiscountRule = allOf(anyOf(goldHappyHour, bigOrderOrGold), notLateNig
 export function shouldDiscount(ctx: OrderCtx): boolean {
   return finalDiscountRule(ctx);
 }
+```
+
+![関数合成のブロックパズル](./picture/gof_ts_study_085_functional_composition.png)
+
+```mermaid
+classDiagram
+    class RuleAst {
+        <<Union>>
+    }
+    class And {
+        op: "and"
+        rules: RuleAst[]
+    }
+    class Or {
+        op: "or"
+        rules: RuleAst[]
+    }
+    class Not {
+        op: "not"
+        rule: RuleAst
+    }
+    class Leaf {
+        op: "compare..."
+        value: any
+    }
+
+    RuleAst <|-- And
+    RuleAst <|-- Or
+    RuleAst <|-- Not
+    RuleAst <|-- Leaf
 ```
 
 ## いいところ😍

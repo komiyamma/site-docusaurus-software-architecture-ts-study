@@ -53,6 +53,28 @@ Compositeはこれを **“呼び出し側から分岐を消す”**のが強み
 ✅ 呼び出し側は **「それが葉か枝か」を意識しない**
 ✅ “木”の中のどのノードにも **同じメソッド（または同じ関数呼び出し）**を使える
 
+```mermaid
+classDiagram
+    class MenuNode {
+        <<Interface>>
+        +price()
+        +print()
+    }
+    class Product {
+        +price()
+        +print()
+    }
+    class Category {
+        -children: MenuNode[]
+        +price()
+        +print()
+    }
+
+    MenuNode <|.. Product
+    MenuNode <|.. Category
+    Category o-- MenuNode : contains (recursive)
+```
+
 ---
 
 ## TypeScriptでの王道（最低限のinterface）🧩✨
