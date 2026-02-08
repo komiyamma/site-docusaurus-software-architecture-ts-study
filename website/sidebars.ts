@@ -186,11 +186,15 @@ const sidebars: SidebarsConfig = {
       { title: "Part 10", start: 91, end: 100 },
       { title: "Part 11", start: 101, end: 110 },
       { title: "Part 12", start: 111, end: 120 },
-    ].map(mod => ({
-      type: 'category' as const,
-      label: mod.title,
-      items: generateStudyIds('tdd_ts', 'tdd_ts', mod.start, mod.end),
-    })),
+    ].flatMap(mod => {
+      const items = generateStudyIds('tdd_ts', 'tdd_ts', mod.start, mod.end);
+      if (items.length === 0) return [];
+      return [{
+        type: 'category' as const,
+        label: mod.title,
+        items: items,
+      }];
+    }),
   ],
   testableTsSidebar: [
     {
@@ -205,11 +209,15 @@ const sidebars: SidebarsConfig = {
       { title: "Part 5", start: 41, end: 50 },
       { title: "Part 6", start: 51, end: 60 },
       { title: "Part 7", start: 61, end: 70 },
-    ].map(mod => ({
-      type: 'category' as const,
-      label: mod.title,
-      items: generateStudyIds('testable_ts', 'testable_ts', mod.start, mod.end),
-    })),
+    ].flatMap(mod => {
+      const items = generateStudyIds('testable_ts', 'testable_ts', mod.start, mod.end);
+      if (items.length === 0) return [];
+      return [{
+        type: 'category' as const,
+        label: mod.title,
+        items: items,
+      }];
+    }),
   ],
 };
 
