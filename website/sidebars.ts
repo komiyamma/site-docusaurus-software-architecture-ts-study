@@ -196,25 +196,7 @@ const sidebars: SidebarsConfig = {
       }];
     }),
   ],
-  testableTsSidebar: [
-    {
-      type: 'doc',
-      id: 'testable_ts/testable_ts_index',
-    },
-    ...[
-      { title: "Part 1", start: 1, end: 10 },
-      { title: "Part 2", start: 11, end: 20 },
-      { title: "Part 3", start: 21, end: 30 },
-    ].flatMap(mod => {
-      const items = generateStudyIds('testable_ts', 'testable_ts', mod.start, mod.end);
-      if (items.length === 0) return [];
-      return [{
-        type: 'category' as const,
-        label: mod.title,
-        items: items,
-      }];
-    }),
-  ],
+  testableTsSidebar: generateProjectSidebar('testable_ts'),
 };
 
 export default sidebars;
