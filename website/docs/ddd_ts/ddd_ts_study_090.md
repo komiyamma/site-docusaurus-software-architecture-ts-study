@@ -1,6 +1,6 @@
 # 第90章 まとめ演習：割引＋期限＋エラーを統合🎓✨
 
-![まとめ演習：割引＋期限＋エラーの統合](/ddd_ts/picture/ddd_ts_study_090_integration_curry.png)
+![まとめ演習：割引＋期限＋エラーの統合](./picture/ddd_ts_study_090_integration_curry.png)
 
 この章は「むずかしいやつ全部のせ🍛」です！
 **Specification（条件）＋ Clock（時間）＋ エラー（例外/Result）**を、1本のユースケースに“きれいに”通します💪✨
@@ -558,7 +558,7 @@ describe("UseCase", () => {
 
 ## 13) よくある事故ポイント（ここで潰す！）😂🧯
 
-![設計のアンチパターン](/ddd_ts/picture/ddd_ts_study_090_anti_patterns.png)
+![設計のアンチパターン](./picture/ddd_ts_study_090_anti_patterns.png)
 
 * `Date.now()` をドメインのあちこちで呼んで、**テスト不能**になる⛔
 * 期限判定が `>=` / `>` でブレて、**境界の日に事故る**📅💥

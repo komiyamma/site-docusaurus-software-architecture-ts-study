@@ -1,6 +1,6 @@
 # 第94章 同期処理でのイベント購読（まずは簡単に）🔔✨
 
-![同期処理でのイベント購読](/ddd_ts/picture/ddd_ts_study_094_sync_subscription.png)
+![同期処理でのイベント購読](./picture/ddd_ts_study_094_sync_subscription.png)
 
 この章はね、**「Domain Event 出したあと、別の処理を“くっつけずに”動かす」**を、いちばんカンタンな形（同期・同一プロセス）で体験する回だよ〜！🧁💕
 

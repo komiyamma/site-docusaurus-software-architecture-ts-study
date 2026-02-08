@@ -1,6 +1,6 @@
 # 第91章 Domain Event入門：「起きた事実」📣⚡
 
-![Domain Event入門：起きた事実](/ddd_ts/picture/ddd_ts_study_091_domain_event_intro.png)
+![Domain Event入門：起きた事実](./picture/ddd_ts_study_091_domain_event_intro.png)
 
 ## 🎯 ねらい
 
@@ -27,7 +27,7 @@
 
 ## 1) Domain Eventってなに？🧠✨（超やさしく）
 
-![Fact vs Command](/ddd_ts/picture/ddd_ts_study_091_fact_vs_command.png)
+![Fact vs Command](./picture/ddd_ts_study_091_fact_vs_command.png)
 
 Domain Eventは一言でいうと…
 

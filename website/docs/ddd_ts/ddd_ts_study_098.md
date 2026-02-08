@@ -1,6 +1,6 @@
 # 第98章 ACL入門：外部の都合を内側に入れない🛡️✨
 
-![ACL入門：外部の都合を内側に入れない](/ddd_ts/picture/ddd_ts_study_098_acl_filter.png)
+![ACL入門：外部の都合を内側に入れない](./picture/ddd_ts_study_098_acl_filter.png)
 
 ## 今日のゴール🎯💖
 
@@ -30,7 +30,7 @@ ACLはそれを防ぐ“防波堤”🌊🧱
 
 ## 2) ありがちな「腐敗」パターン😱💥（ACLがない世界）
 
-![ロジックの腐敗](/ddd_ts/picture/ddd_ts_study_098_logic_corruption.png)
+![ロジックの腐敗](./picture/ddd_ts_study_098_logic_corruption.png)
 
 たとえば外部決済APIがこんな感じだとするね👇
 

@@ -1,6 +1,6 @@
 # 第92章 いつ発行する？どこで発行する？📍⚡️（Domain Eventの“置き場所”を決める）
 
-![いつ発行する？どこで発行する？](/ddd_ts/picture/ddd_ts_study_092_event_location.png)
+![いつ発行する？どこで発行する？](./picture/ddd_ts_study_092_event_location.png)
 
 第91章で「Domain Event＝起きた事実📣」を掴んだよね✨
 第92章はその次の壁👇
@@ -16,7 +16,7 @@
 
 ## 0) まず超重要：この章の“用語の整理”🧠✨
 
-![Raise vs Dispatch](/ddd_ts/picture/ddd_ts_study_092_raise_vs_dispatch.png)
+![Raise vs Dispatch](./picture/ddd_ts_study_092_raise_vs_dispatch.png)
 
 DDDの「発行」って、実は2段階に分けて考えるとスッキリするよ👇
 

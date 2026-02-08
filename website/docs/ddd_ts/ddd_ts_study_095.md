@@ -1,6 +1,6 @@
 # 第95章 非同期の考え方（なぜ必要？）⏳🌍
 
-![非同期の考え方：なぜ必要？](/ddd_ts/picture/ddd_ts_study_095_async_timeline.png)
+![非同期の考え方：なぜ必要？](./picture/ddd_ts_study_095_async_timeline.png)
 
 ## この章のゴール🎯💕
 
@@ -81,7 +81,7 @@ DDDのイベント連携で非同期が欲しくなるのは、だいたいこ�
 
 ## 4) 非同期の基本セット🧰✨（超ざっくり版）
 
-![キューとワーカーの構成](/ddd_ts/picture/ddd_ts_study_095_queue_worker.png)
+![キューとワーカーの構成](./picture/ddd_ts_study_095_queue_worker.png)
 
 非同期の設計って、道具は増えるけど、考え方は単純です💕
 

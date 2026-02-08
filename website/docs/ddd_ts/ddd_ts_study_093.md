@@ -1,6 +1,6 @@
 # 第93章 イベントの持つ情報：入れすぎ注意 📦⚖️
 
-![イベントの持つ情報：入れすぎ注意](/ddd_ts/picture/ddd_ts_study_093_thin_vs_fat_event.png)
+![イベントの持つ情報：入れすぎ注意](./picture/ddd_ts_study_093_thin_vs_fat_event.png)
 
 この章のテーマはひとことで言うと…
 **「イベントは“通知”であって“全部入りレポート”にしない」**だよ〜🔔✨
@@ -91,7 +91,7 @@ DDD的におすすめのメタ情報セット（例）👇
 
 ## 6) 例題：カフェ注文で「太いイベント」→「薄いイベント」へ 🥤➡️🥗
 
-![Fat vs Thin](/ddd_ts/picture/ddd_ts_study_093_fat_vs_thin.png)
+![Fat vs Thin](./picture/ddd_ts_study_093_fat_vs_thin.png)
 
 ### 😇 悪い例：全部盛りイベント（やりがち）
 

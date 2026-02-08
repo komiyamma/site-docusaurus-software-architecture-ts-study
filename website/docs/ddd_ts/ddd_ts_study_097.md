@@ -1,6 +1,6 @@
 # 第97章 Outbox入門：更新と通知のズレ対策 📤📬✨
 
-![Outbox入門：更新と通知のズレ対策](/ddd_ts/picture/ddd_ts_study_097_outbox_pattern.png)
+![Outbox入門：更新と通知のズレ対策](./picture/ddd_ts_study_097_outbox_pattern.png)
 
 今日は「**DB更新は成功したのに、イベント通知が飛ばなくて他サービスが気づかない**😱」みたいな事故を、設計でつぶす章だよ〜！
 この事故の正体は **dual write（2か所書き込み）問題**。まずはそこから見ていこっ🧠💡 ([AWS ドキュメント][1])
@@ -9,7 +9,7 @@
 
 ## 1) まず起きる事故（Outboxが無い世界）💥😵
 
-![Dual Write問題](/ddd_ts/picture/ddd_ts_study_097_dual_write_problem.png)
+![Dual Write問題](./picture/ddd_ts_study_097_dual_write_problem.png)
 
 例：カフェ注文☕
 「支払い完了したら、レシート発行サービスに `PaymentCompleted` を通知する」ってしたい。

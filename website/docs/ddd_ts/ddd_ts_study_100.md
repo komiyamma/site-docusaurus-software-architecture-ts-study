@@ -1,6 +1,6 @@
 # 第100章 ここまでの卒業チェック＋次の一歩 🎓🚀✨
 
-![卒業チェック](/ddd_ts/picture/ddd_ts_study_100_graduation_shields.png)
+![卒業チェック](./picture/ddd_ts_study_100_graduation_shields.png)
 
 ここは「新しい知識を増やす章」というより、**これまでの100章分を“あなたの武器”として固定する章**だよ〜！🧰💕
 なので今日は、

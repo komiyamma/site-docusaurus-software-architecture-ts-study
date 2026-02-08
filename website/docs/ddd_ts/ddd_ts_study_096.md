@@ -1,6 +1,6 @@
 # 第96章 冪等性入門：同じ要求が来ても安全🔁🛡️
 
-![冪等性入門：同じ要求が来ても安全](/ddd_ts/picture/ddd_ts_study_096_idempotency_shield.png)
+![冪等性入門：同じ要求が来ても安全](./picture/ddd_ts_study_096_idempotency_shield.png)
 
 ## この章でやること（ゴール）🎯
 
@@ -267,7 +267,7 @@ describe("PayOrderUseCase idempotency", () => {
 
 ## 8) 超重要：本番の落とし穴（レース対策）🏎️💥🛡️
 
-![レースコンディション](/ddd_ts/picture/ddd_ts_study_096_race_condition.png)
+![レースコンディション](./picture/ddd_ts_study_096_race_condition.png)
 
 「同じ冪等キーのリクエストが**ほぼ同時**に2つ来た」場合、これが起きる😵
 
