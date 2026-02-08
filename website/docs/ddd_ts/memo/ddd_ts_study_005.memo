@@ -1,0 +1,1 @@
+Node.jsやTypeScript、ESLint、Prettier、Vitestを用いた開発環境の構築手順を解説。VS Codeの設定を含め、保存時に整形と検証が自動化される状態を目指す。
