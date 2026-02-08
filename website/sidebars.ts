@@ -205,10 +205,6 @@ const sidebars: SidebarsConfig = {
       { title: "Part 1", start: 1, end: 10 },
       { title: "Part 2", start: 11, end: 20 },
       { title: "Part 3", start: 21, end: 30 },
-      { title: "Part 4", start: 31, end: 40 },
-      { title: "Part 5", start: 41, end: 50 },
-      { title: "Part 6", start: 51, end: 60 },
-      { title: "Part 7", start: 61, end: 70 },
     ].flatMap(mod => {
       const items = generateStudyIds('testable_ts', 'testable_ts', mod.start, mod.end);
       if (items.length === 0) return [];
