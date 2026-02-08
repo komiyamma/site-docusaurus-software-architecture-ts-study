@@ -113,7 +113,7 @@ export function shouldDiscount(ctx: OrderCtx): boolean {
 }
 ```
 
-<!-- ![関数合成のブロックパズル](./picture/gof_ts_study_085_functional_composition.png) -->
+![関数合成のブロックパズル](./picture/gof_ts_study_085_functional_composition.png)
 
 ```mermaid
 classDiagram

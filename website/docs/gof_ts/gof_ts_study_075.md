@@ -56,7 +56,7 @@ Mediatorは **部品（Colleague）同士が直接やり取りしない** ため
 * Mediatorが **ルール** に従って、必要な部品へ指示する🧠
 * ルールが1箇所に集まるから、変更が追いやすい👀
 
-<!-- ![相互参照（スパゲッティ）とMediator（スター型）の対比](./picture/gof_ts_study_075_dependency_star.png) -->
+![相互参照（スパゲッティ）とMediator（スター型）の対比](./picture/gof_ts_study_075_dependency_star.png)
 
 図にするとこう💡
 
