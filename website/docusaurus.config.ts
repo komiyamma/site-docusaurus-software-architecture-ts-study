@@ -111,6 +111,8 @@ const config: Config = {
           "docs/bc_ts",
           "docs/outbox_ts",
           "docs/gof_ts",
+          "docs/tdd_ts",
+          "docs/testable_ts",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),

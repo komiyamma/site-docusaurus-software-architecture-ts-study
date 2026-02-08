@@ -180,12 +180,6 @@ const sidebars: SidebarsConfig = {
       { title: "Part 4", start: 31, end: 40 },
       { title: "Part 5", start: 41, end: 50 },
       { title: "Part 6", start: 51, end: 60 },
-      { title: "Part 7", start: 61, end: 70 },
-      { title: "Part 8", start: 71, end: 80 },
-      { title: "Part 9", start: 81, end: 90 },
-      { title: "Part 10", start: 91, end: 100 },
-      { title: "Part 11", start: 101, end: 110 },
-      { title: "Part 12", start: 111, end: 120 },
     ].flatMap(mod => {
       const items = generateStudyIds('tdd_ts', 'tdd_ts', mod.start, mod.end);
       if (items.length === 0) return [];
