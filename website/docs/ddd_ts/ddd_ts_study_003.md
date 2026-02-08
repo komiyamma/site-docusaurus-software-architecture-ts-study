@@ -123,7 +123,7 @@ stateDiagram-v2
 
 ## 8) ユースケース候補を10個出す📝✨（この章のメイン！）
 
-![Use Case List](./picture/ddd_ts_study_003_usecase_list.png)
+[Use Case List](./picture/ddd_ts_study_003_usecase_list.png)
 
 「ユースケース」＝アプリが提供する“やりたいこと”だよ🎬
 今回は学習用に、よくあるやつを10個並べるね👇
