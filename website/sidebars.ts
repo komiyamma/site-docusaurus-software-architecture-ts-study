@@ -83,91 +83,14 @@ function generateSidebarItems(folder: string, prefix: string, modules: { title?:
 const sidebars: SidebarsConfig = {
 
 
-  entityObjTsSidebar: generateProjectSidebar('entity_obj_ts'),
-
-  dryTsSidebar: generateProjectSidebar('dry_ts'),
-
-  adrTsSidebar: generateProjectSidebar('adr_ts'),
-  yagniTsSidebar: generateProjectSidebar('yagni_ts'),
   kissTsSidebar: generateProjectSidebar('kiss_ts'),
-  solidTsSidebar: generateProjectSidebar('solid_ts'),
+  yagniTsSidebar: generateProjectSidebar('yagni_ts'),
   socTsSidebar: generateProjectSidebar('soc_ts'),
+  adrTsSidebar: generateProjectSidebar('adr_ts'),
   hcLcTsSidebar: generateProjectSidebar('hc_lc_ts'),
-  mvcTsSidebar: generateProjectSidebar('mvc_ts'),
-  diTsSidebar: generateProjectSidebar('di_ts'),
-  dipTsSidebar: generateProjectSidebar('dip_ts'),
-  isaHasaTsSidebar: generateProjectSidebar('isa_hasa_ts'),
-  hexTsSidebar: generateProjectSidebar('hex_ts'),
-
-  dpnRuleTsSidebar: generateProjectSidebar('dpn_rule_ts'),
-
-  layerTsSidebar: generateProjectSidebar('layer_ts'),
-
-  errModelTsSidebar: generateProjectSidebar('err_model_ts'),
-
-  observerTsSidebar: generateProjectSidebar('observer_ts'),
-
-  cleanTsSidebar: generateProjectSidebar('clean_ts'),
-
-  cqsTsSidebar: generateProjectSidebar('cqs_ts'),
-  cqrsTsSidebar: generateProjectSidebar('cqrs_ts'),
-  invariantsTsSidebar: generateProjectSidebar('invariants_ts'),
-
-  svbcTsSidebar: generateProjectSidebar('svbc_ts'),
-  stateMachineTsSidebar: generateProjectSidebar('state_machine_ts'),
-  aclTsSidebar: generateProjectSidebar('acl_ts'),
-  capTsSidebar: generateProjectSidebar('cap_ts'),
-  abTcbTsSidebar: generateProjectSidebar('ab_tcb_ts'),
-  dbcTsSidebar: generateProjectSidebar('dbc_ts'),
-  deTsSidebar: generateProjectSidebar('de_ts'),
-  esTsSidebar: generateProjectSidebar('es_ts'),
-  sagaTsSidebar: generateProjectSidebar('saga_ts'),
+  dryTsSidebar: generateProjectSidebar('dry_ts'),
   refactoringTsSidebar: generateProjectSidebar('refactoring_ts'),
-  modMonoTsSidebar: generateProjectSidebar('mod_mono_ts'),
-  idemTsSidebar: generateProjectSidebar('idem_ts'),
-  bcTsSidebar: generateProjectSidebar('bc_ts'),
-  outboxTsSidebar: generateProjectSidebar('outbox_ts'),
-  apiContractTsSidebar: generateProjectSidebar('api_contract_ts'),
-  dddTsSidebar: [
-    {
-      type: 'doc',
-      id: 'ddd_ts/ddd_ts_index',
-    },
-    ...[
-      { title: "Part 1：準備と全体像", start: 1, end: 10 },
-      { title: "Part 2：ドメイン理解と言葉づくり", start: 11, end: 20 },
-      { title: "Part 3：TypeScriptでDDDしやすい基礎体力", start: 21, end: 30 },
-      { title: "Part 4：Value Object", start: 31, end: 40 },
-      { title: "Part 5：Entity", start: 41, end: 50 },
-      { title: "Part 6：Aggregate", start: 51, end: 60 },
-      { title: "Part 7：ユースケース（Application）を作る", start: 61, end: 70 },
-      { title: "Part 8：Repository / Factory / Domain Service", start: 71, end: 80 },
-      { title: "Part 9：Specification / Policy / 時間 / エラー", start: 81, end: 90 },
-      { title: "Part 10：Domain Event と連携", start: 91, end: 100 },
-    ].map(mod => ({
-      type: 'category' as const,
-      label: mod.title,
-      items: generateStudyIds('ddd_ts', 'ddd_ts', mod.start, mod.end),
-    })),
-  ],
-  gofTsSidebar: [
-    {
-      type: 'doc',
-      id: 'gof_ts/gof_ts_index',
-    },
-    ...[
-      { title: "Part 0：はじめに・環境・学び方", start: 1, end: 10 },
-      { title: "Part 1：GoFに入る前の土台", start: 11, end: 15 },
-      { title: "Part 2：生成パターン (Creational)", start: 16, end: 35 },
-      { title: "Part 3：構造パターン (Structural)", start: 36, end: 56 },
-      { title: "Part 4：振る舞いパターン (Behavioral)", start: 57, end: 89 },
-      { title: "Part 5：仕上げ", start: 90, end: 90 },
-    ].map(mod => ({
-      type: 'category' as const,
-      label: mod.title,
-      items: generateStudyIds('gof_ts', 'gof_ts', mod.start, mod.end),
-    })),
-  ],
+  testableTsSidebar: generateProjectSidebar('testable_ts'),
   tddTsSidebar: [
     {
       type: 'doc',
@@ -190,7 +113,75 @@ const sidebars: SidebarsConfig = {
       }];
     }),
   ],
-  testableTsSidebar: generateProjectSidebar('testable_ts'),
+  errModelTsSidebar: generateProjectSidebar('err_model_ts'),
+  layerTsSidebar: generateProjectSidebar('layer_ts'),
+  mvcTsSidebar: generateProjectSidebar('mvc_ts'),
+  dpnRuleTsSidebar: generateProjectSidebar('dpn_rule_ts'),
+  dipTsSidebar: generateProjectSidebar('dip_ts'),
+  diTsSidebar: generateProjectSidebar('di_ts'),
+  isaHasaTsSidebar: generateProjectSidebar('isa_hasa_ts'),
+  solidTsSidebar: generateProjectSidebar('solid_ts'),
+  gofTsSidebar: [
+    {
+      type: 'doc',
+      id: 'gof_ts/gof_ts_index',
+    },
+    ...[
+      { title: "Part 0：はじめに・環境・学び方", start: 1, end: 10 },
+      { title: "Part 1：GoFに入る前の土台", start: 11, end: 15 },
+      { title: "Part 2：生成パターン (Creational)", start: 16, end: 35 },
+      { title: "Part 3：構造パターン (Structural)", start: 36, end: 56 },
+      { title: "Part 4：振る舞いパターン (Behavioral)", start: 57, end: 89 },
+      { title: "Part 5：仕上げ", start: 90, end: 90 },
+    ].map(mod => ({
+      type: 'category' as const,
+      label: mod.title,
+      items: generateStudyIds('gof_ts', 'gof_ts', mod.start, mod.end),
+    })),
+  ],
+  observerTsSidebar: generateProjectSidebar('observer_ts'),
+  cqsTsSidebar: generateProjectSidebar('cqs_ts'),
+  stateMachineTsSidebar: generateProjectSidebar('state_machine_ts'),
+  invariantsTsSidebar: generateProjectSidebar('invariants_ts'),
+  entityObjTsSidebar: generateProjectSidebar('entity_obj_ts'),
+  dddTsSidebar: [
+    {
+      type: 'doc',
+      id: 'ddd_ts/ddd_ts_index',
+    },
+    ...[
+      { title: "Part 1：準備と全体像", start: 1, end: 10 },
+      { title: "Part 2：ドメイン理解と言葉づくり", start: 11, end: 20 },
+      { title: "Part 3：TypeScriptでDDDしやすい基礎体力", start: 21, end: 30 },
+      { title: "Part 4：Value Object", start: 31, end: 40 },
+      { title: "Part 5：Entity", start: 41, end: 50 },
+      { title: "Part 6：Aggregate", start: 51, end: 60 },
+      { title: "Part 7：ユースケース（Application）を作る", start: 61, end: 70 },
+      { title: "Part 8：Repository / Factory / Domain Service", start: 71, end: 80 },
+      { title: "Part 9：Specification / Policy / 時間 / エラー", start: 81, end: 90 },
+      { title: "Part 10：Domain Event と連携", start: 91, end: 100 },
+    ].map(mod => ({
+      type: 'category' as const,
+      label: mod.title,
+      items: generateStudyIds('ddd_ts', 'ddd_ts', mod.start, mod.end),
+    })),
+  ],
+  abTcbTsSidebar: generateProjectSidebar('ab_tcb_ts'),
+  deTsSidebar: generateProjectSidebar('de_ts'),
+  modMonoTsSidebar: generateProjectSidebar('mod_mono_ts'),
+  hexTsSidebar: generateProjectSidebar('hex_ts'),
+  cleanTsSidebar: generateProjectSidebar('clean_ts'),
+  aclTsSidebar: generateProjectSidebar('acl_ts'),
+  apiContractTsSidebar: generateProjectSidebar('api_contract_ts'),
+  svbcTsSidebar: generateProjectSidebar('svbc_ts'),
+  dbcTsSidebar: generateProjectSidebar('dbc_ts'),
+  idemTsSidebar: generateProjectSidebar('idem_ts'),
+  capTsSidebar: generateProjectSidebar('cap_ts'),
+  outboxTsSidebar: generateProjectSidebar('outbox_ts'),
+  sagaTsSidebar: generateProjectSidebar('saga_ts'),
+  cqrsTsSidebar: generateProjectSidebar('cqrs_ts'),
+  esTsSidebar: generateProjectSidebar('es_ts'),
+  bcTsSidebar: generateProjectSidebar('bc_ts'),
 };
 
 export default sidebars;
