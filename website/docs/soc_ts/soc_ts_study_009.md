@@ -1,4 +1,4 @@
-# 第9章：ライトな3層設計（UI / Application / Domain）🍰✨
+﻿# 第09章：ライトな3層設計（UI / Application / Domain）🍰✨
 
 > **2026/01/11 時点メモ📝**
 >

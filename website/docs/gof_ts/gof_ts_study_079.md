@@ -1,4 +1,4 @@
-# 第79章 Memento ② TypeScript定番：immutable状態＋履歴配列🗂️✨
+﻿# 第79章：Memento ② TypeScript定番：immutable状態＋履歴配列🗂️
 
 ## ねらい🎯
 

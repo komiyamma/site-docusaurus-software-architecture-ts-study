@@ -1,4 +1,4 @@
-# 第17章　ドメイン入門②：最小モデル（Todo）を作る 🧩📝
+﻿# 第17章：ドメイン入門②：最小モデル（Todo）を作る 🧩📝
 
 ![hex_ts_study_017[(./picture/hex_ts_study_017_domain_objects_entities.png)
 

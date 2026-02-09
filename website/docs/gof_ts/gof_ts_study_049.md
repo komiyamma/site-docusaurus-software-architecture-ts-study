@@ -1,4 +1,4 @@
-# 第49章 Facade ② TypeScriptの定番：サービス関数/クラス1枚でOK🧁🚪
+﻿# 第49章：Facade ② TypeScriptの定番：サービス関数/クラス1枚でOK🧁
 
 ## ねらい🎯
 

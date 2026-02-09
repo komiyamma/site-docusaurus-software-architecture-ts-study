@@ -1,4 +1,4 @@
-# 第82章 Template Method ② TypeScript定番：抽象クラスは最小限に🧩
+﻿# 第82章：Template Method ② TypeScript定番：抽象クラスは最小限に🧩
 
 ## ねらい🎯
 

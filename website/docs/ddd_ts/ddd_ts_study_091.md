@@ -1,4 +1,4 @@
-# 第91章 Domain Event入門：「起きた事実」📣⚡
+﻿# 第91章：Domain Event入門：「起きた事実」📣
 
 ![Domain Event入門：起きた事実](./picture/ddd_ts_study_091_domain_event_intro.png)
 

@@ -1,4 +1,4 @@
-# 第5章 開発セットアップ（Windows/VS Code/TS）🔧💻
+﻿# 第05章：開発セットアップ（Windows/VS Code/TS）🔧💻
 
 ## この章のゴール🎯✨
 

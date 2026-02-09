@@ -1,4 +1,4 @@
-# 第25章　Inbound Adapter②：CLIの入力→DTO変換 🔁⌨️
+﻿# 第25章：Inbound Adapter②：CLIの入力→DTO変換 🔁⌨️
 
 ![hex_ts_study_025[(./picture/hex_ts_study_025_validation_strategies.png)
 

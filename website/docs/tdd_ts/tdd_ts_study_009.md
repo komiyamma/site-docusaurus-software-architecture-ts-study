@@ -1,4 +1,4 @@
-# 第9章：tsconfig最小セット（まず strict）🧷✨
+﻿# 第09章：tsconfig最小セット（まず strict）🧷
 
 ![安全ピン](./picture/tdd_ts_study_009_safety_pin.png)
 

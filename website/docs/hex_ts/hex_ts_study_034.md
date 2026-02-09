@@ -1,4 +1,4 @@
-# 第34章　エラー設計②：外側のエラー（I/O失敗）😵‍💫
+﻿# 第34章：エラー設計②：外側のエラー（I/O失敗）😵‍💫
 
 ![hex_ts_study_034[(./picture/hex_ts_study_034_handling_i_o_errors_infra.png)
 

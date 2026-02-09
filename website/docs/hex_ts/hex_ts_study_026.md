@@ -1,4 +1,4 @@
-# 第26章　Outbound Adapter①：InMemoryRepository 🧠📦
+﻿# 第26章：Outbound Adapter①：InMemoryRepository 🧠📦
 
 ![hex_ts_study_026[(./picture/hex_ts_study_026_in_memory_repository.png)
 

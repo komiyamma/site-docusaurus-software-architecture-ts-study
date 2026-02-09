@@ -1,4 +1,4 @@
-# 第02章 戦術DDDと戦略DDDの距離感🧭
+﻿# 第02章：部：ドメイン理解と言葉づくり（第11〜20章）🗣️📘
 
 ![ddd_ts_study_002_strategic_vs_tactical.png](./picture/ddd_ts_study_002_strategic_vs_tactical.png)
 

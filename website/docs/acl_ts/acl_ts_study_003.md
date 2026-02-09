@@ -1,4 +1,4 @@
-# 3章：Windows＋VS Code＋TypeScript(2026)の最小セットアップ 🧰🪟
+﻿# 第03章：Windows＋VS Code＋TypeScript(2026)の最小セットアップ 🧰🪟
 
 ## この章のゴール 🎯✨
 

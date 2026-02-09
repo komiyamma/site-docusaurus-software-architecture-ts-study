@@ -1,4 +1,4 @@
-# 第04章 学び方の型（毎章のテンプレ）📖✅
+﻿# 第04章：部：Value Object（第31〜40章）💎🧊
 
 ![ddd_ts_study_004_learning_loop.png](./picture/ddd_ts_study_004_learning_loop.png)
 

@@ -1,4 +1,4 @@
-# 第73章 Iterator ② TypeScript標準：`Symbol.iterator` とジェネレータ✨
+﻿# 第73章：Iterator ② TypeScript標準：`Symbol.iterator` とジェネレータ✨
 
 ## ねらい🎯
 

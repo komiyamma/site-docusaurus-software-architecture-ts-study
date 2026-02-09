@@ -1,4 +1,4 @@
-# 第9章　今回の題材を決める（ToDoミニ）📝🍰
+﻿# 第09章：今回の題材を決める（ToDoミニ）📝🍰
 
 ![hex_ts_study_009[(./picture/hex_ts_study_009_adapters_implementation.png)
 

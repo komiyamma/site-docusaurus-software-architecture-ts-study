@@ -1,4 +1,4 @@
-# 第4章　まず覚える合言葉3つ 🗣️✨
+﻿# 第04章：まず覚える合言葉3つ 🗣️✨
 
 ![hex_ts_study_004[(./picture/hex_ts_study_004_isolation_of_the_domain.png)
 

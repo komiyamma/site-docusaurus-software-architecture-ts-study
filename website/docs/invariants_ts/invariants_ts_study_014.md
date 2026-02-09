@@ -1,4 +1,4 @@
-# 第14章　正規化（Normalization）：検証前に整える🧼✨
+﻿# 第14章：正規化（Normalization）：検証前に整える🧼✨
 
 ![第14章　正規化（Normalization）：検証前に整える🧼✨](./picture/invariants_ts_study_014_normalize.png)
 

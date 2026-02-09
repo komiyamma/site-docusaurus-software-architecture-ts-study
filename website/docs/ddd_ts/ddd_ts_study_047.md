@@ -1,4 +1,4 @@
-# 第47章 EntityとVOの境界：どこまでVO化？🧩
+﻿# 第47章：EntityとVOの境界：どこまでVO化？🧩
 
 ### ❌ 「VOなのに setter で変更」
 

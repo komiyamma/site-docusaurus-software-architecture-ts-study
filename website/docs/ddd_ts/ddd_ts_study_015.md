@@ -1,4 +1,4 @@
-# 第15章 不変条件（絶対守るルール）🔒📏
+﻿# 第15章：不変条件（絶対守るルール）🔒📏
 
 ![ddd_ts_study_015_invariant_gate.png](./picture/ddd_ts_study_015_invariant_gate.png)
 

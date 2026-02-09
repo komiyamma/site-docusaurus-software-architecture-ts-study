@@ -1,4 +1,4 @@
-# 第8章：Domain入門② Entity / ValueObject をやさしく分ける🎀🧱
+﻿# 第08章：Domain入門② Entity/ValueObject をやさしく分ける🎀
 
 [![Introduction to Domain Driven Design - Entity and Value Object ...](https://tse4.mm.bing.net/th/id/OIP.tm86NG-rIryjiKHvUBL1RAHaFj?pid=Api)](https://speakerdeck.com/jgrodziski/introduction-to-domain-driven-design-entity-and-value-object?utm_source=chatgpt.com)
 

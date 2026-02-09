@@ -1,4 +1,4 @@
-# 第46章 Decorator ② TypeScriptの定番：高階関数でサクッとラップ⚙️
+﻿# 第46章：Decorator ② TypeScriptの定番：高階関数でサクッとラップ⚙️
 
 ## この章のゴール🎯✨
 

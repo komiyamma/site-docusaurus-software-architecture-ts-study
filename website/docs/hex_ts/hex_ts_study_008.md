@@ -1,4 +1,4 @@
-# 第8章　依存の向き（これだけは最重要）🧭🔥
+﻿# 第08章：依存の向き（これだけは最重要）🧭🔥
 
 ![hex_ts_study_008[(./picture/hex_ts_study_008_ports_interfaces.png)
 

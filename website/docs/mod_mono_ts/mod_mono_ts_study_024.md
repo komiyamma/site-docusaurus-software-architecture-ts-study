@@ -1,4 +1,4 @@
-# 第24章：DI入門（newしないで渡す）🎁✨
+﻿# 第24章：DI入門（newしないで渡す）🎁
 
 （＝依存性注入 / Dependency Injection）
 

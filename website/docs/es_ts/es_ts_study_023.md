@@ -1,4 +1,4 @@
-# 23章：楽観ロック（expectedVersion）で守る🔒✅
+﻿# 第23章：楽観ロック（expectedVersion）で守る🔒✅
 
 ## この章でできるようになること🎯✨
 

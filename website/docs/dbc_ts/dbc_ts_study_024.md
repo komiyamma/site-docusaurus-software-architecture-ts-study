@@ -1,4 +1,4 @@
-## 第24章　DbC×テスト：契約を「壊れない仕組み」にする🧪🔒
+﻿# 第24章：DbC×テスト：契約を「壊れない仕組み」にする🧪🔒
 
 ![正常と違反を試す](./picture/dbc_ts_study_024_test_tubes_normal_fail.png)
 

@@ -1,4 +1,4 @@
-# 第4章：「中心（ロジック）」と「外側（I/O）」モデル🏠➡️🌍
+﻿# 第04章：「中心（ロジック）」と「外側（I/O）」モデル🏠➡️🌍
 
 ![testable_ts_study_004_core_donut.png](./picture/testable_ts_study_004_core_donut.png)
 

@@ -1,4 +1,4 @@
-# 第42章　直し方テンプレ：分解の手順書 🔧📌
+﻿# 第42章：直し方テンプレ：分解の手順書 🔧📌
 
 ![hex_ts_study_042[(./picture/hex_ts_study_042_refactoring_steps.png)
 ![hex_ts_study_042[(./picture/hex_ts_study_042_refactoring_template.png)

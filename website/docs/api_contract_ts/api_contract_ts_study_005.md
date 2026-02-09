@@ -1,4 +1,4 @@
-# 第5章：公開API面（Public Surface）を決める🎭🚪
+﻿# 第05章：公開API面（Public Surface）を決める🎭🚪
 
 ![Public Surface Metaphor](./picture/api_contract_ts_study_005_public_gate.png)
 

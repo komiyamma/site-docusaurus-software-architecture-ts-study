@@ -1,4 +1,4 @@
-# 第20章　ユースケース入門②：入力・出力の形（DTO）📮📤
+﻿# 第20章：ユースケース入門②：入力・出力の形（DTO）📮📤
 
 ![hex_ts_study_020[(./picture/hex_ts_study_020_outbound_port_repository_inter.png)
 

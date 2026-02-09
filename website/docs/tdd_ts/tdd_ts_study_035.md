@@ -1,4 +1,4 @@
-# 第35章：unionで状態を表す（ifを減らす）🧷✨
+﻿# 第35章：unionで状態を表す（ifを減らす）🧷
 
 ![ユニオン型とピン](./picture/tdd_ts_study_035_union_pin.png)
 

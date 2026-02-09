@@ -1,4 +1,4 @@
-# 第2章：互換性が壊れると何が起きる？😱💥
+﻿# 第02章：互換性が壊れると何が起きる？😱💥
 
 ![Breaking Changes Illustration](./picture/api_contract_ts_study_002_breaking_impact.png)
 

@@ -1,4 +1,4 @@
-# 第38章：網羅性（exhaustive）で抜け漏れ防止🕳️🚫✨
+﻿# 第38章：網羅性（exhaustive）で抜け漏れ防止🕳️🚫
 
 ![網羅性チェックの土台](./picture/tdd_ts_study_038_no_leak.png)
 

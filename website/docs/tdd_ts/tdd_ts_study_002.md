@@ -1,4 +1,4 @@
-# 第2章：Red→Green→Refactor を1回体験🚦🧪✨
+﻿# 第02章：Red→Green→Refactor を1回体験🚦
 
 ![TDDサイクル](./picture/tdd_ts_study_002_cycle.png)
 

@@ -1,4 +1,4 @@
-# 第13章：Infrastructure入門① 永続化（DB/Storage）を外側に閉じ込める🗄️🚪✨
+﻿# 第13章：Infrastructure入門① 永続化（DB/Storage）を外側に閉じ込める🗄️🚪
 
 この章はね、「保存の都合（DBの型やSQLやファイル形式）」を**中心（Domain/Application）に漏らさない**ための回です😊💡
 ここを押さえると、あとでDBを変えても「え、全層修正…😇」みたいな地獄を回避できます✨

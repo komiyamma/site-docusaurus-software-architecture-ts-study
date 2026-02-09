@@ -1,4 +1,4 @@
-# 第67章 State ② TypeScriptの定番：判別Unionで型安全に（まずこれ）🧠✨
+﻿# 第67章：State ② TypeScriptの定番：判別Unionで型安全に（まずこれ）🧠
 
 ## ねらい🎯
 

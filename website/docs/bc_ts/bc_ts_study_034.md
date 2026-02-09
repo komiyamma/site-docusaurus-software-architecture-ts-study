@@ -1,4 +1,4 @@
-# 第34章 Entity / Value Object 入門（BC内の型づくり）💎🧱
+﻿# 第34章：Entity / Value Object 入門（BC内の型づくり）💎🧱
 
 ## 34.1 今日のゴール🎯✨
 

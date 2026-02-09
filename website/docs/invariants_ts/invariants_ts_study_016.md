@@ -1,4 +1,4 @@
-# 第16章：更新API設計 ✨ setterを減らして「意図のある操作」にする 🧱🎯
+﻿# 第16章：更新API設計：setterを減らして「意図のある操作」にする🧱✨
 
 ![第16章：更新API設計 ✨ setterを減らして「意図のある操作」にする 🧱🎯](./picture/invariants_ts_study_016_encapsulation.png)
 

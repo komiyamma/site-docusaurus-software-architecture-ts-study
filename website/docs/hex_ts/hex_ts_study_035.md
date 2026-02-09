@@ -1,4 +1,4 @@
-# 第35章　Composition Root：依存の組み立て（合体場所）🧩🏗️
+﻿# 第35章：Composition Root：依存の組み立て（合体場所）🧩🏗️
 
 ![hex_ts_study_035[(./picture/hex_ts_study_035_composition_root.png)
 

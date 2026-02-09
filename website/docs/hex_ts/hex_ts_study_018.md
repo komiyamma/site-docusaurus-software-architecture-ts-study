@@ -1,4 +1,4 @@
-# 第18章　ドメイン入門③：ミニ不変条件（Invariants）🧷✨
+﻿# 第18章：ドメイン入門③：ミニ不変条件（Invariants）🧷✨
 
 ![hex_ts_study_018[(./picture/hex_ts_study_018_value_objects.png)
 

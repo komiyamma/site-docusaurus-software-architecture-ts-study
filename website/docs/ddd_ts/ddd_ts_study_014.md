@@ -1,4 +1,4 @@
-# 第14章 状態と遷移（ステート図の下書き）🚦
+﻿# 第14章：状態と遷移（ステート図の下書き）🚦
 
 ![ddd_ts_study_014_state_machine.png](./picture/ddd_ts_study_014_state_machine.png)
 

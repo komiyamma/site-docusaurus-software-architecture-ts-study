@@ -1,4 +1,4 @@
-# 第13章 イベントの列挙（イベントストーミング風）⚡🗒️
+﻿# 第13章：イベントの列挙（イベントストーミング風）⚡🗒️
 
 ![ddd_ts_study_013_event_storming.png](./picture/ddd_ts_study_013_event_storming.png)
 

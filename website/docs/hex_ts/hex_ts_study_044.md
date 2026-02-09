@@ -1,4 +1,4 @@
-# 第44章　次の一歩：クリーンアーキとの関係＆次章への橋渡し 🌉✨
+﻿# 第44章：次の一歩：クリーンアーキとの関係＆次章への橋渡し 🌉✨
 
 ![hex_ts_study_044[(./picture/hex_ts_study_044_clean_architecture_relation.png)
 

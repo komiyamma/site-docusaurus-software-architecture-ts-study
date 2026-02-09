@@ -1,4 +1,4 @@
-# 第15章：AAAで書く（型を固定）🧱🧪✨
+﻿# 第15章：AAAで書く（型を固定）🧱
 
 ![AAAの積み木](./picture/tdd_ts_study_015_aaa_blocks.png)
 

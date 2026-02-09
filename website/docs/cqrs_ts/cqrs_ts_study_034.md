@@ -1,4 +1,4 @@
-﻿# 第34章　API設計（CommandとQueryの出入口）🌐🚪✨
+﻿# 第34章：API設計（CommandとQueryの出入口）🌐🚪
 
 （学食モバイル注文アプリ題材🍙📱）
 

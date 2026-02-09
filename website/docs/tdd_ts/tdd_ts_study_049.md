@@ -1,4 +1,4 @@
-# 第49章：fetch境界（ネット無しでテスト）🌐🧪
+﻿# 第49章：fetch境界（ネット無しでテスト）🌐
 
 ![オフラインテスト](./picture/tdd_ts_study_049_offline.png)
 

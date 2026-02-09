@@ -1,4 +1,4 @@
-# 第5章：用語を味方にしよう（6つだけ）📌✨
+﻿# 第05章：用語を味方にしよう（6つだけ）📌
 
 （State / Event / Transition / Guard / Action / Context）
 

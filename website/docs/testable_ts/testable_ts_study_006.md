@@ -1,4 +1,4 @@
-# 第6章：テストランナー入門（まず1本通す）🧪🎉
+﻿# 第06章：テストランナー入門（まず1本通す）🧪🎉
 
 ![testable_ts_study_006_test_runner.png](./picture/testable_ts_study_006_test_runner.png)
 

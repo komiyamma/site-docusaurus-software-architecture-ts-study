@@ -1,4 +1,4 @@
-# 第6章：書き方② Decision（結論）は“一文で言い切る”✨🧠
+﻿# 第06章：書き方② Decision（結論）は“一文で言い切る”✨🧠
 
 ADRって **「判断のログ」** だから、真ん中の **Decision（結論）** がブレると全体がフワッとしちゃうんだよね🥺💦
 定番の構成（Context / Decision / Consequences）でも、Decisionは“核”として扱われます。 ([Architectural Decision Records][1])

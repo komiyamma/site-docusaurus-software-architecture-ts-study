@@ -1,4 +1,4 @@
-# 第55章 Proxy ② TypeScript標準：JavaScriptの `Proxy` を使う✨🕵️‍♀️
+﻿# 第55章：Proxy ② TypeScript標準：JavaScriptの `Proxy` を使う✨
 
 ## ねらい🎯
 

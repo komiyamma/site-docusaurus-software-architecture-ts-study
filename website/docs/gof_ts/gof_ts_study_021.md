@@ -1,4 +1,4 @@
-# 第21章 Abstract Factory ② TypeScript流：interfaceで“家族”を定義👨‍👩‍👧‍👦✨
+﻿# 第21章：Abstract Factory ② TypeScript流：interfaceで“家族”を定義👨‍👩‍👧‍👦
 
 ## ねらい🎯
 

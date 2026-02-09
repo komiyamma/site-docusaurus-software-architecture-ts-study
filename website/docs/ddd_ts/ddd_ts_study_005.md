@@ -1,4 +1,4 @@
-# 第05章 開発環境：Windows＋VS Code最小セット🪟🧰
+﻿# 第05章：部：Entity（第41〜50章）🪪🧍
 
 ![ddd_ts_study_005_ts_toolchain.png](./picture/ddd_ts_study_005_ts_toolchain.png)
 

@@ -1,4 +1,4 @@
-# 第5章　Portってなに？（差し込み口＝約束）🔌😊
+﻿# 第05章：Portってなに？（差し込み口＝約束）🔌😊
 
 ![hex_ts_study_005[(./picture/hex_ts_study_005_ports_adapters_metaphor.png)
 

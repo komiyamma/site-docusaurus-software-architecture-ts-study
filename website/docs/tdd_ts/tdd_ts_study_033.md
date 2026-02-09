@@ -1,4 +1,4 @@
-# 第33章：決定表で整理（if地獄回避）🗂️🧪✨
+﻿# 第33章：決定表で整理（if地獄回避）🗂️
 
 ![決定表で整理](./picture/tdd_ts_study_033_decision_table.png)
 

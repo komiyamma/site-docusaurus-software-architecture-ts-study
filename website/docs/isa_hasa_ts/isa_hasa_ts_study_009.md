@@ -1,4 +1,4 @@
-# 第9章：TypeScriptらしい合成① 関数をStrategyにする🎛️✨
+﻿# 第09章：TypeScriptらしい合成① 関数をStrategyにする🎛️✨
 
 ## この章でできるようになること🎯💖
 

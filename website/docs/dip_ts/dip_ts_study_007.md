@@ -1,4 +1,4 @@
-# 第7章：TypeScriptでの「抽象」入門（interface / type 超基礎）🧩📘✨
+﻿# 第07章：TypeScriptでの「抽象」入門（interface / type 超基礎）🧩📘✨
 
 この章は、DIPで出てくる「抽象ってなに？🤔」を **TypeScriptの `interface` / `type` で“書ける”ようになる** のがゴールだよ〜！🎯💕
 

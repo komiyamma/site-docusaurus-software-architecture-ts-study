@@ -1,4 +1,4 @@
-# 第3章：TypeScriptで「クラス設計」の最低限🏫✨
+﻿# 第03章：TypeScriptで「クラス設計」の最低限🏫✨
 
 （class / interface / private / readonly を“ちゃんと使える”ようになる回だよ〜😊🧸）
 

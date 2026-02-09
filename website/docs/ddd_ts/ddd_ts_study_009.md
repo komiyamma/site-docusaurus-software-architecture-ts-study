@@ -1,4 +1,4 @@
-# 第09章 仕様の書き方：ユースケースを短く書く📝
+﻿# 第09章：部：Specification / Policy / 時間 / エラー（第81〜90章）🧠📏🧯
 
 ![ddd_ts_study_009_usecase_focus.png](./picture/ddd_ts_study_009_usecase_focus.png)
 

@@ -1,4 +1,4 @@
-# 第31章　HTTP導入③：ユースケースはHTTPを知らない🙅‍♀️
+﻿# 第31章：HTTP導入③：ユースケースはHTTPを知らない🙅‍♀️
 
 ![hex_ts_study_031[(./picture/hex_ts_study_031_usecase_blindness_to_http.png)
 

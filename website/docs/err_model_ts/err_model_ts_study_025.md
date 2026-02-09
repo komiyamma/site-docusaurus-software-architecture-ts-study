@@ -1,4 +1,4 @@
-# 第25章：APIレスポンス契約（Problem Detailsで返す）🧾🌐✨
+﻿# 第25章：APIレスポンス契約（Problem Detailsで返す）🧾🌐
 
 この章では、「サーバ側で正規化したエラー（Domain / Infra / Bug）」を **クライアントが機械的に扱える“失敗の共通フォーマット”** に落とします😊
 その定番が **Problem Details**（RFC 9457）です📜✨（RFC 7807の後継だよ！）([IETF Datatracker][1])

@@ -1,4 +1,4 @@
-# 第84章 Specification実装②：合成（AND/OR）🧷
+﻿# 第84章：Specification実装②：合成（AND/OR）🧷
 
 この章は「条件を“文章みたいに読める形”にする」回だよ〜！🫶
 前章で作った **単体Specification** を、**AND / OR** で組み合わせて「ルールの組み立て」をできるようにします🎀

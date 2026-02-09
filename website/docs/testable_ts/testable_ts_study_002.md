@@ -1,4 +1,4 @@
-# 第2章：I/Oと副作用ってなに？⚡🚪
+﻿# 第02章：I/Oと副作用ってなに？⚡🚪
 
 ![testable_ts_study_002_io_chaos.png](./picture/testable_ts_study_002_io_chaos.png)
 

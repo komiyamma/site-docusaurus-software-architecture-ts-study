@@ -1,4 +1,4 @@
-# 第5章：Windows + VS Codeで“動く最小環境”を作る🪟💻
+﻿# 第05章：Windows + VS Codeで“動く最小環境”を作る🪟💻
 
 ![testable_ts_study_005_toolbox.png](./picture/testable_ts_study_005_toolbox.png)
 

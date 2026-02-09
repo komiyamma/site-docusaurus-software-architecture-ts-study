@@ -1,4 +1,4 @@
-# 第69章 Chain of Responsibility ① “順番に流す”処理が欲しい⛓️
+﻿# 第69章：Chain of Responsibility ① “順番に流す”処理が欲しい⛓️
 
 ## ねらい🎯
 

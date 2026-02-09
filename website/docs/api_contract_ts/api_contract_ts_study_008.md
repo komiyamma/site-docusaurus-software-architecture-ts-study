@@ -1,4 +1,4 @@
-# 第8章：“破壊変更”の定義を自分の教材に固定する📏🧾
+﻿# 第08章：“破壊変更”の定義を自分の教材に固定する📏🧾
 
 ![Breaking Changes List](./picture/api_contract_ts_study_008_breaking_list.png)
 

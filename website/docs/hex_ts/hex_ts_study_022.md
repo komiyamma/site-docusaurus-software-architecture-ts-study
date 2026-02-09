@@ -1,4 +1,4 @@
-# 第22章　Outbound Port：Repositoryを決める 💾🔌
+﻿# 第22章：Outbound Port：Repositoryを決める 💾🔌
 
 ![hex_ts_study_022[(./picture/hex_ts_study_022_mocking_stubbing_for_tests.png)
 

@@ -1,4 +1,4 @@
-# 第17章：Assert基礎②（オブジェクト比較）🧸✨
+﻿# 第17章：Assert基礎②（オブジェクト比較）🧸
 
 ![オブジェクト比較](./picture/tdd_ts_study_017_comparison.png)
 

@@ -1,4 +1,4 @@
-# 第19章　ユースケース入門①：アプリの中心って何？ 🎮➡️🧠
+﻿# 第19章：ユースケース入門①：アプリの中心って何？ 🎮➡️🧠
 
 ![hex_ts_study_019[(./picture/hex_ts_study_019_inbound_port_usecase_interface.png)
 

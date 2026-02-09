@@ -1,4 +1,4 @@
-# 第44章 Order（注文）Entityのたたき台☕🧾
+﻿# 第44章：Order（注文）Entityのたたき台☕🧾
 
 ![Encapsulation](./picture/ddd_ts_study_044_encapsulation.png)
 

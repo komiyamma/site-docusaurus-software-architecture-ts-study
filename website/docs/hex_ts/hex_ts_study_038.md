@@ -1,4 +1,4 @@
-# 第38章　AI活用②：レビュー用プロンプト集（そのまま使える）📝🤖
+﻿# 第38章：AI活用②：レビュー用プロンプト集（そのまま使える）📝🤖
 
 ![hex_ts_study_038[(./picture/hex_ts_study_038_ai_review_prompts.png)
 

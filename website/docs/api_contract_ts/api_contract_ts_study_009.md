@@ -1,4 +1,4 @@
-# 第9章：互換ポリシーを文章にする📜🖊️
+﻿# 第09章：互換ポリシーを文章にする📜🖊️
 
 ![Compatibility Policy Document](./picture/api_contract_ts_study_009_policy_doc.png)
 

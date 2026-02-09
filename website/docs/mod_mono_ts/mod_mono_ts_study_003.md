@@ -1,4 +1,4 @@
-# 第3章：Windowsでの開発準備（Node/TypeScript）🪟⚙️
+﻿# 第03章：Windowsでの開発準備（Node/TypeScript）🪟⚙️
 
 ## ねらい🎯
 

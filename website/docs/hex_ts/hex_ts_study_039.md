@@ -1,4 +1,4 @@
-# 第39章　アンチパターン①：中心がHTTP/DB型を知っちゃう 😱
+﻿# 第39章：アンチパターン①：中心がHTTP/DB型を知っちゃう 😱
 
 ![hex_ts_study_039[(./picture/hex_ts_study_039_anti_pattern_center_knowing_ou.png)
 

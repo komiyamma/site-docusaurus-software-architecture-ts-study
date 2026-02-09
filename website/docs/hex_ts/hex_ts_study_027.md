@@ -1,4 +1,4 @@
-# 第27章　Outbound Adapter②：FileRepository（JSON保存）📄💾
+﻿# 第27章：Outbound Adapter②：FileRepository（JSON保存）📄💾
 
 ![hex_ts_study_027[(./picture/hex_ts_study_027_file_repository_json.png)
 

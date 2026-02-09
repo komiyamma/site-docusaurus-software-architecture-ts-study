@@ -1,4 +1,4 @@
-# 第8章：Node/TSの方針（最新版より“安定”）🧩✨
+﻿# 第08章：Node/TSの方針（最新版より“安定”）🧩
 
 ![安定した柱](./picture/tdd_ts_study_008_stable_pillar.png)
 

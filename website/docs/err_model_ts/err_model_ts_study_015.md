@@ -1,4 +1,4 @@
-# 第15章：unknown → アプリ標準のErrorへ「正規化」🧼🧺✨
+﻿# 第15章：unknown → アプリ標準のErrorへ“正規化”🧼🧺
 
 ([Past chat][1])([Past chat][2])
 

@@ -1,4 +1,4 @@
-# 第13章　TypeScript設定①：strict最小セット 🛡️✨
+﻿# 第13章：TypeScript設定①：strict最小セット 🛡️✨
 
 ![hex_ts_study_013[(./picture/hex_ts_study_013_primary_vs_secondary_adapters.png)
 

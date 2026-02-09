@@ -1,4 +1,4 @@
-# 第8章：Windows＋VS Codeで開発準備（TypeScript最小構成）🪟💻✨
+﻿# 第08章：Windows＋VS Codeで開発準備（TypeScript最小構成）🪟💻
 
 ## この章でできるようになること 🎯
 

@@ -1,4 +1,4 @@
-# 第18章 仕様を図にする（最小のドメイン図）🧩🖼️
+﻿# 第18章：仕様を図にする（最小のドメイン図）🧩🖼️
 
 ![ddd_ts_study_018_minimal_domain_model.png](./picture/ddd_ts_study_018_minimal_domain_model.png)
 

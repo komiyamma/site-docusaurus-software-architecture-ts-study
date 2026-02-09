@@ -1,4 +1,4 @@
-# 14章：最小EventStore②：ストリームIDと順番（version）📼🔢
+﻿# 第14章：最小EventStore②：ストリームIDと順番（version）📼🔢
 
 ## この章でできるようになること 🎯✨
 

@@ -1,4 +1,4 @@
-# 第17章 境界の気配：モジュール分けの種📦🌿
+﻿# 第17章：境界の気配：モジュール分けの種📦🌿
 
 ![ddd_ts_study_017_boundaries.png](./picture/ddd_ts_study_017_boundaries.png)
 

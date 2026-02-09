@@ -1,4 +1,4 @@
-# 第08章 “設計”の超基礎：責務・境界・依存🎯
+﻿# 第08章：部：Repository / Factory / Domain Service（第71〜80章）🧰🏭🧙‍♀️
 
 ![ddd_ts_study_008_dependency_rule.png](./picture/ddd_ts_study_008_dependency_rule.png)
 

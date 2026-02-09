@@ -1,4 +1,4 @@
-# 第15章　フォルダ構成を固定（迷子防止）📁🧭
+﻿# 第15章：フォルダ構成を固定（迷子防止）📁🧭
 
 ![hex_ts_study_015[(./picture/hex_ts_study_015_the_domain_layer.png)
 

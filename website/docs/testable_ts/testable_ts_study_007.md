@@ -1,4 +1,4 @@
-# 第7章：テストの型（AAA）で迷わなくする📐🧪
+﻿# 第07章：テストの型（AAA）で迷わなくする📐🧪
 
 ![testable_ts_study_007_aaa_pattern.png](./picture/testable_ts_study_007_aaa_pattern.png)
 

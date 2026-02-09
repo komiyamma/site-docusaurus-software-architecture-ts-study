@@ -1,4 +1,4 @@
-# 第3章：テストしやすいってどういう状態？🧪✨
+﻿# 第03章：テストしやすいってどういう状態？🧪✨
 
 ![testable_ts_study_003_stability_scale.png](./picture/testable_ts_study_003_stability_scale.png)
 

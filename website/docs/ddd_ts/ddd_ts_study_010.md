@@ -1,4 +1,4 @@
-# 第10章 受け入れ条件（Given/When/Then）✅🧪
+﻿# 第10章：部：Domain Event と連携（第91〜100章）⚡📮🧩
 
 ![ddd_ts_study_010_gwt_flow.png](./picture/ddd_ts_study_010_gwt_flow.png)
 

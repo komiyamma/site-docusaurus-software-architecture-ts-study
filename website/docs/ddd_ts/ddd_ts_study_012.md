@@ -1,4 +1,4 @@
-# 第12章 ユビキタス言語：言葉をそろえる🗣️✨
+﻿# 第12章：ユビキタス言語：言葉をそろえる🗣️✨
 
 ![ddd_ts_study_012_ubiquitous_lang.png](./picture/ddd_ts_study_012_ubiquitous_lang.png)
 

@@ -1,4 +1,4 @@
-# 第5章　開発環境（Windows＋VS Code＋AI）を整える🪟💻🤖✨
+﻿# 第05章：開発環境（Windows＋VS Code＋AI）を整える🪟💻🤖
 
 ![第5章　開発環境（Windows＋VS Code＋AI）を整える🪟💻🤖](./picture/invariants_ts_study_005_environment.png)
 

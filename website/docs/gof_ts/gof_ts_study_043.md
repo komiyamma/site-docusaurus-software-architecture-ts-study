@@ -1,4 +1,4 @@
-# 第43章 Composite ② TypeScript流：Unionでも表現できる（クラスを増やさない）🧩
+﻿# 第43章：Composite ② TypeScript流：Unionでも表現できる（クラスを増やさない）🧩
 
 * ねらい🎯：Composite（木構造）を「判別Union＋関数」でスッキリ書けるようになる✨
 * 学ぶこと📌：判別Union（discriminated union）／再帰型／網羅チェック（never）／再帰とループの使い分け🧠

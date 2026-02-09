@@ -1,4 +1,4 @@
-# 第8章：純粋関数の作り方（I/Oゼロの中心）🍰✨
+﻿# 第08章：純粋関数の作り方（I/Oゼロの中心）🍰✨
 
 ![testable_ts_study_008_pure_function.png](./picture/testable_ts_study_008_pure_function.png)
 

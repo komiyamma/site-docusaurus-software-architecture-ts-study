@@ -1,4 +1,4 @@
-# 第16章　ドメイン入門①：ドメイン＝ルール置き場 🏠📌
+﻿# 第16章：ドメイン入門①：ドメイン＝ルール置き場 🏠📌
 
 ![hex_ts_study_016[(./picture/hex_ts_study_016_defining_the_use_case.png)
 

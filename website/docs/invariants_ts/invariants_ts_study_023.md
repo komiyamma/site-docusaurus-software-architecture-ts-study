@@ -1,4 +1,4 @@
-# 第23章　エラー設計②：Result型で失敗も仕様にする🎯📦
+﻿# 第23章：エラー設計②：Result型で失敗も仕様にする🎯📦
 
 ![第23章　エラー設計②：Result型で失敗も仕様にする🎯📦](./picture/invariants_ts_study_023_result_type.png)
 

@@ -1,4 +1,4 @@
-# 第37章 VOの合成：Address/Receiptなど📦
+﻿# 第37章：VOの合成：Address/Receiptなど📦
 
 VO（Value Object）って「小さくてキレイな値の箱」だけじゃなくて、**VOの中にVOを入れて“もっと自然なモデル”を作れる**んだよ〜！🥳
 この章では、**複合VO（Composite Value Object）**の作り方を、実装＆テストまでいっしょにやるよ🧪💕

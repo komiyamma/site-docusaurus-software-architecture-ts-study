@@ -1,4 +1,4 @@
-# 第8章 Composition Root入門①：組み立て場所（entry）を決める🏗️📌
+﻿# 第08章：Composition Root入門①：組み立て場所（entry）を決める🏗️📌
 
 ## この章のゴール🎯✨
 

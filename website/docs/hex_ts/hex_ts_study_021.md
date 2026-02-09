@@ -1,4 +1,4 @@
-# 第21章　Inbound Port：UseCaseの入口を決める 🚪🔌
+﻿# 第21章：Inbound Port：UseCaseの入口を決める 🚪🔌
 
 ![hex_ts_study_021[(./picture/hex_ts_study_021_cli_adapter.png)
 

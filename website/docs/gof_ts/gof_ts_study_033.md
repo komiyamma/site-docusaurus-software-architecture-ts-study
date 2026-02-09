@@ -1,4 +1,4 @@
-# 第33章 Singleton ② TypeScriptの定番：モジュールのexportで十分📦✨
+﻿# 第33章：Singleton ② TypeScriptの定番：モジュールのexportで十分📦
 
 ## 1) まず結論：Singletonクラス、作らなくてOKだよ〜🙆‍♀️💡
 

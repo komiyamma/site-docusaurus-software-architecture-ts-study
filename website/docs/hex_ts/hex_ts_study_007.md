@@ -1,4 +1,4 @@
-# 第7章　Inbound / Outbound の超やさしい整理 🚪➡️⬅️
+﻿# 第07章：Inbound / Outbound の超やさしい整理 🚪➡️⬅️
 
 ![hex_ts_study_007[(./picture/hex_ts_study_007_the_right_side_driven_output.png)
 

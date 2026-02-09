@@ -1,4 +1,4 @@
-# 第3章 ヘキサゴナルの「1枚絵」入門（城の中心を守る）🏰🛡️✨
+﻿# 第03章：ヘキサゴナルの1枚絵（城の中心を守る）🏰🛡️
 
 ![hex_ts_study_003[(./picture/hex_ts_study_003_dependency_rule_inward_only.png)
 

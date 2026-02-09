@@ -1,4 +1,4 @@
-# 第17章　境界の設計①：外部入力はまず unknown で受ける🕵️‍♀️❓🛡️
+﻿# 第17章：境界の設計①：外部入力はまず unknown で受ける🕵️‍♀️❓
 
 ![第17章　境界の設計①：外部入力はまず unknown で受ける🕵️‍♀️❓](./picture/invariants_ts_study_017_unknown_input.png)
 

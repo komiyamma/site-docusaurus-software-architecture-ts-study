@@ -1,4 +1,4 @@
-# 第97章 Outbox入門：更新と通知のズレ対策 📤📬✨
+﻿# 第97章：Outbox入門：更新と通知のズレ対策📤📬
 
 ![Outbox入門：更新と通知のズレ対策](./picture/ddd_ts_study_097_outbox_pattern.png)
 

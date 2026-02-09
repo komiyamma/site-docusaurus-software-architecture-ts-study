@@ -1,4 +1,4 @@
-# 第32章　テスト①：ユースケース単体テスト（最優先）🧪💪
+﻿# 第32章：テスト①：ユースケース単体テスト（最優先）🧪💪
 
 ![hex_ts_study_032[(./picture/hex_ts_study_032_unit_testing_usecases.png)
 

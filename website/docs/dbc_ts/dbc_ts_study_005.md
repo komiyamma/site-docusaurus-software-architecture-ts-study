@@ -1,4 +1,4 @@
-# 第5章　TypeScriptで作る「静的な契約」①：基本の型付け🧷🧱
+﻿# 第05章：TypeScriptで作る「静的な契約」①：型で守れる範囲🧷✅
 
 ![型のステンシル](./picture/dbc_ts_study_005_type_stencils.png)
 

@@ -1,4 +1,4 @@
-# 第14章　Composition Root：newとimportの集中管理📍🧹
+﻿# 第14章：Composition Root：newとimportの集中管理📍🧹
 
 ## 今日のゴール🎯✨
 

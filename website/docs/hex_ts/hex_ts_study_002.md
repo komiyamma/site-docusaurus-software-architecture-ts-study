@@ -1,4 +1,4 @@
-# 第2章　直結コードの「つらさ」あるある 😵‍💫💥
+﻿# 第02章：直結コードの「つらさ」あるある 😵‍💫💥
 
 ![hex_ts_study_002[(./picture/hex_ts_study_002_the_layered_architecture_probl.png)
 

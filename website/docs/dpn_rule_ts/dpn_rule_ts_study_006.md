@@ -1,4 +1,4 @@
-# 第6章 TypeScriptの武器：type/interfaceで“契約”を作る📜🧡
+﻿# 第06章：TypeScriptの武器：type/interfaceで“契約”を作る📜🧡
 
 この章はね、「中心（domain/app）が、外側（DB/HTTP/SDK）を直接知らなくても動ける」状態を作るための**超大事な準備**だよ〜！😊✨
 そのカギが **“契約（contract）”＝ interface / type** なの🧩🔑

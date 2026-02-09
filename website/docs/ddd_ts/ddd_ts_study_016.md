@@ -1,4 +1,4 @@
-# 第16章 例外ケース（失敗の道）😵‍💫🧯
+﻿# 第16章：例外ケース（失敗の道）😵‍💫🧯
 
 ![ddd_ts_study_016_failure_paths.png](./picture/ddd_ts_study_016_failure_paths.png)
 

@@ -1,4 +1,4 @@
-# 第61章 Observer ② TypeScriptの定番：EventTarget / EventEmitterの使い分け🧠📣
+﻿# 第61章：Observer ② TypeScriptの定番：EventTarget / EventEmitterの使い分け🧠
 
 ## ねらい🎯
 

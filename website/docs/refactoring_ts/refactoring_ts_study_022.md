@@ -1,4 +1,4 @@
-# 第22章 Inline / Extract Variable（変数の整理）🧺🪄
+﻿# 第22章：Inline / Extract Variable（変数の整理）🧺🪄
 
 ## ねらい🎯
 

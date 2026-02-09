@@ -1,4 +1,4 @@
-# 第13章 判別Unionで“状態/種類”を安全にする（State/Visitorの土台）🚦✨
+﻿# 第13章：判別Unionで“状態/種類”を安全にする（State/Visitorの土台）🚦
 
 ## 13-1 まず困るやつ：`status: string` が事故る😵‍💫
 

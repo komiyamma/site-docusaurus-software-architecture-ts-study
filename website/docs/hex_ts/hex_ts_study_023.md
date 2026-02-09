@@ -1,4 +1,4 @@
-# 第23章　Outbound Port：Clockなど小さな外部依存を切る ⏰🔌
+﻿# 第23章：Outbound Port：Clockなど小さな外部依存を切る ⏰🔌
 
 ![hex_ts_study_023[(./picture/hex_ts_study_023_domain_services.png)
 

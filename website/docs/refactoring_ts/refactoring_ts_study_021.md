@@ -1,4 +1,4 @@
-# 第21章 Extract Function（長い関数を分割）✂️📦
+﻿# 第21章：Extract Function（長い関数を分割）✂️📦
 
 ### ねらい🎯
 

@@ -1,4 +1,4 @@
-# 第42章 Entityの設計：ID生成と比較ルール🆔
+﻿# 第42章：Entityの設計：ID生成と比較ルール🆔
 
 ![ID Generation](./picture/ddd_ts_study_042_id_generation.png)
 

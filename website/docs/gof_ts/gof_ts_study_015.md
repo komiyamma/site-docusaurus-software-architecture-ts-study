@@ -1,4 +1,4 @@
-# 第15章 例外よりResult的な扱い（Command/Chain/Observerの安定化）🧯
+﻿# 第15章：例外よりResult的な扱い（Command/Chain/Observerの安定化）🧯
 
 ## ねらい🎯✨
 

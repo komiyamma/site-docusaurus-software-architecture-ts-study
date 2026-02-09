@@ -1,4 +1,4 @@
-# 第29章 Prototype ② TypeScript標準でやる：スプレッド/structuredClone/assign🧬
+﻿# 第29章：Prototype ② TypeScript標準でやる：スプレッド/structuredClone/assign🧬
 
 ## ねらい🎯
 

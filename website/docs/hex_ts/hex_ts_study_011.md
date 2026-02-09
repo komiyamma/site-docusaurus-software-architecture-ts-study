@@ -1,4 +1,4 @@
-# 第11章　Windows＋VS Code準備②：VS Codeの必須設定 🧰✨
+﻿# 第11章：Windows＋VS Code準備②：VS Codeの必須設定 🧰✨
 
 ![hex_ts_study_011[(./picture/hex_ts_study_011_testing_in_isolation.png)
 

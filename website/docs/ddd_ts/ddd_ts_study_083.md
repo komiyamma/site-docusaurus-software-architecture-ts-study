@@ -1,4 +1,4 @@
-# 第83章 Specification実装①：単体条件を作る🧩
+﻿# 第83章：Specification実装①：単体条件を作る🧩
 
 今日は「if文の条件」を、そのまま“再利用できる部品”にしちゃう回だよ〜！☺️☕
 （2026年時点の最新として、TypeScriptは 5.9 系が現行の安定版ラインだよ〜）([Microsoft for Developers][1])

@@ -1,4 +1,4 @@
-# 第4章：VS CodeとAIで“観測の下準備”🧰🤖✨
+﻿# 第04章：VS CodeとAIで“観測の下準備”🧰🤖✨
 
 [![Getting started with Copilot Chat in VS Code](https://tse2.mm.bing.net/th/id/OIP.VWwdfYYgYW-DIbDAZC44ugHaEb?pid=Api)](https://code.visualstudio.com/docs/copilot/getting-started-chat?utm_source=chatgpt.com)
 

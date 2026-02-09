@@ -1,4 +1,4 @@
-# 第28章　Adapterが薄いかチェック（太ったら負け）🥗⚠️
+﻿# 第28章：Adapterが薄いかチェック（太ったら負け）🥗⚠️
 
 ![hex_ts_study_028[(./picture/hex_ts_study_028_thin_adapter_principle.png)
 

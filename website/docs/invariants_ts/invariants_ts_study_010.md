@@ -1,4 +1,4 @@
-# 第10章　型の武器③：Branded / Opaque 風の型で「混ぜない」🏷️😎✨
+﻿# 第10章：型の武器③：Branded/Opaque風の型で「混ぜない」🏷️😎
 
 ![第10章　型の武器③：Branded / Opaque 風の型で「混ぜない」🏷️😎✨](./picture/invariants_ts_study_010_branded_type.png)
 

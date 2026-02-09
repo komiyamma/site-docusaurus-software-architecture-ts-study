@@ -1,4 +1,4 @@
-# 第2章：Windows＋VS Code＋TypeScript環境づくり💻🪟✨
+﻿# 第02章：Windows＋VS Code＋TypeScript環境づくり💻🪟
 
 （ここで“詰まらない土台”を作るよ〜！🎀）
 

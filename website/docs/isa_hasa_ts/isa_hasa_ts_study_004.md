@@ -1,4 +1,4 @@
-# 第4章：TypeScriptで合成するための道具箱① `interface` / `type` 📘✨
+﻿# 第04章：TypeScriptで合成するための道具箱① `interface` / `type` 📘✨
 
 （テーマ：**「差し替え可能」にするための“約束”を作れるようになる**🧩🔁）
 

@@ -1,4 +1,4 @@
-# 第76章 Mediator ② TypeScript定番：イベント中心（Observerと親戚）📣🕊️
+﻿# 第76章：Mediator ② TypeScript定番：イベント中心（Observerと親戚）📣
 
 ## ねらい🎯
 

@@ -1,4 +1,4 @@
-# 第41章　アンチパターン③：Repositoryが何でも屋になる 🧹😵
+﻿# 第41章：アンチパターン③：Repositoryが何でも屋になる 🧹😵
 
 ![hex_ts_study_041[(./picture/hex_ts_study_041_anti_pattern_god_repository.png)
 

@@ -1,4 +1,4 @@
-# 第17章 Factory Method ② TypeScript流：関数Factoryから始めよう🧁
+﻿# 第17章：Factory Method ② TypeScript流：関数Factoryから始めよう🧁
 
 ## ねらい🎯
 

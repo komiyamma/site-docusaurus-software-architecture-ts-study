@@ -1,4 +1,4 @@
-# 第7章：型で守る②（Entity と Value Object）👤💎
+﻿# 第07章：型で守る②（Entity と Value Object）👤💎
 
 ## この章でできるようになること 🎯✨
 

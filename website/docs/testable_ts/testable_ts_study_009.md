@@ -1,4 +1,4 @@
-# 第9章：TypeScriptの型でテストを減らす🛡️📘
+﻿# 第09章：TypeScriptの型でテストを減らす🛡️📘
 
 ![testable_ts_study_009_type_shield.png](./picture/testable_ts_study_009_type_shield.png)
 

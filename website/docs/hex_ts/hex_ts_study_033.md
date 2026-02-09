@@ -1,4 +1,4 @@
-# 第33章　エラー設計①：中心のエラー（仕様）📌😌
+﻿# 第33章：エラー設計①：中心のエラー（仕様）📌😌
 
 ![hex_ts_study_033[(./picture/hex_ts_study_033_handling_domain_errors.png)
 

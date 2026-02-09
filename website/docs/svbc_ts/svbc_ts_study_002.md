@@ -1,4 +1,4 @@
-# 第2章　SemVerの超基本：MAJOR/MINOR/PATCH🔢✨
+﻿# 第02章：SemVerの超基本：MAJOR/MINOR/PATCH🔢✨
 
 **できるようになる**：3つの番号の役割を、利用者目線で説明できるようになる💬👥
 

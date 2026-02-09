@@ -1,4 +1,4 @@
-# 第4章　境界（Boundary）を見つけよう🚧📍✨
+﻿# 第04章：境界（Boundary）を見つけよう🚧📍
 
 ![第4章　境界（Boundary）を見つけよう🚧📍](./picture/invariants_ts_study_004_boundary_map.png)
 

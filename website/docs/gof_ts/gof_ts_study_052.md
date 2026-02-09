@@ -1,4 +1,4 @@
-# 第52章 Flyweight ② TypeScript標準：Mapキャッシュで共有する🗃️✨
+﻿# 第52章：Flyweight ② TypeScript標準：Mapキャッシュで共有する🗃️
 
 ## ねらい🎯
 

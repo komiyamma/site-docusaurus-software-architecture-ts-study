@@ -1,4 +1,4 @@
-# 第16章：Assert基礎①（数・文字・真偽）✅✨
+﻿# 第16章：Assert基礎①（数・文字・真偽）✅
 
 ![アサートの基本アイコン](./picture/tdd_ts_study_016_assert_icons.png)
 

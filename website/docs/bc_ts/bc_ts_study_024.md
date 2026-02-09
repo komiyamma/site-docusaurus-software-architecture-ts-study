@@ -1,4 +1,4 @@
-# 第24章 Customer/Supplier（主導権がある関係）🤝👑
+﻿# 第24章：Customer/Supplier（主導権がある関係）🤝👑
 
 ## この章でわかるようになること🎯✨
 

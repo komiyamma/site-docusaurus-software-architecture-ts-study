@@ -1,4 +1,4 @@
-# 第75章 Static factoryとFactory classの使い分け⚖️
+﻿# 第75章：Static factoryとFactory classの使い分け⚖️
 
 この章は「Factoryを使うのは分かったけど、`static`でいいの？クラス作るべき？」って迷子にならないための回だよ〜！🧭💕
 

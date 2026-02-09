@@ -1,4 +1,4 @@
-# 第7章　プリミティブ地獄（string/numberだらけ）を体験する🧟‍♀️➡️😇
+﻿# 第07章：プリミティブ地獄（string/numberだらけ）を体験する🧟‍♀️➡️😇
 
 ![第7章　プリミティブ地獄（string/numberだらけ）を体験する🧟‍♀️➡️😇](./picture/invariants_ts_study_007_prohibitive_mix.png)
 

@@ -1,4 +1,4 @@
-# 第11章 不変に近づく：readonly・イミュータブルの気持ち🧊✨
+﻿# 第11章：不変に近づく：readonly・イミュータブルの気持ち🧊✨
 
 ![第11章 不変に近づく：readonly・イミュータブルの気持ち🧊✨](./picture/invariants_ts_study_011_readonly.png)
 

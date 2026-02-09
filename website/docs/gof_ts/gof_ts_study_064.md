@@ -1,4 +1,4 @@
-# 第64章 Command ② TypeScript定番：関数Command＋履歴配列📚
+﻿# 第64章：Command ② TypeScript定番：関数Command＋履歴配列📚
 
 ## ねらい🎯
 

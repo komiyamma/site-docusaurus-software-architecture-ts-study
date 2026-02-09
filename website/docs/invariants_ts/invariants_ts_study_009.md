@@ -1,4 +1,4 @@
-# 第9章　型の武器②：Discriminated Union（タグ付きユニオン）🏷️🧠✨
+﻿# 第09章：型の武器②：Discriminated Union（タグ付きユニオン）🏷️🧠
 
 ![第9章　型の武器②：Discriminated Union（タグ付きユニオン）🏷️🧠](./picture/invariants_ts_study_009_discriminated_union.png)
 

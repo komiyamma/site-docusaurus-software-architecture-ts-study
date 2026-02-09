@@ -1,4 +1,4 @@
-# 第03章 例題ドメイン紹介：カフェ注文☕🧾
+﻿# 第03章：部：TypeScriptでDDDしやすい基礎体力（第21〜30章）🏋️‍♀️🧡
 
 ![ddd_ts_study_003_cafe_domain_map.png](./picture/ddd_ts_study_003_cafe_domain_map.png)
 

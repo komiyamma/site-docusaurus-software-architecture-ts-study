@@ -1,4 +1,4 @@
-# 第28章　外部API境界（ACLの入門）：外の歪みを中に入れない📡🧼🛡️
+﻿# 第28章：外部API境界（ACLの入門）：外の歪みを中に入れない📡🧼
 
 ![第28章　外部API境界（ACLの入門）：外の歪みを中に入れない📡🧼](./picture/invariants_ts_study_028_external_api.png)
 

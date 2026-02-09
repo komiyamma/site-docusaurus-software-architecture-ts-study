@@ -1,4 +1,4 @@
-﻿# 第7章　CQRSの最小形（CommandHandler / QueryService）🧩✨
+﻿# 第07章：CQRSの最小形（CommandHandler / QueryService）🧩✨
 
 今日は **CQRSの“骨格だけ”** を作ります☺️💡
 「難しいことは後回し！」で、まずは **分けた瞬間にスッキリする体験** を優先します🎀

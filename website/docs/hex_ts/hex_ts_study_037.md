@@ -1,4 +1,4 @@
-# 第37章　AI活用①：雛形生成の安全な頼り方 🤖🧰
+﻿# 第37章：AI活用①：雛形生成の安全な頼り方 🤖🧰
 
 ![hex_ts_study_037[(./picture/hex_ts_study_037_ai_as_a_pair_programmer.png)
 

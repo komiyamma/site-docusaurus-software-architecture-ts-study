@@ -1,4 +1,4 @@
-# 第18章　境界の設計②：DTOとドメインを分ける📦↔️🏰
+﻿# 第18章：境界の設計②：DTOとドメインを分ける📦↔️🏰
 
 ![第18章　境界の設計②：DTOとドメインを分ける📦↔️🏰](./picture/invariants_ts_study_018_dto_conversion.png)
 

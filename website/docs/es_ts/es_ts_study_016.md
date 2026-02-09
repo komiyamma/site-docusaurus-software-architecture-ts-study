@@ -1,4 +1,4 @@
-# 16章：Command処理の“型”①（Load → Decide → Append）📮✅
+﻿# 第16章：Command処理の“型”①（Load → Decide → Append）📮✅
 
 ## この章でできるようになること🎯✨
 

@@ -1,4 +1,4 @@
-﻿# 第8章　Windows＋VS Code＋TSのプロジェクト土台づくり🪟🧰✨（CQRS用の“迷子防止テンプレ”）
+﻿# 第08章：Windows＋VS Code＋TSのプロジェクト土台づくり🪟🧰
 
 この章のゴールはこれ👇
 **「Command/Query/Domain/Infrastructure を“最初から分けた形”で、すぐ動いて・すぐテストできて・すぐ整形できる」**状態を作ることだよ〜😊💕

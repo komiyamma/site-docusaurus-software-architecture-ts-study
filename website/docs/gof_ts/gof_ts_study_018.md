@@ -1,4 +1,4 @@
-# 第18章 Factory Method ③ 拡張に強く：登録（Registry）で増やす📌🗂️
+﻿# 第18章：Factory Method ③ 拡張に強く：登録（Registry）で増やす📌
 
 ## ねらい🎯
 

@@ -1,4 +1,4 @@
-# 第01章 DDDってなに？（一言でいうと）💡
+﻿# 第01章：DDDってなに？（一言でいうと）💡
 
 ![ddd_ts_study_001_domain_core.png](./picture/ddd_ts_study_001_domain_core.png)
 

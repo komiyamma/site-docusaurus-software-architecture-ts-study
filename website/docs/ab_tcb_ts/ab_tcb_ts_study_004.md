@@ -1,4 +1,4 @@
-# 第4章：VS Code + TypeScript（2026）環境準備🔧💻
+﻿# 第04章：VS Code + TypeScript（2026）環境準備🔧💻
 
 ## この章のゴール🎯
 

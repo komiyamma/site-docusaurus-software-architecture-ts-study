@@ -1,4 +1,4 @@
-# 第73章 Repositoryの粒度：集約単位📦
+﻿# 第73章：Repositoryの粒度：集約単位📦
 
 この章はね、「Repositoryを作りすぎてコードが太る問題」を止める回だよ〜！🧁
 結論からいくと **Repositoryは“集約ルート（Aggregate Root）単位”で作る** のが基本ルールです💡

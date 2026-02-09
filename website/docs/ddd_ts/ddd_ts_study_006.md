@@ -1,4 +1,4 @@
-# 第06章 TypeScript（2026想定）の設計で大事な所🧡
+﻿# 第06章：部：Aggregate（第51〜60章）🏯🛡️
 
 ![ddd_ts_study_006_ts_guardrails.png](./picture/ddd_ts_study_006_ts_guardrails.png)
 

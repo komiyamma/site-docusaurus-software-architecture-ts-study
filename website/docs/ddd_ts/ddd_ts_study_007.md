@@ -1,4 +1,4 @@
-# 第07章 プロジェクト構成（domain/app/infra/test）📦
+﻿# 第07章：部：ユースケース（Application）を作る（第61〜70章）🎬🧑‍🍳
 
 ![ddd_ts_study_007_layered_arch.png](./picture/ddd_ts_study_007_layered_arch.png)
 

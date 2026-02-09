@@ -1,4 +1,4 @@
-# 第19章 “何を作らないか”を決める（スコープ）✂️
+﻿# 第19章：“何を作らないか”を決める（スコープ）✂️
 
 ![ddd_ts_study_019_scope_cut.png](./picture/ddd_ts_study_019_scope_cut.png)
 

@@ -1,4 +1,4 @@
-# 第40章 Bridge ② TypeScript定番：interface実装を注入（DIっぽく）💉
+﻿# 第40章：Bridge ② TypeScript定番：interface実装を注入（DIっぽく）💉
 
 ## ねらい🎯
 

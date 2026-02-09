@@ -1,4 +1,4 @@
-# 第12章：Watch運用（保存→即テスト）🔁✨
+﻿# 第12章：Watch運用（保存→即テスト）🔁
 
 ![ウォッチモード](./picture/tdd_ts_study_012_infinite_loop.png)
 

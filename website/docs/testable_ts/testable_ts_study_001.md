@@ -1,4 +1,4 @@
-# 第1章：はじめに（この講座のゴール）🎯😊
+﻿# 第01章：はじめに（この講座のゴール）🎯😊
 
 ![testable_ts_study_001_intro_tree.png](./picture/testable_ts_study_001_intro_tree.png)
 
