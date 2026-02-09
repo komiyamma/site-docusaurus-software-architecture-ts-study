@@ -1,6 +1,6 @@
 # 第2章：Red→Green→Refactor を1回体験🚦🧪✨
 
-![TDDサイクル[(./picture/tdd_ts_study_002_cycle.png)
+![TDDサイクル](./picture/tdd_ts_study_002_cycle.png)
 
 この章は「TDDって結局なにするの？」を、**1回だけ**ちゃんと回して “体に覚えさせる” 回だよ〜😊💕
 

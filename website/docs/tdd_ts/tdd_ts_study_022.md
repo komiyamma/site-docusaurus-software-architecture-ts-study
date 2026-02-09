@@ -1,6 +1,6 @@
 # 第22章：パラメータ化テスト（ケース増殖の味方）🔁🧪✨
 
-![パラメータ化テスト[(./picture/tdd_ts_study_022_multiplier.png)
+![パラメータ化テスト](./picture/tdd_ts_study_022_multiplier.png)
 
 ## 🎯 この章のゴール
 

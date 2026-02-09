@@ -1,6 +1,6 @@
 # 第55章：発展⭐️E2E/ビジュアルは少数精鋭（任意）🖼️🧪✨
 
-![視覚的カメラ[(./picture/tdd_ts_study_055_visual_camera.png)
+![視覚的カメラ](./picture/tdd_ts_study_055_visual_camera.png)
 
 ## 🎯目的
 

@@ -1,6 +1,6 @@
 # 第39章：変換層（外部データに汚染されない）🔄🛡️
 
-![変換層の門[(./picture/tdd_ts_study_039_filter_gate.png)
+![変換層の門](./picture/tdd_ts_study_039_filter_gate.png)
 
 ## 🎯目的
 

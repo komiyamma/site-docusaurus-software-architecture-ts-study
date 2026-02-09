@@ -1,6 +1,6 @@
 # 第31章：ベイビーステップ（詰まらない進め方）👶⏱️🧪✨
 
-![ベイビーステップ[(./picture/tdd_ts_study_031_baby_steps.png)
+![ベイビーステップ](./picture/tdd_ts_study_031_baby_steps.png)
 
 ## 🎯この章のゴール
 

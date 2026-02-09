@@ -1,6 +1,6 @@
 # 第42章：依存の注入（関数引数DI）📦➡️✨
 
-![差し替え可能なプラグ[(./picture/tdd_ts_study_042_pluggable.png)
+![差し替え可能なプラグ](./picture/tdd_ts_study_042_pluggable.png)
 
 「テストを安定させる魔法」じゃなくて、**“差し替え可能にする設計”**だよ〜🧙‍♀️💕
 

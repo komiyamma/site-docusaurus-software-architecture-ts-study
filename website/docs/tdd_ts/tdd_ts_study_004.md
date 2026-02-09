@@ -1,6 +1,6 @@
 # 第4章：TDDが向く場所・向かない場所🎯✨
 
-![ロジックを狙い撃つ[(./picture/tdd_ts_study_004_target.png)
+![ロジックを狙い撃つ](./picture/tdd_ts_study_004_target.png)
 
 （＝「どこをTDDで固めると一番ラクになる？」を決める章だよ〜💡🧪）
 

@@ -1,6 +1,6 @@
 # 第11章：Vitest導入（成功/失敗を体験）🧪✨
 
-![テスト成功[(./picture/tdd_ts_study_011_check_mark.png)
+![テスト成功](./picture/tdd_ts_study_011_check_mark.png)
 
 「テストが動く！」と「わざと落として読める！」を今日いっぺんに体験しちゃう章だよ〜😆💕
 

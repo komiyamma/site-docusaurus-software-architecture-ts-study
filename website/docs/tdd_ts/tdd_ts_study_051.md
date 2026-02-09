@@ -1,6 +1,6 @@
 # 第51章：カバレッジの正しい距離感📈（数字に振り回されない）🧪✨
 
-![カバレッジの地図[(./picture/tdd_ts_study_051_map_coverage.png)
+![カバレッジの地図](./picture/tdd_ts_study_051_map_coverage.png)
 
 ## 🎯この章のゴール
 

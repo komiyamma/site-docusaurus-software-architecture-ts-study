@@ -1,6 +1,6 @@
 # 第50章：入力検証（スキーマ/バリデーションの入口）🧷✨
 
-![バリデーションの盾[(./picture/tdd_ts_study_050_input_shield.png)
+![バリデーションの盾](./picture/tdd_ts_study_050_input_shield.png)
 
 API や JSON、フォーム入力って、**「型があるっぽく見える」けど実は `unknown`** なんだよね😵‍💫
 TypeScript の型は *実行時* には守ってくれないから、入口でコケると「どこで壊れたの!?」ってなる…💥

@@ -1,6 +1,6 @@
 # 第46章：非同期テスト基礎（async/await）⏳🧪✨
 
-![非同期の砂時計[(./picture/tdd_ts_study_046_async_hourglass.png)
+![非同期の砂時計](./picture/tdd_ts_study_046_async_hourglass.png)
 
 ## 🎯 目的
 

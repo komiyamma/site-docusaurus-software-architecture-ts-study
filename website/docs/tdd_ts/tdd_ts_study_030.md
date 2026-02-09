@@ -1,6 +1,6 @@
 # 第30章：テスト側リファクタ（読み物として整える）🧹📘✨
 
-![テストコードの掃除[(./picture/tdd_ts_study_030_broom.png)
+![テストコードの掃除](./picture/tdd_ts_study_030_broom.png)
 
 ## 🎯 目的
 

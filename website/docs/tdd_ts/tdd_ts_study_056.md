@@ -1,6 +1,6 @@
 # 第56章：卒業制作🎓✨ 小アプリを「TDDで完成」＋CIで自動チェック✅🤖
 
-![卒業おめでとう[(./picture/tdd_ts_study_056_graduation.png)
+![卒業おめでとう](./picture/tdd_ts_study_056_graduation.png)
 
 ここは“総まとめ回”だよ〜！🎉
 **仕様→テスト→実装→リファクタ→運用（CI）**まで、1人で回して「作りきる」体験をするよ🧪💪

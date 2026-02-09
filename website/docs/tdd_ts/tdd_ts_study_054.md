@@ -1,6 +1,6 @@
 # 第54章：遅いテストの直し方（継続の生命線）🐢➡️⚡️🧪
 
-![時計の修理[(./picture/tdd_ts_study_054_repair_clock.png)
+![時計の修理](./picture/tdd_ts_study_054_repair_clock.png)
 
 ## 🎯 目的
 

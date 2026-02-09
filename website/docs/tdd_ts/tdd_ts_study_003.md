@@ -1,6 +1,6 @@
 # 第3章：「小さく刻む」基本（1テスト＝1約束）🔪🧪✨
 
-![仕様を小テストに分解[(./picture/tdd_ts_study_003_scaling.png)
+![仕様を小テストに分解](./picture/tdd_ts_study_003_scaling.png)
 
 ## 🎯この章のゴール
 

@@ -1,6 +1,6 @@
 # 第24章：ミニ演習① カフェ会計（税・端数）☕️🧾✨
 
-![カフェ会計[(./picture/tdd_ts_study_024_cafe_counter.png)
+![カフェ会計](./picture/tdd_ts_study_024_cafe_counter.png)
 
 この章は「TDDの基礎セット（正常→境界→異常 / AAA / 命名）」を **1本の小さなアプリに凝縮して完走**する回だよ〜！💪🧪
 （テストは **Vitest v4系**が現行だよ🧪✨ ([NPM][1])）

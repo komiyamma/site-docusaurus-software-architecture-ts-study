@@ -1,6 +1,6 @@
 # 第36章：ブランド型（ID取り違え防止）🏷️🧪✨
 
-![ブランド型[(./picture/tdd_ts_study_036_brand_tag.png)
+![ブランド型](./picture/tdd_ts_study_036_brand_tag.png)
 
 ## 🎯目的
 

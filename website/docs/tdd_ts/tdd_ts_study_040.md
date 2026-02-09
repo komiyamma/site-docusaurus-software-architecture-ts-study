@@ -1,6 +1,6 @@
 # 第40章：小さな設計ルール（境界を守る）📏🏠✨
 
-![お城の堀（境界）[(./picture/tdd_ts_study_040_castle_moat.png)
+![お城の堀（境界）](./picture/tdd_ts_study_040_castle_moat.png)
 
 ## 🎯この章のゴール
 

@@ -1,6 +1,6 @@
 # 第53章：UIテスト戦略（やる/やらないを決める）🧭🖥️✨
 
-![望遠鏡でUIを覗く[(./picture/tdd_ts_study_053_telescope.png)
+![望遠鏡でUIを覗く](./picture/tdd_ts_study_053_telescope.png)
 
 ## 🎯この章のゴール
 

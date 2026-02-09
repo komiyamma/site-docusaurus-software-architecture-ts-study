@@ -1,6 +1,6 @@
 # 第21章：テストデータ最小化（Arrangeを軽く）🧸✨
 
-![最小限のテストデータ[(./picture/tdd_ts_study_021_toy_doll.png)
+![最小限のテストデータ](./picture/tdd_ts_study_021_toy_doll.png)
 
 この章は「テストが読みにくい」「準備（Arrange）が長すぎてやる気が消える😭」を救う章だよ〜！
 **TDDが続くかどうかは、Arrangeを軽くできるかで決まる**と言っても過言じゃない✊💕

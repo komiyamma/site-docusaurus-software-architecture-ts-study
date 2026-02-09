@@ -1,6 +1,6 @@
 # 第27章：明白な実装（迷いがない時は素直に）🌼🧪
 
-![明白な実装のデージー[(./picture/tdd_ts_study_027_daisy.png)
+![明白な実装のデージー](./picture/tdd_ts_study_027_daisy.png)
 
 ## 🎯この章のゴール
 

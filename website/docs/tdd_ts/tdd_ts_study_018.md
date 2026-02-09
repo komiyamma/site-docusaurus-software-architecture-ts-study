@@ -1,6 +1,6 @@
 # 第18章：Assert基礎③（配列・順序・含有）📦✨
 
-![配列の箱[(./picture/tdd_ts_study_018_array_box.png)
+![配列の箱](./picture/tdd_ts_study_018_array_box.png)
 
 〜「配列のテストって、どこまで厳しく見るべき？」がスッキリする章だよ〜😊💕
 

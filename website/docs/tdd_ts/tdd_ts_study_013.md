@@ -1,6 +1,6 @@
 # 第13章：VS Code Testingビュー（ワンクリック化）🧰🧪✨
 
-![テスティングパネルのUI[(./picture/tdd_ts_study_013_testing_ui.png)
+![テスティングパネルのUI](./picture/tdd_ts_study_013_testing_ui.png)
 
 ## 🎯 目的
 

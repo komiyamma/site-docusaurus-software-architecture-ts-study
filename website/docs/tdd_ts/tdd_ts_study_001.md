@@ -1,6 +1,6 @@
 # 第1章：TDDってなに？（1行で言える）🙂🧪
 
-![TDDの道[(./picture/tdd_ts_study_001_path.png)
+![TDDの道](./picture/tdd_ts_study_001_path.png)
 
 ## 🎯この章のゴール
 

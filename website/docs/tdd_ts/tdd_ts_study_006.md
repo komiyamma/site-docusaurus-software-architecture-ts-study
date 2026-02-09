@@ -1,6 +1,6 @@
 # 第6章：AI時代のTDDルール（使い方固定）🤖✅🧪
 
-![AIロボットの相棒[(./picture/tdd_ts_study_006_robot_helper.png)
+![AIロボットの相棒](./picture/tdd_ts_study_006_robot_helper.png)
 
 ## 🎯目的
 

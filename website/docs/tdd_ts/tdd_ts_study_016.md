@@ -1,6 +1,6 @@
 # 第16章：Assert基礎①（数・文字・真偽）✅✨
 
-![アサートの基本アイコン[(./picture/tdd_ts_study_016_assert_icons.png)
+![アサートの基本アイコン](./picture/tdd_ts_study_016_assert_icons.png)
 
 テストって「書く」よりも、「どこをどう確認するか（Assert）」で強さが決まるよ〜！💪🧪
 この章は **“通るだけテスト” → “守れるテスト”** に進化させる回だよ😊🌸

@@ -1,6 +1,6 @@
 # 第48章：乱数の固定（フレーク撲滅の基本）🎲🚫
 
-![固定されたサイコロ[(./picture/tdd_ts_study_048_fixed_dice.png)
+![固定されたサイコロ](./picture/tdd_ts_study_048_fixed_dice.png)
 
 ## 🎯 目的（この章でできるようになること）
 

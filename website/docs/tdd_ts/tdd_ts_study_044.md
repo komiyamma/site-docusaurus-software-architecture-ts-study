@@ -1,6 +1,6 @@
 # 第44章：モック/スパイ（呼ばれ方を仕様に）🎭📣
 
-![スパイのマイク[(./picture/tdd_ts_study_044_microphone.png)
+![スパイのマイク](./picture/tdd_ts_study_044_microphone.png)
 
 ## 🎯 この章のゴール
 

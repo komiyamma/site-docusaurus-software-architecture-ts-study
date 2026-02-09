@@ -1,6 +1,6 @@
 # 第7章：プロジェクト作成（フォルダだけ決める）📁✨
 
-![フォルダの構成[(./picture/tdd_ts_study_007_folders.png)
+![フォルダの構成](./picture/tdd_ts_study_007_folders.png)
 
 ## 🎯この章のゴール
 

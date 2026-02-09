@@ -1,6 +1,6 @@
 # 第34章：ミニ演習②：会計（割引・クーポン）🎟️🧾✨
 
-![カフェ会計（演習）[(./picture/tdd_ts_study_034_cafe_exercise.png)
+![カフェ会計（演習）](./picture/tdd_ts_study_034_cafe_exercise.png)
 
 ## 🎯 この章のゴール
 

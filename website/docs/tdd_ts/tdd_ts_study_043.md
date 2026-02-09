@@ -1,6 +1,6 @@
 # 第43章：スタブ（返すだけの偽物）🧸✨
 
-![スタブの人形[(./picture/tdd_ts_study_043_dummy_doll.png)
+![スタブの人形](./picture/tdd_ts_study_043_dummy_doll.png)
 
 ねらいはシンプル！**「外部（DB/HTTPなど）なしで、ロジックだけを速く・安定してテストする」**だよ〜💨🧪
 

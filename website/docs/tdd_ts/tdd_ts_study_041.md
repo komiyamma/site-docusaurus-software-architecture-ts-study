@@ -1,6 +1,6 @@
 # 第41章：依存って何？（時間・乱数・I/O）⏰🎲
 
-![不安定な地盤[(./picture/tdd_ts_study_041_shaky_ground.png)
+![不安定な地盤](./picture/tdd_ts_study_041_shaky_ground.png)
 
 ## 🎯この章のゴール
 

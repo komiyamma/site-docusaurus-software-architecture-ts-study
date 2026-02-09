@@ -1,6 +1,6 @@
 # 第26章：三角測量（2例目で一般化）📐🧪✨
 
-![三角測量[(./picture/tdd_ts_study_026_triangle.png)
+![三角測量](./picture/tdd_ts_study_026_triangle.png)
 
 ## 🎯 今日のゴール
 

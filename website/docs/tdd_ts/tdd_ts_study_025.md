@@ -1,6 +1,6 @@
 # 第25章：仮実装（まず通す）🩹🧪✨
 
-![仮実装の絆創膏[(./picture/tdd_ts_study_025_band_aid.png)
+![仮実装の絆創膏](./picture/tdd_ts_study_025_band_aid.png)
 
 ## 🎯 今日のゴール
 

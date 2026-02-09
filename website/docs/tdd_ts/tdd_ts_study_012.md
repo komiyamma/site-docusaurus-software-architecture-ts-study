@@ -1,6 +1,6 @@
 # 第12章：Watch運用（保存→即テスト）🔁✨
 
-![ウォッチモード[(./picture/tdd_ts_study_012_infinite_loop.png)
+![ウォッチモード](./picture/tdd_ts_study_012_infinite_loop.png)
 
 この章はね、**TDDが“気持ちよく回る”ようにするための準備運動**だよ〜🧘‍♀️💖
 「保存した瞬間にテストが走る」だけで、集中力がぜんぜん変わるの🥺⚡️

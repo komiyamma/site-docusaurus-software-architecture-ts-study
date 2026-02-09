@@ -1,6 +1,6 @@
 # 第37章：Result型入門（例外を乱用しない）🧯✨
 
-![Result型[(./picture/tdd_ts_study_037_result_box.png)
+![Result型](./picture/tdd_ts_study_037_result_box.png)
 
 ## 🎯この章のゴール
 

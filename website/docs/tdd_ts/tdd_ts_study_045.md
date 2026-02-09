@@ -1,6 +1,6 @@
 # 第45章：ファイルI/O境界（本物/偽物の判断）📁✨
 
-![I/O境界[(./picture/tdd_ts_study_045_io_boundary.png)
+![I/O境界](./picture/tdd_ts_study_045_io_boundary.png)
 
 ## 🎯 目的
 

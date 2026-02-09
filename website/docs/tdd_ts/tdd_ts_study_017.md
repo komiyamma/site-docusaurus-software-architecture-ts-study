@@ -1,6 +1,6 @@
 # 第17章：Assert基礎②（オブジェクト比較）🧸✨
 
-![オブジェクト比較[(./picture/tdd_ts_study_017_comparison.png)
+![オブジェクト比較](./picture/tdd_ts_study_017_comparison.png)
 
 > 今日は「返ってきたオブジェクト、どう検証するのが正解？」をスッキリさせる章だよ〜🫶💕
 

@@ -1,6 +1,6 @@
 # 第10章：モジュール（import/export）で迷わない🌿📦✨
 
-![モジュールの枝分かれ[(./picture/tdd_ts_study_010_module_branch.png)
+![モジュールの枝分かれ](./picture/tdd_ts_study_010_module_branch.png)
 
 ## 🎯この章のゴール
 
