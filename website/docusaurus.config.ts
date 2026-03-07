@@ -413,6 +413,7 @@ const config: Config = {
           label: 'komiyamma.net',
           position: 'right',
           className: 'navbar-link-site-home',
+          target: '_self',
         },
         {
           href: 'https://github.com/komiyamma/site-docusaurus-software-architecture-ts-study',
