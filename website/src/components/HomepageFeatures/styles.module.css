@@ -9,8 +9,10 @@
 }
 
 .featureSvg {
-  height: 320px;
-  width: 320px;
+  display: block;
+  width: clamp(5rem, 9vw, 6.25rem);
+  height: clamp(5rem, 9vw, 6.25rem);
+  margin: 0 auto 1rem;
 }
 
 .features h3 {
