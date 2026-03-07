@@ -456,12 +456,12 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description, link}: FeatureItem) {
+function Feature({title, description, link}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
         <Link to={link}>
-          <Svg className={styles.featureSvg} role="img" />
+          <CategorySvg className={styles.featureSvg} role="img" />
         </Link>
       </div>
       <div className="text--center padding-horiz--md">
