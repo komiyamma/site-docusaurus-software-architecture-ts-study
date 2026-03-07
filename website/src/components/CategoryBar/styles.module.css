@@ -1,0 +1,78 @@
+/* ========================================
+   Category Bar (2nd row of navigation)
+   ======================================== */
+
+.categoryBar {
+  background: #1e5490;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+              0 1px 3px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: var(--ifm-navbar-height);
+  z-index: var(--ifm-z-index-fixed);
+  width: 100%;
+}
+
+.categoryBarInner {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 0.5rem;
+
+  /* Subtle scrollbar to indicate scrollability */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+}
+
+.categoryBarInner::-webkit-scrollbar {
+  height: 5px;
+}
+
+.categoryBarInner::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.categoryBarInner::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+}
+
+.categoryBarInner::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+/* Individual category link */
+.categoryLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.categoryLink:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+/* Active (current section) highlight */
+.categoryLinkActive {
+  color: #ffffff;
+  font-weight: 600;
+  border-bottom-color: #ffffff;
+}
+
+/* ========================================
+   Responsive: hide on mobile (use sidebar)
+   ======================================== */
+@media (max-width: 996px) {
+  .categoryBar {
+    display: none;
+  }
+}
