@@ -1,0 +1,22 @@
+/* ========================================
+   Mobile Sidebar - Category Section
+   ======================================== */
+
+.categorySection {
+  padding: 0.5rem 0;
+}
+
+.categorySectionTitle {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.divider {
+  margin: 0.5rem 0.75rem;
+  border: none;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
