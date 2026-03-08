@@ -7,8 +7,8 @@ import * as path from 'path';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'ソフトウェア設計 TypeScript',
-  tagline: 'ソフトウェアアーキテクチャ入門者用の学習教材',
+  title: 'ソフトウェア設計の学習教材 TypeScript版',
+  tagline: 'ソフトウェア設計の学習教材 TypeScript版',
   favicon: 'img/architecture_logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
