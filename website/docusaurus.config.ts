@@ -160,7 +160,7 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'HOME',
+      title: 'ソフトウェア設計 TS',
       logo: {
         alt: 'Home',
         src: 'img/home_white.svg',
@@ -171,7 +171,7 @@ const config: Config = {
         {
           href: 'https://komiyamma.net',
           label: 'komiyamma.net',
-          position: 'right',
+          position: 'left',
           className: 'navbar-link-site-home',
           target: '_self',
         },
