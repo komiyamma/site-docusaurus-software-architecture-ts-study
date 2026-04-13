@@ -18,6 +18,7 @@
 ---
 
 ## 1) まず結論：検索を速くする“3つのレバー”🔧✨
+![cqrs_ts_study_032_three_levers.png](./picture/cqrs_ts_study_032_three_levers.png)
 
 Read最適化って、だいたいこの3つをいじるだけで一気に改善するよ😊
 
@@ -63,6 +64,7 @@ CQRSのRead側は、ここを改善しやすいのが最高ポイントだよ✨
 ---
 
 ## 4) Readモデルは「一覧の1行」単位で作ると強い💪📋
+![cqrs_ts_study_032_read_row_shape.png](./picture/cqrs_ts_study_032_read_row_shape.png)
 
 ### ✅ 一覧用Readモデル（例）
 
@@ -82,6 +84,7 @@ CQRSのRead側は、ここを改善しやすいのが最高ポイントだよ✨
 ---
 
 ## 5) “検索用フィールド”を用意すると強い🔎✨
+![cqrs_ts_study_032_search_text_column.png](./picture/cqrs_ts_study_032_search_text_column.png)
 
 検索って「LIKEで部分一致」だけに頼ると遅くなりがち…💦  
 なので **検索を速くするための加工済みカラム** を持つのがRead側の勝ち筋だよ😊
@@ -151,6 +154,7 @@ type OrderListFilter = {
 ````
 
 ### 7-2) “索引（Map）”を持つストアを作る🗂️✨
+![cqrs_ts_study_032_inmemory_buckets.png](./picture/cqrs_ts_study_032_inmemory_buckets.png)
 
 ```ts
 export class OrderListStore {
@@ -279,6 +283,7 @@ export async function getOrderList(q: ListQuery) {
 ---
 
 ## 9) キーワード検索をガチで速くしたいなら：FTS（全文検索）も選べる📚⚡
+![cqrs_ts_study_032_fts_vs_like.png](./picture/cqrs_ts_study_032_fts_vs_like.png)
 
 SQLiteには **FTS5** っていう全文検索機能があるよ（公式）([SQLite][2])
 LIKE検索より大きいデータで強くなりやすい✨

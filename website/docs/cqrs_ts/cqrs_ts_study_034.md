@@ -51,6 +51,7 @@ flowchart LR
 ---
 
 ## 2) API設計で一番大事なこと💎
+![cqrs_ts_study_034_frontend_friendly_api.png](./picture/cqrs_ts_study_034_frontend_friendly_api.png)
 
 それはね… **「フロントが迷わない入口」** を作ること😊🖥️✨
 
@@ -89,6 +90,7 @@ APIって、バックエンドの都合で作るとこうなりがち👇😇
 ## 4) 入口の設計テンプレ（迷子防止）🧭✨
 
 ### 4-1) Command のレスポンスは “軽く” 🪶
+![cqrs_ts_study_034_command_response_weight.png](./picture/cqrs_ts_study_034_command_response_weight.png)
 
 Command のレスポンスで **Readモデル（画面用DTO）を返したくなる**んだけど、最初はグッと我慢😊✋
 理由はシンプル👇
@@ -102,6 +104,7 @@ Command のレスポンスで **Readモデル（画面用DTO）を返したく�
 * 画面は `GET /orders/{orderId}` みたいな Query を叩く…でもいいし、一覧再取得でもOK🔄✨
 
 ### 4-2) 同期/非同期でステータスが変わる📮⏳
+![cqrs_ts_study_034_http_status_decision.png](./picture/cqrs_ts_study_034_http_status_decision.png)
 
 * **すぐ処理が終わる** 👉 `201 Created`（作成） or `200 OK`
 * **キューに積んで後で処理** 👉 `202 Accepted`（受付だけ）
@@ -130,6 +133,7 @@ Command のレスポンスで **Readモデル（画面用DTO）を返したく�
 RFC 9457 は HTTP API のエラー表現を標準化する仕様だよ〜 ([RFC エディタ][1])
 
 ### 6-1) エラーの返し方（おすすめ形）🧱✨
+![cqrs_ts_study_034_problem_details_structure.png](./picture/cqrs_ts_study_034_problem_details_structure.png)
 
 返却Content-Type：`application/problem+json`
 
@@ -156,6 +160,7 @@ RFC 9457 は HTTP API のエラー表現を標準化する仕様だよ〜 ([RFC 
 ---
 
 ## 7) リトライ前提！Command には Idempotency-Key を付けよう🔁🛡️
+![cqrs_ts_study_034_idempotency_key_header.png](./picture/cqrs_ts_study_034_idempotency_key_header.png)
 
 ネットワークは普通にコケる😇📶
 だから **「同じ注文が2回入っちゃった😭」** を防ぐために、Command にはこれを付けるのが超おすすめ👇
@@ -168,6 +173,7 @@ RFC 9457 は HTTP API のエラー表現を標準化する仕様だよ〜 ([RFC 
 ---
 
 ## 8) OpenAPI（仕様書）を“先に固定”すると強い📘✨
+![cqrs_ts_study_034_openapi_contract.png](./picture/cqrs_ts_study_034_openapi_contract.png)
 
 OpenAPI は HTTP API の仕様を機械可読にする標準だよ😊
 OpenAPI 3.1 が仕様として公開されてるよ〜 ([Swagger][2])

@@ -18,6 +18,7 @@ Martin Fowler も「Domain Event は、システムの状態変化を引き起�
 ---
 
 ## 2) Command / Event /（ついでに）Integration Event の違い🔀
+![cqrs_ts_study_027_command_vs_event.png](./picture/cqrs_ts_study_027_command_vs_event.png)
 
 混ざりやすいから、ここでスッキリさせよ〜😆✨
 
@@ -58,6 +59,7 @@ flowchart LR
 ## 4) 何がうれしいの？（なぜイベントを出すの？）🎁✨
 
 ### (A) 「副作用」をHandlerから追い出せる🚪💨
+![cqrs_ts_study_027_side_effect_explosion.png](./picture/cqrs_ts_study_027_side_effect_explosion.png)
 
 たとえば支払いのあとに…
 
@@ -76,6 +78,7 @@ flowchart LR
 ---
 
 ## 5) イベントに入れるデータ、どう決める？📦🧩
+![cqrs_ts_study_027_payload_scale.png](./picture/cqrs_ts_study_027_payload_scale.png)
 
 ### まずはこの方針でOK🙆‍♀️
 
@@ -138,6 +141,7 @@ export type OrderDomainEvent = OrderPlaced | OrderPaid;
 ---
 
 ### 6-3) Order集約で「イベントをためる」📦🧲
+![cqrs_ts_study_027_aggregate_receipt.png](./picture/cqrs_ts_study_027_aggregate_receipt.png)
 
 Orderの中で状態が変わったら、イベントを `push` するよ〜✨
 

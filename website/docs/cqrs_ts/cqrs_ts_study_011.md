@@ -39,6 +39,7 @@ CQRSって“分ける”のが目立つけど、実は **「壊れない設計�
 ---
 
 ## 2) 学食アプリの不変条件リストを作ろう🍙🧾✨
+![cqrs_ts_study_011_order_checklist.png](./picture/cqrs_ts_study_011_order_checklist.png)
 
 題材「学食モバイル注文（PlaceOrder）」の例でいくね😊
 
@@ -85,6 +86,7 @@ flowchart TD
 ---
 
 ## 4) 実装してみよう✍️✨（ガード関数＋DomainError）
+![cqrs_ts_study_011_domain_error_card.png](./picture/cqrs_ts_study_011_domain_error_card.png)
 
 まず「失敗の形」を揃えるよ😊
 （エラー設計の本格回は後でやるけど、ここは最低限でOK！）
@@ -110,6 +112,7 @@ export function invariant(condition: unknown, code: string, message: string): as
 ---
 
 ## 5) OrderItem と Money で不変条件を守る🍽️💰🛡️
+![cqrs_ts_study_011_money_guard.png](./picture/cqrs_ts_study_011_money_guard.png)
 
 ### `domain/money.ts` 💰
 
@@ -171,6 +174,7 @@ export class OrderItem {
 ---
 
 ## 6) Order（集約の中心）で「壊れない」を確定する📦🛡️✨
+![cqrs_ts_study_011_internal_calc.png](./picture/cqrs_ts_study_011_internal_calc.png)
 
 ここが本丸だよ〜！😊
 Orderが「正しい状態」しか作れないなら、世界が平和になる🕊️✨
@@ -213,6 +217,7 @@ export class Order {
 ---
 
 ## 7) 入口（Command）側：親切なチェックを足す🤝✨
+![cqrs_ts_study_011_kindness_vs_safety.png](./picture/cqrs_ts_study_011_kindness_vs_safety.png)
 
 ここは「ユーザーに優しく返す」ための入口チェック😊
 （ドメインでも守ってるから二重でもOK！むしろ安心💞）
@@ -287,6 +292,7 @@ export async function placeOrderHandler(raw: unknown) {
 ---
 
 ## 9) テストで「壊れない」を固定する🧪💖
+![cqrs_ts_study_011_test_cement.png](./picture/cqrs_ts_study_011_test_cement.png)
 
 不変条件って、**テストで固定**すると最強になるよ✨
 （未来の自分を救うやつ🥹）

@@ -41,6 +41,7 @@
 ---
 
 ## 2) “Readモデルを育てる”ってどういう意味？🪴🙂
+![cqrs_ts_study_028_gardening_read_model.png](./picture/cqrs_ts_study_028_gardening_read_model.png)
 ![cqrs_ts_study_028_event_handler.png](./picture/cqrs_ts_study_028_event_handler.png)
 
 ```mermaid
@@ -143,6 +144,7 @@ export type DomainEvent = OrderPlaced | OrderPaid;
 ---
 
 ### Step 2：イベントバス（publish/subscribe）を超シンプルに作る📨✨
+![cqrs_ts_study_028_fan_out_speaker.png](./picture/cqrs_ts_study_028_fan_out_speaker.png)
 
 まずは学習用に **インプロセス（同一アプリ内）** でOK🙂
 （第26章で見た“非同期”は、仕組みを差し替えるだけで発展できるよ）
@@ -404,6 +406,7 @@ console.log("📊 今日の売上:", await sales.getDaily(day));
 ---
 
 ## 6) ここが“設計のキモ”だよ💡🧠✨
+![cqrs_ts_study_028_handler_security_gate.png](./picture/cqrs_ts_study_028_handler_security_gate.png)
 
 ### ✅ イベントハンドラに入れていいもの / ダメなもの🙅‍♀️
 

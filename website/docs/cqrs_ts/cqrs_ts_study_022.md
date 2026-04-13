@@ -60,6 +60,8 @@ flowchart TD
 
 ## 2) “境界”ってどこ？（ここで返し方を決める！）🚪🌐
 
+![boundary_gate_conversion](./picture/cqrs_ts_study_022_boundary_gate_conversion.png)
+
 CQRSでいう境界は、だいたいここ👇
 
 * HTTP API の Controller / Route（いちばん多い）🌐
@@ -72,6 +74,8 @@ CQRSでいう境界は、だいたいここ👇
 ---
 
 ## 3) エラー返却フォーマットは「Problem Details」寄せが強い🥇✨
+
+![problem_details_id_card](./picture/cqrs_ts_study_022_problem_details_id_card.png)
 
 HTTPのエラー返却を統一する“型”として、**RFC 9457（Problem Details）** があるよ〜！📄✨
 これは **RFC 7807を置き換える形**で整理された標準だよ🧠📌 ([RFCエディタ][1])
@@ -111,6 +115,8 @@ export const err = <E>(error: E): Err<E> => ({ ok: false, error });
 ---
 
 ### 4-2) DomainError を「コード付き」で作る（UIが嬉しい）🏷️✨
+
+![domain_error_key_code](./picture/cqrs_ts_study_022_domain_error_key_code.png)
 
 エラーは **“分類”だけじゃなく、機械が扱える code** を持たせると神👼✨
 フロントが「codeで分岐」できるから、文言変更しても壊れにくいよ💪
@@ -181,6 +187,8 @@ export class PayOrderHandler {
 「DomainErrorをどうHTTPにする？」を **一箇所に集約**する！
 
 ### 5-1) 入力バリデーションは境界でやる（Zodが便利）🧁✅
+
+![zod_scanner_guard](./picture/cqrs_ts_study_022_zod_scanner_guard.png)
 
 Zodは **TypeScript-firstのバリデーションライブラリ**で、実行時に検証しつつ型も推論できるよ✨ ([Zod][3])
 
@@ -330,6 +338,8 @@ export function buildPayOrderRouter(handler: PayOrderHandler) {
 
 ## 6) 例外は“最後の砦”として一箇所で握る🛡️⚠️
 
+![global_handler_net](./picture/cqrs_ts_study_022_global_handler_net.png)
+
 Resultで処理しきれない事故（DB落ち、バグ）はここで回収する💪
 ※ detail に生の例外メッセージを出すのは、基本やめよ（情報漏れしがち）🥲
 
@@ -360,6 +370,8 @@ export function globalErrorHandler(err: unknown, req: Request, res: Response, _n
 ---
 
 ## 7) 仕上げ：エラー対応の“型”をチームで固定しよう🧷✨
+
+![team_rules_tablet](./picture/cqrs_ts_study_022_team_rules_tablet.png)
 
 ### ✅ 最低限固定したいルール（おすすめ）📌
 

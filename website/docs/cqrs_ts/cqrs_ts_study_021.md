@@ -61,6 +61,8 @@ DB・ネットワーク・外部API・ファイルなどの「外側」が原因
 
 ## 2) なんで分けるの？（分けないと地獄😵‍💫）
 
+![messy_vs_clean_errors](./picture/cqrs_ts_study_021_messy_vs_clean_errors.png)
+
 エラーを一括りにすると…
 
 * 「どれがユーザーに見せてOK？」が毎回ブレる😵
@@ -73,6 +75,8 @@ DB・ネットワーク・外部API・ファイルなどの「外側」が原因
 ---
 
 ## 3) 具体例：PayOrder（支払う）で起こるエラーを並べよう💳⚠️
+
+![error_decision_tree](./picture/cqrs_ts_study_021_error_decision_tree.png)
 
 ### ドメインエラー候補📜
 
@@ -100,6 +104,8 @@ DB・ネットワーク・外部API・ファイルなどの「外側」が原因
 ---
 
 ## 4) TypeScriptで“エラーを型”にしよう🧩✨（超重要！）
+
+![tagged_error_luggage](./picture/cqrs_ts_study_021_tagged_error_luggage.png)
 
 ここではライブラリ無しで、素朴にいくよ〜😊
 （最近は Result 型パターンがよく使われるよ、って話は後で少しするね🤖）
@@ -131,6 +137,8 @@ type AppError = DomainError | InfraError | UnexpectedBug;
 
 ## 5) 「どこで」どのエラーを作る？（責務の置き場）📦🧠
 
+![error_map_locations](./picture/cqrs_ts_study_021_error_map_locations.png)
+
 ### ドメインエラー📜
 
 * **ドメインのルールを判断する場所**で作る
@@ -149,6 +157,8 @@ type AppError = DomainError | InfraError | UnexpectedBug;
 ---
 
 ## 6) ちょい実装例：PayOrderが返す“失敗の型”💳🧩
+
+![result_pattern_package](./picture/cqrs_ts_study_021_result_pattern_package.png)
 
 ```ts
 type Ok<T> = { ok: true; value: T };
@@ -170,6 +180,8 @@ type PayOrderResult = Result<{ paidAt: string }, AppError>;
 ---
 
 ## 7) ミニ演習📝✨（3分でOK！）
+
+![sorting_game_show](./picture/cqrs_ts_study_021_sorting_game_show.png)
 
 ### ✅ お題：PayOrderのエラーを「3分類」で仕分けしてみてね💳⚠️
 

@@ -22,6 +22,7 @@ CQRSって作って終わりじゃなくて、**運用（うんよう）＝障�
 観測 = **“あとから原因を特定できるように、情報を残すこと”** だよ📝
 
 観測の三兄弟（よくセットで言われるやつ）👇
+![cqrs_ts_study_036_three_pillars.png](./picture/cqrs_ts_study_036_three_pillars.png)
 
 * **ログ**：出来事の記録（いちばん身近）🧾
 * **トレース**：1回の処理がどこを通ったか（分散だと最強）🧵
@@ -76,6 +77,7 @@ flowchart LR
 ---
 
 ## 4. 実装ハンズオン①：相関IDを“自動で”ログに混ぜる（AsyncLocalStorage）🪄
+![cqrs_ts_study_036_async_local_storage.png](./picture/cqrs_ts_study_036_async_local_storage.png)
 
 ポイントはこれ👇
 
@@ -198,6 +200,7 @@ export async function payOrderHandler(cmd: PayOrderCommand) {
 ```
 
 ### 5-2) Domain Eventに `eventId` と `correlationId` を入れる📨🧷
+![cqrs_ts_study_036_event_metadata.png](./picture/cqrs_ts_study_036_event_metadata.png)
 
 OpenTelemetryでも「ログとトレースを相関できるように、ログに traceId/spanId を含める」思想があるよ。([OpenTelemetry][4])
 同じノリで、イベントにも“追跡用メタ”を入れると復旧が強くなる🔥
@@ -222,6 +225,7 @@ export type EventEnvelope<TType extends string, TPayload> = {
 ---
 
 ## 6. 復旧の本丸：再投影（Reprojection）って何？🧱🔄
+![cqrs_ts_study_036_reprojection_flow.png](./picture/cqrs_ts_study_036_reprojection_flow.png)
 
 再投影は一言でいうと👇
 
@@ -245,6 +249,7 @@ Readモデルは（便利だけど）
 ここは **手順として暗記** しちゃってOK😆
 
 ### 手順A：いちばん安全（影武者＝シャドーで作って切り替え）👤➡️👤
+![cqrs_ts_study_036_shadow_reprojection.png](./picture/cqrs_ts_study_036_shadow_reprojection.png)
 
 1. **新しいReadモデル置き場**を用意（例：`orders_read_v2`）📦
 2. 古いイベント（またはWrite DB）から **全部リプレイ**して埋める🔄
@@ -262,6 +267,7 @@ Readモデルは（便利だけど）
 （本番ではDBやメッセージ基盤でも同じ発想！）
 
 ### 8-1) イベントログ例 `event-store.jsonl` 🧾
+![cqrs_ts_study_036_jsonl_store.png](./picture/cqrs_ts_study_036_jsonl_store.png)
 
 ```json
 {"eventId":"e1","type":"OrderPlaced","occurredAt":"2026-01-24T00:00:00.000Z","correlationId":"c1","payload":{"orderId":"o1","total":780}}

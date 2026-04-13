@@ -6,6 +6,7 @@
 ---
 
 ## 0. 今日のゴール（この3つが揃えば卒業🎓✨）✅
+![cqrs_ts_study_037_graduation_goals.png](./picture/cqrs_ts_study_037_graduation_goals.png)
 
 ### 完成条件✅
 
@@ -47,6 +48,7 @@ ADR（Architecture Decision Record）は、**アーキテクチャ上の重要�
 ---
 
 ## 2. ADRの型（MADRがおすすめ）🧩✨
+![cqrs_ts_study_037_madr_template.png](./picture/cqrs_ts_study_037_madr_template.png)
 
 テンプレはいろいろあるけど、初心者は **MADR（Markdown ADR）** が扱いやすいよ〜！
 見出しが決まってて、迷子になりにくい🥰 ([adr.github.io][2])
@@ -107,6 +109,7 @@ ADR（Architecture Decision Record）は、**アーキテクチャ上の重要�
 ---
 
 ### ステップB：投影をどっちにする？（同期/非同期）🪞⚡️⏳
+![cqrs_ts_study_037_sync_projection_arch.png](./picture/cqrs_ts_study_037_sync_projection_arch.png)
 
 **卒業制作は同期投影がラク**（まず動く！）おすすめ👍
 
@@ -125,6 +128,7 @@ ADR（Architecture Decision Record）は、**アーキテクチャ上の重要�
 ---
 
 ## 6. “動く最小実装”サンプル（同期投影版）🧪✨
+![cqrs_ts_study_037_project_component_map.png](./picture/cqrs_ts_study_037_project_component_map.png)
 
 > 目的：**卒業条件を満たす最小**を、スッと作る💨
 > 仕組み：Command → Domain → Event → Projection → ReadModel → Query
@@ -463,6 +467,7 @@ console.log("SUMMARY after pay:", getSummary.execute());
 ---
 
 ## 8. そのまま貼れるADRテンプレ（MADR風）📝✨
+![cqrs_ts_study_037_adr_lifecycle.png](./picture/cqrs_ts_study_037_adr_lifecycle.png)
 
 ### ADR 0001：卒業制作で“同期投影”を選ぶ（例）
 

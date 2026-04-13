@@ -1,6 +1,8 @@
 ## CQRS（読み/書き分離）教育アウトライン：全37章 🎓✨（TypeScript / Windows / VS Code / AI拡張前提🤖）
+![TypeScript and CQRS](./picture/cqrs_ts_index_typescript_cqrs.png)
 
 ### 第1章　CQRSってなに？最短でわかる入口🚪✨
+![Course Map](./picture/cqrs_ts_index_course_map.png)
 
 * ねらい：CQRSの“雰囲気”をつかむ😊
 * 学ぶ：Command（更新）/ Query（参照）の分け方の意味

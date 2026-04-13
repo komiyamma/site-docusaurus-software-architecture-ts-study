@@ -17,6 +17,8 @@ Write（更新）じゃなくて Read（参照）を守るテストなので、�
 
 ## QueryServiceテストって、何をテストするの？🤔🧪
 
+![query_test_checklist](./picture/cqrs_ts_study_024_query_test_checklist.png)
+
 ### ✅ テストしてOK（むしろやるべき）
 
 * DTOのキーが揃ってる？（例：`id` なのに `orderId` に変わってない？）🔑
@@ -32,6 +34,8 @@ Write（更新）じゃなくて Read（参照）を守るテストなので、�
 ---
 
 ## 作戦：固定データで「金型」を作る🧁📐
+
+![fixture_mold_factory](./picture/cqrs_ts_study_024_fixture_mold_factory.png)
 ![cqrs_ts_study_024_snapshot_testing.png](./picture/cqrs_ts_study_024_snapshot_testing.png)
 
 ```mermaid
@@ -46,6 +50,8 @@ flowchart LR
 ```
 
 QueryServiceのテストは、イメージとして
+
+![snapshot_camera_comparison](./picture/cqrs_ts_study_024_snapshot_camera_comparison.png)
 
 * **固定データ（fixture）** を入れる🍱
 * **QueryService** を動かす▶️
@@ -93,6 +99,8 @@ Vitestの **グローバルAPI**（`describe`, `it`, `expect` をimport無しで
 ---
 
 ## ハンズオン①：GetOrderList（一覧）のテスト📋👀🧪
+
+![shape_sorting_verification](./picture/cqrs_ts_study_024_shape_sorting_verification.png)
 
 ここでは “学食モバイル注文” の一覧を想定🍙📱
 
@@ -300,6 +308,8 @@ export type SalesSummaryDto = {
 
 ## よくある事故と回避テク😵‍💫🧯
 
+![dynamic_data_hazard](./picture/cqrs_ts_study_024_dynamic_data_hazard.png)
+
 ### 事故①：日付・乱数・IDでスナップショットが毎回変わる🌀
 
 ✅ 回避：
@@ -315,6 +325,8 @@ export type SalesSummaryDto = {
 * ネスト深いなら、部分だけ検証＋必要箇所だけsnapshot📸
 
 ### 事故③：「これは仕様変更？バグ？」で揉める😇
+
+![diff_review_magnifier](./picture/cqrs_ts_study_024_diff_review_magnifier.png)
 
 ✅ 回避：
 

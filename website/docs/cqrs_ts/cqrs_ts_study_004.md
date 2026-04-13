@@ -114,6 +114,7 @@ payOrder(orderId: string, method: PaymentMethod): Order {
 ```
 
 ### 💥つらポイント①：「支払い」なのに、OrderService がどんどん太る🍔➡️🐘
+![Service Getting Fat](./picture/cqrs_ts_study_004_order_service_elephant.png)
 
 * しかもこの “支払い処理っぽい何か” は、いずれ外部連携になってさらに地獄👹
 
@@ -145,6 +146,7 @@ cancelOrder(orderId: string): Order {
 ```
 
 ### 💥つらポイント②：状態遷移のルールが “あちこちに散る”🧩🌀
+![Scattered Logic](./picture/cqrs_ts_study_004_scattered_logic.png)
 
 * payOrder にも cancelOrder にも **状態チェック**がいる
 * ルール追加のたびに、両方直す可能性が出てくる😵‍💫
@@ -198,6 +200,7 @@ listOrders(search?: OrderSearch): Order[] {
 ```
 
 ### 💥つらポイント③：参照ロジックが増えるほど “更新ロジックのそば” に置かれて事故る💥
+![Logic Collision](./picture/cqrs_ts_study_004_collision_point.png)
 
 * 「検索条件を追加しただけ」のつもりが、OrderService 全体に影響しそうな恐怖😨
 * この `listOrders` は **Query（参照）**なのに、同じクラスに **Command（更新）** も入ってる…（混線中🚧）
@@ -255,6 +258,7 @@ getSalesSummary(today: Date): SalesSummary {
 ```
 
 ### 💥つらポイント④：「画面が欲しい形（集計）」が増えるほど、サービスが“何でも屋”になる🧙‍♂️🧹
+![Jack of All Trades](./picture/cqrs_ts_study_004_jack_of_all_trades.png)
 
 * 集計は完全に **Queryの世界** なのに、Commandと同居してカオス
 * 「集計項目ちょっと追加して」→ `OrderService` を触る → ついでに payOrder に触る → 事故る、が起きがち😇💥
@@ -262,6 +266,7 @@ getSalesSummary(today: Date): SalesSummary {
 ---
 
 ## 5) 仕上げ：ログ・通知・例外メッセージも足してみる📣🧾
+![Mixed Concerns Blender](./picture/cqrs_ts_study_004_blender_mix.png)
 
 よくある追加要望👇
 
@@ -281,6 +286,7 @@ getSalesSummary(today: Date): SalesSummary {
 ---
 
 ## 6) ここでテストを書こうとして詰む🧪💥（わざと！）
+![Testing Hurdles](./picture/cqrs_ts_study_004_test_hurdles.png)
 
 たとえば「ORDEREDの注文が支払われるとPAIDになる」テストを書きたいのに…
 
@@ -296,6 +302,7 @@ getSalesSummary(today: Date): SalesSummary {
 ---
 
 ## 7) “辛さ”チェックリスト✅😵‍💫
+![Pain Diagnosis Checklist](./picture/cqrs_ts_study_004_pain_diagnosis.png)
 
 いまの状態で、どれか当てはまったら大成功（この章の狙い通り！）🎉
 

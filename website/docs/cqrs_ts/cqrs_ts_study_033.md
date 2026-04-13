@@ -17,6 +17,7 @@
 ---
 
 ## まず“遅い集計”を体験しよう😅🐢
+![cqrs_ts_study_033_slow_aggregation_loop.png](./picture/cqrs_ts_study_033_slow_aggregation_loop.png)
 
 売上集計って、最初はこうしたくなる👇
 
@@ -65,6 +66,7 @@ Read側の集計は、発想をこう変える！
 ---
 
 ## 集計最適化の代表3パターン🍣（まずは①でOK！）
+![cqrs_ts_study_033_aggregation_patterns.png](./picture/cqrs_ts_study_033_aggregation_patterns.png)
 
 ### ① 集計テーブル（プリ集計）を増分更新する🌱🔁 ←この章のメイン！
 
@@ -117,6 +119,7 @@ Read側の集計は、発想をこう変える！
 そして超重要なのがこれ👇
 
 ### 二重カウント防止テーブル（冪等性）🛡️🔁
+![cqrs_ts_study_033_idempotency_guard.png](./picture/cqrs_ts_study_033_idempotency_guard.png)
 
 * `projection_processed`
 
@@ -242,6 +245,7 @@ export function applyOrderPaid(db: sqlite.DatabaseSync, ev: OrderPaid) {
 ```
 
 **ポイント🧠✨**
+![cqrs_ts_study_033_refund_subtraction.png](./picture/cqrs_ts_study_033_refund_subtraction.png)
 
 * 集計の更新は **“足し算”だけ** に寄せると超強い💪
 * 取り消し（返金/キャンセル）も、イベントで **マイナス加算** にすると整合性が保ちやすいよ🔁🙂
@@ -295,6 +299,7 @@ export function getTopMenus(db: sqlite.DatabaseSync, day: string, limit = 3) {
 ---
 
 ## 壊れたらどうする？（再投影テンプレ）🧯🛠️
+![cqrs_ts_study_033_rebuild_flow.png](./picture/cqrs_ts_study_033_rebuild_flow.png)
 
 集計テーブルは「派生物」なので、最悪こうできるのが強み💪✨
 

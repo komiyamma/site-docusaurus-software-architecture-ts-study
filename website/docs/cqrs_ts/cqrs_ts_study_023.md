@@ -45,6 +45,8 @@ CommandHandler のユニットテストで守るのは、基本これ👇✨
 
 ## 今どきのテスト実行：Vitest を使うよ🏃‍♀️💨
 
+![vitest_speed_rocket](./picture/cqrs_ts_study_023_vitest_speed_rocket.png)
+
 この章では **Vitest** で進めるね😊
 Vitest は `vitest` コマンドがローカルで基本ウォッチ動作になってて、開発中のフィードバックが速いのがうれしいやつ💖（CIでは自動で単発実行にも寄るよ）([Vitest][1])
 あとカバレッジも `v8` / `istanbul` から選べて、デフォルトは `v8` でOK👌([Vitest][2])
@@ -268,7 +270,11 @@ export class PayOrderHandler {
 
 ## 4) いよいよテスト！🧪✨（CommandHandler のユニットテスト）
 
+![aaa_recipe_flow](./picture/cqrs_ts_study_023_aaa_recipe_flow.png)
+
 ここでのコツはこれだよ👇😊💕
+
+![mocking_movie_set](./picture/cqrs_ts_study_023_mocking_movie_set.png)
 
 * Arrange：依存（repo/payment）を **モック**にする🧸
 * Act：handler.handle() を呼ぶ🏃‍♀️
@@ -441,6 +447,8 @@ describe("PayOrderHandler", () => {
 
 ## 5) テストの実行コマンド🏃‍♀️💨
 
+![coverage_shield](./picture/cqrs_ts_study_023_coverage_shield.png)
+
 Vitest は `vitest` が基本で、開発環境だとウォッチに入りやすいよ〜（CIや非対話だと単発へ）([Vitest][1])
 単発で回したいなら `vitest run` が公式に用意されてるよ✅([Vitest][1])
 
@@ -455,12 +463,16 @@ npm run coverage
 
 ## 6) VS Code をもっと楽にする小ワザ🧡🧰
 
+![vscode_instant_feedback](./picture/cqrs_ts_study_023_vscode_instant_feedback.png)
+
 Vitest は **VS Code用の公式拡張**も案内されてるので、テストの成功/失敗がエディタ内で見やすくなるよ👀✨([Vitest][5])
 （テスト増えてきたら、これ入れると体験めっちゃ良くなる😊）
 
 ---
 
 ## 7) AI活用🤖✨（この章でめっちゃ効く！）
+
+![ai_edge_case_list](./picture/cqrs_ts_study_023_ai_edge_case_list.png)
 
 おすすめの使い方はこれ〜👇💕
 

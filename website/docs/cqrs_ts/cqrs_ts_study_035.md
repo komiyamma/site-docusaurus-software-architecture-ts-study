@@ -40,6 +40,7 @@ flowchart TD
 ## 35.2 “3択”のキャラ紹介😆✨
 
 ### ① 再取得（Re-fetch）🔄✨
+![cqrs_ts_study_035_refetch_flow.png](./picture/cqrs_ts_study_035_refetch_flow.png)
 
 **やり方：** Command成功したら、GET（Query）をもう一回取りにいく！
 
@@ -58,6 +59,7 @@ flowchart TD
 ---
 
 ### ② 楽観更新（Optimistic Update）🚀💖
+![cqrs_ts_study_035_optimistic_update.png](./picture/cqrs_ts_study_035_optimistic_update.png)
 
 **やり方：** サーバーの返事を待たずに、画面を先に更新しちゃう！
 
@@ -70,11 +72,14 @@ flowchart TD
   * 失敗したら巻き戻し（rollback）が必要🙃
   * 非同期投影だと「画面は更新されたけど、GETはまだ古い」ズレが起きることも👀
 
+![cqrs_ts_study_035_optimistic_rollback.png](./picture/cqrs_ts_study_035_optimistic_rollback.png)
+
 TanStack Query v5 には **楽観更新のガイド**がちゃんとあるよ〜！心強い💪✨ ([TanStack][2])
 
 ---
 
 ### ③ 通知（Notification / Subscription）🔔📨
+![cqrs_ts_study_035_sse_notification.png](./picture/cqrs_ts_study_035_sse_notification.png)
 
 **やり方：** サーバーから「Readモデル更新できたよ！」って教えてもらう
 
@@ -90,6 +95,7 @@ TanStack Query v5 には **楽観更新のガイド**がちゃんとあるよ〜
 ---
 
 ## 35.3 判断のコツ：どれを選ぶ？🧭✨
+![cqrs_ts_study_035_strategy_decision_tree.png](./picture/cqrs_ts_study_035_strategy_decision_tree.png)
 
 ### 迷ったらこの3質問だけでOK🙆‍♀️💡
 
@@ -241,6 +247,7 @@ export function usePlaceOrder_optimistic() {
 ```
 
 ### CQRSあるある注意⚠️👀
+![cqrs_ts_study_035_ux_waiting_state.png](./picture/cqrs_ts_study_035_ux_waiting_state.png)
 
 非同期投影だと、`onSettled` で再取得しても **Read側がまだ古い**ことがあるの🥺
 そのときは次のどれかを足すと安定するよ👇

@@ -23,6 +23,7 @@
 ---
 
 ## 2) 非同期投影は、どこが“非同期”なの？⏳📨
+![cqrs_ts_study_026_sync_vs_async_track.png](./picture/cqrs_ts_study_026_sync_vs_async_track.png)
 ![cqrs_ts_study_026_async_projection.png](./picture/cqrs_ts_study_026_async_projection.png)
 
 ```mermaid
@@ -108,6 +109,7 @@ sequenceDiagram
 ---
 
 ## 4) “学食モバイル注文”で起きること（超具体例🍙📱）
+![cqrs_ts_study_026_lag_gap.png](./picture/cqrs_ts_study_026_lag_gap.png)
 
 ### シーン：注文ボタンを押した瞬間👇
 
@@ -125,6 +127,7 @@ sequenceDiagram
 ---
 
 ## 5) 非同期投影でよく出てくる登場人物たち👥✨
+![cqrs_ts_study_026_outbox_mailbox.png](./picture/cqrs_ts_study_026_outbox_mailbox.png)
 
 ### (A) イベント（Event）📣
 
@@ -273,6 +276,7 @@ SQLiteならWALで読み取り並行性が上がりやすい、みたいな話�
 ---
 
 ## 9) 「配達の性質」：非同期は“だいたい複数回届く”前提📦🔁
+![cqrs_ts_study_026_duplicate_delivery.png](./picture/cqrs_ts_study_026_duplicate_delivery.png)
 
 非同期投影では、現実あるあるが起きるよ👇
 

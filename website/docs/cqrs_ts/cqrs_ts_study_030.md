@@ -17,6 +17,7 @@
 ---
 
 ## まず“事故”を想像しよっか 😵‍💫💥
+![cqrs_ts_study_030_double_scan_disaster.png](./picture/cqrs_ts_study_030_double_scan_disaster.png)
 
 たとえば `OrderPaid`（支払い完了）イベントで、売上集計をこう更新してたとする👇
 
@@ -46,6 +47,7 @@
 ---
 
 ## 冪等性ってなに？（超やさしく）🧸✨
+![cqrs_ts_study_030_elevator_button.png](./picture/cqrs_ts_study_030_elevator_button.png)
 
 **同じ入力を何回やっても、結果が1回と同じ**になる性質だよ🔁✅
 
@@ -168,6 +170,7 @@ export function openReadDb(file = "readmodel.db") {
 ---
 
 ### 3) “冪等ガード”を作る（ここが主役👑）
+![cqrs_ts_study_030_bouncer_check.png](./picture/cqrs_ts_study_030_bouncer_check.png)
 
 * `INSERT OR IGNORE` で **「初回だけ changes=1」** にする
 * 0なら「もう処理済み」なので投影しない

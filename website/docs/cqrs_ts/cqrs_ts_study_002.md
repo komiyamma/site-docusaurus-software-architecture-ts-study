@@ -21,6 +21,7 @@
 想像しやすいように、アプリの“日常”を先に作っちゃうよ📖✨
 
 ### 登場人物👥
+![App Characters](./picture/cqrs_ts_study_002_characters.png)
 
 * **学生（ユーザー）**：スマホで注文＆支払い📱💳
 * **学食スタッフ（店員）**：注文を受けて作って渡す👩‍🍳🔥
@@ -61,6 +62,7 @@
 注文って「途中経過」があるよね？これが分離の練習にちょうどいいの🍙➡️📦
 
 ### 注文ステータス（最小セット）🔖
+![Order Status Lifecycle](./picture/cqrs_ts_study_002_order_status_lifecycle.png)
 
 * `ORDERED`：注文した（未払いでもOKにする）🧾
 * `PAID`：支払い済み💳
@@ -155,6 +157,7 @@ mindmap
 ---
 
 ## 8) ミニ演習：付箋でやると超わかる📝✨
+![Sticky Note Sorting](./picture/cqrs_ts_study_002_sticky_note_sorting.png)
 
 紙でも、メモ帳でも、なんでもOKだよ😊
 

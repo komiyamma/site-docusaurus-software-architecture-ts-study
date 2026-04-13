@@ -17,6 +17,7 @@
 ---
 
 ## 1) 投影（Projection）ってなに？🪞✨
+![cqrs_ts_study_025_projection_mirror.png](./picture/cqrs_ts_study_025_projection_mirror.png)
 
 **投影＝Writeモデルの出来事を、Readモデルの形に“写す”こと**だよ😊
 
@@ -71,6 +72,7 @@ Read DB / Read Repo
 * 作りやすい（最短でCQRSが気持ちよくなる）🚀
 
 ### 同期投影の怖いところ😱（超だいじ）
+![cqrs_ts_study_025_sync_risk_trip.png](./picture/cqrs_ts_study_025_sync_risk_trip.png)
 
 * **Write更新は成功したのに、Read更新が失敗**するとズレる…（いわゆる二重書き問題）⚠️
 * DBが別々だと、1回でまとめて守るのが難しい😵‍💫
@@ -81,6 +83,7 @@ Read DB / Read Repo
 ---
 
 ## 3) 投影コード、どこに置くのが正解？🏠🧠
+![cqrs_ts_study_025_code_placement_levels.png](./picture/cqrs_ts_study_025_code_placement_levels.png)
 
 初心者のうちは、次の順で「キレイさ」を上げていくのがおすすめだよ😊
 
@@ -109,6 +112,7 @@ Read DB / Read Repo
 ---
 
 ## 4-1) 今回作る部品（最小セット）📦
+![cqrs_ts_study_025_components_puzzle.png](./picture/cqrs_ts_study_025_components_puzzle.png)
 
 * `PlaceOrderHandler`（Command側）🧾✅
 * `OrderWriteRepository`（Write保存）🗄️

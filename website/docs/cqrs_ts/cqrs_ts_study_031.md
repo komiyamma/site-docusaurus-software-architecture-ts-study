@@ -6,6 +6,7 @@
 ---
 
 ## 1. まず、何が困るの？（Dual Write問題）😵‍💫💥
+![cqrs_ts_study_031_two_ball_toss.png](./picture/cqrs_ts_study_031_two_ball_toss.png)
 
 たとえば注文を確定するとき、
 
@@ -27,6 +28,7 @@ Outboxはこの問題の定番解決策として知られてるよ 📮✨ ([mic
 ---
 
 ## 2. Outboxの考え方（超ざっくり図）🖼️✨
+![cqrs_ts_study_031_corkboard_note.png](./picture/cqrs_ts_study_031_corkboard_note.png)
 ![cqrs_ts_study_031_outbox_pattern.png](./picture/cqrs_ts_study_031_outbox_pattern.png)
 
 ```mermaid
@@ -133,6 +135,7 @@ Prismaのトランザクションの基本は公式ドキュメントにまと�
 ---
 
 ## 5. Outbox Relay（送る係）を作るよ📨🤖
+![cqrs_ts_study_031_postal_worker_relay.png](./picture/cqrs_ts_study_031_postal_worker_relay.png)
 
 Outboxは「メモを残すだけ」なので、**送る係**が必要！
 

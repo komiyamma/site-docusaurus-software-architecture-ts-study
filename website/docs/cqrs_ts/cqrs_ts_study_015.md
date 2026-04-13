@@ -9,6 +9,7 @@ CQRSのWrite側（Command側）って、更新が増えるほど「途中で失�
 ---
 
 ## 1. トランザクションって結局なに？🤔💭
+![cqrs_ts_study_015_safety_net.png](./picture/cqrs_ts_study_015_safety_net.png)
 
 超ざっくり言うと…
 
@@ -38,6 +39,7 @@ CQRSのWrite側（Command側）って、更新が増えるほど「途中で失�
 そしてCQRS/DDDっぽい世界では、よくこう考えるの👇
 
 ### ✅ 「集約（Aggregate）」＝ 一貫性を守る単位 📦✨
+![cqrs_ts_study_015_aggregate_bundle.png](./picture/cqrs_ts_study_015_aggregate_bundle.png)
 
 学食アプリなら、多くの場合…
 
@@ -67,6 +69,7 @@ flowchart LR
 ```
 
 ### ✅ 1 Command = 1 Transaction（基本形）🔒
+![cqrs_ts_study_015_transaction_dome.png](./picture/cqrs_ts_study_015_transaction_dome.png)
 
 * CommandHandlerの中で
 
@@ -171,6 +174,7 @@ export interface OrderRepository {
 ---
 
 ### 4.4 InMemory実装：成功したらコミット、失敗したらロールバック🧠✨
+![cqrs_ts_study_015_inmemory_copy.png](./picture/cqrs_ts_study_015_inmemory_copy.png)
 
 ポイントは「**トランザクション中はコピーに書き込む**」ことだよ🙂🪄
 
@@ -243,6 +247,7 @@ export class PayOrderHandler {
 ---
 
 ### 4.6 動作確認：わざと失敗させて“ロールバック”を体感😆💥
+![cqrs_ts_study_015_rollback_undo.png](./picture/cqrs_ts_study_015_rollback_undo.png)
 
 ```ts
 // src/dev/playground.ts
@@ -274,6 +279,7 @@ console.log("🔒 finally:", (await repo.findById("order-1"))?.snapshot());
 ---
 
 ## 5. ミニ演習：どこまで同時更新すべき？🎯📝
+![cqrs_ts_study_015_consistency_scale.png](./picture/cqrs_ts_study_015_consistency_scale.png)
 
 次の更新、**同じトランザクションに入れる？入れない？** を考えてみてね🙂✨
 （答えもすぐ下に書くよ！）

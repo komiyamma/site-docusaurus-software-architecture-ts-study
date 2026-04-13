@@ -17,6 +17,7 @@
 ---
 
 ## 1) Commandってどんなもの？🤔🧠
+![Command Request Envelope](./picture/cqrs_ts_study_010_command_envelope.png)
 
 Command は一言でいうと…
 
@@ -31,6 +32,7 @@ Command は一言でいうと…
 そして超大事ポイント👇
 
 ### TypeScriptの「型」は、実行時には守ってくれない😇⚡
+![TypeScript Runtime Ghost](./picture/cqrs_ts_study_010_ts_runtime_ghost.png)
 
 画面やAPIから来るデータって、**実は何でも入ってくる**のね…（文字列のはずが null とか）
 だから **Command の入口**で、軽くでもチェックしてあげるのが安全🛡️✨
@@ -38,6 +40,7 @@ Command は一言でいうと…
 ---
 
 ## 2) PlaceOrder の入力DTOを決めよう🧾🧩
+![Input DTO Checklist](./picture/cqrs_ts_study_010_input_dto_checklist.png)
 
 学食アプリの「注文する」って、最低限なにが必要？🍙📱
 
@@ -59,6 +62,7 @@ Command は一言でいうと…
 ---
 
 ## 3) ハンズオン：Zodで入力DTO + 最小バリデーション✅✨
+![Zod Validation Scanner](./picture/cqrs_ts_study_010_zod_scanner.png)
 
 Zodは **TypeScript向けのバリデーションライブラリ**で、
 「実行時チェック」しつつ「型」も作れて便利だよ〜🤖💖([Zod][2])
@@ -92,6 +96,7 @@ export type PlaceOrderInput = z.infer<typeof PlaceOrderInputSchema>;
 ---
 
 ## 4) “入力DTO” と “Command” を分ける発想💡✨
+![Input Purification Filter](./picture/cqrs_ts_study_010_input_purification.png)
 ![cqrs_ts_study_010_input_flow.png](./picture/cqrs_ts_study_010_input_flow.png)
 
 ```mermaid
@@ -153,6 +158,7 @@ Zod の `parse()` は、ダメな入力なら例外を投げるよ⚠️
 ---
 
 ## 5) PlaceOrderHandler は「流れ」だけ持つ🏃‍♀️💨
+![Handler Traffic Cop](./picture/cqrs_ts_study_010_handler_cop.png)
 
 第10章では “雰囲気” をつかむのが目的なので、まずは薄く！
 
@@ -183,6 +189,7 @@ export class PlaceOrderHandler {
 ---
 
 ## 6) 入口から呼ぶイメージ（API/画面側）🌐🖥️
+![Input Safety Net](./picture/cqrs_ts_study_010_input_cushion.png)
 
 ```ts
 // どこかのcontroller的な場所のイメージ

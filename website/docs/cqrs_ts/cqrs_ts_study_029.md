@@ -32,6 +32,7 @@
 ---
 
 ## 3) CQRSで “ズレ” が生まれる場所（図で一発）🪞🔧
+![cqrs_ts_study_029_write_read_canyon.png](./picture/cqrs_ts_study_029_write_read_canyon.png)
 
 ポイントはここ👇
 
@@ -64,6 +65,7 @@
 ---
 
 ## 4) “ズレOK” と “ズレNG” を決めるコツ🎯🧠
+![cqrs_ts_study_029_traffic_light_data.png](./picture/cqrs_ts_study_029_traffic_light_data.png)
 
 ズレが怖いのは、「どこでもズレる」と思うから！
 現実は **ズレていい場所とダメな場所がある** のだ〜✨
@@ -108,6 +110,7 @@ mindmap
 だから **ユーザー体験で吸収する** のが王道だよ😊
 
 ### ① 「反映中…」をちゃんと見せる🕒🫧
+![cqrs_ts_study_029_friendly_loading_robot.png](./picture/cqrs_ts_study_029_friendly_loading_robot.png)
 
 * 注文直後に一覧に無くても「反映中です」って出すだけで安心感MAX
 

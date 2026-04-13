@@ -17,6 +17,8 @@ CQRSのRead側は、**ドメインの綺麗さより“使いやすさ”優先�
 ## 1. Read DTOってなに？（超ざっくり）🧃✨
 
 Read DTOは、**画面やAPIが欲しい形に整えた“見せる用の箱”**だよ📦✨
+
+![dto_translation](./picture/cqrs_ts_study_018_dto_translation.png)
 ドメイン（OrderとかMoneyとか）をそのまま返すんじゃなくて、**表示に都合がいい形に加工する**のが仕事🙂
 
 たとえば👇
@@ -41,6 +43,8 @@ Read DTOは、**画面やAPIが欲しい形に整えた“見せる用の箱”*
 ## 3. まず最重要：Read DTOは“ビュー専用”でOK🙆‍♀️🎀
 
 ### ✅ 割り切っていいことリスト（やってOK！）✨
+
+![dos_and_donts_gate](./picture/cqrs_ts_study_018_dos_and_donts_gate.png)
 
 * **フラットにする**（ネストを減らす）📄✨
 * **表示用の文字列を入れる**（例：`totalYenText: "¥680"`）💴
@@ -120,6 +124,8 @@ export type OrderListItemDto = {
 
 ### 5.1 DTO変換は「純粋な関数」にすると最強💪🙂
 
+![pure_mapping_machine](./picture/cqrs_ts_study_018_pure_mapping_machine.png)
+
 * 入力：Read側の行データ（DBやin-memory）
 * 出力：Read DTO
 * 副作用：なし（大事！）
@@ -174,6 +180,8 @@ export function toOrderListItemDto(row: OrderListRow): OrderListItemDto {
 ## 6. `satisfies` で“DTOの作り間違い”を早めに潰す💣➡️🧯
 
 DTO変換って、地味に **タイポ**とか **項目漏れ**が起きやすいのね🥺
+
+![satisfies_inspection](./picture/cqrs_ts_study_018_satisfies_inspection.png)
 そこで便利なのが `satisfies`！✨
 （式の型を変えずに、**「DTO型に合ってる？」をチェック**してくれるやつだよ）([TypeScript][3])
 
@@ -196,6 +204,8 @@ export function toOrderListItemDto(row: OrderListRow): OrderListItemDto {
 ---
 
 ## 7. 欠損値（null / undefined）をどうする？🕳️😵‍💫➡️🙂✨
+
+![null_handling_bento](./picture/cqrs_ts_study_018_null_handling_bento.png)
 
 Read側って、集計やJOINの都合で **値がない**ことがあるよね。
 そのときの“おすすめ方針”を2つ出すね👇
@@ -226,6 +236,8 @@ export type SalesSummaryDto = {
 ---
 
 ## 8. QueryServiceは「DTOを返す係」📦➡️📤✨
+
+![query_service_delivery](./picture/cqrs_ts_study_018_query_service_delivery.png)
 
 QueryServiceの戻り値は、もう **DTOで固定**しちゃってOK😊
 

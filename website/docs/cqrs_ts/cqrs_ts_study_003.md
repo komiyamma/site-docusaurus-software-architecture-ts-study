@@ -137,6 +137,7 @@ type CreateOrderRequest = {
 
 class OrderService {
   // DBの代わりに配列で保存（雑だけど最小で動く！）
+  // ![Fragile In-Memory Storage](./picture/cqrs_ts_study_003_fragile_memory.png)
   private orders: Order[] = [];
 
   createOrder(req: CreateOrderRequest): Order {
@@ -245,6 +246,7 @@ Invoke-RestMethod -Method Get -Uri "http://localhost:3000/orders"
 ---
 
 # 7) この章の「わざと雑」ポイント観察👀🌱
+![Spaghetti Code](./picture/cqrs_ts_study_003_spaghetti_bowl.png)
 
 動いた！えらい！🎉 …でも、今の `OrderService` って、もうすでに👇が混ざってる😅
 
@@ -264,6 +266,7 @@ Invoke-RestMethod -Method Get -Uri "http://localhost:3000/orders"
 # 8) ミニ演習（5〜15分）🧩✨
 
 ## 演習A：注文に `note`（備考）を追加📝
+![Bloating Service](./picture/cqrs_ts_study_003_bloating_service.png)
 
 * `CreateOrderRequest` に `note?: string` を追加
 * `Order` にも `note?: string` を追加
@@ -272,6 +275,7 @@ Invoke-RestMethod -Method Get -Uri "http://localhost:3000/orders"
 👉 **ポイント**：地味だけど、こういう小変更が積み重なると `OrderService` がどんどん太る🍔😅
 
 ## 演習B：`GET /orders?status=ORDERED` を追加🔎
+![Mixed Concerns](./picture/cqrs_ts_study_003_mixed_concerns.png)
 
 * `app.get("/orders"...` でクエリを見る
 * `listOrders()` にフィルタ引数を足してもいいし、ルート側でやってもいい

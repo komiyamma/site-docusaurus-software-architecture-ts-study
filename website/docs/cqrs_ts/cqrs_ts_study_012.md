@@ -60,6 +60,7 @@ ORDERED  -- PayOrder -->  PAID
 ---
 
 ## 3) 実装の置き方（どこに何を書く？）📦🧩
+![cqrs_ts_study_012_implementation_layers.png](./picture/cqrs_ts_study_012_implementation_layers.png)
 
 ざっくりこうするのが気持ちいいよ〜😊✨
 
@@ -72,6 +73,7 @@ ORDERED  -- PayOrder -->  PAID
 ---
 
 ## 4) 型を用意しよう（Result と DomainError）🧰✨
+![cqrs_ts_study_012_result_pattern.png](./picture/cqrs_ts_study_012_result_pattern.png)
 
 「成功 or 失敗」を **型で表す** と、設計が急にスッキリするよ😊🌸
 
@@ -88,6 +90,7 @@ export const err = <E>(error: E): Result<never, E> => ({ ok: false, error });
 ```
 
 ### DomainError（仕様エラー）
+![cqrs_ts_study_012_domain_errors.png](./picture/cqrs_ts_study_012_domain_errors.png)
 
 ```ts
 // src/domain/errors.ts
@@ -105,6 +108,7 @@ export type OrderStatus = "ORDERED" | "PAID";
 ---
 
 ## 5) ドメイン：Order に「支払う」を生やす🌱💳
+![cqrs_ts_study_012_order_pay_logic.png](./picture/cqrs_ts_study_012_order_pay_logic.png)
 
 ここが本丸だよ〜！😆✨
 「支払えるか？」は **Order 自身が知ってる**のが自然👍
@@ -158,6 +162,7 @@ export class Order {
 ---
 
 ## 6) Repository（保存の入り口）🗄️✨
+![cqrs_ts_study_012_repository_interface.png](./picture/cqrs_ts_study_012_repository_interface.png)
 
 Handler は Repository 経由で Order を取って、保存するだけにするよ😊
 
@@ -199,6 +204,7 @@ export class InMemoryOrderRepository implements OrderRepository {
 ---
 
 ## 7) Command と Handler：流れだけを書く🚶‍♀️✨
+![cqrs_ts_study_012_handler_flow.png](./picture/cqrs_ts_study_012_handler_flow.png)
 
 ### PayOrderCommand（入力）
 

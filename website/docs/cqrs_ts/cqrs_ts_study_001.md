@@ -43,6 +43,7 @@ CQRSは、**“見る”と“変える”の役割を分けて**、変更しや
 ---
 
 ## 3) Command / Query を一瞬で見分けるコツ👓✨
+![Command vs Query Tools](./picture/cqrs_ts_study_001_command_vs_query_tools.png)
 
 迷ったら、この3つの質問でOK😊
 
@@ -64,6 +65,7 @@ CQRSは、**“見る”と“変える”の役割を分けて**、変更しや
 ---
 
 ## 4) よくある誤解：CQRS = イベント駆動？イベントソーシング？🤔
+![Not Event Sourcing](./picture/cqrs_ts_study_001_not_event_sourcing.png)
 
 ここ、初心者が混乱しやすいところ！💡
 
@@ -97,6 +99,7 @@ CQRSは、**“見る”と“変える”の役割を分けて**、変更しや
 ---
 
 ## 6) ミニ演習：Command？Query？どっちゲーム🗂️🎮
+![Sorting Game](./picture/cqrs_ts_study_001_sorting_game.png)
 
 次の10個を **Command / Query** に分けてみてね✨（直感でOK！）
 
