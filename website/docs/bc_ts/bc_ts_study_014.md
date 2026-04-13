@@ -35,6 +35,8 @@ mindmap
 
 ## 14.2 例題（学内フリマ🛍️）で “寿命” を見てみよう👀
 
+![Cart vs Trade Lifecycle](./picture/bc_ts_study_014_cart_vs_trade.png)
+
 同じ「取引」まわりでも、データの寿命がバラバラだよね👇
 
 ### 🛒 カート（短命）
@@ -87,6 +89,8 @@ flowchart LR
 
 ## 14.4 “寿命で切る” ときのチェック質問🧩💡
 
+![Lifecycle Checklist](./picture/bc_ts_study_014_checklist.png)
+
 データを見つけたら、これを自問してみてね👇
 
 1. **これ、消えたら困る？**😨
@@ -100,6 +104,8 @@ flowchart LR
 ---
 
 ## 14.5 文章でわかる “図” 🖊️🗺️
+
+![Cart and Trading Contexts](./picture/bc_ts_study_014_context_map.png)
 
 頭の中のイメージはこんな感じ👇
 
@@ -137,6 +143,8 @@ flowchart TD
 
 ## 14.6 ミニ演習：データ寿命の分類表を作ろう📝✨
 
+![Data Buckets](./picture/bc_ts_study_014_data_buckets.png)
+
 次のデータを、**短命 / 長命 / 監査必要** に分類してみよう😊
 （学内フリマを想定🛍️）
 
@@ -157,6 +165,8 @@ flowchart TD
 ---
 
 ## 14.7 TypeScriptミニ演習：寿命つきデータを “型で” 表現する🧸💻
+
+![Ephemeral Type Code](./picture/bc_ts_study_014_ephemeral_code.png)
 
 短命データは「期限」を型と関数で持たせると、境界の気持ちが出るよ🫧✨
 
@@ -204,6 +214,8 @@ if (isExpired(cart)) {
 ---
 
 ## 14.8 よくある事故パターン集😇➡️😱
+
+![Mixing Lifecycles Accident](./picture/bc_ts_study_014_accident_mix.png)
 
 ### ❌ 事故①：カートに “確定情報” を入れちゃう
 

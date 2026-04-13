@@ -35,6 +35,8 @@ mindmap
       ユビキタス言語
 ```
 
+![Capability Definition Mindmap](./picture/bc_ts_study_011_capability_mindmap.png)
+
 > BCは「ドメインを理解して分ける」流れの中で作っていく、っていう説明がよくあるよ📚（まずドメイン分析→BC定義、みたいな順番）([Microsoft Learn][1])
 
 ---
@@ -63,6 +65,8 @@ flowchart TD
   S4 --> S5["5. ラベル(仮称)を付ける"]
 ```
 
+![5 Steps to Capability](./picture/bc_ts_study_011_capability_steps.png)
+
 ### Step 1：動詞＋名詞で書く✍️✨
 
 能力名は **「〜を管理する」「〜を成立させる」「〜を通知する」**みたいに、動きがわかる形にするよ🏃‍♀️💨
@@ -90,6 +94,8 @@ flowchart TD
 
 あとで境界候補にしやすいように、**近い仕事をグルーピング**するよ📦✨
 （この時点では、きれいに分けようとしなくてOK🙆‍♀️）
+
+![Grouping Capabilities](./picture/bc_ts_study_011_capability_grouping.png)
 
 ### Step 5：束に“ラベル（仮の名前）”をつける🏷️
 
@@ -148,6 +154,8 @@ flowchart TD
 
 ## 5) 便利な「能力カード」テンプレ🃏✨
 
+![Capability Card Template](./picture/bc_ts_study_011_capability_cards.png)
+
 能力を1枚カードとして扱うと、境界を考えるときに超ラクだよ😊
 
 * 能力名（動詞＋名詞）：
@@ -170,6 +178,8 @@ flowchart TD
 （例：通知は1つにまとめてOK、まずは粗く！）
 
 ### 演習B：3〜5グループに束ねよう📦📦📦
+
+![Grouping Exercise](./picture/bc_ts_study_011_grouping_exercise.png)
 
 出した能力を、直感でいいから束ねてね😊
 例：
@@ -221,6 +231,8 @@ UIやDBではなく業務の責任で。重複しそうなら似ているもの�
 ---
 
 ## 8) よくある失敗あるある😵‍💫➡️🙂
+
+![Capability Fail Patterns](./picture/bc_ts_study_011_fail_patterns.png)
 
 ### 失敗1：画面ごとに能力を作っちゃう📱
 

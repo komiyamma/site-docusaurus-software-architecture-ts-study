@@ -25,6 +25,8 @@
 
 # Context Mapってなに？🗺️👀
 
+![Context Map as Guidance](./picture/bc_ts_study_023_map_concept.png)
+
 Context Mapは一言でいうと…
 
 > **BC（箱）と、BC同士のつながり（矢印）を描いた“関係図”** 🧱➡️🧱
@@ -35,6 +37,8 @@ Context Mapは一言でいうと…
 ---
 
 # なんでContext Mapが必要なの？🎁✨
+
+![Chaos vs Map](./picture/bc_ts_study_023_confusion_clarity.png)
 
 BCを分けただけだと、次にこうなることが多いの👇
 
@@ -60,6 +64,8 @@ Context Mapがあると…✨
 
 ## ✅ Context Mapの最小パーツ
 
+![3 Map Elements](./picture/bc_ts_study_023_mini_notation.png)
+
 * **箱（BC）**：名前（＋一言説明があると最高）🏷️✨
 * **矢印（関係）**：どっちがどっちに関わる？➡️
 * **矢印ラベル**：何をやりとり？（例：出品一覧を参照、発送依頼を送る）📝
@@ -67,6 +73,8 @@ Context Mapがあると…✨
 ---
 
 # 学内フリマ例🛍️（超わかりやすい関係）
+
+![Flea Market Context Map](./picture/bc_ts_study_023_flea_market_map.png)
 
 仮にBCがこうだとして👇
 
@@ -88,6 +96,8 @@ Context Mapがあると…✨
 
 ## ① ファイルを作る📄
 
+![Context Map File Location](./picture/bc_ts_study_023_file_structure.png)
+
 プロジェクトにこんな感じで置くのがおすすめ！
 
 * `docs/context-map.md` 🗺️✨
@@ -100,6 +110,8 @@ Context Mapがあると…✨
 
 ## ③ “矢印”を入れる➡️
 
+![Arrow Definition Questions](./picture/bc_ts_study_023_arrow_questions.png)
+
 次の質問に答えると、矢印が自然に出ます👇
 
 * **誰が誰を使う？**（依存の方向）🤝
@@ -109,6 +121,8 @@ Context Mapがあると…✨
 ---
 
 # Mermaidで描く（コピペOK）🧸✨
+
+![Mermaid Code to Diagram](./picture/bc_ts_study_023_mermaid_preview.png)
 
 VS CodeでMarkdownを書くなら、Mermaidで図が作れて便利だよ😊
 （プレビューできる環境なら最高！できなくてもOK！）

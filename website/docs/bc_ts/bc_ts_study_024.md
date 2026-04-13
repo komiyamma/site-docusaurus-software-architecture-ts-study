@@ -44,6 +44,8 @@ Customer/Supplier は、Bounded Context 同士が **上流（Supplier）→下�
 
 ## 2. まず大前提：上流/下流の向き🧭➡️
 
+![River Metaphor](./picture/bc_ts_study_024_river_metaphor.png)
+
 向きは超シンプル👇
 
 * **上流（Upstream）**：変更すると **下流に影響** が出る側⚠️
@@ -80,6 +82,8 @@ Customer/Supplier になるのは、ここが成立してるとき👇
 
 ## ✅ 条件A：下流の要望が、上流の計画に入る📅✨
 
+![Negotiation Meeting](./picture/bc_ts_study_024_negotiation_meeting.png)
+
 * 「このフィールド欲しい！」「この期限までに欲しい！」
 * それを上流が **計画に織り込む**（優先度が影響する） ([DevIQ][3])
 
@@ -103,6 +107,8 @@ flowchart TD
 ---
 
 ## 5. Customer/Supplier の「リアルな痛み」😇➡️😱
+
+![Broken Contract Fire](./picture/bc_ts_study_024_broken_contract_fire.png)
 
 Customer/Supplier をちゃんと決めないと、こうなる👇
 
@@ -154,6 +160,8 @@ Customer/Supplier をちゃんと決めないと、こうなる👇
 ---
 
 ## 7. TypeScriptミニ演習：契約（公開API）を作ってみよ📦✨
+
+![Contract Bridge](./picture/bc_ts_study_024_contract_bridge.png)
 
 ## 7.1 Supplier（Shipping）側：公開APIだけを定義する🚪📄
 
@@ -224,6 +232,8 @@ export class ShippingClient {
 ---
 
 ## 9. さらに安全にする：契約テスト（超ミニ）🧪✨
+
+![CDC Cycle](./picture/bc_ts_study_024_cdc_cycle.png)
 
 「下流が期待する動き」をテストとして書いて、上流が満たす。
 この発想が CDC だよ🧪🤝 ([martinfowler.com][6])

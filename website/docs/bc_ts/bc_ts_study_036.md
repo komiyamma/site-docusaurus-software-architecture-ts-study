@@ -27,6 +27,8 @@
 
 ## 36.3 状態一覧を“短い単語”で決める🏷️✨
 
+![UI Naming Trap](./picture/bc_ts_study_036_ui_naming_trap.png)
+
 まずは状態（ステータス）の候補を並べるよ🧠💡
 ここではシンプルにこの5つにするね👇
 
@@ -81,6 +83,8 @@
 
 ## 36.5 状態遷移図（文字でOK）🗺️📌
 
+![State Transition Map](./picture/bc_ts_study_036_transition_map.png)
+
 手描きでも、文字でもOK🙆‍♀️
 最小はこれで十分だよ👇
 
@@ -106,7 +110,11 @@ stateDiagram-v2
 
 ## 36.6 TypeScriptで「間違った遷移」を書きにくくする🧩🔒
 
+![Transition Logic Machine](./picture/bc_ts_study_036_transition_machine.png)
+
 ### 方式A：まずは“statusだけ”を守る（最小で強い）💪
+
+![Union Type Puzzle](./picture/bc_ts_study_036_union_puzzle.png)
 
 状態を **文字列Union** にして、遷移を **表（map）** で固定するよ🗂️✨
 （このやり方、初心者でも扱いやすい😊）
@@ -171,6 +179,8 @@ export const transitions2 = {
 ---
 
 ### 方式B：状態ごとに型を分けて「あり得ないデータ」を持てなくする🧠🧱
+
+![Discriminated Union Boxes](./picture/bc_ts_study_036_discriminated_boxes.png)
 
 次は一段レベルアップ🌈
 状態によって「持っていい情報」が変わるなら、**状態ごとに型を分ける**のが強いよ💪✨
@@ -237,6 +247,8 @@ export type Trade =
 
 ## 36.7 網羅チェック（exhaustive check）で「処理漏れ」を潰す✅💥
 
+![Exhaustive Check Net](./picture/bc_ts_study_036_exhaustive_net.png)
+
 状態やコマンドが増えたときに怖いのが「switchの書き忘れ」😱
 そこで **`never` を使った網羅チェック**が効くよ🧯✨
 TypeScript公式Handbookでも、`assertNever` 的なやり方が紹介されてるよ📚 ([typescriptlang.org][3])
@@ -267,6 +279,8 @@ function label(status: Status): string {
 ---
 
 ## 36.8 ありがちな落とし穴トップ5😵‍💫⚠️
+
+![Silent Failure Trash Can](./picture/bc_ts_study_036_silent_failure.png)
 
 5. **例外を握りつぶす**（禁止遷移はログに残して気づけるようにする📌）
 

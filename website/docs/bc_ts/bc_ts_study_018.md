@@ -21,6 +21,8 @@
 
 ## 18.2 境界案の比較でよく起きる悩み😵‍💫🌀
 
+![Hidden Issues](./picture/bc_ts_study_018_hidden_issues.png)
+
 境界案って、だいたい全部それっぽく見えるんだよね😂
 でも実際はこう👇
 
@@ -33,6 +35,8 @@
 ---
 
 ## 18.3 判断の物差し まずは4つ🧭✨
+
+![4 Criteria Gauge](./picture/bc_ts_study_018_criteria_gauge.png)
 
 この章では、境界案A/B/Cを次の4つで比べるよ📊👀
 （点数化できるから強い💪✨）
@@ -52,6 +56,8 @@ mindmap
 
 ## ① 変更頻度🛠️🔁
 
+![Change Frequency Isolation](./picture/bc_ts_study_018_change_frequency.png)
+
 * よく変わるルールと、めったに変わらないルールが混ざってない？
 * 変更が多いところだけ、うまく隔離できてる？
 
@@ -59,6 +65,8 @@ mindmap
 「毎月ルールが増える場所」は、別の境界にしたいことが多いよ📈✨
 
 ## ② 複雑さの閉じ込め🧠🧱
+
+![Complexity Containment](./picture/bc_ts_study_018_complexity_box.png)
 
 * 難しいルールが、他の場所に漏れてない？
 * その境界の中で、理解が完結する？
@@ -68,6 +76,8 @@ mindmap
 
 ## ③ 依存の強さ（結合の弱さ）🔗⚠️
 
+![Dependency Strength](./picture/bc_ts_study_018_dependency_string.png)
+
 * ある境界が変わったとき、他の境界も巻き込まない？
 * 連携が「内部モデル直結」になってない？
 
@@ -75,6 +85,8 @@ mindmap
 境界の外とは「必要最低限の情報」だけで話すのが理想🧼📦
 
 ## ④ 将来の分割しやすさ🌱✂️
+
+![Future Split](./picture/bc_ts_study_018_future_split.png)
 
 * もし将来チームが増えたり、機能が伸びたら分けやすい？
 * 逆に「一度決めたら分けるの地獄」になってない？
@@ -85,6 +97,8 @@ mindmap
 ---
 
 ## 18.4 スコアリング表で比べよう📊✨
+
+![Scorecard](./picture/bc_ts_study_018_scorecard.png)
 
 境界案A/B/Cを、各項目 **1〜5点**でつけるよ📝😊
 

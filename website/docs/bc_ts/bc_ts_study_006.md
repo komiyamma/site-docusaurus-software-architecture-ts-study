@@ -34,6 +34,8 @@
 
 ## 6-2. なぜ“言葉のズレ”はヤバいの？💣😵‍💫
 
+![Ambiguity Risk Signs](./picture/bc_ts_study_006_ambiguity_risk.png)
+
 ### ヤバさ①：同じ変数名・同じ型名に“別ルール”が混ざる🧨
 
 「User」に “出品のルール” と “決済のルール” が同居すると…
@@ -55,6 +57,8 @@ DDDでは、**開発者とドメインの人が同じ意味で話せる言葉（
 ---
 
 ## 6-3. 解決の第一歩：用語カード🃏✨（言葉→意味→場面）
+
+![Term Card Template](./picture/bc_ts_study_006_term_card_template.png)
 
 この章の成果物はこれ！
 **用語カード（言葉→意味→使う場面）**🃏✨
@@ -88,6 +92,8 @@ mindmap
 ---
 
 ## 6-4. “ユーザー”を割ってみよう🍉🧩（例：学内フリマ）
+
+![User Split Cards](./picture/bc_ts_study_006_user_split_cards.png)
 
 ここでは「ユーザー」を、あえて3枚に割るよ🃏🃏🃏
 
@@ -136,6 +142,8 @@ flowchart TD
 
 ## 6-5. “ズレ語”を見つけるチェックリスト🔍✅
 
+![Collision Detection Signs](./picture/bc_ts_study_006_collision_signs.png)
+
 次のサインが出たら、**同じ言葉が割れる可能性**高いよ⚠️
 
 * ルールが違う（上限、期限、禁止、例外…）⚖️
@@ -157,6 +165,8 @@ flowchart TD
 ---
 
 ## 6-6. TypeScriptミニ演習：同名っぽいけど型を分ける🧩🛡️
+
+![Type Splitting Jigsaw](./picture/bc_ts_study_006_type_splitting.png)
 
 目標はこれ👇
 **“同じ人”でも、意味が違うなら型を分ける**（混線をコンパイルで止める💪）

@@ -11,6 +11,7 @@
 ## 1. DDDの地図（超シンプル）🗺️✨
 
 ![イメージ](./picture/bc_ts_study_003_ddd_boundary.png)
+![Strategic vs Tactical DDD](./picture/bc_ts_study_003_strategic_vs_tactical.png)
 
 「DDDって難しそう…」って思うかもしれないけど、大事なのはこの2つだけ！😊
 
@@ -49,6 +50,8 @@ graph LR
 
 ## 3-2. BC（Bounded Context）ってなに？🧱🛡️
 
+![BC Definition Box](./picture/bc_ts_study_003_bc_definition_box.png)
+
 BCはDDDの中心パターンのひとつで、ざっくり言うと…
 
 ✅ **「言葉（モデル）の意味がブレない範囲」を、はっきり区切ること**
@@ -60,6 +63,8 @@ BCはDDDの中心パターンのひとつで、ざっくり言うと…
 ---
 
 ## 3-3. DDDとBCの関係を一言で🧠✨
+
+![DDD Toolbox](./picture/bc_ts_study_003_ddd_toolbox.png)
 
 ここ、超大事なのでスパッと言うね✂️💖
 
@@ -91,6 +96,8 @@ BCがあると何がうれしいかというと👇
 でも実は、“ユーザー”は1種類じゃないことが多いの🌀
 
 ### 例：「ユーザー」が3つに割れる🌪️
+
+![User Split Silhouette](./picture/bc_ts_study_003_user_split_silhouette.png)
 
 * **出品者（Seller）**：出品・在庫・発送準備などが関心ごと📦
 * **購入者（Buyer）**：購入・支払い・受取・レビューなどが関心ごと🧾
@@ -124,6 +131,8 @@ flowchart TD
 ---
 
 ## 3-5. TypeScriptでの超ミニ実演🧸💻
+
+![BC Folder Structure](./picture/bc_ts_study_003_bc_folder_structure.png)
 
 「同じUserでも、世界が違えば別物でOK」って感覚を、コードでちょい体験するよ😊
 
@@ -159,6 +168,8 @@ export type User = {
 ---
 
 ## 3-6. 「BCとは何か」を1〜2行で書くテンプレ✍️💕
+
+![BC Template Card](./picture/bc_ts_study_003_bc_template_card.png)
 
 この章の成果物はこれ👇
 

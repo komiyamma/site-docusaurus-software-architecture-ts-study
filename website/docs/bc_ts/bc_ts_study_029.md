@@ -17,6 +17,8 @@
 
 ## 1. なんで「フォルダで分ける」が最初に効くの？💡📁
 
+![Boundary Guard Rail](./picture/bc_ts_study_029_guard_rail.png)
+
 ![イメージ](./picture/bc_ts_study_029_entry_point.png)
 
 ```mermaid
@@ -44,6 +46,8 @@ flowchart TD
 
 ## 2. “学内フリマ” のBCをフォルダに落とす🛍️🏫
 
+![Three BC Boxes](./picture/bc_ts_study_029_three_bc_boxes.png)
+
 例として、こんな3つに分けるよ（章の後半で増やしてもOK）🌸
 
 * Listing（出品）🧾📦
@@ -55,6 +59,8 @@ flowchart TD
 ---
 
 ## 3. まずは最小の“境界フォルダ構成”を作る🧱📁
+
+![Folder Structure Tree](./picture/bc_ts_study_029_folder_structure_tree.png)
 
 最初はこれで十分！「深くしすぎない」のがコツだよ🧸🌱
 
@@ -101,6 +107,8 @@ graph TD
 
 ## 4. 入口ファイル `index.ts` を “窓口” にする🚪📮
 
+![Import Etiquette](./picture/bc_ts_study_029_import_etiquette.png)
+
 BCの外からは **必ずここ経由** にするよ✅
 すると「外から触っていいもの」が自然に揃う✨
 
@@ -127,6 +135,8 @@ import { ListingItem } from "../contexts/listing/domain/types"; // だめ〜😭
 
 ## 5. “入口import” を楽にする（tsconfig の paths）🧭✨
 
+![Path Shortcut](./picture/bc_ts_study_029_path_shortcut.png)
+
 相対パス地獄（`../../../`）は、境界を壊す温床だよ😵‍💫
 だから **入口専用のimport名** を作ってあげるのが最強💪
 
@@ -152,6 +162,8 @@ TypeScript は `baseUrl` と `paths` で import の解決ルールを作れる�
 ---
 
 ## 6. “共有(shared)” は最小にしようね⚠️🧬
+
+![Shared Bin Overflow](./picture/bc_ts_study_029_shared_bin_overflow.png)
 
 共有フォルダって便利なんだけど…増え始めると一気にこうなる👇
 

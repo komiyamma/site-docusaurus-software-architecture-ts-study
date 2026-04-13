@@ -59,6 +59,8 @@
 
 ## 3. 「入口」ってどこ？🚪👀
 
+![Entrance Guard Invariant](./picture/bc_ts_study_035_entrance_guard.png)
+
 不変条件は **“入口で守る”** のがコツだよ🔒✨
 
 ```mermaid
@@ -86,15 +88,21 @@ flowchart LR
 
 ### 事故パターンA：コンストラクタが自由すぎる🌀
 
+![Free Constructor Chaos](./picture/bc_ts_study_035_free_constructor_chaos.png)
+
 * どこからでも `new Listing(...)` できる
 * つまり、どこからでも壊せる😱
 
 ### 事故パターンB：プロパティが書き換え放題✏️💣
 
+![Direct Property Edit](./picture/bc_ts_study_035_direct_edit_burglar.png)
+
 * `listing.price = -100;` みたいなのが通る
 * “壊れた出品” がBC内に存在しちゃう😵
 
 ### 事故パターンC：「とりあえず any」🫠
+
+![Any Type Black Hole](./picture/bc_ts_study_035_any_black_hole.png)
 
 * 一瞬ラクだけど、後で地獄👹
 * 不変条件が崩壊しても気づけない…
@@ -102,6 +110,8 @@ flowchart LR
 ---
 
 ## 5. 入口で守るための基本セット🧰✨
+
+![Three Invariant Tools](./picture/bc_ts_study_035_three_tools.png)
 
 初心者〜中級なら、まずこの3点セットが強いよ💪😊
 
@@ -116,6 +126,8 @@ flowchart LR
 ## 6. ミニ実装：出品（Listing）BCで「壊れた出品」を封印する🛡️📦
 
 ### 6-1. Result型（成功/失敗を安全に表現）🧾✨
+
+![Result Type Box](./picture/bc_ts_study_035_result_type_box.png)
 
 ```ts
 export type Result<T, E> =
@@ -199,6 +211,8 @@ export class Money {
 ---
 
 ### 6-5. Entity：Listing（状態と操作で不変条件を守る）🚦🧱
+
+![State Transition Traffic](./picture/bc_ts_study_035_state_transition_traffic.png)
 
 ここが「入口で守る」の本体だよ🔒✨
 

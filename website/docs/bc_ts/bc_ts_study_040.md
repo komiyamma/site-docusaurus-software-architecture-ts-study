@@ -38,6 +38,8 @@ ACLはひとことで言うと…
 * 状態がやたら多い or 逆に雑（`UNKNOWN` 多すぎ問題）😵‍💫
 * 欠損値や null の意味が不明（`null` = 未設定？エラー？）🌀
 
+![External Quirks Monster](./picture/bc_ts_study_040_external_quirks_monster.png)
+
 この“クセ”が**境界を越えてドメインに入る**と、ドメインがどんどん汚れていく…😱
 だから、**境界のところで翻訳して止める**のがACLだよ🧼✨
 
@@ -106,6 +108,8 @@ src/
 * `acl/`：外部DTOを受け取って**翻訳**するゾーン🧼
 * `domain/`：**清潔な中心**（外部都合禁止）🏠✨
 
+![Shipping Folder Map](./picture/bc_ts_study_040_shipping_folder_map.png)
+
 ---
 
 ## 4. 内側（Shipping）のモデルを先に決める🏠🧱
@@ -115,6 +119,8 @@ src/
 ### 4.1 Value Object：Money💰
 
 「金額」は雑に number で持つと事故るから、最低限の形にしよう🧯
+
+![Money VO Shield](./picture/bc_ts_study_040_money_vo_shield.png)
 
 ```ts
 // src/contexts/shipping/domain/money.ts
@@ -237,6 +243,8 @@ export type ShipFastCreateShipmentResponse = z.infer<
 * 外部状態 → **ShippingStatus**へ
 * `fee_minor + currency` → **Money**へ
 * 外部の変な値 → **problem** やエラーへ
+
+![Mapper Translation Machine](./picture/bc_ts_study_040_mapper_translation_machine.png)
 
 ```ts
 // src/contexts/shipping/acl/shipfast/shipfastMapper.ts
@@ -412,6 +420,8 @@ export class CreateShipmentUseCase {
 ACLは**テストがないと、ただの変換コード**になって崩れるよ😵‍💫
 ここはガチで固めよう💪✨
 
+![ACL Testing Station](./picture/bc_ts_study_040_acl_testing_station.png)
+
 ```ts
 // src/contexts/shipping/acl/shipfast/shipfastMapper.test.ts
 import { describe, it, expect } from "vitest";
@@ -461,6 +471,8 @@ describe("ShipFast -> Shipment mapper", () => {
 
 **症状**：`domain/` で `shipfastSchemas` を import してる
 **対策**：`domain/` は外部import禁止ルール（第32章）を徹底📏➡️
+
+![ACL Leak Accident](./picture/bc_ts_study_040_acl_leak_accident.png)
 
 ### 事故②：mapperが散らばる🌀
 

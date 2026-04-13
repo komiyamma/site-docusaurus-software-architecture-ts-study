@@ -32,10 +32,14 @@ BCの境界を守るには、「矢印のルール」を先に決めるのが超
 
 ### ルールA：他BCの「中身（internal）」を直接見ない🙈🚫
 
+![Private Internal Rule](./picture/bc_ts_study_032_peeking_forbidden.png)
+
 * OK：相手BCの **公開口（Public API）** だけを使う🚪✨
 * NG：相手BCの domain / application / internal フォルダを直接 import する📦🔓➡️😱
 
 ### ルールB：依存の矢印は「片道」を基本にする➡️➡️
+
+![Flow vs Cycle](./picture/bc_ts_study_032_flow_vs_cycle.png)
 
 ```mermaid
 flowchart LR
@@ -55,12 +59,16 @@ flowchart LR
 
 ### ルールC：「共有」は最小にして、増えそうなら止める✂️🧬
 
+![Minimal Sharing](./picture/bc_ts_study_032_minimal_sharing.png)
+
 * 共有が増える＝調整が増える＝速度が死ぬ😵‍💫⛔
 * 共有するなら「本当にブレないもの」だけ（例：IDの型など）🧊✨
 
 ---
 
 ## 32.3 例題（学内フリマ🛍️）で矢印を決めてみよう🗺️➡️
+
+![Dependency Chain](./picture/bc_ts_study_032_dependency_chain.png)
 
 たとえばBCがこんな感じだとします👇
 
@@ -91,6 +99,8 @@ flowchart LR
 ---
 
 ## 32.4 依存の向きを決める4つの質問🤔🧭
+
+![Dependency Decision Compass](./picture/bc_ts_study_032_decision_compass.png)
 
 ```mermaid
 flowchart TD
@@ -185,6 +195,8 @@ src/
 ---
 
 ## 32.7 ESLintで「破ったら即エラー」にする👮‍♀️🚨
+
+![ESLint Guard](./picture/bc_ts_study_032_eslint_guard.png)
 
 今どきESLintは **Flat Config**（設定ファイル形式）が標準です📄✨（設定ファイル名も決まってるよ）([ESLint][1])
 さらにESLint v9ではFlat Configがデフォルトになった流れが整理されています。([ESLint][2])
@@ -318,6 +330,8 @@ export default defineConfig(
 ---
 
 ## 32.11 よくある失敗あるある集😵‍💫⚠️
+
+![Thin Index Bypass](./picture/bc_ts_study_032_thin_index_bypass.png)
 
 * 「とりあえず使えたから…」で他BCの domain を直importし始める🙈
 * index.ts が薄すぎて、みんな中身を覗きに行く👀💥

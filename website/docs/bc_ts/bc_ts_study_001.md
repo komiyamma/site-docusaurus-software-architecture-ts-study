@@ -49,6 +49,8 @@ graph TD
 
 ### 登場人物🎭✨
 
+![School Flea Market](./picture/bc_ts_study_001_flea_market.png)
+
 * 出品する人（学生）📦
 * 買う人（学生）🛒
 * 運営（学内の係）🧾
@@ -61,6 +63,8 @@ graph TD
 * 問い合わせ：トラブルや質問に対応する💬🆘
 
 ここでポイントなのが…
+
+![User Ambiguity](./picture/bc_ts_study_001_user_ambiguity.png)
 **同じ単語が、場面によって意味がズレやすい**ってところ🌀
 たとえば「ユーザー」って言葉ひとつでも、
 出品のユーザー？購入のユーザー？運営のユーザー？で、欲しい情報が変わるんだよね🤔💡
@@ -68,6 +72,8 @@ graph TD
 ---
 
 ## 3. 最終成果物の完成イメージ👀✨（ゴール地点を先に見る）
+
+![Final Deliverables Kit](./picture/bc_ts_study_001_deliverables.png)
 
 最後に「これができたら勝ち🎉」っていう完成セットを作るよ🎁✨
 
@@ -84,6 +90,8 @@ graph TD
 ---
 
 ## 4. Context Mapって、最終的にこういう絵🗺️✨（超ざっくり完成図）
+
+![Context Map Islands](./picture/bc_ts_study_001_context_map_concept.png)
 
 まだ今は意味が全部わからなくてOK🙆‍♀️✨
 「箱（BC）と矢印（関係）」で描くよ📦➡️📦
@@ -122,6 +130,8 @@ flowchart LR
 
 ## 5. この教材の進み方🗺️🌸（迷子にならない地図）
 
+![Learning Roadmap](./picture/bc_ts_study_001_roadmap.png)
+
 大きくは、この流れで進むよ🧸✨
 
 1. まず“境界がないと地獄”を体験😇➡️😱
@@ -145,6 +155,8 @@ flowchart TD
 ---
 
 ## 6. AI相棒の使いどころ🤖💡（ズルじゃないよ、武器だよ）
+
+![AI Partner Robot](./picture/bc_ts_study_001_ai_partner.png)
 
 この教材は「AI導入済み」前提だから、こういう場面でガンガン使うよ✨
 

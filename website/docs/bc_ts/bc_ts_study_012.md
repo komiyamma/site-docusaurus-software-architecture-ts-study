@@ -38,6 +38,8 @@ EventStorming（公式表記は **EventStorming** で1語だよ🧡）は、ド�
   * 🟥問題/疑問（「ここ曖昧！」）
     EventStormingは付箋色を使う文化があるよ〜くらいの理解でOK😊 ([ウィキペディア][1])
 
+![Sticky Note Types](./picture/bc_ts_study_012_sticky_types.png)
+
 ```mermaid
 flowchart LR
     E[🧡 イベント<br/>〜された] 
@@ -90,6 +92,8 @@ flowchart LR
 
 「イベントは過去形の動詞」っていう原則に沿ってるよ🧡 ([ddd-crew.github.io][2])
 
+![Event Timeline](./picture/bc_ts_study_012_timeline_flow.png)
+
 ---
 
 ## 1. なぜ「イベント」から入るの？⏳👀
@@ -114,6 +118,8 @@ BCを見つける時、「データ（テーブル）」から考えると、ど
 
 ## ステップ3：“混ざると危険”を赤で刺す🟥⚠️
 
+![Hotspot Questions](./picture/bc_ts_study_012_hotspot_questions.png)
+
 並べていると、だいたいここで「あれ？」が出るよ😊
 疑問や事故の匂いは🟥で刺す！
 
@@ -129,6 +135,8 @@ BCを見つける時、「データ（テーブル）」から考えると、ど
 ---
 
 ## ステップ4：イベントを“かたまり”で囲む📦✨（ここが境界候補！）
+
+![Event Clustering](./picture/bc_ts_study_012_event_clustering.png)
 
 次に、イベントを眺めて「近いもの」をまとめるよ😊
 ポイントは **同じ目的・同じ関心**っぽいものが集まること！
@@ -203,6 +211,8 @@ EventStormingは、こういう“業務の流れ”をイベントで見える�
 
 ## 12.5 ありがちな失敗あるある😇➡️😱（回避テク付き）
 
+![Event Fail Patterns](./picture/bc_ts_study_012_fail_patterns.png)
+
 ## 失敗①：イベントが「作業」になってる🌀
 
 * ❌「出品画面を開いた」
@@ -223,6 +233,8 @@ EventStormingは、こういう“業務の流れ”をイベントで見える�
 ---
 
 ## 12.6 TypeScriptミニ演習💻🧡：イベントを“型”で並べてみよう
+
+![Typed Events Code](./picture/bc_ts_study_012_typed_events.png)
 
 イベントを雑にでも型にすると、**言葉の粒度**が揃って気持ちいいよ😊✨
 

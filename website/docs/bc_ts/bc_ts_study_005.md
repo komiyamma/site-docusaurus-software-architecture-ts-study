@@ -12,6 +12,8 @@
 
 ## 5.1 まず“最新バージョン”を確認しよ✅🧸
 
+![Version Checklist](./picture/bc_ts_study_005_version_check.png)
+
 2026/02/02時点での目安はこれ👇
 
 * TypeScript（安定版）: **5.9.3**（npmのlatest）📌 ([npm][1])
@@ -24,6 +26,8 @@
 ---
 
 ## 5.2 Node.js（LTS）を入れる🟩⬇️
+
+![Node Install Success](./picture/bc_ts_study_005_node_install.png)
 
 ## 手順🍀
 
@@ -65,6 +69,8 @@ npm -v
 ---
 
 ## 5.4 プロジェクトを作る📦🚀（最小セット）
+
+![Project Setup Steps](./picture/bc_ts_study_005_project_setup_flow.png)
 
 ## ① フォルダ作成＆VS Codeで開く📁
 
@@ -129,6 +135,8 @@ flowchart TD
 ---
 
 ## 5.5 “動く”を確認しよう🎬✨
+
+![Code Run Cycle](./picture/bc_ts_study_005_run_cycle.png)
 
 ## ① `src/index.ts` を作る📝
 
@@ -255,6 +263,8 @@ npm start
 ---
 
 ## 5.9 ここまでの成果物🎁✨
+
+![Final Folder Tree](./picture/bc_ts_study_005_folder_tree.png)
 
 この章が終わった時点で、フォルダの中身はだいたいこんな感じになってるよ📁😊
 

@@ -16,6 +16,8 @@
 
 ### 境界は “正解” じゃなくて “仮説” 🧪✨
 
+![Hypothesis vs Answer](./picture/bc_ts_study_017_hypothesis_cake.png)
+
 同じ題材でも、切り方はいくつもあり得るよ😊
 だからまずは「3つ出す」＝視野が広がるのが最大の価値💖
 
@@ -38,6 +40,8 @@ flowchart LR
 
 ## 準備する材料🧺📋
 
+![Preparation Materials](./picture/bc_ts_study_017_prep_materials.png)
+
 前の章（11〜16）で作ったメモを机に並べる感じでOKだよ📝✨
 
 * 能力リスト（例：出品、購入、配送、問い合わせ…）🧱
@@ -50,6 +54,8 @@ flowchart LR
 ---
 
 ## 発散のコツ3つ🌈✨
+
+![Divergence Tips](./picture/bc_ts_study_017_divergence_tips.png)
 
 ### コツ1️⃣ 切り口を変える🔪
 
@@ -93,6 +99,8 @@ mindmap
 ---
 
 ## 境界案テンプレ これを3枚作る🗒️🖊️
+
+![Proposal Template](./picture/bc_ts_study_017_template_form.png)
 
 A/B/Cそれぞれ、下のテンプレを埋めよう😊
 （最初はざっくりでOK！完璧禁止🙅‍♀️）
@@ -172,6 +180,8 @@ graph TD
 
 ### 境界案A 能力で切る 王道🧱✨
 
+![Plan A Capability](./picture/bc_ts_study_017_plan_a_capability.png)
+
 **ねらい：機能のまとまりが直感的で分かりやすい**😊
 
 **箱（BC）** 📦
@@ -204,6 +214,8 @@ graph TD
 
 ### 境界案B ルールとリスクで切る 安全志向⚖️🛡️
 
+![Plan B Risk](./picture/bc_ts_study_017_plan_b_risk.png)
+
 **ねらい：壊れやすい場所（ルールが濃い場所）を隔離する**⚠️
 
 **箱（BC）** 📦
@@ -233,6 +245,8 @@ graph TD
 ---
 
 ### 境界案C オーナーで切る 運用リアル系👩‍💻🌍
+
+![Plan C Owner](./picture/bc_ts_study_017_plan_c_owner.png)
 
 **ねらい：誰が面倒を見るか（責任）で境界を決める**🏷️
 

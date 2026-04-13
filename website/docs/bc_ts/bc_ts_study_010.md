@@ -11,6 +11,8 @@
 
 ## 10.1 SoCってなに？🧁✨
 
+![SoC Mindmap](./picture/bc_ts_study_010_soc_mindmap.png)
+
 SoCは **Separation of Concerns** の略で、ひとことで言うと…
 
 > 「気にすること（関心）を、混ぜずに分けて置こうね」🍱✨
@@ -83,6 +85,8 @@ BC（Bounded Context）は、その考え方を **“ドメインの言葉” �
 
 ## パターンA：UI都合がドメインに侵入🖥️➡️📜
 
+![UI Logic Invasion](./picture/bc_ts_study_010_ui_invasion.png)
+
 ### よくある混入物🧨
 
 * 画面文言（「価格を入力してください」みたいな文章）
@@ -101,6 +105,8 @@ BC（Bounded Context）は、その考え方を **“ドメインの言葉” �
 ---
 
 ## パターンB：DB都合がドメインをねじ曲げる🗄️➡️🧠
+
+![DB Logic Invasion](./picture/bc_ts_study_010_db_invasion.png)
 
 ### よくある混入物🧨
 
@@ -121,6 +127,8 @@ DBは「保存の形」🗄️
 ---
 
 ## パターンC：外部サービス都合が中心モデルを汚す🌐➡️🧽
+
+![External Service Pollution](./picture/bc_ts_study_010_external_pollution.png)
 
 ### よくある混入物🧨
 
@@ -150,6 +158,8 @@ flowchart LR
 ---
 
 ## 10.4 学内フリマで、SoC×BCをコードの形にする📁🔒
+
+![Listing BC Architecture Layering](./picture/bc_ts_study_010_listing_architecture.png)
 
 ここでは「出品BC（Listing）」を例に、**分け方の型**を作るよ🧸✨
 
@@ -325,6 +335,8 @@ SoCができてると、あとでDBに差し替えても「domain/app」が揺�
 ## 10.6 ミニ演習3つ🧪✨
 
 ## 演習1：これはどの関心？仕分けゲーム🍱🎮
+
+![Concern Sorting Game](./picture/bc_ts_study_010_sorting_game.png)
 
 次の要素を、4カテゴリに振り分けてみよう👇
 （UI / ドメイン / 保存 / 外部）

@@ -10,6 +10,8 @@
 
 ## 1) そもそも「モデル」って何？🧩
 
+![Model Map Metaphor](./picture/bc_ts_study_009_model_map_metaphor.png)
+
 モデルは、**現実のコピー**じゃないよ🙅‍♀️
 モデルは、**目的のために“必要なところだけ”を切り取った道具**だよ🔧✨
 
@@ -88,6 +90,8 @@ graph TD
 
 ### 4-1) まず「そのBCで、Userは何者？」を一言で決める🏷️
 
+![User Role Masks](./picture/bc_ts_study_009_user_role_masks.png)
+
 **User**って言いながら、実際には “役割” を見てることが多いよ👀✨
 
 * ListingのUser：**出品者**（何を出す人？出品できる？）🛍️
@@ -99,6 +103,8 @@ graph TD
 ---
 
 ### 4-2) 次に「そのBCで必要な情報だけ」を選ぶ🧺✨
+
+![Attribute Selection Filter](./picture/bc_ts_study_009_attribute_selection.png)
 
 ここが“モデルは道具”の実践だよ🔧
 
@@ -140,6 +146,8 @@ BC内のモデルが小さい＝テストデータが小さい＝しんどさが
 
 ## 6) よくある事故パターン集🚑💥（先に回避しよう）
 
+![Accident Patterns](./picture/bc_ts_study_009_accident_patterns.png)
+
 ### 事故①：万能Userクラス（全部盛り）🍱😇➡️😱
 
 * どこで何を使ってるか追えない
@@ -161,6 +169,8 @@ Shippingの制約（住所・配送可否）をTradingに入れ始めると、�
 ---
 
 ## 7) TypeScriptミニ演習：BCごとに “別User型” を作ってみる🧸💻
+
+![Type Brand Guard](./picture/bc_ts_study_009_type_brand_guard.png)
 
 ここでは **「同名でもOK」** を体で覚えるよ🧠✨
 （わざと似せた名前にして、混ざる怖さも体感しよう😇）
@@ -236,6 +246,8 @@ flowchart TD
 ---
 
 ## 8) ワーク：あなたのBC別Userを“自分の言葉”で作る📝💖
+
+![User Model Worksheet](./picture/bc_ts_study_009_user_model_worksheet.png)
 
 次の手順でやると迷いにくいよ😊✨
 

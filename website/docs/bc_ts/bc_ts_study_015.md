@@ -10,6 +10,8 @@
 
 ## 15.1 なんで“責任者”で切ると強いの？🤔💡
 
+![Chaos without Ownership](./picture/bc_ts_study_015_shared_ownership_chaos.png)
+
 システムって、だんだん大きくなると「仕様決める人」「保守する人」「困ったとき直す人」が分かれてくるよね🧩
 このとき **“責任の境界” が曖昧** だと、こうなる…👇😵‍💫
 
@@ -54,6 +56,8 @@ mindmap
 
 ## 15.3 “チームの境目”と“システムの境目”は似てくる🪞🧩（Conwayの法則）
 
+![Conway's Law Mirror](./picture/bc_ts_study_015_conways_law.png)
+
 有名な話で、**組織のコミュニケーション構造が、システム構造に反映されやすい**っていう考え方があるよ📣🧠
 そして「望むアーキテクチャにしたいなら、チームの会話の形から変える」っていう“逆方向の工夫”も語られてるの✨ ([martinfowler.com][3])
 
@@ -77,6 +81,8 @@ flowchart LR
 ---
 
 ## 15.4 チーム設計のヒント：4つのチームタイプで考える🧠🗂️
+
+![4 Team Types](./picture/bc_ts_study_015_team_types.png)
 
 「責任者」って言っても、全員が同じ仕事を持つわけじゃないよね🙂
 チーム設計の整理として、Team Topologies では **4つの基本タイプ**が紹介されてるよ👇✨ ([teamtopologies.com][1])
@@ -146,6 +152,8 @@ RACIはこう👇
 
 ## 15.6 “責任者マップ”から境界案（BC候補）を起こすコツ✂️📦✨
 
+![Boundary Heuristics](./picture/bc_ts_study_015_boundary_heuristics.png)
+
 責任者マップができたら、次は境界のタネ探しだよ👀🌱
 見つけ方はシンプル👇
 
@@ -169,6 +177,8 @@ RACIはこう👇
 ---
 
 ## 15.7 よくある失敗パターン集😇➡️😱（早めに回避！）
+
+![Ownership Fail Patterns](./picture/bc_ts_study_015_fail_patterns.png)
 
 ## 失敗①：全員で“共同所有”にしちゃう🤝💥
 
@@ -210,6 +220,8 @@ RACIはこう👇
 ---
 
 ## 15.9 演習②：TypeScriptで“責任者マップ”をデータ化する📌💻
+
+![Code Ownership Map](./picture/bc_ts_study_015_code_map.png)
 
 「口で言ってるだけ」だと忘れるから、**マップをJSON相当に落として固定**しちゃうよ🧷✨
 （あとでADRやドキュメントに貼れる！📄）

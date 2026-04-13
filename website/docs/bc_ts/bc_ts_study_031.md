@@ -45,6 +45,8 @@ mindmap
 
 ## TypeScript的に超重要ポイント⚠️🧠
 
+![Structural Typing Risk](./picture/bc_ts_study_031_structural_typing_risk.png)
+
 TypeScriptの型は、基本的に **“名前” じゃなく “形（プロパティ）” で互換性が決まる**よ📦
 これを **構造的型付け（structural typing）**って呼ぶよ。([TypeScript][1])
 
@@ -93,6 +95,8 @@ flowchart TD
 ---
 
 ## 1) まずは「BCごとに User 型を置く」📁✨
+
+![Context File Separation](./picture/bc_ts_study_031_file_separation.png)
 
 おすすめの置き場所（例）👇
 
@@ -143,6 +147,8 @@ export const toUserId = (raw: string): UserId => raw as UserId;
 
 ## 2) import するときは alias ＋ “type-only import” 🧼📦
 
+![Import Aliasing](./picture/bc_ts_study_031_import_alias.png)
+
 型だけを読み込みたい時は `import type` が便利だよ〜！
 実行時の依存を増やしにくいし、境界も守りやすい🛡️✨ ([TypeScript][2])
 
@@ -154,6 +160,8 @@ import type { User as TradingUser, UserId as TradingUserId } from "../contexts/t
 ---
 
 ## 3) 「混ぜたら困る」をコンパイルで止める🛑💥（ミニ実験）
+
+![Brand Type Safety](./picture/bc_ts_study_031_compiler_stop.png)
 
 たとえば取引BCの関数が「取引UserId」だけを受け付けるようにしてみるね👇
 
@@ -198,6 +206,8 @@ TypeScriptは構造的だから、もし両方のUserがたまたま同じ形な
 ---
 
 ## 5) 「境界を越える形」は Domain型じゃなく DTO にしよ📦🚚
+
+![DTO Boundary Crossing](./picture/bc_ts_study_031_dto_boundary_crossing.png)
 
 BCを跨いで何か渡したいとき、やりがち事故👇😱
 
@@ -263,6 +273,8 @@ authorizePurchase(sellerId);
 ## 8) よくある事故あるある😵‍💫🧯
 
 ## 事故1：`shared/types/User.ts` を作って全部そこに集める📦😇
+
+![Shared User Bloat](./picture/bc_ts_study_031_shared_user_bloat.png)
 
 * いったん楽だけど、BCの意味が溶けて **“でっかいUser”** になりがち🫠
 * 対策：**UserはBC内に置く**。共有したくなったら「DTO」か「別の概念名」へ🧼📦

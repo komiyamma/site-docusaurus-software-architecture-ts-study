@@ -19,6 +19,8 @@
 
 > 「こういう条件のとき、こうしなきゃいけない」っていう決まりごと📌
 
+![Variety of Rules](./picture/bc_ts_study_013_rule_variety.png)
+
 たとえば学内フリマだと…🛍️🏫
 
 * 出品は1人10件まで！🔟
@@ -41,6 +43,8 @@
 * 出品ルールだけ頻繁に変わる（例：禁止物の追加）🧾
 * 取引ルールだけ変わる（例：支払い期限の変更）⏳
 * 運営ルールだけ変わる（例：通報の扱いを厳しく）🚨
+
+![Independent Change Reasons](./picture/bc_ts_study_013_change_reasons.png)
 
 **変わる理由が違う**＝別の“都合”で動いてる、ってことになりがち💡
 
@@ -78,6 +82,8 @@ flowchart LR
 
 ルールを **1枚＝1ルール** にするのがコツ！
 ごちゃ混ぜを防げるよ🧼✨
+
+![Rule Card Template](./picture/bc_ts_study_013_rule_card_template.png)
 
 **ルールカードのテンプレ👇**
 
@@ -155,6 +161,8 @@ mindmap
 
 ## 5) 成果物：ルールのまとまり “3つ” を作る🧩🧩🧩
 
+![Rule Clustering](./picture/bc_ts_study_013_rule_clustering.png)
+
 ここからが本番！🎉
 さっきの12ルールを、**3つの束** に分けるよ✂️✨
 
@@ -210,6 +218,8 @@ flowchart TD
 
 ## 6) “境界っぽい匂い” チェックリスト👃✅
 
+![Boundary Smell Check](./picture/bc_ts_study_013_boundary_check.png)
+
 束を作ったら、次をチェックすると精度が上がるよ✨
 
 * ルールの変更理由が同じ？違う？🌀
@@ -249,6 +259,8 @@ export type RuleViolation = {
 ```
 
 ## ② ルールは「小さな関数」に分ける🧩
+
+![Functional Rule Code](./picture/bc_ts_study_013_code_rules.png)
 
 ```ts
 // src/contexts/listing/domain/listingRules.ts

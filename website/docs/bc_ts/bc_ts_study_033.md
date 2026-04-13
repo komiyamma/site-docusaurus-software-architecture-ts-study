@@ -40,6 +40,8 @@ BCを守るコツは、1つの強い武器じゃなくて **3つの弱い武器�
 
 ## 33.3 PRで見る「境界チェックリスト」🧾✅
 
+![Boundary Review Checklist](./picture/bc_ts_study_033_review_checklist.png)
+
 PRレビューで毎回ここを見るよ👀✨（コピペでOK！）
 
 ### A. import（境界の入口）🚪
@@ -88,6 +90,8 @@ mindmap
 
 ### ① 内部フォルダ直import（最頻出）🚨
 
+![Internal Import Violation](./picture/bc_ts_study_033_internal_burglar.png)
+
 ✅ **症状**：別BCの “内部実装” を勝手に使い始める
 
 ```ts
@@ -115,6 +119,8 @@ flowchart LR
 
 ### ② DTOを“ドメイン型”として使う📦➡️🧠（危険）
 
+![DTO Invasion](./picture/bc_ts_study_033_dto_invasion.png)
+
 ✅ **症状**：境界越えの形が、BC内に侵入して定着する
 
 ```ts
@@ -131,6 +137,8 @@ type TradingShipmentStatus = "requested" | "in_transit" | "delivered";
 
 ### ③ “共通化フォルダ” が巨大化する🧟‍♀️
 
+![Shared Folder Bloat](./picture/bc_ts_study_033_shared_bloat.png)
+
 ✅ **症状**：便利関数・型がなんでも shared に集まり、境界が消える
 
 * shared に入れていいのは **言葉の意味がブレないものだけ**（例：Dateの扱いユーティリティ等、超限定）✂️
@@ -139,6 +147,8 @@ type TradingShipmentStatus = "requested" | "in_transit" | "delivered";
 ---
 
 ### ④ 別BCの「Entity」を参照し始める🧨
+
+![Entity Reference Tangle](./picture/bc_ts_study_033_entity_tangle.png)
 
 ✅ **症状**：IDで繋ぐべきなのに、オブジェクト参照で絡まる
 
@@ -149,6 +159,8 @@ type TradingShipmentStatus = "requested" | "in_transit" | "delivered";
 
 ### ⑤ 便利な“横断サービス”が生まれる🌀
 
+![Cross-cutting Service Bloat](./picture/bc_ts_study_033_god_service.png)
+
 ✅ **症状**：どのBCにも依存する Service が中心に鎮座する
 
 * 横断が必要なら、**アプリ層（ユースケース）** に寄せる
@@ -157,6 +169,8 @@ type TradingShipmentStatus = "requested" | "in_transit" | "delivered";
 ---
 
 ### ⑥ テストが別BCの内部に依存する🧪💥
+
+![Test Dependency Violation](./picture/bc_ts_study_033_test_drill.png)
 
 ✅ **症状**：テストのために内部をimport → 境界が壊れる
 

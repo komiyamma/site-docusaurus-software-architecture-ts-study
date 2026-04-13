@@ -61,6 +61,8 @@ mindmap
 
 ### ① 出品者（Seller）🧑‍🎓📦
 
+![Three Role Icons](./picture/bc_ts_study_004_roles_icons.png)
+
 * 物を登録して売りに出す
 * 値段・受け渡し場所・状態を書く
 * 売れたら受け渡しする
@@ -86,6 +88,8 @@ mindmap
 
 ## 4-4. まずは「扱うモノ（対象）」を決める🧺🧩
 
+![Domain Object Icons](./picture/bc_ts_study_004_domain_objects.png)
+
 アプリで扱う対象（名詞）を並べるよ〜📝✨
 これが後で「モデル」になっていくよ！
 
@@ -109,6 +113,8 @@ mindmap
 
 ### ユースケース① 出品する📦✨
 
+![Listing Flow](./picture/bc_ts_study_004_listing_flow.png)
+
 * 出品者が、商品を登録する
 * 必須：タイトル、価格、状態、受け渡し方法（手渡し）、受け渡し候補日時
 * できれば：写真、説明文
@@ -118,6 +124,8 @@ mindmap
 ---
 
 ### ユースケース② 購入する🛒💰
+
+![Purchase Flow](./picture/bc_ts_study_004_purchase_flow.png)
 
 * 購入者が出品を見つける
 * 「購入したい」を押す（申込み）
@@ -129,6 +137,8 @@ mindmap
 ---
 
 ### ユースケース③ 受け渡し（発送）を完了する📍🎉
+
+![Meetup Flow](./picture/bc_ts_study_004_meetup_flow.png)
 
 * 受け渡しが終わったら「完了」を押す
 * 片方だけ完了だと揉めるので、**両者が完了**で確定にする（案）✅✅
@@ -155,6 +165,8 @@ sequenceDiagram
 ---
 
 ## 4-6. “何が起きる？”（イベント）で時系列を作る📣⏳
+
+![Event Timeline](./picture/bc_ts_study_004_event_timeline.png)
 
 ユースケースをイベントにすると、境界の匂いが出てくるよ👃✨
 （次の章以降でめっちゃ使う！）
@@ -207,6 +219,8 @@ flowchart LR
 ---
 
 ## 4-8. 最初に「やらないこと」を決める（暴走防止）🚫🍱
+
+![Out of Scope Signs](./picture/bc_ts_study_004_out_of_scope.png)
 
 世界観が広がりすぎると、設計の練習ができなくなるの🥺💦
 なので最初は、こういうのは**後回し**でOK👇

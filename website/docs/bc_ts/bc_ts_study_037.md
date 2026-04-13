@@ -24,6 +24,8 @@
 
 ## アプリ層がやること（超重要🌟）
 
+![App Layer Chef](./picture/bc_ts_study_037_app_layer_chef.png)
+
 アプリ層は、ドメイン（BC内のルール）を使って **手続きを組み立てる** 係だよ🧑‍🍳
 
 * 入力を受け取る（画面/APIなどから）🧾
@@ -54,6 +56,8 @@ flowchart LR
 ---
 
 ## 37.2 CQS（Command-Query Separation）ってなに？🌓✨
+
+![Command vs Query Characters](./picture/bc_ts_study_037_command_worker_query_librarian.png)
 
 CQSは **“読み取り” と “書き込み” を分けようね** っていう設計ルールだよ📏😊
 **Command（コマンド）** と **Query（クエリ）** を分けるのがポイント！
@@ -87,6 +91,8 @@ CQSの定義として「1つのメソッドは“更新”か“参照”のど�
 ---
 
 ## 37.3 CQS と CQRS の違い（混乱しがち⚠️）🌀
+
+![CQS vs CQRS](./picture/bc_ts_study_037_cqs_vs_cqrs.png)
 
 * **CQS**：メソッド/ユースケースを「読み・書き」に分ける **設計ルール** 🧩
 * **CQRS**：読みモデル・書きモデルを分けてスケールさせる **アーキテクチャ寄り** 🏢
@@ -138,6 +144,8 @@ CQSの原理は「Commandは値を返さない」が基本だけど、実務で�
 ---
 
 ## 37.5 フォルダ構成（CQSが迷子にならない形📁🧭）
+
+![Command Query Folders](./picture/bc_ts_study_037_folder_drawers.png)
 
 例：Trading（取引）BC の中を、アプリ層で CQS 分離するイメージ👇
 
@@ -391,16 +399,22 @@ main().catch(console.error);
 
 ## ミス1：Commandで “ついでに一覧も返す” 🌀
 
+![Bloated Command Return](./picture/bc_ts_study_037_bloated_command_return.png)
+
 * 例：「購入する」の結果で、取引の詳細DTOも全部返しちゃう
   → 便利そうだけど、**責務が肥大化** しやすいよ😵‍💫
   ✅ まずは「tradeId返す」で我慢が安全🍵
 
 ## ミス2：Queryで domain の状態変更メソッドを呼ぶ😱
 
+![Query Side Effect](./picture/bc_ts_study_037_query_side_effect.png)
+
 * Queryは「見たいだけ」なのに、いつの間にか状態が変わってバグる💥
   ✅ Queryは **DTOを作るだけ** を意識しよう🧸
 
 ## ミス3：アプリ層にルールを書き始める🧨
+
+![Logic Leak Chef](./picture/bc_ts_study_037_logic_leak_chef.png)
 
 * `if (status !== "draft") throw ...` がアプリ層に増殖
   ✅ ルールは domain に寄せる（第35〜36章の流れだね🔒🚦）

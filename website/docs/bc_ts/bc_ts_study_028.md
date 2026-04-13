@@ -23,6 +23,8 @@ ACL（Anti-Corruption Layer）を **「変換の置き場」**として設計で
 
 ## 1. ACLは「翻訳の玄関」🚪🧼
 
+![ACL Gatekeeper](./picture/bc_ts_study_028_acl_gatekeeper.png)
+
 ACLはひとことで言うと、**外部の世界のクセが、内側（自分のドメイン）に入り込むのを防ぐ“翻訳ゾーン”**だよ🧱✨
 外部のモデルをそのまま中に持ち込むと、気づかないうちに **言葉・単位・状態・エラー**まで全部引きずられて、内側が汚れていく😇➡️😱
 
@@ -41,6 +43,8 @@ ACLはひとことで言うと、**外部の世界のクセが、内側（自分
 ---
 
 ## 2. まずは「差分」を棚卸ししよう📋👀
+
+![Diff Analysis](./picture/bc_ts_study_028_diff_analysis.png)
 
 ```mermaid
 mindmap
@@ -90,6 +94,8 @@ ACL設計は、いきなりコードを書かないでOK🙆‍♀️
 👉 ルール：**内側で単位を統一**（外の単位は入口で変換）🔁
 
 ### 2-4. 状態の差分（ステータス）🚦🧨
+
+![Status Mapping Machine](./picture/bc_ts_study_028_status_mapping.png)
 
 * 外：`IN_TRANSIT / DELIVERED / CANCELLED`
 * 内：`ShippingStatus.InDelivery / Delivered / Cancelled`（名前も粒度も違うことがある）
@@ -157,6 +163,8 @@ ACLは「変換のルールが命」💓
 ---
 
 ## 5. 「どこで翻訳する？」置き場所の原則📍🧭
+
+![Architecture Map](./picture/bc_ts_study_028_architecture_map.png)
 
 ACLの置き場所は、基本こう考えると迷いにくいよ👇
 
@@ -326,6 +334,8 @@ export function toDomainShipment(dto: ExternalShipmentDto): Result<Shipment> {
 
 ## 7. エラー翻訳：外の失敗を内側の言葉にする🚨➡️🧸
 
+![Error Translation Dictionary](./picture/bc_ts_study_028_error_translation.png)
+
 ACLはデータだけじゃなく、**失敗の翻訳**も大事だよ🛡️
 たとえば外部HTTPエラーを、内側でこう分類できると扱いやすい👇
 
@@ -358,6 +368,8 @@ export function mapHttpToDomainError(status: number): DomainError {
 ---
 
 ## 8. テスト戦略：ACLは“テストが本体”🧪🛡️
+
+![Test Shield](./picture/bc_ts_study_028_test_shield.png)
 
 ACLは「外の変更」が一番刺さる場所⚠️
 だからテストの守りが超大事だよ😊

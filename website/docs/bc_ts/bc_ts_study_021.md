@@ -36,6 +36,8 @@ mindmap
 
 ## 21.2 “同じ単語、別の意味” を放置すると起きる事故😇➡️😱
 
+![Bloated User Concept](./picture/bc_ts_study_021_bloated_user.png)
+
 例：学内フリマ🛍️で「ユーザー」という言葉が出てきたとして…
 
 * 出品の文脈：出品する人（出品者）👩‍💻
@@ -65,6 +67,8 @@ flowchart TD
 
 ## 21.3 BC別用語集の作り方 6ステップ🧁✨
 
+![Glossary Creation Steps](./picture/bc_ts_study_021_step_flow.png)
+
 ```mermaid
 flowchart TD
     S1["1. BCを1つ選ぶ"] --> S2["2. 候補の言葉を拾う"]
@@ -91,6 +95,8 @@ flowchart TD
 
 ### Step 3：「このBCではこう呼ぶ」を決める🏷️✨
 
+![Naming Prism](./picture/bc_ts_study_021_naming_prism.png)
+
 * 同じ意味は **同じ言葉に統一**（別名を増やさない）🧼
 * 逆に、意味が違うなら **別の言葉を与える**（User問題の解決）✂️
 
@@ -115,6 +121,8 @@ flowchart TD
 
 ## 21.4 そのまま使える✨ 用語カード（テンプレ）🃏📚
 
+![Glossary Card Template](./picture/bc_ts_study_021_glossary_card.png)
+
 BCごとの用語集は、まず **Markdown 1枚**でOK！軽いのが続くコツ🥰
 
 ```md
@@ -133,6 +141,8 @@ BCごとの用語集は、まず **Markdown 1枚**でOK！軽いのが続くコ�
 ## 21.5 例題：学内フリマ🛍️ 用語集サンプル（3BCぶん）📖✨
 
 ## A) 出品BC（Listing）🛍️🏷️
+
+![Listing Dictionary Content](./picture/bc_ts_study_021_listing_dict.png)
 
 | 用語    | コード名          | 1文定義              | 例（会話）          | 境界メモ           | 似てるけど別（禁止語） |
 | ----- | ------------- | ----------------- | -------------- | -------------- | ----------- |
@@ -181,6 +191,8 @@ BCごとの用語集は、まず **Markdown 1枚**でOK！軽いのが続くコ�
 
 ## 21.6 用語集を “コードに効かせる” 小さなコツ💻🪄
 
+![Dictionary to Code Transformation](./picture/bc_ts_study_021_dict_to_code.png)
+
 用語集は作って終わりじゃなくて、**命名の迷いを減らす**のが目的だよ😊✨
 
 ### コツ①：用語集の「コード名」を、そのまま型名にする🧩
@@ -209,6 +221,8 @@ export type Price = {
 ---
 
 ## 21.7 AI相棒🤖✨に手伝ってもらう（超おすすめ！）
+
+![AI Generating Words](./picture/bc_ts_study_021_ai_word_gen.png)
 
 AIは **“たたき台作り” が得意**だよ🧁
 でも、最後に意味を決めるのは人間（あなた）👑✨

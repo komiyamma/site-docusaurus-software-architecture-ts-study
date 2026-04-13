@@ -44,6 +44,8 @@ flowchart LR
 
 ## 2. 「そのまま使う」と何が起きる？💥
 
+![Dirty Data Invasion](./picture/bc_ts_study_027_dirty_data_invasion.png)
+
 ありがちな “やっちゃう例” をあえて出すね😇（※危険⚠️）
 
 ```ts
@@ -66,6 +68,8 @@ function updateShippingDomain(ex: ExternalShipRes) {
 ```
 
 ### これ、何が“痛い”の？😱🩹
+
+![Unit Confusion](./picture/bc_ts_study_027_unit_confusion.png)
 
 * **用語が腐る**：`st` がドメイン用語として定着しちゃう（誰も意味わからん…）🌀
 * **単位が腐る**：送料の単位が「銭」なのに「円」と思い込んでバグる💸💥
@@ -94,6 +98,8 @@ flowchart TD
 
 ## 3. ACL（腐敗防止層）って何者？🧼🛡️
 
+![ACL Translator](./picture/bc_ts_study_027_acl_translator.png)
+
 ACLは **外部と内部の間の“通訳さん”** だよ🎧✨
 中では「自分たちの言葉・単位・状態」を守って、外は外の流儀で話す。
 
@@ -109,6 +115,8 @@ ACLは **外部と内部の間の“通訳さん”** だよ🎧✨
 ---
 
 ## 4. “ACLが必要なサイン” チェックリスト✅👀
+
+![Warning Signs](./picture/bc_ts_study_027_warning_signs.png)
 
 ```mermaid
 mindmap
@@ -133,6 +141,8 @@ mindmap
 ---
 
 ## 5. ここが本題：「翻訳が必要な差分リスト」を作ろう📝✨
+
+![Diff List Table](./picture/bc_ts_study_027_diff_list_table.png)
 
 この章のゴールはこれ！🎯
 **外部→内部で “何を翻訳しないとヤバいか” を言語化する**よ💪😊
@@ -173,6 +183,8 @@ type ExternalShipRes = {
 ---
 
 ## 7. TypeScriptの小ネタ：差分を“型”で見つけやすくする🧠🔍
+
+![Type Guard Shield](./picture/bc_ts_study_027_type_guard_shield.png)
 
 TypeScriptの強みは「型で違和感を浮かび上がらせる」こと✨
 たとえば、内部ではこういう“自分たちの言葉”を持ちたいよね😊

@@ -12,6 +12,8 @@
 
 ## 19.2 なぜ「名前」がそこまで重要なの？😳💥
 
+![Vague Name Consequences](./picture/bc_ts_study_019_vague_name_mess.png)
+
 BCの名前って、ただのラベルじゃないの。
 
 **BC名＝境界の説明書の“表紙”**📘✨
@@ -30,6 +32,8 @@ BCの名前って、ただのラベルじゃないの。
 ---
 
 ## 19.3 まず大原則：BC名は「機能名」じゃなくて「意味のまとまり名」🧠📌
+
+![Semantic vs Tech Naming](./picture/bc_ts_study_019_semantic_signpost.png)
 
 BCは「画面」や「API」単位じゃなくて、**意味がブレない範囲**だよね。
 
@@ -70,6 +74,8 @@ mindmap
 
 ## 19.5 ありがちな“ダメ名前”図鑑😇📚
 
+![Bad Name Dumping Ground](./picture/bc_ts_study_019_bad_name_trash.png)
+
 これ、めっちゃよく出る…！でも危険⚠️
 
 * `Common` / `Shared` / `Core` 🧨
@@ -84,6 +90,8 @@ mindmap
 ---
 
 ## 19.6 命名の作り方テンプレ（超実用）🧰✨
+
+![Naming Process Funnel](./picture/bc_ts_study_019_naming_funnel.png)
 
 ```mermaid
 flowchart TD
@@ -116,6 +124,8 @@ flowchart TD
 
 ### ステップ3：3つのテストで絞る⚖️👀
 
+![3 Naming Tests](./picture/bc_ts_study_019_three_tests.png)
+
 #### ✅ テストA：境界テスト（ここまで？どこから？）🚧
 
 その名前を聞いた人が、こう言える？
@@ -142,6 +152,8 @@ flowchart TD
 ---
 
 ## 19.7 例題：学内フリマを3つのBCにした場合🛍️🏫
+
+![Clear Example Labels](./picture/bc_ts_study_019_example_labels.png)
 
 境界案がこうだったとするね👇（例）
 
@@ -185,6 +197,8 @@ BC名は、単体だとまたブレやすいから、**名刺セット**にす�
 ---
 
 ## 19.9 コードに落とす前の“表記ルール”も決めよう🧾📁
+
+![Consistency Rule](./picture/bc_ts_study_019_consistency_rule.png)
 
 名前が決まったら、**表記のゆれ**を潰すのがコツだよ🙂✨
 

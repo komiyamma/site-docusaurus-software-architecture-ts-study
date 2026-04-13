@@ -38,6 +38,8 @@ mindmap
 
 ## なんでBC（境界）の学習でADRが効くの？🧱🗺️
 
+![ADR as Guidance](./picture/bc_ts_study_022_future_signpost.png)
+
 BCって、テストの答えみたいに「唯一の正解」があることは少ないよね🤔💭
 だからこそ、**どうしてその境界にしたのか**を残しておくと…
 
@@ -58,6 +60,8 @@ flowchart TD
 
 ## 「ADRを書くべき決定」ってどれ？🧠⚖️
 
+![Filtering Decisions](./picture/bc_ts_study_022_decision_filter.png)
+
 ADRはなんでも書くメモじゃないよ🙅‍♀️💦
 **“プロジェクトの進み方に影響する大きめの決定”** を書くのがコツ！
 
@@ -74,6 +78,8 @@ ADRはなんでも書くメモじゃないよ🙅‍♀️💦
 
 ## ADRの置き場所（おすすめ）📁🧷
 
+![ADR Location](./picture/bc_ts_study_022_folder_tree.png)
+
 「コードと一緒に」置くのがやりやすい！
 たとえば👇みたいに、リポジトリ内にフォルダを作るのが定番だよ📂✨
 
@@ -85,6 +91,8 @@ ADRはなんでも書くメモじゃないよ🙅‍♀️💦
 ---
 
 ## ADRの“最低限”フォーマット（ミニ）🧾✨
+
+![ADR Format Template](./picture/bc_ts_study_022_format_card.png)
 
 いきなり長文にしないで、まずはこの5つでOK！
 （MADRでもこの考え方が基本だよ🧸） ([GitHub][4])
@@ -112,6 +120,8 @@ ADRはなんでも書くメモじゃないよ🙅‍♀️💦
 
 **Status** のおすすめ運用👇
 
+![Status Lifecycle](./picture/bc_ts_study_022_status_flow.png)
+
 * Proposed：まだ相談中（ドラフト）🌀
 * Accepted：決まった✅
 * Superseded：後で別のADRに置き換えた🔁（古いのは消さず残す） ([AWSドキュメント][5])
@@ -129,6 +139,8 @@ flowchart LR
 ---
 
 ## 例：この教材の題材（学内フリマ🛍️）でADRを書いてみよう✍️😊
+
+![Example ADR Content](./picture/bc_ts_study_022_example_doc.png)
 
 ここでは「境界案を採用した理由」を1枚にするよ📄✨
 
@@ -199,6 +211,8 @@ flowchart LR
 ---
 
 ## AI相棒と書くときの“うまいやり方”🤖💞
+
+![AI Drafting Assistance](./picture/bc_ts_study_022_ai_drafting.png)
 
 GitHub Copilot や OpenAI Codex系の相棒がいると、ADRはかなり楽になるよ✍️✨
 ただし！AIは「それっぽい理由」を作るのが得意なので、**最後は必ず自分の言葉で整える**のが大事😊🧠

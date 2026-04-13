@@ -55,6 +55,8 @@ BCの中心（モデル/ユースケース）に混ざりやすい外部都合�
 * 外部サービスSDK（決済SDK、配送APIのクセ）📦
 * 環境変数、時刻、乱数、ファイルI/O ⏰🎲📁
 
+![External Intruders](./picture/bc_ts_study_038_external_intruders.png)
+
 こういうのは **“端っこ（インフラ層）”** に寄せて、中心はきれいに保つ🧼✨
 そのために使うのが **DIP/DI** だよ🛡️🔌
 
@@ -84,6 +86,8 @@ mindmap
 * 購入者が購入ボタンを押す🖱️
 * 取引を「確定」状態にする✅
 * 取引を保存する💾
+
+![Simple Trading Flow](./picture/bc_ts_study_038_trading_flow.png)
 
 このとき、BCの中心が「DBに保存する方法」を知らなくてOKにしたい🙆‍♀️
 だから **Repository（保存口）を“抽象”として置く**よ📦✨
@@ -124,6 +128,8 @@ mindmap
   * application/（ユースケース）🎮
   * ports/（外部にお願いする“口”＝抽象）🚪
   * infra/（DBやHTTPなどの実装）🧰
+
+![Clean Architecture Folders](./picture/bc_ts_study_038_clean_architecture_folders.png)
 
 ---
 
@@ -229,6 +235,8 @@ export class InMemoryTradeRepository implements TradeRepository {
 最後に「どの実装を使うか」を決めるのは **“組み立て場所”** だよ🔧✨
 （ここでDIしてる！）
 
+![Composition Root Puzzle](./picture/bc_ts_study_038_composition_root_puzzle.png)
+
 ```ts
 // src/main.ts（例：アプリ起動時の組み立て）
 import { ConfirmTradeUseCase } from "./contexts/trading/application/confirmTradeUseCase";
@@ -293,10 +301,14 @@ console.log("確定できたよ〜✅🎉");
 * なんでもかんでも抽象にすると逆に読みにくい😂
 * **“外部都合が絡むところだけ”** 抽象化が基本だよ🎯✨
 
+![Interface Explosion](./picture/bc_ts_study_038_interface_explosion.png)
+
 ### 落とし穴2：portsに外部SDKの型が混ざる🧪➡️💥
 
 * portsは「BCの言葉」で書くのがコツ🗣️
 * SDKの型（HTTPレスポンスとか）は infra 側で変換しよ🧼✨
+
+![SDK Leak](./picture/bc_ts_study_038_sdk_leak.png)
 
 ### 落とし穴3：組み立て場所が散らばる🌀
 

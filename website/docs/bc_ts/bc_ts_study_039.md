@@ -52,6 +52,8 @@ flowchart LR
 * 価格はいくら？
 * 公開中？停止中？
 
+![Trading Calls Listing](./picture/bc_ts_study_039_trading_listing_call.png)
+
 でもここで事故りやすいのがこれ😵‍💫
 TradingがListingの**内部Entity**を直接importして使い始めると、境界が崩壊する💥
 
@@ -89,6 +91,8 @@ BCの外から触っていいのは「窓口」だけ😊
 ## 39-4 DTO設計のコツ7つ📦🧩
 
 DTOは「壊れにくい箱」だから、ルールがあるよ😊🛡️
+
+![DTO Safe Box](./picture/bc_ts_study_039_dto_safe_box.png)
 
 ```mermaid
 mindmap
@@ -157,6 +161,8 @@ flowchart TD
 
 だいたい選択肢は3つ😊
 
+![Conversion Locations](./picture/bc_ts_study_039_conversion_locations.png)
+
 ### A) 呼ばれる側の「出口」でDTOにする（おすすめ）🚪📦
 
 Listingが外に出す瞬間に、内部モデル → DTOへ変換
@@ -188,6 +194,8 @@ ACLは次の統合パターン（翻訳層）で本領発揮🛡️✨
 * `contexts/listing/` … 出品BC
 * `contexts/trading/` … 取引BC
 * 他BCは **listingの内部をimportしない**（第32章の依存ルール）➡️📏
+
+![Listing Internal Flow](./picture/bc_ts_study_039_listing_internal_flow.png)
 
 ---
 
@@ -363,6 +371,8 @@ TypeScriptの型はランタイムには存在しないよね🫠
   「別BCから来たデータ」は **“外から来た” 扱い** にすると安全度アップ🔒
 * HTTP経由なら、なおさら必須級📡⚠️
 
+![Runtime Validation Guard](./picture/bc_ts_study_039_runtime_validation_guard.png)
+
 例：Zodなどで `req` を検証する（ここでは雰囲気だけ）🧪✨
 
 ```ts
@@ -391,6 +401,8 @@ if (!parsed.success) return { ok: false, error: "VALIDATION_ERROR" };
 * `reason` を増やすなら、受け手は `default` を用意しておく👀
 * “新しいレスポンス形” を別DTOとして切るのもあり✂️
 
+![DTO Evolution](./picture/bc_ts_study_039_dto_evolution.png)
+
 ---
 
 ## 39-9 よくある事故ベスト6🚑💥
@@ -398,6 +410,8 @@ if (!parsed.success) return { ok: false, error: "VALIDATION_ERROR" };
 1. **EntityをDTOとして渡しちゃう**
 
    * “運搬箱” のはずが “本体” を渡して依存爆発😱
+
+![Accident Entity Leak](./picture/bc_ts_study_039_accident_entity_leak.png)
 
 2. **他BCの内部型をimportして使う**
 

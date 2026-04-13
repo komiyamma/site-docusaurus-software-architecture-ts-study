@@ -134,6 +134,8 @@ flowchart TD
 
 ## 4-1. “optional地獄” バグ（実例っぽいやつ）😱
 
+![Optional Hell](./picture/bc_ts_study_002_optional_hell.png)
+
 購入の処理で「住所が必要」なのに、万能 `User` は `shippingAddress?` だから…
 
 ```ts
@@ -156,6 +158,8 @@ export function createOrder(order: Order) {
 出品側の処理が「住所なんて知らんが？」ってなる😇🌀
 
 ## 4-2. “フラグ地獄” バグ🚩😵‍💫
+
+![Flag Hell](./picture/bc_ts_study_002_flag_hell.png)
 
 役割が増えると、分岐が増える👇
 
@@ -191,6 +195,8 @@ export function canListItem(user: User): boolean {
 
 ## 5-1. 衝突リストの作り方（超かんたん）🍰
 
+![Conflict List Template](./picture/bc_ts_study_002_conflict_list.png)
+
 次の3点セットで書くのがおすすめ📝✨
 
 1. **言葉**（例：ユーザー）
@@ -212,6 +218,8 @@ flowchart LR
   * 混ざると困る：`User` が optional だらけになって、例外/分岐/バグが増える😱
 
 * **ステータス**
+
+![Status Collision](./picture/bc_ts_study_002_status_collision.png)
 
   * 意味A：出品ステータス（出品中/停止/削除）📦
   * 意味B：取引ステータス（支払待ち/発送中/完了）📮
@@ -253,6 +261,8 @@ flowchart LR
 ---
 
 ## 7. AIに手伝ってもらう🤖💕（質問テンプレつき）
+
+![AI Conflict Detection](./picture/bc_ts_study_002_ai_brainstorming.png)
 
 「言葉の衝突」は、AIと相性めっちゃ良いよ〜😳✨
 理由：**発想の幅（漏れ防止）**に強いから🧠💨

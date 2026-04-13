@@ -10,6 +10,7 @@
 
 ## 1. Bounded Context（BC）を1行で言うと 📝🎯
 
+![BC One Liner](./picture/bc_ts_study_007_bc_one_liner.png)
 ![イメージ](./picture/bc_ts_study_007_meaning_boundary.png)
 
 結論から言うとこれ！👇
@@ -36,6 +37,8 @@ flowchart LR
 
 ## 2) “同じ言葉、別の意味” が起きると何がまずいの？😵‍💫🌀
 
+![User Conflict Minefield](./picture/bc_ts_study_007_user_minefield.png)
+
 学内フリマ🛍️でよくある「地雷ワード」＝ **ユーザー** を考えてみよう🧨💥
 
 * 出品する人にとっての「ユーザー」＝ **出品者** 🏷️
@@ -55,6 +58,8 @@ flowchart LR
 ---
 
 ## 3) 図でつかむ：BCは「意味の防波堤」🌊🧱
+
+![BC Breakwater](./picture/bc_ts_study_007_bc_breakwater.png)
 
 文章で図にするとこんな感じだよ👇
 
@@ -97,6 +102,8 @@ flowchart TD
 
 ## 4) よくある誤解：BC＝マイクロサービス？🤔💭
 
+![BC vs Microservices](./picture/bc_ts_study_007_bc_vs_microservice.png)
+
 ちょい注意⚠️
 BCは **「設計の境界（意味の境界）」** で、必ずしも「サービス分割」そのものじゃないよ🧸
 
@@ -106,6 +113,8 @@ BCは **「設計の境界（意味の境界）」** で、必ずしも「サー
 ---
 
 ## 5) TypeScriptでイメージを固定してみる（超ミニ）🧩💻
+
+![Type Location Signpost](./picture/bc_ts_study_007_type_location.png)
 
 「同じUserでも、BCが違えば別物」って、コードでも雰囲気が出せるよ😊
 （ここでは“分けてOK”の感覚を掴むのが目的だよ🎀）
@@ -136,6 +145,8 @@ export type User = {
 ## 6) 章のメイン課題：BCの定義を「例題の言葉」で言い換えよう✍️🛍️
 
 ## ✅ ステップ1：まずテンプレ（穴埋め）🧸📝
+
+![Fill-in-Blank Worksheet](./picture/bc_ts_study_007_fill_in_blank.png)
 
 次の文を埋めてみてね👇
 

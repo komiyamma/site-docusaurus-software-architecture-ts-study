@@ -53,6 +53,8 @@ flowchart TD
 
 ## 34.3 1分でわかる「判定クイズ」🎮🧠
 
+![Entity vs VO Decision Flow](./picture/bc_ts_study_034_decision_flow.png)
+
 ```mermaid
 flowchart TD
     Q1{時間の経過で<br/>状態が変わる？} -- "YES (可変)" --> Entity[Entity 🧍‍♀️]
@@ -80,6 +82,8 @@ flowchart TD
 ---
 
 ## 34.4 学内フリマ🛍️で、Entity/VO を仕分けしてみよう📦✨
+
+![Entity vs VO Classification](./picture/bc_ts_study_034_classification_baskets.png)
 
 ```mermaid
 mindmap
@@ -129,6 +133,8 @@ mindmap
 
 ## パターン①：VOを「type + 工場関数」で作る（かんたん）🧁✨
 
+![Money Value Object](./picture/bc_ts_study_034_money_vo.png)
+
 ## ✅ Money（値オブジェクト）🪙
 
 ```ts
@@ -168,6 +174,8 @@ export function addMoney(a: Money, b: Money): Money {
 
 ## パターン②：IDを「ブランド型」で作る（混ぜない）🆔🧷
 
+![Branded ID Keys](./picture/bc_ts_study_034_branded_keys.png)
+
 「stringでもいいじゃん？」って思うけど、混ざると事故るよ😇⚠️
 **ListingId と TradeId を取り違える**みたいなミスが、型で防げる✨
 
@@ -197,6 +205,8 @@ export function TradeId(value: string): TradeId {
 ---
 
 ## パターン③：Entityを「状態 + ふるまい」で作る（入門版）🧍‍♀️🛍️
+
+![Entity Lifecycle](./picture/bc_ts_study_034_listing_entity_lifecycle.png)
 
 ここでは **Listing（出品）** を Entity として作ってみよう😊
 Entityは **IDで同一性を持つ**のがポイント🆔✨
@@ -265,10 +275,14 @@ export function listingEquals(a: Listing, b: Listing): boolean {
 
 ### 失敗①：全部 string / number で持つ🧟‍♀️
 
+![Primitive Hell](./picture/bc_ts_study_034_primitive_hell.png)
+
 * `price: number` だと、**通貨**や**丸め**や**マイナス禁止**が散らばる💥
   ✅ 回避：Money VOに閉じ込める🪙✨
 
 ### 失敗②：Entityの同一性を「全フィールド一致」で判断する🌀
+
+![Entity Equality Scale](./picture/bc_ts_study_034_entity_equality_scale.png)
 
 * priceが変わったら別物扱い…？ってなる😵
   ✅ 回避：Entityは **IDでequals**🆔

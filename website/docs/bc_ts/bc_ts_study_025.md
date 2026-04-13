@@ -47,6 +47,8 @@ flowchart LR
 
 ## 2) なぜわざわざ「合わせる」の？🤔💭
 
+![Direct Connection](./picture/bc_ts_study_025_direct_connection.png)
+
 結論：**翻訳（変換）を作らない（薄くする）ことで、統合コストを下げる**ためだよ✂️✨
 
 上流のモデルに合わせると、理想の設計からはちょっと遠ざかることもあるけど、
@@ -56,6 +58,8 @@ flowchart LR
 ---
 
 ## 3) どんな場面で起きやすい？🌍⚙️
+
+![Cloud Plug](./picture/bc_ts_study_025_cloud_plug.png)
 
 ## ありがちな Conformist 例あるある🍞
 
@@ -104,10 +108,14 @@ Context Map では「下流が Conformist」って関係として表せるよ�
 
 ## こわさ①：破壊的変更が直撃する💥
 
+![Change Wave Impact](./picture/bc_ts_study_025_change_wave.png)
+
 上流が変わったら、下流は合わせるしかない。
 「交渉できない」関係だと、変更耐性は弱くなるよ🥲 ([microsoftpressstore.com][1])
 
 ## こわさ②：上流の言葉が、ドメインの中心に侵食する🧼🧽
+
+![Pollution Leaking](./picture/bc_ts_study_025_pollution_leaking.png)
 
 外部の用語・状態・クセが、そのまま自分のコード中核に入りやすい😵
 結果、モデルが “外部都合の形” に寄っていくことがあるよ🌧️ ([Domain Language][2])
@@ -119,6 +127,8 @@ Context Map では「下流が Conformist」って関係として表せるよ�
 ---
 
 ## 7) じゃあ Conformist はダメ？🙅‍♀️➡️🙆‍♀️
+
+![Quarantine Zone](./picture/bc_ts_study_025_quarantine_zone.png)
 
 ダメじゃないよ🙂✨
 **“どこで Conformist を許すか” を決める**のが設計だよ🧠🧩

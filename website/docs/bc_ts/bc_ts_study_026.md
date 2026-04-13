@@ -53,6 +53,8 @@ graph LR
 
 ## 26.3 どうして危ないの？（Shared Kernelの“副作用”）😵‍💫💥
 
+![Tug of War Risk](./picture/bc_ts_study_026_tug_of_war.png)
+
 Shared Kernel は便利に見えるけど、**結合（coupling）を増やす**ので危険です⚠️
 
 ### 起きがちな事故あるある🚑
@@ -68,6 +70,8 @@ Shared Kernel は便利に見えるけど、**結合（coupling）を増やす**
 
 ## 26.4 使っていい条件 / ダメな条件✅❌
 
+![Diamond Kernel](./picture/bc_ts_study_026_diamond_kernel.png)
+
 ### ✅ 使っていい条件（だいたいこの4つ）
 
 1. **共有したいものが“本当に小さい”**（例：ID型、Money、通貨、日付範囲）✂️
@@ -76,6 +80,8 @@ Shared Kernel は便利に見えるけど、**結合（coupling）を増やす**
 4. **用語が安定してる**📚（「同じ言葉の意味」がブレにくい）
 
 ### ❌ やめた方がいい条件（危険サイン🚨）
+
+![Poisonous Kernel](./picture/bc_ts_study_026_poisonous_kernel.png)
 
 * 共有したいのが **Entityや業務ルール**（＝ドメインの中心）😱
 * 片方が外部ベンダー/外部サービスで、共同所有が無理🌧️
@@ -87,6 +93,8 @@ Shared Kernel は便利に見えるけど、**結合（coupling）を増やす**
 ---
 
 ## 26.5 「最小共有」って具体的に何を共有するの？✂️🧬
+
+![Filter Sieve](./picture/bc_ts_study_026_filter_sieve.png)
 
 ```mermaid
 mindmap
@@ -122,6 +130,8 @@ mindmap
 ---
 
 ## 26.6 共有物の運用ルール（ここが本体）📜🤝🧪
+
+![Handshake Agreement](./picture/bc_ts_study_026_handshake_agreement.png)
 
 Shared Kernel は「コード」より「運用」が超大事です🧸✨
 最小限、これだけは決めよう👇

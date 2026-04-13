@@ -2,6 +2,8 @@
 
 ## 20.1 まず結論：これを書くと、境界が“守れる”ようになる🛡️✨
 
+![Documentation as Defense](./picture/bc_ts_study_020_text_wall.png)
+
 Bounded Context（BC）って、見た目は「箱を分ける」だけに見えるけど…
 本当に強いのは **“文章で境界を固定する”** ことだよ📝💪
 
@@ -22,6 +24,8 @@ flowchart TD
 ---
 
 ## 20.2 「目的・責務・非目的」って何が違うの？🧠💡
+
+![Purpose, Responsibility, Non-Goal](./picture/bc_ts_study_020_three_defs.png)
 
 ![イメージ](./picture/bc_ts_study_020_purpose_card.png)
 
@@ -110,6 +114,8 @@ mindmap
 
 ### ① Listing（出品）🛍️
 
+![Listing BC Focus](./picture/bc_ts_study_020_card_listing.png)
+
 🎯 目的
 
 * 出品者が商品を登録し、公開できる状態に整えて、閲覧できるようにする👀✨
@@ -138,6 +144,8 @@ mindmap
 
 ### ② Trading（取引）🤝
 
+![Trading BC Focus](./picture/bc_ts_study_020_card_trading.png)
+
 🎯 目的
 
 * 購入から完了までの「取引の進行」を安全に管理し、当事者（購入者・出品者）の合意を状態で表す🔁✨
@@ -165,6 +173,8 @@ mindmap
 ---
 
 ### ③ Shipping（配送）📦
+
+![Shipping BC Focus](./picture/bc_ts_study_020_card_shipping.png)
 
 🎯 目的
 
@@ -209,6 +219,8 @@ flowchart LR
 
 ### 失敗②：非目的が“書いてない”＝境界が溶ける🫠
 
+![Bloated BC (No Non-Goals)](./picture/bc_ts_study_020_bloated_bc.png)
+
 非目的がないと、こうなる👇
 
 * 「ついでに決済もここで…」
@@ -224,6 +236,8 @@ flowchart LR
 ---
 
 ## 20.6 ミニ演習：あなたのBCで3点セットを書こう📝💕
+
+![Filling BC Template](./picture/bc_ts_study_020_filling_template.png)
 
 1. BCを1つ選ぶ（まずは1つでOK）🎯
 2. 代表ユースケースを2つ書く（例：出品する／公開停止する）📌

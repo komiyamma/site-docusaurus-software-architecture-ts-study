@@ -13,6 +13,8 @@
 
 ## 0. 公開APIってなに？🧸💡（たとえで覚える）
 
+![House Entrance Metaphor](./picture/bc_ts_study_030_house_entrance.png)
+
 ![イメージ](./picture/bc_ts_study_030_public_api.png)
 
 Bounded Context（BC）を「お部屋🏠」だとすると…
@@ -40,6 +42,8 @@ Bounded Context（BC）を「お部屋🏠」だとすると…
 ---
 
 ## 2. 公開APIに入れてOKなもの／ダメなもの✅❌
+
+![Public Filter](./picture/bc_ts_study_030_public_filter.png)
 
 まずは超ざっくり基準👇（迷ったらコレでOK🧭）
 
@@ -74,6 +78,8 @@ flowchart TD
 ---
 
 ## 3. 公開APIの形は「1つの入口ファイル」にまとめる📮✨
+
+![File Structure Door](./picture/bc_ts_study_030_file_structure_door.png)
 
 おすすめは、各BCに **`public`（または `index.ts`）を1つ置く**やり方だよ📄
 
@@ -111,6 +117,8 @@ src/
 ここから「学内フリマ🛍️」例で、最小の公開APIを作るよ〜😊
 
 ### 4-1) DTO（外に渡す型）を作る📦
+
+![Entity to DTO Transformation](./picture/bc_ts_study_030_entity_to_dto.png)
 
 「ドメインの中心（Entity）」を外に出す代わりに、**運搬用の型**を用意するよ🚚✨
 
@@ -241,6 +249,8 @@ console.log(id);
 
 ### 失敗①：Entityをそのままexportしちゃう🧱💥
 
+![Leakage Accident](./picture/bc_ts_study_030_leakage_accident.png)
+
 * 便利だけど、外がEntityに依存してしまう
 * 仕様変更（プロパティ追加/削除）で外が壊れる
 
@@ -263,6 +273,8 @@ console.log(id);
 ---
 
 ## 6. もっと強く守りたい人向け：package.jsonのexportsで“入口しか出さない”📦🔒
+
+![Sealed Package](./picture/bc_ts_study_030_sealed_package.png)
 
 もしBCを「パッケージっぽく」扱うなら、**`package.json` の `exports`**で公開入口を絞れるよ🚪✨
 Node.jsでは `"main"` と `"exports"` がエントリポイントを定義できるんだ📌 ([Node.js][3])

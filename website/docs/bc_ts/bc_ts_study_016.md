@@ -60,6 +60,8 @@ UIは「見せ方」、ドメインは「意味」。
 
 ## 危ない理由②：同じ業務が複数のUIにまたがる🧵🧠
 
+![Multiple UI Entries](./picture/bc_ts_study_016_multiple_entry_points.png)
+
 * 例えば「購入」って、
 
   * 一覧から買う
@@ -92,6 +94,8 @@ flowchart TD
 
 ## 3) 例：学内フリマ🛍️🏫で分けてみよ〜✨
 
+![Purchase Flow Comparison](./picture/bc_ts_study_016_purchase_flow_comparison.png)
+
 ここでは「購入する」を題材にするよ😊🌸
 
 ## A) UIフロー（画面の流れ）🖥️➡️✅
@@ -119,6 +123,8 @@ flowchart TD
 ---
 
 ## 4) 分離のコツ：まず“二重メモ”を作る📝🪞
+
+![Two Note Templates](./picture/bc_ts_study_016_two_note_templates.png)
 
 次のテンプレで書くと、分けやすいよ✨
 
@@ -160,6 +166,8 @@ mindmap
 ## 5) “境界探し”に効く！ドメインフローの見つけ方🔎✂️
 
 ## ステップ1：動詞を「業務っぽい動詞」にする🗣️✨
+
+![Verb Transformation](./picture/bc_ts_study_016_verb_transformation.png)
 
 UIの動詞はこうなりがち👇
 
@@ -219,6 +227,8 @@ UIの動詞はこうなりがち👇
 
 ## 7) TypeScriptで“境界の匂い”を感じるミニ例🧩✨
 
+![Code Naming Scent](./picture/bc_ts_study_016_code_naming.png)
+
 ここは「UIではなく、意味で関数名を作る」練習だよ😊
 （まだ実装は雑でOK！“名前”が主役🎀）
 
@@ -274,6 +284,8 @@ function placeOrder(cmd: PlaceOrderCommand): OrderPlacedEvent {
 ---
 
 ## 9) よくある事故パターン集😇🚑（先に知って回避しよ！）
+
+![Flow Fail Patterns](./picture/bc_ts_study_016_fail_patterns.png)
 
 * **事故①：画面単位でモジュールを切る** → “業務がまたがって詰む”🌀
 * **事故②：確認画面がドメインの中心になる** → “成立条件が散らばる”💥

@@ -17,6 +17,8 @@ Bounded Context（BC）って、最初はちょっと地味に見えるんだけ
 
 ## まず結論：メリット3つ🎁💖
 
+![3 Benefits Icons](./picture/bc_ts_study_008_three_benefits_icons.png)
+
 1. **変更が怖くない**（影響が局所化する）🛡️🔧
 2. **チームでも揉めない**（言葉の意味が固定される）🗣️📌
 3. **テストしやすい**（境界がある＝試しやすい）🧪✅
@@ -40,6 +42,8 @@ BCは「モデルが通用する範囲をハッキリさせる」考え方で、
 ---
 
 ## ① 変更が怖くない（影響が局所化する）🛡️🔧
+
+![Impact Containment](./picture/bc_ts_study_008_impact_containment.png)
 
 ## “怖い変更”って何？😱
 
@@ -98,6 +102,8 @@ BCは「このモデルが通用する範囲」を明確にして、範囲の中
 
 ## ② チームでも揉めない（言葉の意味が固定される）🗣️📌
 
+![Ubiquitous Language Team](./picture/bc_ts_study_008_ubiquitous_team.png)
+
 ## 揉めポイント第1位🥇：同じ単語、別の意味
 
 たとえば「ユーザー」って単語、めっちゃ危険ワード⚠️
@@ -127,6 +133,8 @@ BCの中では、チーム全員が同じ言葉を同じ意味で使う（＝ユ
 
 ## ③ テストしやすい（境界がある＝試しやすい）🧪✅
 
+![Test in a Box](./picture/bc_ts_study_008_test_in_box.png)
+
 テストがしんどいのって、だいたいこういうとき👇
 
 * 1つ直すと、どこが壊れるか分からない😱
@@ -140,6 +148,8 @@ BCの中では、チーム全員が同じ言葉を同じ意味で使う（＝ユ
 ---
 
 ## 図でイメージしよ〜🗺️✨（文章の図）
+
+![Chaos vs Order World](./picture/bc_ts_study_008_chaos_vs_order.png)
 
 ## BCがない世界😵‍💫
 
@@ -249,6 +259,8 @@ test("invalid price throws", () => {
 ---
 
 ## ワーク📝✨「BCがある世界 / ない世界」比較メモを作る
+
+![BC Comparison Table](./picture/bc_ts_study_008_comparison_table.png)
 
 ## 1) まず、学内フリマの困りごとを想像😵‍💫➡️🙂
 
