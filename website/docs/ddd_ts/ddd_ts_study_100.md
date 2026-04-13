@@ -27,8 +27,12 @@
 ---
 
 ## 2) 最終チェック：5大観点の卒業テスト 🎓🧩
+![Five Pillars of Graduation](./picture/ddd_ts_study_100_five_pillars.png)
+
 
 ### A. 不変条件チェック🔒📏
+![Invariant Encapsulation](./picture/ddd_ts_study_100_invariant_lock.png)
+
 
 次の質問に即答できたら強いよ〜！
 
@@ -42,6 +46,8 @@
 ---
 
 ### B. 境界チェック📦🚧
+![Dependency Direction](./picture/ddd_ts_study_100_boundary_arrows.png)
+
 
 * domain → infra を import してない？（**ドメインがDBやHTTPを知らない**）
 * domain → app を import してない？（**ドメインがユースケースを知らない**）
@@ -53,6 +59,8 @@
 ---
 
 ### C. テストチェック🧪💪
+![Test Check](./picture/ddd_ts_study_100_test_check.png)
+
 
 * テストは「手順」じゃなくて「仕様（Given/When/Then）」になってる？✅
 * ドメイン（VO/集約）のテストは **速くて安定**してる？⚡
@@ -64,6 +72,8 @@
 ---
 
 ### D. イベントチェック📣📮
+![Event as a Fact](./picture/ddd_ts_study_100_event_fact.png)
+
 
 * イベント名は「過去形の事実」になってる？（PaymentCompleted みたいに）🕰️
 * イベントの中身が **盛りすぎ**になってない？（画面表示に必要な情報全部入れてる…とか）📦⚠️
@@ -75,6 +85,8 @@
 ---
 
 ### E. 運用っぽさチェック🛠️🧯
+![Operation Check](./picture/ddd_ts_study_100_operation_check.png)
+
 
 * 失敗は “ユーザー向け文言” と “開発者向け情報” が分離できてる？👤🧑‍💻
 * 再試行が来ても壊れない見通しがある？（冪等性の入口がある）🔁🛡️
@@ -110,6 +122,8 @@ Yesが多いほど「DDDっぽいだけ」から卒業できてるよ🎓✨
 ---
 
 ## 4) “卒業課題” 🎒🌟（自分の題材に移す練習）
+![Choosing the Next Project](./picture/ddd_ts_study_100_next_project.png)
+
 
 カフェ注文題材のままでもOKだし、別題材でもOKだよ😊
 おすすめは「**自分が本当に作りたい小さい題材**」✨
@@ -135,6 +149,8 @@ Yesが多いほど「DDDっぽいだけ」から卒業できてるよ🎓✨
 ---
 
 ## 5) “レビュー観点テンプレ” 完成させよ！📝🤖✨
+![Review Template](./picture/ddd_ts_study_100_review_template.png)
+
 
 ここが第100章の本命💘
 このテンプレがあると、次のプロジェクトでも迷子にならないよ〜🗺️
@@ -189,6 +205,8 @@ Yesが多いほど「DDDっぽいだけ」から卒業できてるよ🎓✨
 ---
 
 ## 6) 2026/02/07 時点の“周辺ツール事情”ミニ更新 🧰🆕✨
+![2026 Toolchain Update](./picture/ddd_ts_study_100_toolchain_2026.png)
+
 
 ここは「設計の卒業」には必須じゃないけど、**現場で困らないための超重要メモ**だよ📌💕
 
@@ -204,6 +222,8 @@ Yesが多いほど「DDDっぽいだけ」から卒業できてるよ🎓✨
 ---
 
 ## 7) 次の一歩ロードマップ（おすすめ順）🚀🧭
+![Future Learning Roadmap](./picture/ddd_ts_study_100_future_roadmap.png)
+
 
 卒業したら、次はこれが気持ちよく伸びるよ〜😊💕
 
