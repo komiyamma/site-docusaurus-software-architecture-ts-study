@@ -12,6 +12,8 @@
 
 ## まず結論：最小の“守りのセット”はこれ💡✅
 
+![The Three Guards](./picture/api_contract_ts_study_029_three_guards.png)
+
 契約を守るのに、最初からテスト地獄にする必要はないよ〜☺️🌸
 まずはこの **3点セット** からスタートでOK！
 
@@ -36,6 +38,8 @@ graph BT
 
 ## 29-1. 守るべき「契約」を3つだけ選ぼう🎯📝
 
+![3 Key Contracts](./picture/api_contract_ts_study_029_contract_trio.png)
+
 前章（観点）で出てきた「壊れやすいところ」全部を最初から守ろうとすると、しんどい😵‍💫💦
 ここでは、**重要な契約を3つだけ** 選ぶよ！
 
@@ -56,6 +60,8 @@ graph BT
 ---
 
 ## 29-2. 型チェックは「最強の無料ガード」🟦🛡️
+
+![Type Check Shield](./picture/api_contract_ts_study_029_type_check_shield.png)
 
 ## 役割はこれ！✨
 
@@ -81,6 +87,8 @@ graph BT
 
 ## 29-3. 型テストは「型の意図」を固定する🧩🔒
 
+![Type Intent Lock](./picture/api_contract_ts_study_029_type_intent_lock.png)
+
 型チェックは強いんだけど、**“意図”までは固定しきれない** ことがあるよ😵‍💫
 たとえば👇
 
@@ -103,6 +111,8 @@ Vitestは `*.test-d.ts` を型テストとして扱う仕組みがあって、`e
 ---
 
 ## 29-4. ユニットテストは「意味・挙動・エラー」を固定する⚙️🧪
+
+![Unit Test Scope](./picture/api_contract_ts_study_029_unit_test_scope.png)
 
 型では守れない契約があるんだよね👇🥺
 
@@ -216,6 +226,8 @@ describe("parseUser", () => {
 
 ## 29-6. 最小構成の“回し方”✅🔁
 
+![Minimal Workflow](./picture/api_contract_ts_study_029_workflow_cycle.png)
+
 ## ローカルで回すコマンド（例）🌀
 
 * `typecheck`：型の契約を守る🟦
@@ -238,6 +250,8 @@ describe("parseUser", () => {
 ---
 
 ## 落とし穴②：ユニットテストが“内部実装テスト”になっちゃう🧱🔍
+
+![Internal Test Trap](./picture/api_contract_ts_study_029_internal_test_trap.png)
 
 * private関数や内部構造に依存すると、リファクタでテストが壊れる😵‍💫
 

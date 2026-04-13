@@ -29,6 +29,8 @@
 
 ## 28.2 “壊れ方”はだいたい5種類に分けられる🧩🧨
 
+![5 Types of Compatibility Breakage](./picture/api_contract_ts_study_028_five_breakages.png)
+
 互換性が壊れるときって、だいたいこの5パターンに落ちます👇✨
 
 1. **型で壊れる（コンパイルで落ちる）** 🟦💥
@@ -81,6 +83,8 @@ mindmap
 
 ### A. 公開API面（Public Surface）🎭🚪
 
+![Public Surface Inspection](./picture/api_contract_ts_study_028_public_surface_check.png)
+
 **「利用者が触れる場所」**が変わってないか？
 
 * exportされてる関数/クラス/型が消えてない？🧹
@@ -97,6 +101,8 @@ mindmap
 
 ### B. 入力の契約（引数・パラメータ・バリデーション）🧾🧷
 
+![Input Contract Check](./picture/api_contract_ts_study_028_input_check.png)
+
 **「渡し方」**が変わると壊れます😱
 
 * 必須引数が増えた？（破壊になりやすい）🧨
@@ -111,6 +117,8 @@ mindmap
 ---
 
 ### C. 出力の契約（戻り値・レスポンス・payload）🎁📦
+
+![Output Contract Check](./picture/api_contract_ts_study_028_output_check.png)
 
 **「返ってくるもの」**が変わると、呼び出し側が壊れます💔
 
@@ -129,6 +137,8 @@ mindmap
 
 ### D. エラーの契約（例外・エラー形式・ステータス）😵‍💫📛
 
+![Error Contract Check](./picture/api_contract_ts_study_028_error_check.png)
+
 **エラーも契約**です。ここが変わると運用で燃えます🔥
 
 * 例外を投げる条件が増えた？😱
@@ -144,6 +154,8 @@ mindmap
 ---
 
 ### E. 意味（セマンティクス）の契約 🧠🫥⚠️
+
+![Semantic Change](./picture/api_contract_ts_study_028_semantic_check.png)
 
 ここが一番やばいです😇（テストしないと気づけない）
 
@@ -179,6 +191,8 @@ mindmap
 ---
 
 ## 28.4 「変更 → 影響 → テスト観点」表テンプレ 📋✨
+
+![Change Impact Matrix](./picture/api_contract_ts_study_028_impact_matrix.png)
 
 変更が来たら、まずこの表を1枚作るのが最強です🧠💪
 （レビューの質が爆上がりします🔥）

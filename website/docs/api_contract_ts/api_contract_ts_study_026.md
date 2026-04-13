@@ -11,6 +11,8 @@
 
 ## イベント契約ってなに？🤝💌
 
+![4 Elements of Event Contract](./picture/api_contract_ts_study_026_contract_elements.png)
+
 イベント契約＝「このイベントはこういう意味で、こういう形で届くよ」という約束だよ📮✨
 だいたい次の4点セットでできてることが多いです👇
 
@@ -39,6 +41,8 @@
 
 ### 命名のコツ🍀
 
+![Event Naming Tips](./picture/api_contract_ts_study_026_naming_tips.png)
+
 * **ドメイン語彙**で書く（アプリ内の自然な言葉）🗣️
 * **短く、でも具体的に**（何が起きたか一発で分かる）🎯
 * **「意味」を変えない**（同じ名前で別の意味にしない）⚠️
@@ -55,6 +59,8 @@
 * 🎁 **payload**：ビジネスのデータ（ここが進化する）
 
 ### 便利な“共通封筒”の代表：Cloud Native Computing Foundation配下のCloudEvents✨
+
+![CloudEvents Structure](./picture/api_contract_ts_study_026_cloudevents_structure.png)
 
 CloudEvents形式だと、イベントに最低限の共通フィールド（id/source/type/specversionなど）を持たせやすいよ📦
 たとえば `specversion`, `type`, `source`, `id` は “Required” として扱われます🧾 ([Microsoft Learn][2])
@@ -76,6 +82,8 @@ graph TD
 ---
 
 ## イベント仕様テンプレ🧾✨（まずこれを書けばOK）
+
+![Event Spec Template](./picture/api_contract_ts_study_026_spec_template.png)
 
 イベント契約は「文章＋例」で残すのが超大事📚
 まずはこのテンプレを埋めるだけで、設計が一気に安定するよ😊💕
@@ -159,6 +167,8 @@ export type UserSignedUpEventV1 = CloudEventLike<UserSignedUpV1> & {
 
 ## 互換性の鉄則：イベントは「追加に強く、変更に弱い」🧬⚖️
 
+![Event Compatibility Shield](./picture/api_contract_ts_study_026_backward_compat_shield.png)
+
 イベントはログみたいに残ることが多いし、あとから再生（リプレイ）されることもある📼
 だから **“過去のイベントを新しいコードが読める”** がめちゃ大事！💥
 
@@ -176,6 +186,8 @@ ConfluentのSchema Registry系ドキュメントでも、Kafkaでは **BACKWARD�
 ---
 
 ## 重複・順序・再送…非同期あるあるへの備え🧟‍♀️📦
+
+![Async Chaos](./picture/api_contract_ts_study_026_async_chaos.png)
 
 非同期は「同じイベントがもう一度来る」こと、普通にあるよ😳
 CloudEventsでも `id` は再送時に同じになる場合があり、`source + id` が同じなら重複扱いできる、という考え方が書かれてるよ🧠✨ ([Cloud Events][3])
@@ -205,6 +217,8 @@ CloudEventsでも `id` は再送時に同じになる場合があり、`source +
 ---
 
 ## ミニ演習②：consumer側を“追加に強く”する✅🛡️
+
+![Zod Passthrough Guard](./picture/api_contract_ts_study_026_zod_passthrough.png)
 
 イベントは将来フィールドが増えるから、**知らないフィールドが来ても落ちない**のが理想だよ🧡
 

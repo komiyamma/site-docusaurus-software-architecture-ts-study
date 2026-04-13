@@ -13,6 +13,8 @@
 
 ## 0) まず最初に：バージョニングは「最後の手段」にしよ？🧯💡
 
+![Evolve vs Version](./picture/api_contract_ts_study_024_evolve_vs_version.png)
+
 APIって、できるだけ **同じバージョンのまま進化（Evolve）**できると運用がラクだよ〜！🌱
 例えばこういう変更は、基本「壊れにくい」ので**バージョンを増やさず**に済むことが多いよ👇✨ ([Redocly][1])
 
@@ -31,6 +33,8 @@ APIって、できるだけ **同じバージョンのまま進化（Evolve）**
 
 ## 1) 代表4方式をざっくり把握しよう 🧭✨
 
+![4 Strategies Doors](./picture/api_contract_ts_study_024_4_strategies.png)
+
 ここからは「どうやってバージョンを表現するか？」の話だよ〜💖
 代表はこの4つ👇（実務でもよく出る！）
 
@@ -44,6 +48,8 @@ Microsoft の設計ガイドでも、この4つの比較が整理されてるよ
 ---
 
 ## 2) 選び方の判断軸（これだけ持って帰って🎁✨）
+
+![Decision Axis](./picture/api_contract_ts_study_024_decision_axis.png)
 
 方式選びは「好み」じゃなくて、だいたいこの軸で決まるよ👇💡
 
@@ -59,6 +65,8 @@ Microsoft の設計ガイドでも、この4つの比較が整理されてるよ
 ## 3) 方式別：メリデメと向いてる場面 🧁📌
 
 ### A) URI（URLパス）版：`/v1/...` 🛣️✨
+
+![URI Versioning](./picture/api_contract_ts_study_024_uri_versioning.png)
 
 例：`GET https://api.example.com/v1/customers/3`
 
@@ -83,6 +91,8 @@ Microsoft の設計ガイドでも、この4つの比較が整理されてるよ
 ---
 
 ### B) Query（クエリ）版：`...?version=1` 🧷
+
+![Query Versioning](./picture/api_contract_ts_study_024_query_versioning.png)
 
 例：`GET https://api.example.com/customers/3?version=2`
 
@@ -132,6 +142,8 @@ URLは変えず、リクエストヘッダでバージョンを伝える方法�
 
 ### D) Media Type（Accept）版：`Accept: application/vnd...v1+json` 🍱✨
 
+![Media Type Versioning](./picture/api_contract_ts_study_024_accept_header.png)
+
 例：`Accept: application/vnd.contoso.v1+json`（例として紹介）([Microsoft Learn][2])
 
 **いいところ 🥰**
@@ -154,6 +166,8 @@ URLは変えず、リクエストヘッダでバージョンを伝える方法�
 ---
 
 ## 4) 迷ったらこれ！ざっくり決定フロー 🧭✨
+
+![Strategy Decision Flow](./picture/api_contract_ts_study_024_decision_flow.png)
 
 * **公開APIで、利用者が多い** → まず **URI版（/v1）** が無難 💖
 * **URLを変えたくない／ゲートウェイで分岐したい** → **Header版** 👍

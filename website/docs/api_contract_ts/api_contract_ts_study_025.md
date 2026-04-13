@@ -38,6 +38,8 @@ APIバージョン移行で揉める原因、だいたいこの3つ👇
 
 ## 25-1. 旧版サポートを「3段階」で設計しよう🏗️💞
 
+![Support Level Staircase](./picture/api_contract_ts_study_025_support_levels.png)
+
 旧版（v1）を残すときは、まず **“何をどこまで守るか”** を段階にするのが超大事🧠✨
 おすすめはこの3段階👇
 
@@ -79,6 +81,8 @@ APIバージョン移行で揉める原因、だいたいこの3つ👇
 
 ## 25-3. “告知”は3レイヤーで出す📣🌈
 
+![Notification Channels](./picture/api_contract_ts_study_025_notification_layers.png)
+
 告知は「見た人だけ得する」方式だと漏れるよ〜😭
 なので **3レイヤー**で出すのが王道👇
 
@@ -93,6 +97,8 @@ APIバージョン移行で揉める原因、だいたいこの3つ👇
 ---
 
 ## 25-4. HTTPヘッダーで「移行の合図」を出す📩🚧🌇
+
+![Deprecation Headers](./picture/api_contract_ts_study_025_header_stamps.png)
 
 ## 使うヘッダー（最小セット）✨
 
@@ -131,6 +137,8 @@ export function v1DeprecationHeaders(req: Request, res: Response, next: NextFunc
 
 ## 25-5. “利用率（メトリクス）”で移行をコントロールする📊🧡
 
+![Migration Metrics](./picture/api_contract_ts_study_025_metrics_dashboard.png)
+
 「誰が残ってるか分からない」のが炎上の元🔥
 だから **旧版がSunset予定なら利用状況を監視しろ**ってガイドでも強めに言われるよ📌([SailPoint OSS][4])
 
@@ -147,6 +155,8 @@ export function v1DeprecationHeaders(req: Request, res: Response, next: NextFunc
 ---
 
 ## 25-6. 旧版サポートの「運用レシピ」7ステップ🪜✨
+
+![Migration Recipe Card](./picture/api_contract_ts_study_025_migration_recipe.png)
 
 ## Step 1：移行先を“先に”用意する🛠️💗
 
@@ -221,6 +231,8 @@ gantt
 ---
 
 ## 25-8. よくある落とし穴（ここで事故る🥲）
+
+![Migration Pitfalls](./picture/api_contract_ts_study_025_pitfall_traps.png)
 
 * **“期限だけ決めた”けど移行先が弱い**（移行不能で炎上🔥）
 * **告知がドキュメントだけ**（ランタイム通知がないと漏れる📉）

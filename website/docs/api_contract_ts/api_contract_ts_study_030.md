@@ -11,6 +11,8 @@
 
 ## 1) CDCってなに？🤝📜（ざっくり1分で）
 
+![CDC Concept](./picture/api_contract_ts_study_030_cdc_concept.png)
+
 CDCはひとことで言うと…
 
 **「使う側（Consumer）が “こう動いてほしい！” を契約（Contract）として残して、提供側（Provider）がそれを守れてるか確認する」** って考え方だよ😊✨
@@ -62,6 +64,8 @@ sequenceDiagram
 ---
 
 ## 4) ハンズオン構成📦✨（ミニモノレポ風）
+
+![Monorepo Structure](./picture/api_contract_ts_study_030_demo_structure.png)
 
 フォルダはこんな感じにするよ👇
 
@@ -273,6 +277,8 @@ npm run test:contract
 
 ## 10) CIに入れる（壊したら止める🚦）🧯✨
 
+![CI Pipeline Gates](./picture/api_contract_ts_study_030_ci_pipeline.png)
+
 ### CIで止めたいポイント（最小セット）✅
 
 * Consumer：契約生成（pact作る）🧪📄
@@ -336,6 +342,8 @@ CDCを回し始めると、次に効いてくるのが「伝え方」だよ🫶
 
 ### 11-1) CHANGELOG（何が変わったかの公式ノート）📝✨
 
+![Keep a Changelog](./picture/api_contract_ts_study_030_changelog_book.png)
+
 Keep a Changelogは **CHANGELOGの型**として有名だよ📚
 
 * 「重要な変更を、時系列で、バージョンごとに」
@@ -364,6 +372,8 @@ Keep a Changelogは **CHANGELOGの型**として有名だよ📚
 ---
 
 ### 11-2) バージョン運用（SemVer）🔢✨
+
+![SemVer Counters](./picture/api_contract_ts_study_030_semver_counters.png)
 
 SemVerは「バージョン番号に意味を持たせる」ルールだよ📌 ([Semantic Versioning][10])
 
@@ -400,6 +410,8 @@ Conventional Commitsは、コミットメッセージを機械が読める形に
 
 ### 11-5) ADR（意思決定のメモ）🧠📌✨
 
+![ADR Card](./picture/api_contract_ts_study_030_adr_card.png)
+
 ADRは「なんでこの設計にしたっけ？」を未来の自分に残すメモ！
 有名な型（Nygard ADR）だと👇が基本セットだよ✨ ([Architectural Decision Records][14])
 
@@ -430,6 +442,8 @@ Accepted
 ---
 
 ## 12) 最終キャップストーン（提出物セット📦🧾）🎓✨
+
+![Capstone Project Box](./picture/api_contract_ts_study_030_capstone_box.png)
 
 ここまでの全部を、1セットにまとめよう！💖
 

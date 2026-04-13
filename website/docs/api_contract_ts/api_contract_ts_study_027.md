@@ -27,6 +27,8 @@
 
 ## 2) まず押さえる大前提📌✨「リリース中は“新旧が混ざる”」
 
+![Client-Server Mixing Matrix](./picture/api_contract_ts_study_027_mixing_matrix.png)
+
 リリースって、ふつうこうなります👇
 
 * サーバーA（新）🆕 と サーバーB（旧）🧓 が同時に動く時間がある
@@ -47,12 +49,16 @@
 
 ### パターンA：サーバ先行で“削除”しちゃう🪓💀
 
+![Deletion Accident](./picture/api_contract_ts_study_027_delete_accident.png)
+
 * 旧クライアントが送ってくるフィールドを、サーバが「もう要らないよね？」で削除
 * 旧クライアントが期待してたレスポンスを、サーバが変更
 
 結果：旧クライアントが **400/500** を踏む、または画面が壊れる📉😭
 
 ### パターンB：クライアント先行で“新しい値”を送り始める🚀💥
+
+![Unknown Enum Value](./picture/api_contract_ts_study_027_new_value_accident.png)
 
 * 新クライアントが、新しい enum 値（例：`status: "archived"`）を送る
 * 旧サーバーがその値を知らなくて落ちる
@@ -62,6 +68,8 @@
 ---
 
 ## 4) 最強の型🧠✨「Expand → Migrate → Contract（並行変更）」
+
+![Parallel Change Phases](./picture/api_contract_ts_study_027_expand_contract.png)
 
 破壊的変更（本来なら互換性が壊れる変更）を、安全にやる定番がこれ👇
 **Parallel Change / Expand and Contract** と呼ばれる手法です🪜
@@ -140,6 +148,8 @@ flowchart LR
 
 ## 6) 「デプロイ」と「リリース」を分ける🎛️✨（Feature Flag）
 
+![Feature Flag Switch](./picture/api_contract_ts_study_027_feature_flag.png)
+
 段階リリースの強い味方が **Feature Toggle / Feature Flag** です🚩
 コードは本番に置いても、機能は“OFFのまま”にできるやつ🙂
 これで **古いクライアントが混ざってても** 安全に切り替えできます。([martinfowler.com][2])
@@ -153,6 +163,8 @@ flowchart LR
 ---
 
 ## 7) 段階リリースの代表パターン3つ🪜🌈
+
+![Deployment Strategies](./picture/api_contract_ts_study_027_deployment_types.png)
 
 ### ① カナリア（Canary）🐤📈
 
@@ -197,6 +209,8 @@ export type UserV2 = UserV1 & {
 ---
 
 ### 8-2) “読む側”は寛容に（Tolerant Reader）📖🧠
+
+![Tolerant Reader](./picture/api_contract_ts_study_027_tolerant_reader.png)
 
 受け取ったデータは「欠けてる可能性」を許す🌸
 そして内部表現は「揃った形」に寄せる（デフォルト補完）✨
