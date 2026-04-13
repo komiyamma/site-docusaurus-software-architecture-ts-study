@@ -18,6 +18,8 @@
 
 ## 1. 事前条件は「入口の説明書」でもある📘🚪
 
+![precondition_manual](./picture/dbc_ts_study_009_precondition_manual.png)
+
 事前条件って「壊れた入力を止める」だけじゃなくて、**関数の使い方を“コードで説明する”**役目もあります🙂✨
 
 * ✅ 読みやすい事前条件 → 呼び出し側が正しく直せる
@@ -55,6 +57,8 @@ flowchart TD
 ---
 
 ## 3. 例外の種類を使い分けると、読みやすさが爆上がり💥📌
+
+![exception_bins](./picture/dbc_ts_study_009_exception_bins.png)
 
 JS/TS には定番のエラー型があります👇
 
@@ -128,6 +132,8 @@ export function createUser(input: CreateUserInput) {
 
 ### どこがツラい？😭
 
+![confusing_order](./picture/dbc_ts_study_009_confusing_order.png)
+
 * `unknown` を **即 `String()`** してて、原因が消える（`null` も `"null"` になる）🫥
 * **形式チェック（正規表現）**が早すぎて、前提の「型/空/必須」が後回し😵‍💫
 * メッセージが「直し方不明」ばっかり🧭💔
@@ -139,6 +145,8 @@ export function createUser(input: CreateUserInput) {
 ここからが本番だよ🙂💪
 
 ### 6.1 小さなチェック関数を用意する（読みやすさ最強）🧰✨
+
+![helper_toolbelt](./picture/dbc_ts_study_009_helper_toolbelt.png)
 
 ```ts
 function assertNonEmptyString(value: unknown, name: string): asserts value is string {
@@ -213,6 +221,8 @@ export function createUser(input: CreateUserInput) {
 「重い」には2種類あります👇
 
 ### 7.1 実行コストが重い⚡
+
+![heavy_check_crane](./picture/dbc_ts_study_009_heavy_check_crane.png)
 
 * 正規表現（特に複雑）🧾
 * JSONパース、日付パース📅

@@ -18,6 +18,8 @@
 * URL クエリ🔗
 * 他の人が書いたコードやライブラリ🧩
 
+![external_data_risk](./picture/dbc_ts_study_006_external_data_risk.png)
+
 ここで怖いのは、**見た目はそれっぽいけど中身が違う**こと😵‍💫
 DbCでいうと、これは「まだ契約が結ばれてない状態」です🤝❌
 
@@ -27,6 +29,8 @@ DbCでいうと、これは「まだ契約が結ばれてない状態」です�
 ---
 
 ## 2) any と unknown の違い🧭🤔
+
+![any_vs_unknown_metaphor](./picture/dbc_ts_study_006_any_vs_unknown_metaphor.png)
 
 ![unknownの洗浄](./picture/dbc_ts_study_006_unknown_decontamination.png)
 
@@ -69,6 +73,8 @@ DbCの考え方では、**境界（Boundary）で厳しく**が基本です🙂
 
 ## 4) まずは最小の型ガード：typeof からいこう🚦✨
 
+![typeof_filter](./picture/dbc_ts_study_006_typeof_filter.png)
+
 ### 例：unknown を string にしてから使う🙂
 
 ```ts
@@ -92,6 +98,8 @@ export function toUpperSafe(input: unknown): string {
 ## 5) “よくある罠”も一緒に覚えよう🕳️😵‍💫
 
 ### 罠①：typeof null は "object" 😭
+
+![null_object_trap](./picture/dbc_ts_study_006_null_object_trap.png)
 
 ```ts
 export function isObjectLike(value: unknown): value is Record<string, unknown> {
@@ -168,6 +176,8 @@ flowchart TD
 ---
 
 ## 7) JSONは特に危険！まず unknown に入れよう📦🧯
+
+![json_handling](./picture/dbc_ts_study_006_json_handling.png)
 
 TypeScriptでは JSON.parse の結果が “強めに信用されがち” なので、意識して unknown に落とすのが安全です🙂
 

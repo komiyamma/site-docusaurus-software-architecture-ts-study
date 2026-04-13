@@ -23,6 +23,8 @@ DbCには、設計を守るための3つの強力な道具があります。
 
 ## 1) 事前条件（Precondition）＝入力の約束📥✅
 
+![precondition_bouncer_id](./picture/dbc_ts_study_003_precondition_bouncer_id.png)
+
 ### 意味🙂
 
 関数やメソッドを**呼ぶ前に満たしておいてね**という約束です🤝✨
@@ -50,6 +52,8 @@ export function divide(a: number, b: number): number {
 ---
 
 ## 2) 事後条件（Postcondition）＝結果の約束📤✅
+
+![postcondition_inspector](./picture/dbc_ts_study_003_postcondition_inspector.png)
 
 ### 意味🙂
 
@@ -80,6 +84,8 @@ export function clampToNonNegative(n: number): number {
 ---
 
 ## 3) 不変条件（Invariant）＝いつでも守るルール🧱✅
+
+![invariant_shield_diamond](./picture/dbc_ts_study_003_invariant_shield_diamond.png)
 
 ### 意味🙂
 
@@ -210,6 +216,8 @@ export function saveUserName(name: string): void {
 ---
 
 ## 6) ミニ仕分けクイズ🎲✨（その場で答えてOK）
+
+![sorting_game_boxes](./picture/dbc_ts_study_003_sorting_game_boxes.png)
 
 次の条件はどれ？🤔💭
 （A: 事前条件 / B: 事後条件 / C: 不変条件 / D: ただの分岐）

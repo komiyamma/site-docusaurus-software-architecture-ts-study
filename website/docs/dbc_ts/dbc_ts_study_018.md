@@ -65,6 +65,8 @@ TypeScriptは **「throwされるエラーの型」を型として表現でき�
 
 ## `throw` の強み・弱み💥⚡
 
+![Throw Rocket](./picture/dbc_ts_study_018_throw_rocket.png)
+
 ### 強み👍✨
 
 * 書くのが速い（ガード節 + `throw` で即終了）🚀
@@ -86,6 +88,8 @@ TypeScriptは **「throwされるエラーの型」を型として表現でき�
 
 ## `Result` の強み・弱み🎁🧩
 
+![Result Armored Truck](./picture/dbc_ts_study_018_result_armored_truck.png)
+
 ### 強み👍✨
 
 * 成功/失敗が “型” と “分岐” で見える👀✅
@@ -101,6 +105,8 @@ TypeScriptは **「throwされるエラーの型」を型として表現でき�
 ---
 
 ## 早見表📋✨（判断が一瞬になるやつ）
+
+![Error Sorting Bins](./picture/dbc_ts_study_018_error_sorting_bins.png)
 
 | 失敗の種類               | 例                   | おすすめ          | 理由         |
 | ------------------- | ------------------- | ------------- | ---------- |
@@ -160,6 +166,8 @@ export function buyWithPoints(currentPoints: number, usePoints: number): number 
 ---
 
 ### B) `Result` 版🎁（仕様エラーはResult、契約違反はthrow）
+
+![Result Railway Switch](./picture/dbc_ts_study_018_result_railway_switch.png)
 
 まずは “軽量Result” を自作します（慣れると爆速💨）
 
@@ -240,6 +248,8 @@ Resultを “便利に伝播” したいならライブラリもアリです�
 ---
 
 ## 非同期（async/await）での考え方⚡🔁
+
+![Async Relay Baton](./picture/dbc_ts_study_018_async_relay_baton.png)
 
 * `throw`：`await` の途中で落ちる → 呼び出し側で `try/catch`
 * `Result`：`Promise<Result<...>>` を返す → 呼び出し側は分岐で扱う

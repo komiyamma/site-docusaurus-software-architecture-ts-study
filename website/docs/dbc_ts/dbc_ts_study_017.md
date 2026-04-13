@@ -12,17 +12,23 @@
 
 ### ① 契約違反（Contract Violation）🧨
 
+![Contract Violation Red Card](./picture/dbc_ts_study_017_contract_violation_red_card.png)
+
 * **「呼び出し側が約束を破った」**（＝プログラミングミス寄り）
 * 例：`amount` が負の値、`userId` が空文字、`price` が NaN など😵‍💫
 * 基本方針：**即ストップ**（throw して上に伝える / 直すべきはコード）🛑💥
 
 ### ② ドメインエラー（Domain Error）📉
 
+![Domain Error Sold Out](./picture/dbc_ts_study_017_domain_error_sold_out.png)
+
 * **「仕様として起きうる失敗」**（＝正しい入力でも起きる）
 * 例：残高不足、在庫切れ、予約枠満席、重複登録不可など🧾
 * 基本方針：**丁寧に扱う**（ユーザーに伝える/画面に出す/分岐する）🙂📣
 
 ### ③ インフラエラー（Infrastructure Error）🌩️
+
+![Infrastructure Failure](./picture/dbc_ts_study_017_infrastructure_failure.png)
 
 * **「外部要因で失敗」**（ネットワーク/DB/タイムアウト等）
 * 例：DB接続失敗、API 500、DNS、通信切れなど📡💥
@@ -62,6 +68,8 @@ flowchart TD
 ---
 
 ## 例で一気に理解：送金（transfer）💸✨
+
+![Transfer Failure Paths](./picture/dbc_ts_study_017_transfer_failure_paths.png)
 
 「送金する」って、失敗パターンが3種類ぜんぶ出る最高の題材なんだよね🙂
 
@@ -166,6 +174,8 @@ function failInsufficientBalance(current: number, required: number) {
 ---
 
 ## 「インフラエラー」は cause で“原因を握ったまま”包む🔗🌩️
+
+![Error Wrapping Cause](./picture/dbc_ts_study_017_error_wrapping_cause.png)
 
 インフラ失敗は、表に出すときはメッセージをやさしくして、
 中では **cause に本当の原因を持たせる** とデバッグが爆速になるよ🔍✨ ([MDN Web Docs][1])

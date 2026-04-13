@@ -37,6 +37,8 @@ flowchart LR
 * 並行処理で上書きされてた（あとで出がち）
 
 👉 **「戻り値だけ見たら成功に見える」**のが怖いところ😱
+
+![silent_failure](./picture/dbc_ts_study_010_silent_failure.png)
 事後条件があると、出口で即バレします🔦✅
 
 ### あるある②：増えてるけど“増え方”が間違ってる📉📈
@@ -61,12 +63,16 @@ flowchart LR
 
 ### ルール③：重すぎる検証はやりすぎ注意⚖️
 
+![postcondition_rules](./picture/dbc_ts_study_010_postcondition_rules.png)
+
 事後条件は便利だけど、**毎回DB全件チェック**とかやると重いです🐢💦
 まずは「その関数が責任を持つ範囲」で軽く・確実に✅
 
 ---
 
 ## 10.4 まずは道具づくり：軽い `ensure` を用意しよう🧰✨
+
+![exit_gate](./picture/dbc_ts_study_010_exit_gate.png)
 
 “出口チェック”をサクッと書くために、まずは小さな関数を作ります🙂
 
@@ -163,6 +169,8 @@ flowchart LR
 
 ## 10.7 事後条件パターン③：「変えちゃダメ」を保証する🧊🚫
 
+![masking_protection](./picture/dbc_ts_study_010_masking_protection.png)
+
 ときどき必要なのがコレ👇
 
 * この関数はポイントは変えるけど
@@ -223,6 +231,8 @@ async function fakeApi(_userId: string): Promise<number> {
 ---
 
 ## 10.9 ミニ実験：わざと壊して「事後条件で止まる」を体感しよう🧪😈
+
+![safety_fuse](./picture/dbc_ts_study_010_safety_fuse.png)
 
 ### 手順💻✨
 

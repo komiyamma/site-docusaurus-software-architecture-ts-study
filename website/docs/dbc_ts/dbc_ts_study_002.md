@@ -52,6 +52,8 @@ npm pkg set scripts.dev="tsx src/main.ts"
 
 ## ① 契約なし版：静かに壊れて“あとで泣く”😭
 
+![silent_ninja](./picture/dbc_ts_study_002_silent_ninja.png)
+
 `src/divide.ts` を作って👇
 
 ```ts
@@ -89,6 +91,8 @@ npm run dev
 
 ### 何がイヤかポイント😵‍💫
 
+![debug_spotlight](./picture/dbc_ts_study_002_debug_spotlight.png)
+
 * `10 / 0` が **Infinity** で返ってくる → その場では止まらない😇
 * `0 / 0` が **NaN** → それも止まらない🫠
 * つまり「どこで壊れたか」が**すぐ分からない**（あとでログ地獄🔥）
@@ -96,6 +100,8 @@ npm run dev
 ---
 
 ## ② 契約あり版：入口で止めて、失敗を読みやすくする🤝🛑
+
+![contract_gate_toll](./picture/dbc_ts_study_002_contract_gate_toll.png)
 
 ここからがDbCの“気持ちよさ”だよ〜✨
 **「この関数はこういう入力じゃないと受け付けないよ」**を、コードで宣言する📜✅
@@ -186,6 +192,8 @@ flowchart TD
 
 ## 演習①：エラーメッセージを“直し方が分かる”感じにしてみよう📝💕
 
+![signpost_clarity](./picture/dbc_ts_study_002_signpost_clarity.png)
+
 次のメッセージ、どっちが親切かな？🙂
 
 * ❌ `invalid input`（なにが？どう直すの？😢）
@@ -198,6 +206,8 @@ flowchart TD
 
 ## 演習②：テスト用ケースを増やして“止まる安心”を体感しよう🧪✨
 
+![safety_net_test](./picture/dbc_ts_study_002_safety_net_test.png)
+
 `src/main.ts` の `cases` に追加してみて👇
 
 * `[1, -1]`（負数はOK？OKなら通る☺️）
@@ -209,6 +219,8 @@ flowchart TD
 ---
 
 ## AI活用ミニ（Copilot / Codex）🤖✨
+
+![ai_helper_robot](./picture/dbc_ts_study_002_ai_helper_robot.png)
 
 契約チェックを増やすとき、AIにこう頼むと速いよ⚡
 

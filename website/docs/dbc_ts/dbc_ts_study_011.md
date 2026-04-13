@@ -13,6 +13,8 @@
 ### よくある事故あるある😵‍💫
 
 1. **小数が混じって誤差が出る**（0.1 + 0.2 問題）🧪
+
+   ![floating_point_gap](./picture/dbc_ts_study_011_floating_point_gap.png)
    JavaScript の `number` は **IEEE 754 の浮動小数点**なので、10進の小数を正確に表せないことがあるよ⚠️ ([MDNウェブドキュメント][1])
 
 2. **単位が混ざって破綻する**（円とドル、税込と税抜、個と箱…）💴💱📦
@@ -29,6 +31,8 @@
 ## 11.2 事後条件で守るべき“整合性”の代表パターン集📚✅
 
 ### パターンA：合計の一致（超重要）🧾➕
+
+![total_balance](./picture/dbc_ts_study_011_total_balance.png)
 
 * **期待**：`total = subtotal + tax`
 * **事後条件**：戻り値を返す直前に **必ず式で確認**する✅
@@ -47,6 +51,8 @@ flowchart LR
 * “たまに -0 になる” とかも潰す🧹
 
 ### パターンC：整数・安全な整数（桁がデカい時）🔢🧱
+
+![unsafe_integer](./picture/dbc_ts_study_011_unsafe_integer.png)
 
 * 金額は「最小単位（円、セント）」で **整数**にするのが基本💴✨
 * さらに大きい桁を扱うなら「安全な整数か？」まで見ると安心😊
@@ -160,6 +166,8 @@ function addTax(subtotalTaxExcludedYen: Yen, taxYen: Yen): Yen {
 
 ## 11.5 “丸め”は仕様の一部：関数名で意思表示しよ🔁🧠
 
+![rounding_molds](./picture/dbc_ts_study_011_rounding_molds.png)
+
 丸めは「計算のテクニック」じゃなくて **業務ルール**だよ🧾✨
 だから **関数名で丸め方を表現**すると、読み手が迷子にならない😊🧭
 
@@ -189,6 +197,8 @@ function ceilInt(value: number): number {
 ---
 
 ## 11.6 浮動小数の誤差に“本気で”向き合う話（最新動向）🧪📌
+
+![future_decimal](./picture/dbc_ts_study_011_future_decimal.png)
 
 * JavaScript の `number` は浮動小数点だから、**10進小数の厳密な金額計算**には向かないことがある⚠️ ([MDNウェブドキュメント][1])
 * その背景もあって、**10進の正確な Decimal 型**を追加しようという TC39 の提案も進んでる（2025-10-23 の Stage 1 Draft）🧠✨ ([tc39.es][3])

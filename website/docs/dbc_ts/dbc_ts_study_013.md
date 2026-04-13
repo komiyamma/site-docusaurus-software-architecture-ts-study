@@ -35,6 +35,8 @@ flowchart LR
 
 ## 2. ありがちなダメ例（不変条件が散らばる）😵‍💫💥
 
+![Scattered Logic Leak](./picture/dbc_ts_study_013_scattered_logic_leak.png)
+
 たとえば「Emailはメールっぽい文字列である」が不変条件だとするね📩
 
 ### ❌ こうなると壊れやすい
@@ -47,6 +49,8 @@ flowchart LR
 ---
 
 ## 3. 王道パターン①：コンストラクタを隠して `create()` に集約🏭✨
+
+![Private Constructor Fortress](./picture/dbc_ts_study_013_private_constructor_fortress.png)
 
 ### 3.1 形（結論）📌
 
@@ -103,6 +107,8 @@ sendWelcome(email);
 
 ## 4. 王道パターン②：プリミティブ型は「ブランド型＋ファクトリ関数」🪪✨
 
+![Brand Type Seal](./picture/dbc_ts_study_013_brand_type_seal.png)
+
 「Emailは実体はstringなんだけど、ただのstringとは区別したい」って時あるよね🙂
 そのとき便利なのが **ブランド型（Nominalっぽくするやつ）**✨
 
@@ -145,6 +151,8 @@ sendWelcome(email); // ✅
 
 ## 5. `new` を隠すテクニック集🔒🛠️
 
+![Hide New Button](./picture/dbc_ts_study_013_hide_new_button.png)
+
 「`new` できちゃう」状態を放置すると、だいたい後で壊れる😇💥
 なので、次のどれかで封じるのが定番だよ✅
 
@@ -163,6 +171,8 @@ flowchart TD
 
 ## 6. 不変条件チェック、どこまで厳密にする？📏🤔
 
+![Light vs Heavy Check](./picture/dbc_ts_study_013_light_vs_heavy_check.png)
+
 不変条件は“強く”したいけど、やりすぎると辛いこともあるよね🙂💦
 
 おすすめの考え方👇
@@ -175,6 +185,8 @@ flowchart TD
 ---
 
 ## 7. 演習🧪✍️（手を動かすと一気に身につく！）
+
+![Exercise Workbench](./picture/dbc_ts_study_013_exercise_workbench.png)
 
 ### 演習1：`NonEmptyString` を作る🧵✅
 

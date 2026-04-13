@@ -46,6 +46,8 @@ flowchart LR
     style Invariant fill:#f96,stroke:#333
 ```
 
+![invariant_pillars](./picture/dbc_ts_study_012_invariant_pillars.png)
+
 不変条件が強いと何が嬉しいかというと…
 **「中に入ってるものが最初から信用できる」**から、考える量が激減します🧠➡️😌✨
 
@@ -56,6 +58,8 @@ flowchart LR
 まずは、わざと “壊れやすい例” を見てみよう👀
 
 ### 例：Money がただの形だけ（壊れてOKになってる）😱
+
+![leaky_wallet](./picture/dbc_ts_study_012_leaky_wallet.png)
 
 ```ts
 // ダメな例：ただのデータ（いつでも壊れた状態になれる）
@@ -142,6 +146,8 @@ export type Currency = "JPY" | "USD" | "EUR";
 
 ### ③ Money を「生成時にチェック」する💴✅
 
+![minting_machine](./picture/dbc_ts_study_012_minting_machine.png)
+
 ここがこの章の主役！🧱✨
 “壊れた Money は作れない” って状態を作るよ🙂
 
@@ -193,6 +199,8 @@ export class Money {
 }
 ```
 
+![amber_preservation](./picture/dbc_ts_study_012_amber_preservation.png)
+
 ```mermaid
 flowchart TD
     Raw["生データ (number, string)"] --> Create["Money.create() 🧪<br/>(不変条件の入口)"]
@@ -230,6 +238,8 @@ node dist/index.js
 ---
 
 ## 12.6 “散らすと破れる” が本当に怖い理由😵‍💫🧨
+
+![fortress_gate](./picture/dbc_ts_study_012_fortress_gate.png)
 
 不変条件を 1か所に集めると、こういう恩恵があるよ👇
 

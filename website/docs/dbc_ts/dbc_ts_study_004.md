@@ -12,6 +12,8 @@
 
 ## 4.0 まず結論：DbCは「境界の品質保証」だから設計の真ん中にいる🏛️✅
 
+![design_center_sun](./picture/dbc_ts_study_004_design_center_sun.png)
+
 DbCは「この関数・このモジュールに入っていい値」と「出ていく結果の品質」を**約束として実行時に保証**する考え方だよね🤝✨
 で、実務の設計で一番大事なのって、だいたいここ👇
 
@@ -38,6 +40,8 @@ SoCって「役割ごとに分けようね」って話なんだけど、DbCと�
 ここは **壊れたデータが入りやすい場所**だから、契約を強くするのが鉄則！💪🚪
 
 ### “中（ドメイン）”は軽くできる理由🏃‍♀️💨
+
+![soc_castle_walls](./picture/dbc_ts_study_004_soc_castle_walls.png)
 
 境界で契約をガッチリ守れたら、中はこうできる👇
 
@@ -74,6 +78,8 @@ TypeScript 5.9 だと `tsc --init` のデフォルトが `module: "nodenext"` / 
 
 ## 4.2 テスタブル設計×DbC：契約はテストの“答え合わせ装置”🧪✅
 
+![test_answer_key](./picture/dbc_ts_study_004_test_answer_key.png)
+
 テストがつらいコードって、だいたいこれ👇
 
 * 入力の条件が曖昧（何を渡していいの？）😵‍💫
@@ -94,6 +100,8 @@ DbCを入れると、テストが急にラクになる理由はシンプルで�
 * 契約違反テスト😈：契約を破る入力 → ちゃんと止まる
 
 ### “契約がある関数”のテストは短くなる✂️🧪
+
+![short_test_checklist](./picture/dbc_ts_study_004_short_test_checklist.png)
 
 例：金額計算（超ミニ）💴✨
 
@@ -157,6 +165,8 @@ flowchart TD
 ---
 
 ## 4.4 依存関係ルール×DbC：「契約を“中心側”の言葉で書く」🧱🧠
+
+![dependency_arrows_inward](./picture/dbc_ts_study_004_dependency_arrows_inward.png)
 
 依存関係ルール（ざっくり）：
 **外側は内側に依存してOK、内側は外側に依存しない**🙅‍♀️➡️✅

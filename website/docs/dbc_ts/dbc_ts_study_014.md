@@ -53,6 +53,8 @@ flowchart TD
 
 ## 3. まず覚える3つの型（この章の型）🧩✨
 
+![Three Update Patterns](./picture/dbc_ts_study_014_three_update_patterns.png)
+
 ### A) 値オブジェクトは「作れた＝正しい」＋「更新は作り直す」♻️💎
 
 値オブジェクト（例：金額、メールアドレス）は、基本は不変（immutable）にしやすい✨
@@ -89,6 +91,8 @@ export function ensure(condition: unknown, message: string): asserts condition {
 
 ### 4.2 値オブジェクト：Money（0以上の整数円だけ許す）💴🧱
 
+![Money Immutability](./picture/dbc_ts_study_014_money_immutability.png)
+
 ```ts
 import { ensure } from "./ensure";
 
@@ -122,6 +126,8 @@ export class Money {
 ---
 
 ### 4.3 エンティティ：Product（価格とセール価格の整合を守る）🛍️🔒
+
+![Price Linkage](./picture/dbc_ts_study_014_price_linkage.png)
 
 ルール（不変条件っぽいもの）を入れるよ👇
 
@@ -220,6 +226,8 @@ flowchart LR
 
 ## 5. “まとめて更新”が必要なケース（2つの値がペア）🔗📦
 
+![Batch Update Lock](./picture/dbc_ts_study_014_batch_update_lock.png)
+
 たとえば「開始日と終了日」はセットだよね📅✨
 別々に setter で変えると、一瞬だけ「終了日が開始日より前」が起きる😱
 
@@ -260,6 +268,8 @@ export class MembershipPeriod {
 ---
 
 ## 6. ちょい実務ポイント：更新方針を先に決める⚖️🙂
+
+![Violation Strategy Choice](./picture/dbc_ts_study_014_violation_strategy_choice.png)
 
 「価格を下げたらセール価格が違反になった！」みたいなとき、設計は2択になりがち👇
 
@@ -360,6 +370,8 @@ Subscription（定期購読）を作ってみよう
 ---
 
 ## 10. よくある失敗あるある😱（回避ワザ付き✨）
+
+![Partial Update Collapse](./picture/dbc_ts_study_014_partial_update_collapse.png)
 
 * 「一部だけ更新」して整合が壊れる → ✅ 関係する値は一括更新📦
 * validate を呼び忘れる → ✅ コンストラクタを隠して create / 更新メソッド経由にする🏭

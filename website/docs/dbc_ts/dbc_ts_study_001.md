@@ -11,6 +11,8 @@
 
 ## 1. DbCは「関数の入口に置く約束」🤝🚪
 
+![fail_fast_gate](./picture/dbc_ts_study_001_fail_fast_gate.png)
+
 DbCは、ひとことで言うと……
 
 **「この関数に入ってくる値はこうであってね」**（事前条件）
@@ -41,6 +43,8 @@ TypeScriptは「型」でかなり守れます🙂🧷
 ---
 
 ## 2. DbCの3点セット🧩✅（超やさしく）
+
+![three_elements_machine](./picture/dbc_ts_study_001_three_elements_machine.png)
 
 ### 2.1 事前条件（Precondition）＝入力の約束📥🚪
 
@@ -95,6 +99,8 @@ mindmap
 
 ## 3. 「コメント」より「実行される約束」📝➡️✅
 
+![comment_vs_contract](./picture/dbc_ts_study_001_comment_vs_contract.png)
+
 コメントって、こうなりがちです👇😵‍💫
 
 * 書いた人は覚えてる
@@ -117,6 +123,8 @@ export function divide(a: number, b: number) {
 ---
 
 ## 4. ミニ例：契約がない関数がどう壊れるか😵‍💫
+
+![explosion_downstream](./picture/dbc_ts_study_001_explosion_downstream.png)
 
 ### 4.1 契約なし版（“壊れても進む”）🚧
 
@@ -178,6 +186,8 @@ export function invariantCondition(condition: unknown, message: string): asserts
 ---
 
 ## 6. 契約あり版：入口で止める🚪🛑✨
+
+![detective_fail_fast](./picture/dbc_ts_study_001_detective_fail_fast.png)
 
 さっきの割引を、DbCっぽくしてみます🙂
 

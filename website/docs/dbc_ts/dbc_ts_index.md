@@ -7,6 +7,8 @@
 
 ## 第1章　DbCってなに？「約束」でバグを入口で止める🤝🛑
 
+![concept_gate](./picture/dbc_ts_index_concept_gate.png)
+
 * DbCの目的：**壊れた値を中に入れない**🚪
 * 3点セット：事前条件・事後条件・不変条件🧩
 * 「コメント」より「実行される約束」📝➡️✅
@@ -36,6 +38,8 @@
 
 ## 第5章　TypeScriptで作る「静的な契約」①：型で守れる範囲🧷✅
 
+![static_vs_dynamic](./picture/dbc_ts_index_static_vs_dynamic.png)
+
 * `string | null` / union / literal type で「ありえる値」を狭める🎯
 * `readonly` で“勝手に変えない”宣言🧊
 * 演習：`UserId` や `Currency` を型で表現してみる🪪💴
@@ -55,6 +59,8 @@
 ---
 
 ## 第8章　事前条件（Precondition）入門：入口で止める🚪✅
+
+![pre_post_inv_pillars](./picture/dbc_ts_index_pre_post_inv_pillars.png)
 
 * 入口チェックの基本（null/空/範囲/形式）🧱
 * どこでチェックする？（public境界が基本）📌
@@ -82,6 +88,8 @@
 
 ## 第12章　不変条件（Invariant）入門：壊れない中心を作る🧱✨
 
+![invariant_core](./picture/dbc_ts_index_invariant_core.png)
+
 * “無効な状態を作らない”が最強の防御🚫
 * 不変条件は散らすと破れる→1か所に集める📌
 * 演習：`Money`（0以上、通貨必須）を作る💴🧱
@@ -101,6 +109,8 @@
 ---
 
 ## 第15章　契約はどこに置く？境界（Boundary）設計が9割🚧🧭
+
+![boundary_wall](./picture/dbc_ts_index_boundary_wall.png)
 
 * public API／外部入力で強く守る🌐
 * internalは「前提を信頼」して軽くする🏃‍♀️
@@ -136,6 +146,8 @@
 ---
 
 ## 第20章　アサーション関数入門：読みやすい契約を関数化🧩📝
+
+![tools_kit](./picture/dbc_ts_index_tools_kit.png)
 
 * `assertNonEmptyString` みたいに“意図の名前”をつける✨
 * コピペチェック地獄から脱出🏃‍♀️

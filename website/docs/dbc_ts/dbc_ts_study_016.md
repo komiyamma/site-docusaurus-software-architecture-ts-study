@@ -10,6 +10,8 @@
 
 ## 1) まず結論：契約は“入口”に寄せると幸せ😊🚧
 
+![Dangerous Input Package](./picture/dbc_ts_study_016_dangerous_input_package.png)
+
 外部から来る入力（API/フォーム/ファイル/CLI）は、だいたいこんな感じで危ない💣😵‍💫
 
 * 数値のつもりが `"12"`（文字列）
@@ -50,6 +52,8 @@
 
 ## 4) “薄いアダプタ” と “中心ロジック” の役割分担🧩🔀
 
+![Airlock Separation](./picture/dbc_ts_study_016_airlock_separation.png)
+
 ### 4-1. こう分ける（図）🗺️✨
 
 * **Adapter（境界）**：入力の検証、変換、エラー整形
@@ -82,6 +86,7 @@ flowchart TD
 ### 5-1. ドメイン型（中心が信じていい形）🧱💎
 
 ![ドメインの道具](./picture/dbc_ts_study_016_domain_value_objects.png)
+![Solid Domain Bricks](./picture/dbc_ts_study_016_solid_domain_bricks.png)
 
 ここではシンプルに「型 + 生成関数」で不変条件を固めるよ✅
 （第12〜14章の“不変条件”のノリだね🧱✨）
@@ -127,6 +132,8 @@ flowchart LR
 ---
 
 ### 5-2. 中心ロジック（計算だけに集中）🧠🧮
+
+![Pure Calculation Vacuum](./picture/dbc_ts_study_016_pure_calculation_vacuum.png)
 
 ```ts
 // domain/calcTotal.ts
@@ -174,6 +181,8 @@ export function calcTotal(input: CalcInput): CalcOutput {
 ---
 
 ### 5-3. 薄いアダプタ（Zodで入口を固める）🚪🧱
+
+![Zod Scanner Gate](./picture/dbc_ts_study_016_zod_scanner_gate.png)
 
 外部入力はまず Zod で止めるよ🛑
 （ここが「契約の前線基地」🏰✨）
@@ -286,6 +295,8 @@ describe("handleCalc", () => {
 ---
 
 ## 7) よくある“分け方ミス”と直し方🧯😵‍💫
+
+![Fat Adapter Overworked](./picture/dbc_ts_study_016_fat_adapter_overworked.png)
 
 ### ミス1：中心で raw JSON を受け取ってしまう💥
 

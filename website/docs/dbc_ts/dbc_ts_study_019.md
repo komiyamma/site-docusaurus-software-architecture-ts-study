@@ -20,6 +20,8 @@
 
 ## なぜ「境界で変換」しないと危ないの？😱🧨
 
+![Error Leak vs Filter](./picture/dbc_ts_study_019_error_leak_vs_filter.png)
+
 境界で変換しないと、こんな事故が起きがち👇
 
 * **内部情報ダダ漏れ**（DB名、SQL、ファイルパス、スタックトレース…）🫣💥
@@ -80,6 +82,8 @@ flowchart LR
 
 ## まずは最小の土台：`AppError` を作ろう🧩✨
 
+![AppError Uniform](./picture/dbc_ts_study_019_app_error_uniform.png)
+
 「外に出す形」を決めるよ📦
 （HTTPでもCLIでも同じ思想で使えるよ👍）
 
@@ -124,6 +128,8 @@ export type AppError =
 ---
 
 ## 「unknown が来ても平気」な変換関数を作る🧯✨
+
+![Unknown Error Handling](./picture/dbc_ts_study_019_unknown_error_handling.png)
 
 `catch` で受けるのは、基本 `unknown` として扱うのが安全🙆‍♀️
 （`useUnknownInCatchVariables: true` だとより安心🧼）
@@ -178,6 +184,8 @@ export const toAppError = (e: unknown): AppError => {
 
 ## `cause` で「原因」をつないでいく🪢✨
 
+![Cause Chain Archive](./picture/dbc_ts_study_019_cause_chain_archive.png)
+
 境界で変換するなら、**原因チェーン**が命！🔥
 `Error.cause` は「捕まえたエラーを別エラーに包む」用途で使われるよ🧠 ([MDN Web Docs][1])
 
@@ -212,6 +220,8 @@ async function fetchUserFromDb(userId: string) {
 ---
 
 ## 境界でのテンプレ：try/catch はここだけに寄せる🧱✨
+
+![User vs Log View](./picture/dbc_ts_study_019_user_vs_log_view.png)
 
 境界（例：HTTPハンドラっぽい入口）ではこう👇
 

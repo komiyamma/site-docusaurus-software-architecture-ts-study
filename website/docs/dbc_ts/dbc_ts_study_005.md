@@ -41,6 +41,8 @@ TypeScriptの**型**を使って、DbCの「契約（約束）」のうち、**�
 
 ## 5.3　`string | null` / union で「ありえる値」を狭める🎯✅
 
+![narrowing_funnel](./picture/dbc_ts_study_005_narrowing_funnel.png)
+
 ### 5.3.1　`null` が来るなら、型に書く📝
 
 `null` が来る可能性があるのに `string` とだけ書くと、受け取る側が事故りやすいです😵‍💫💥
@@ -69,6 +71,8 @@ flowchart LR
 
 ### 5.3.2　union は「選択肢を絞る」最強ワザ⚡
 
+![union_vending_machine](./picture/dbc_ts_study_005_union_vending_machine.png)
+
 「状態」や「種別」を union にすると、**ありえない分岐**が減ります🧠✨
 
 ```ts
@@ -88,6 +92,8 @@ canExportPdf("VIP");
 ---
 
 ## 5.4　literal type と `as const` で「値をそのまま型にする」🧊✨
+
+![as_const_freeze](./picture/dbc_ts_study_005_as_const_freeze.png)
 
 ### 5.4.1　そのままだと “広がる” 問題（widening）🌪️
 
@@ -145,6 +151,8 @@ const routes = {
 ---
 
 ## 5.6　`readonly` で「勝手に変えない」を契約にする🧊🔒
+
+![readonly_museum_case](./picture/dbc_ts_study_005_readonly_museum_case.png)
 
 ### 5.6.1　まずはプロパティを `readonly` にする
 

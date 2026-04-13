@@ -60,6 +60,8 @@
 * `export` してる関数（他モジュールが呼ぶ）
 
 逆に、同じモジュール内で「ここまで来たら正しい」と言い切れる場所は、チェックを薄くしてもOK🙆‍♀️✨
+
+![boundary_fortress](./picture/dbc_ts_study_008_boundary_fortress.png)
 （入口がガッチリ守れてると、中がスッキリするよ🧼💖）
 
 ```mermaid
@@ -74,6 +76,8 @@ flowchart TD
 ---
 
 ## 8.4 まずは“超シンプル”な事前条件から書こう✍️✨
+
+![referee_whistle](./picture/dbc_ts_study_008_referee_whistle.png)
 
 ### 例：送金 `transfer(amount)` 💸🚀
 
@@ -118,6 +122,8 @@ export function transfer(amount: number) {
 ---
 
 ## 8.6 事前条件を“関数化”すると一気にキレイ🧼🧩
+
+![helper_stamp](./picture/dbc_ts_study_008_helper_stamp.png)
 
 毎回 `if` を書くのがしんどくなってきたら、**小さな関数にして名前をつける**と読みやすいよ✨
 
@@ -197,6 +203,8 @@ node dist/main.js
 ---
 
 ## 8.8 AIに手伝ってもらうときのコツ🤖🧠✨
+
+![architect_robot](./picture/dbc_ts_study_008_architect_robot.png)
 
 事前条件はAIが得意！でも**“何を守りたいか”は人間が決める**のが超大事だよ⚖️💕
 

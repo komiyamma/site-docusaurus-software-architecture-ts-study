@@ -21,6 +21,8 @@ TypeScriptは、コンパイル（変換）されて実行されるとき、**�
 
 ## 「型はコンパイル時」「値は実行時」🧠🔁
 
+![ghost_types](./picture/dbc_ts_study_007_ghost_types.png)
+
 ざっくりこう覚えると強いよ💪✨
 
 * **型（Type）**：開発中に「こう使うはずだよね？」をチェックする🧷✅
@@ -39,6 +41,8 @@ flowchart TD
 ---
 
 ## 型だけでは守れない契約①：数値の範囲・制約📏🚫
+
+![range_constraints](./picture/dbc_ts_study_007_range_constraints.png)
 
 たとえば、こういう“約束”は型だけじゃ無理👇
 
@@ -75,6 +79,8 @@ const u: User = { name: "A", age: 999 }; // 型的にはOK 😇
 
 ## 型だけでは守れない契約③：複数項目の整合性（関係の約束）🧩🧠
 
+![relationship_puzzle](./picture/dbc_ts_study_007_relationship_puzzle.png)
+
 ここがめちゃ大事ポイント✨
 
 * `startDate <= endDate` 📅
@@ -102,6 +108,8 @@ const u: User = { name: "A", age: 999 }; // 型的にはOK 😇
 
 ## よくある事故：`as` は“変換”じゃなくて“言い張り”😵‍💫🗣️
 
+![as_sticker_trap](./picture/dbc_ts_study_007_as_sticker_trap.png)
+
 TypeScriptの `as` は、実行時の値を変えないよ！
 「この型だってことにして！」ってコンパイラにお願いしてるだけ（＝強引に通す）💥
 
@@ -121,6 +129,8 @@ console.log(x.age + 1); // "not a number1" とかになって地獄 👻
 ---
 
 ## じゃあどうする？「型＋実行時チェック」の二刀流⚔️✅
+
+![dual_wielding](./picture/dbc_ts_study_007_dual_wielding.png)
 
 この章の結論はこれ👇
 

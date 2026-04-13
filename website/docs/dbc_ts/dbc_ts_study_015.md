@@ -49,6 +49,8 @@ flowchart LR
 
 ## “入口は厳しく、中はスムーズ”の理由🚪➡️✨
 
+![Water Filter](./picture/dbc_ts_study_015_water_filter.png)
+
 ### 1) バグの原因が入口で止まる🛑🔦
 
 中で落ちると「どこで壊れた？」が地獄😵‍💫
@@ -71,6 +73,8 @@ flowchart LR
 
 ## DbC三点セットは「置き場所」が違うよ📌🧩
 
+![DbC Placement Map](./picture/dbc_ts_study_015_dbc_placement_map.png)
+
 ここ超大事！🧠💡
 
 ### ✅ 事前条件（Precondition）＝境界に置く🚪✅
@@ -92,6 +96,8 @@ flowchart LR
 ---
 
 ## アンチパターン集😇➡️😱
+
+![Scattered Checks Chaos](./picture/dbc_ts_study_015_scattered_checks_chaos.png)
 
 ### ❌ アンチ1：チェックがあちこちに散る🌪️
 
@@ -170,6 +176,8 @@ export async function grantPointsEndpoint(rawBody: unknown) {
 
 ## 1) “中心の型”を用意する（不変条件の住処）🧱🔒
 
+![Minting Branded Types](./picture/dbc_ts_study_015_minting_branded_types.png)
+
 ポイントやIDって、ただの `number` / `string` じゃ壊れやすい😵
 なので **作る時点で保証**しよう✨
 
@@ -206,6 +214,8 @@ export function toPoints(value: number): Points {
 ---
 
 ## 2) 境界で検証して “翻訳” する（DTO → ドメイン型）🗣️🔁
+
+![Translator Booth](./picture/dbc_ts_study_015_translator_booth.png)
 
 外の入力（DTOっぽいやつ）は、いったん “ただのデータ” として扱うよ📦
 
@@ -279,6 +289,8 @@ async function savePoints(_userId: UserId, _points: number): Promise<void> {
 ---
 
 ## 境界で“エラー変換”すると世界が平和になる🧾🕊️
+
+![Error Spokesperson](./picture/dbc_ts_study_015_error_spokesperson.png)
 
 境界のもう1つの大事な役目👇
 **内部のエラーを、そのまま外に漏らさない**🙅‍♀️

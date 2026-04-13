@@ -59,6 +59,8 @@ flowchart TD
 
 ## 20.3 アサーション関数ってなに？🧩
 
+![Assertion Flow](./picture/dbc_ts_study_020_assertion_flow.png)
+
 **アサーション（assertion）**は、ざっくり言うとこうです👇
 
 * 「ここはこうであるはず！」を実行時にチェックする✅
@@ -71,6 +73,8 @@ flowchart TD
 ---
 
 ## 20.4 まずは最小の `assert` を作ろう🧪🧱
+
+![Minimal Assert Function](./picture/dbc_ts_study_020_minimal_assert.png)
 
 「条件がダメなら止める」だけのミニ関数から作ります🙂✨
 
@@ -97,6 +101,8 @@ export function assert(condition: unknown, message = "Assertion failed"): assert
 
 ### 20.5.1 空じゃない文字列を保証する✅🧡
 
+![String Validation Process](./picture/dbc_ts_study_020_string_validation.png)
+
 ```ts
 import { assert } from "./assert";
 
@@ -114,6 +120,8 @@ export function assertNonEmptyString(value: unknown, fieldName: string): asserts
 ---
 
 ### 20.5.2 数値の範囲を保証する📏🔢
+
+![Number Range Visualization](./picture/dbc_ts_study_020_range_check.png)
 
 ```ts
 import { assert } from "./assert";
@@ -217,6 +225,8 @@ flowchart LR
 ---
 
 ## 20.8 エラーメッセージのテンプレ📝✨
+
+![Error Message Template](./picture/dbc_ts_study_020_error_template.png)
 
 メッセージは「直し方が分かる」と超つよいです💪🙂
 
