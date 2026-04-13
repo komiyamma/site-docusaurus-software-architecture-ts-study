@@ -1,5 +1,7 @@
 # 第20章：HTTPレスポンス設計（200/201/202/409など）📨🔁
 
+![第20章httpレスポンス設計200201202409など](./picture/idem_ts_study_020_ch20_http_response_design_200_201_202_409_etc.png)
+
 ## この章のゴール🎯✨
 
 * 「このAPI、次に何すればいいの…？😵」をクライアントに感じさせないレスポンスを作れるようになる💪
@@ -28,6 +30,8 @@ HTTPの基本の意味（201/202/409/503など）はHTTP仕様（RFC 9110）に�
 ---
 
 ## 2) 冪等性とレスポンス設計がぶつかるポイント⚡
+
+![2_冪等性とレスポンス設計がぶつかるポイント](./picture/idem_ts_study_020_2_idempotency_and_response_design_conflicts.png)
 
 冪等性が必要になるのは、だいたいこの状況👇
 
@@ -78,6 +82,8 @@ flowchart TD
 
 ### 失敗系（クライアント原因）😵
 
+![失敗系クライアント原因](./picture/idem_ts_study_020_failure_client_causes.png)
+
 * **400 Bad Request**：形式がダメ（JSON壊れてる等）🧱
 * **401 Unauthorized / 403 Forbidden**：認証/権限🔐
 * **404 Not Found**：ない🙈
@@ -125,6 +131,8 @@ flowchart TD
 
 ## 5) ミニ注文API：レスポンス設計の「完成形」サンプル📑✨
 
+![5_ミニ注文apiレスポンス設計の完成形サンプル](./picture/idem_ts_study_020_5_mini_order_api_response_design_complete_sample.png)
+
 ここでは例として👇の2つを考えるね！
 
 * `POST /orders`：注文を作る🧾
@@ -169,6 +177,8 @@ flowchart TD
 
 ### 例1：同じIdempotency-Keyなのに、本文が違う😱
 
+![例1同じidempotencykeyなのに本文が違う](./picture/idem_ts_study_020_ex1_same_idempotency_key_different_body.png)
+
 * 1回目：`amount=1000`
 * 2回目：`amount=2000`（同じキー）
 
@@ -208,6 +218,8 @@ export function sendProblem(res: Response, problem: ProblemDetails) {
 ```
 
 ### 409（冪等キー衝突）を返す例⚔️
+
+![409冪等キー衝突を返す例](./picture/idem_ts_study_020_409_returning_idempotency_key_conflict_example.png)
 
 ```ts
 import type { Request, Response } from "express";
@@ -283,6 +295,8 @@ export function createOrder(req: Request, res: Response) {
 ---
 
 ## 9) AI活用プロンプト🤖💡（コピペOK）
+
+![9_ai活用プロンプトコピペok](./picture/idem_ts_study_020_9_ai_usage_prompt_copy_paste_ok.png)
 
 ### ① ステータス表のたたき台を作らせる📋
 
