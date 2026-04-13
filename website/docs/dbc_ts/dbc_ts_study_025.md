@@ -183,6 +183,8 @@ src/
 
 ### 2-1. Result（仕様として起きる失敗用）📦
 
+![Result Type Structure](./picture/dbc_ts_study_025_result_type.png)
+
 `src/shared/result.ts`
 
 ```ts
@@ -239,6 +241,8 @@ export class AlreadyCancelledError extends DomainError {
 ```
 
 ### 2-3. Clock（“未来”判定をテストで安定させる）🕒🧪
+
+![Testing Time](./picture/dbc_ts_study_025_clock_mock.png)
 
 `src/shared/clock.ts`
 
@@ -308,6 +312,8 @@ export function assertNoDuplicates<T>(
 
 ## 3）境界：Zodで入力を受けて「中心が食べられる形」に翻訳🗣️🔁
 
+![Boundary Validation](./picture/dbc_ts_study_025_zod_boundary.png)
+
 外から来る値は信用しません🙂‍↔️
 Zodで「形のチェック」＋「変換」までやっちゃいます✨
 
@@ -371,6 +377,8 @@ export function parseCancelReservation(
 ---
 
 ## 4）ドメイン：予約（不変条件の中心）🧱✨
+
+![Reservation Rules](./picture/dbc_ts_study_025_reservation_invariants.png)
 
 `src/domain/reservation.ts`
 
@@ -539,6 +547,8 @@ npm run dev
 ---
 
 ## 7）テスト（正常＋禁止ケース＋並び順）🧪🔒
+
+![Test Scenarios](./picture/dbc_ts_study_025_test_cases.png)
 
 `src/reservation.test.ts`
 

@@ -29,6 +29,8 @@ DbCのテストは、ざっくり2種類です👇
 
 ### ② 契約違反テスト🛑⚠️
 
+![Two Pillars of Contract Testing](./picture/dbc_ts_study_024_two_test_pillars.png)
+
 「壊れた入力なら、**事前条件（Pre）** で確実に止まる」
 例：負の金額、空文字、範囲外、など🚫
 
@@ -55,6 +57,8 @@ VitestはViteベースの次世代テストフレームワークで、体験が�
 ---
 
 ## セットアップ（最短コース）🧰⚡
+
+![Vitest Setup Steps](./picture/dbc_ts_study_024_vitest_setup.png)
 
 ### 1) 依存関係を入れる📦
 
@@ -159,6 +163,8 @@ export class Money {
 
 ### `src/transfer.ts`（Pre/Postをテストしやすく）💸
 
+![Money Transfer Invariants](./picture/dbc_ts_study_024_transfer_logic.png)
+
 ```ts
 import { Money } from "./money";
 import { assert } from "./assert";
@@ -245,6 +251,8 @@ npm test
 
 ## 境界値テストの“型”🍎📏（これ、超効きます🔥）
 
+![Boundary Value Testing](./picture/dbc_ts_study_024_boundary_set.png)
+
 境界値は「単発」じゃなくて **セットで** 固めます✅
 
 例：金額なら👇
@@ -287,6 +295,8 @@ flowchart LR
 ---
 
 ## 型の契約もテストできる（Type Test）🧷🧪✨
+
+![Type Testing](./picture/dbc_ts_study_024_type_test.png)
 
 「型で守りたい約束」も、テストで壊れにくくできます💪
 Vitestは `expectTypeOf` / `assertType` などで型テストができます🧷 ([Vitest][4])

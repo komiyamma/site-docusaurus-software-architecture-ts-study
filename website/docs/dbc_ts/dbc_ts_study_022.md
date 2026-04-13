@@ -10,6 +10,8 @@
 
 ## 1. 外部入力は“型が効かない世界”🌍😵‍💫
 
+![Chaotic External Input](./picture/dbc_ts_study_022_external_input_chaos.png)
+
 TypeScriptの型って、基本は **コンパイル時の安心**だよね🧠✨
 でも外部入力は、実行時に突然こうなる👇
 
@@ -33,6 +35,8 @@ Zodは「実行時にデータを検証」して、**通ったら型もついて
 
 ## 3. まずは最重要パターン1つだけ覚えよ🧠✅
 
+![safeParse Flow](./picture/dbc_ts_study_022_safeparse_flow.png)
+
 ### ✅ 外部入力 → `safeParse` → 成功なら使う / 失敗なら弾く
 
 * `parse()`：失敗したら例外 throw 💥（初心者のうちは扱いづらい）
@@ -52,6 +56,8 @@ flowchart LR
 ![Zodバリデーション](./picture/dbc_ts_study_022_zod_validation.png)
 
 ### 4.1 スキーマを書く✍️
+
+![Strict Mode Validation](./picture/dbc_ts_study_022_strict_mode.png)
 
 ポイントはこれ👇
 
@@ -100,6 +106,8 @@ export function validateCreateUserRequest(input: unknown) {
 ---
 
 ## 5. 「フォームは全部文字列問題」どうする？🧩😇
+
+![Preprocess Transformation](./picture/dbc_ts_study_022_preprocess_flow.png)
 
 フォームやクエリって、だいたい文字列で来るよね？
 なのにスキーマは `z.number()`… つらい😭
@@ -179,6 +187,8 @@ if (!result.success) {
 ---
 
 ## 7. “境界で弾く”の実務テンプレ🧱✅
+
+![Boundary Pattern](./picture/dbc_ts_study_022_boundary_pattern.png)
 
 ### 7.1 APIハンドラっぽい形（フレームワーク不問）🔁
 

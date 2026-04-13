@@ -14,6 +14,8 @@ Zodはv4系が現行で、npm上の最新版は4.3.6（2026年1月時点）だ�
 
 ## 23.2 なぜ「DTOのまま使う」が危ないの？😵‍💫💥
 
+![Core Logic Pollution](./picture/dbc_ts_study_023_dto_pollution.png)
+
 外部入力をZodで通して「OKだった！」となっても、DTO（ただのオブジェクト）のまま中心ロジックに入れると、あとでこんな事故が起きやすいよ🧨
 
 * **意味が薄い**：`email: string` のままだと、正規化（小文字化/trim）やルールが散らばる🌀
@@ -92,6 +94,8 @@ export type CreateUserRequestDTO = z.output<typeof CreateUserRequestSchema>;
 
 ### 23.4.2 次にドメイン型（中心で信じたい形）🧱🔒
 
+![Branded Types](./picture/dbc_ts_study_023_branded_type.png)
+
 ここは「作れた＝正しい」を目指すよ💪✨（不変条件を閉じ込める）
 
 ```ts
@@ -155,6 +159,8 @@ export type CreateUserCommand = {
 ---
 
 ### 23.4.3 翻訳関数（DTO → ドメイン）🗣️➡️🏭
+
+![Translation Process](./picture/dbc_ts_study_023_translation_function.png)
 
 「Zodで通ったDTO」を、ドメイン型へまとめて変換するよ✨
 この“翻訳所”があると、中心ロジックがずっと綺麗になる🧼💕
@@ -261,6 +267,8 @@ flowchart TD
 
 ### ② “欠損値”を翻訳所で吸収する🕳️➡️🧱
 
+![Absorbing Missing Values](./picture/dbc_ts_study_023_missing_value_absorption.png)
+
 * `optional().default(...)` はすごく便利✨（「中心は常にboolean」とかにできる）
 
 ### ③ エラーを「表示向け」に整える🧾👀
@@ -298,6 +306,8 @@ DTOには `nickname?: string` を追加して、
 ---
 
 ### 演習3：UserIdの取り違え事故を止めよう🪪🛑
+
+![Compile-Time Safety with Brands](./picture/dbc_ts_study_023_brand_safety.png)
 
 `UserId` と `ProductId` を **別ブランド**で作って、
 

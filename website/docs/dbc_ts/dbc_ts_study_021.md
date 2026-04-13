@@ -32,6 +32,8 @@ flowchart LR
 
 ### A) 「asserts 条件」：条件が真であることを保証✅
 
+![Asserts Condition](./picture/dbc_ts_study_021_asserts_condition.png)
+
 例：null じゃない／文字列だ／配列じゃない…などを保証するやつ！
 
 ```ts
@@ -58,6 +60,8 @@ TypeScript 公式でも「asserts condition」の形が説明されてるよ。 
 
 ### B) 「asserts 値 is 型」：値がその型であることを保証👑
 
+![Asserts Value Is Type](./picture/dbc_ts_study_021_asserts_value_is_type.png)
+
 「asserts value is string」みたいに、**“型そのもの”を保証**できるのが強い✨
 
 ```ts
@@ -70,6 +74,8 @@ export function assertNonEmptyString(value: unknown, name = "value"): asserts va
 ---
 
 ## 3. なんで「asserts」が必要なの？（unknown地獄を救う🧯）
+
+![Rescue from Unknown Hell](./picture/dbc_ts_study_021_unknown_rescue.png)
 
 外部入力（JSON/フォーム/Storage/Query/DBなど）は、型が効きにくい世界🌍
 だから「いったん unknown で受けて、検証してから使う」が安全✨
@@ -123,6 +129,8 @@ export type User = {
 
 ### 5-2. unknown → User へ「通行証」を発行する🚦✨
 
+![User Object Validation](./picture/dbc_ts_study_021_assert_is_user.png)
+
 ```ts
 export function assertIsUser(input: unknown): asserts input is User {
   assertIsRecord(input, "input");
@@ -153,6 +161,8 @@ function handleRequest(body: unknown) {
 ---
 
 ## 6. DbCとしての「asserts」の置きどころ🚧🧱
+
+![Assert Placement Strategy](./picture/dbc_ts_study_021_dbc_placement.png)
 
 「asserts」は、DbCでいうと **事前条件（入口の契約）** と相性が最高💖
 おすすめ配置はこんな感じ👇
@@ -192,6 +202,8 @@ function assertIsUserBad(x: unknown): asserts x is User {
 ---
 
 ### 7-2. 「as User」で逃げると、契約が消える🫥
+
+![The 'as' Keyword Trap](./picture/dbc_ts_study_021_as_user_trap.png)
 
 ```ts
 const user = input as User; // ← これは検証してない（ただの自己申告）
