@@ -5,6 +5,8 @@
 
 ## 第1章：CQSってなに？超ざっくりつかむよ〜🧸✨
 
+![CQS Concept Hammer Book](./picture/cqs_ts_index_concept_hammer_book.png)
+
 * Command / Query の言葉の意味
 * 「混ぜると事故る」直感を作る💥
 * 今日のゴール：CQSの一文ルールを覚える📝
@@ -13,6 +15,8 @@
 
 ## 第2章：混ぜ混ぜ関数が起こす“あるある事故”集😇→😱
 
+![Messy Function](./picture/cqs_ts_index_messy_function.png)
+
 * 1つの関数で「保存・取得・表示用整形」までやる例
 * 副作用が読めない／デバッグがしんどい
 * “何が起きた？”を説明できない状態を体験🎮
@@ -20,6 +24,8 @@
 ---
 
 ## 第3章：CQSの基本ルール（初心者版）✅✨
+
+![Basic Rules Sign](./picture/cqs_ts_index_basic_rules_sign.png)
 
 * Command：状態を変える（副作用あり）🔧
 * Query：状態を読む（副作用なし）📖
@@ -53,6 +59,8 @@
 
 ## 第7章：リファクタ① まず関数を分ける（CQSの第一歩）✂️✨
 
+![Refactoring Cut](./picture/cqs_ts_index_refactoring_cut.png)
+
 * `addTodo()` / `completeTodo()`（Command）
 * `getTodos()`（Query）
 * 名前付けルール：動詞で迷わないコツ📛
@@ -68,6 +76,8 @@
 ---
 
 ## 第9章：Query設計：副作用ゼロにするコツ🍃✨
+
+![Side Effect Zero](./picture/cqs_ts_index_side_effect_zero.png)
 
 * Query内でやらない：保存・更新・外部送信🙅‍♀️
 * “隠れ副作用”チェック（Date/乱数/グローバル）👀
@@ -101,6 +111,8 @@
 
 ## 第13章：テスト① Queryはテストが超簡単🧪🥳
 
+![Testing Contrast](./picture/cqs_ts_index_testing_contrast.png)
+
 * Queryのテスト＝入力→出力を比べるだけ
 * サンプル：`getTodos()` の並び替えやフィルタ
 * AIでテスト雛形を作るミニコーナー🤖✍️
@@ -128,6 +140,8 @@
 ---
 
 ## 追加：AI（Copilot/Codex）を“教材に自然に混ぜる”運用案🤖💡
+
+![AI Helper](./picture/cqs_ts_index_ai_helper.png)
 
 各章の最後に小さく入れるのがおすすめです☺️
 

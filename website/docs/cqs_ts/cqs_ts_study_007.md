@@ -6,6 +6,10 @@
 
 ## 1) 今日のゴール🎯✨
 
+![goal_separation](./picture/cqs_ts_study_007_goal_separation_01.png)
+
+
+
 * 「状態を変える処理」＝ **Command** 🔧
 * 「状態を読む処理」＝ **Query** 📖
 * それを **別の関数に分ける**（最初の一歩）✂️
@@ -19,6 +23,10 @@
 ---
 
 ## 2) まず“混ぜ混ぜ関数”を見て、事故ポイントを発見する👀💥
+
+![mixed_function_problem](./picture/cqs_ts_study_007_mixed_function_problem_01.png)
+
+
 
 たとえば、こういうの…よくある！🥹（※わざとダメ寄せ）
 
@@ -95,6 +103,10 @@ let todos: Todo[] = [];
 
 ## 手順B：Commandを切り出す🔧✨（状態を変えるだけ！）
 
+![extract_command](./picture/cqs_ts_study_007_extract_command_01.png)
+
+
+
 ```ts
 export function addTodo(title: string): void {
   todos.push({ id: crypto.randomUUID(), title, done: false });
@@ -108,6 +120,10 @@ export function completeTodo(id: string): void {
 ```
 
 ## 手順C：Queryを切り出す📖✨（読むだけ！）
+
+![extract_query_copy](./picture/cqs_ts_study_007_extract_query_copy_01.png)
+
+
 
 ここが超重要ポイント👇
 **外に配列をそのまま渡すと、外側で書き換えられて事故る**😇💥
@@ -195,6 +211,10 @@ render();
 
 ## 6) 命名ルール📛✨（迷ったらコレ！）
 
+![naming_rules](./picture/cqs_ts_study_007_naming_rules_01.png)
+
+
+
 ## Commandの名前（やること＝動詞）🔧
 
 * `addTodo`
@@ -218,6 +238,10 @@ render();
 ## 7) よくあるミス集😇→😱（ここ超大事！）
 
 ## ❌ Queryのつもりで配列を並び替えちゃう
+
+![query_side_effect](./picture/cqs_ts_study_007_query_side_effect_01.png)
+
+
 
 ```ts
 export function getTodosSortedBad(): readonly Todo[] {
@@ -253,6 +277,10 @@ Queryは「読むだけ」だから、送信・保存・更新は置かない�
 ---
 
 ## 9) AIミニコーナー🤖💡（Copilot/Codexに投げると強い！）
+
+![ai_refactoring_partner](./picture/cqs_ts_study_007_ai_refactoring_partner_01.png)
+
+
 
 そのままコピペで使えるプロンプト例だよ〜✨
 

@@ -7,6 +7,8 @@
 
 ## 1. まずは“たった2種類”だけ覚えよ〜🧠💡
 
+![Command Query Contrast](./picture/cqs_ts_study_003_command_query_contrast.png)
+
 ## ✅ Command（コマンド）＝状態を変える（副作用あり）🔧💥
 
 * 例：追加する、更新する、削除する、保存する、送信する…
@@ -45,6 +47,8 @@
 ---
 
 ## 3. ありがち事故：CommandとQueryを混ぜるとこうなる😇→😱
+
+![Mix Accident](./picture/cqs_ts_study_003_mix_accident.png)
 
 たとえば ToDo でありがちな「混ぜ混ぜ関数」👇
 
@@ -112,9 +116,13 @@ graph LR
 * 「追加した結果の一覧が欲しい」なら
   **Command → Query の2ステップ**にするのが基本 🔁✨
 
+![Two Step Flow](./picture/cqs_ts_study_003_two_step_flow.png)
+
 ---
 
 ## 5. 「副作用」ってなに？超ざっくりリスト🧨👀
+
+![Side Effect Mindmap](./picture/cqs_ts_study_003_side_effect_mindmap.png)
 
 Queryでやっちゃダメ（やるならCommand側へ！）になりがちなもの👇
 
@@ -151,6 +159,8 @@ mindmap
 
 ## 6. どうしても迷う「例外」ゾーン（軽く）🧠⚠️
 
+![Pop Exception](./picture/cqs_ts_study_003_pop_exception.png)
+
 CQSは基本ルールとして強いけど、例外もあるよ〜（有名なのは “pop” みたいなやつ！） ([martinfowler.com][1])
 
 ## 🌀 例外ケースの考え方（初心者向け）
@@ -167,6 +177,8 @@ CQSは基本ルールとして強いけど、例外もあるよ〜（有名な�
 ---
 
 ## 7. ミニ判断フローチャート（脳内用）🧠🗺️
+
+![Decision Flow](./picture/cqs_ts_study_003_decision_flow.png)
 
 * ① これ呼ぶと、保存されたデータ・メモリ・画面・外部が変わる？
 
@@ -193,6 +205,8 @@ flowchart TD
 ---
 
 ## 8. 仕分けクイズ（12問）🎯💖
+
+![Quiz Card](./picture/cqs_ts_study_003_quiz_card.png)
 
 次の関数は Command？Query？どっちかな？✨（直感でOK！）
 

@@ -6,6 +6,8 @@
 
 ## 5-0. この章で作るもの（完成イメージ）🎯✨
 
+![ToDo App Preview](./picture/cqs_ts_study_005_app_preview.png)
+
 次の機能がある **ミニToDo** を作るよ〜🧸💕
 
 * 追加 ➕
@@ -31,6 +33,8 @@
 
 ## 5-2. いまの定番バージョン感（2026/01/20時点）📌✨
 
+![Tech Versions](./picture/cqs_ts_study_005_tech_versions.png)
+
 * Node.js は **v24 系が Active LTS**（安定運用向き）💚 ([nodejs.org][1])
 * TypeScript は **5.9 系**が現行の安定ラインとして参照しやすいよ📘 ([TypeScript][2])
 * Vite は **v7 系**が最新安定ライン（例：v7.3.1 表示あり）⚡ ([GitHub][3])
@@ -38,6 +42,8 @@
 ---
 
 ## 5-3. プロジェクトを作る（Vite + vanilla-ts）⚡🪄
+
+![Vite Setup](./picture/cqs_ts_study_005_vite_setup.png)
 
 ターミナルで以下を順に実行してね🖥️✨
 
@@ -179,6 +185,7 @@ function boot() {
 ------------------------------ */
 
 // ✅ 追加（Command）っぽいのに、戻り値も返して、さらに描画もしちゃう😇
+// ![Add Mixed](./picture/cqs_ts_study_005_add_mixed.png)
 function addTodoMixed(rawTitle: string): Todo[] {
   const title = rawTitle.trim();
   if (!title) return todos;
@@ -239,6 +246,7 @@ function setFilterMixed(f: Filter) {
 }
 
 // ✅ 読み込み＋描画（Query？）っぽいのに修正や保存もする😇
+// ![Init Chaos](./picture/cqs_ts_study_005_init_chaos.png)
 function loadTodosAndRenderMixed() {
   const raw = localStorage.getItem(STORAGE_KEY);
   const saved = raw ? (safeJsonParse<Todo[]>(raw) ?? []) : [];
@@ -265,6 +273,7 @@ function saveTodosMixed() {
 }
 
 // ✅ 表示用取得（Queryっぽい）なのに、読んだ回数を増やす副作用を入れる😇💥
+// ![Query Side Effect](./picture/cqs_ts_study_005_query_side_effect.png)
 function getVisibleTodosMixed(): Todo[] {
   bumpReadCount(); // ← Queryに副作用ドーン😇
   switch (filter) {
@@ -562,6 +571,8 @@ mindmap
 ---
 
 ## 5-7. ミニ課題（この章のうちに軽く遊ぶ）🧸📝
+
+![Mini Tasks](./picture/cqs_ts_study_005_mini_tasks.png)
 
 どれも “混ぜ混ぜのまま” でOKだよ😎（次で直すから！）
 

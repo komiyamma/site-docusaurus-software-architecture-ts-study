@@ -44,6 +44,8 @@ graph TD
 
 ## 2) Queryの戻り値：**“ほしいデータそのもの”**を返す📦✨
 
+![Query Shape](./picture/cqs_ts_study_004_query_shape.png)
+
 Queryは「読む」だけだから、戻り値は素直でOK🙆‍♀️💕
 
 ### よくあるQuery例🧸
@@ -84,6 +86,8 @@ export async function fetchTodos(): Promise<Todo[]> {
 ---
 
 ## 3) Commandの戻り値：基本は **`void`**（＝返さない）🧹✨
+
+![Command Void](./picture/cqs_ts_study_004_command_void.png)
 
 Commandは「変える」側。
 戻り値を盛り始めると、だんだん **Queryっぽい責務**が混ざってくるのが落とし穴😱💥
@@ -159,6 +163,8 @@ TypeScriptではちょっと不思議なことが起きるよ〜😳
 
 ### ✅ Commandが返していいのは **“レシート”** 🧾✨
 
+![Receipt Return](./picture/cqs_ts_study_004_receipt_return.png)
+
 * **ID**（作ったものの識別子）
 * **成否**（OK/NG）
 * **バージョン**（楽観ロックとかの）
@@ -167,6 +173,8 @@ TypeScriptではちょっと不思議なことが起きるよ〜😳
 逆に、これはやりがちだけど避けたい👇
 
 ### ❌ Commandが返しがちなダメ例🐘💥
+
+![Bloated Return](./picture/cqs_ts_study_004_bloated_return.png)
 
 * 「更新後の一覧を返す」
 * 「画面表示用に整形したデータを返す」
@@ -209,9 +217,14 @@ export function createTodo(title: string): CreateTodoReceipt {
 
 ## 6) 非同期Commandのもう1個の落とし穴：「await付け忘れ」😱⚡
 
+![Floating Promise](./picture/cqs_ts_study_004_floating_promise.png)
+
 `Promise<void>` のCommandを呼ぶとき、うっかり `await` を忘れると、**失敗がどこかに飛んでいく**ことがあるよ〜🥲
 
 そこで登場するのが、よく使われるlintルール：`no-floating-promises` 🧹✨
+
+![Lint Guard](./picture/cqs_ts_study_004_lint_guard.png)
+
 このルールは「Promiseを放置しないで！」って怒ってくれるやつ！
 
 * `void somePromise()` って書くと「意図的にawaitしない」意思表示になるよ🙋‍♀️
@@ -220,6 +233,8 @@ export function createTodo(title: string): CreateTodoReceipt {
 ---
 
 ## 7) ミニ演習：戻り値の型を選んでみよ〜🎯💗
+
+![Quiz Selection](./picture/cqs_ts_study_004_quiz_selection.png)
 
 次の関数、戻り値はどれが自然？
 **A: `void` / B: `T` / C: `Promise<void>` / D: `Promise<T>`** で考えてね🧠✨

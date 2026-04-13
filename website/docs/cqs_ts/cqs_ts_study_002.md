@@ -6,6 +6,8 @@
 * VS Code は **1.108（2025年12月版の更新が2026-01-08公開）**、Insiders は **1.109（2026-01-18更新）** が出てるよ🪟✨ ([code.visualstudio.com][2])
 * VS Code で使える **Codex IDE 拡張**の案内も公式に出てるよ🤖🧰 ([OpenAI Developers][3])
 
+![Tech Stack Icons](./picture/cqs_ts_study_002_tech_stack_icons.png)
+
 ---
 
 ## この章のゴール🎯✨
@@ -21,6 +23,8 @@
 ---
 
 ## まずは“混ぜ混ぜ関数”を見てみよ😇🌀
+
+![Messy Logic Machine](./picture/cqs_ts_study_002_messy_logic_machine.png)
 
 ToDoアプリあるあるで、こういう「全部入り関数」を作っちゃいがち👇（事故の香りがぷんぷん😇）
 
@@ -125,6 +129,8 @@ todoList.innerHTML = addTodoAndRenderHtml(""); // 😱 追加のつもりゼロ�
 
 ## 事故②：デバッグが地獄👹🔍「何が起きたの？」が説明できない
 
+![Debug Hell Maze](./picture/cqs_ts_study_002_debug_hell_maze.png)
+
 混ぜ混ぜ関数だと、バグが出た時にこうなる👇😇
 
 * 追加が悪い？
@@ -159,6 +165,8 @@ todo.title = todo.title.trim();   // 😱 “表示”の都合が “保存デ�
 
 ## 事故④：テストできない（＝安心して変更できない）😵‍💫🧪
 
+![Untestable Blob](./picture/cqs_ts_study_002_untestable_blob.png)
+
 混ぜ混ぜ関数は、だいたいテストが難しくなるよ〜😇
 
 * `localStorage` が必要（環境依存）
@@ -172,6 +180,8 @@ todo.title = todo.title.trim();   // 😱 “表示”の都合が “保存デ�
 ---
 
 ## 事故⑤：二重実行・多重クリックで増殖する🐛🐛🐛
+
+![Double Click Explosion](./picture/cqs_ts_study_002_double_click_explosion.png)
 
 UIイベントって、意外と二重で走ることがあるの🥲（Enter＋Click、二重バインド、連打…）
 
@@ -193,6 +203,8 @@ input.addEventListener("keydown", (e) => {
 ---
 
 ## 事故⑥：エラーの“責任者”が不明になる🫠🧨
+
+![Error Mystery](./picture/cqs_ts_study_002_error_mystery.png)
 
 この関数、失敗ポイントが多すぎるよね😇
 
@@ -241,6 +253,8 @@ mindmap
 この状態をひとことで言うと…
 
 ## 「何が起きた？」を説明できない関数は、将来の自分を泣かせる😭💔
+
+![Future Self Crying](./picture/cqs_ts_study_002_future_self_crying.png)
 
 （未来のあなた：ｳｯ…たしかに…ってなるやつ🥹）
 

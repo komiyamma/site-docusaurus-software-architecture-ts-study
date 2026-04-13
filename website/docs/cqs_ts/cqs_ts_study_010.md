@@ -10,6 +10,10 @@
 
 ## 1) なんでCommandの戻り値って悩むの？😵‍💫
 
+![command_temptation](./picture/cqs_ts_study_010_command_temptation_01.png)
+
+
+
 Commandって「状態を変える係」だよね🔧
 でも実務だとついこう言いたくなるの👇
 
@@ -84,6 +88,10 @@ Commandって「状態を変える係」だよね🔧
 
 ## 4) 基本パターン：Command → Queryで再取得🔁✨
 
+![cq_cycle](./picture/cqs_ts_study_010_cq_cycle_01.png)
+
+
+
 ```mermaid
 graph LR
     UI["🎨 UI (Event)"] -->|"1. 命令 (Command) 🔧"| C["ロジック (更新)"]
@@ -127,6 +135,10 @@ graph TD
 
 ### 5-1. ダメ寄り例（返しすぎ）😇💥
 
+![bloated_command](./picture/cqs_ts_study_010_bloated_command_01.png)
+
+
+
 
 ```ts
 type Todo = { id: string; title: string; completed: boolean };
@@ -159,6 +171,10 @@ export function completeTodo_bad(id: string): Todo[] {
 ---
 
 ### 5-2. 良い例：Commandは最小だけ返す（ID or 成否）🎁✅
+
+![slim_command](./picture/cqs_ts_study_010_slim_command_01.png)
+
+
 
 ```ts
 type TodoId = string;
@@ -195,6 +211,10 @@ export function getTodos(): readonly Todo[] {
 
 ### 5-3. UI側はこう使う（Command→Query）🖥️🔁
 
+![ui_interaction_flow](./picture/cqs_ts_study_010_ui_interaction_flow_01.png)
+
+
+
 ```ts
 const newId = addTodo("牛乳を買う🍼");
 const list1 = getTodos(); // 画面更新用に読む📖
@@ -210,6 +230,10 @@ if (r.ok) {
 ---
 
 ## 6) それでも「少し返したい」実務の落とし所🧩✨
+
+![snapshot_compromise](./picture/cqs_ts_study_010_snapshot_compromise_01.png)
+
+
 
 たとえば「追加した直後に、その1件だけ画面に出したい」みたいな時あるよね🥺
 その場合は **“最小のスナップショット”だけ**返す、が妥協ラインになりやすいよ👇
@@ -230,6 +254,10 @@ if (r.ok) {
 ## 7) TSで事故を減らす小ワザ🧠✨（CQSにも効く！）
 
 ### noImplicitReturns で「返し忘れ」を検出🧯
+
+![ts_guard_returns](./picture/cqs_ts_study_010_ts_guard_returns_01.png)
+
+
 
 CommandResultみたいなUnionを返すとき、返し忘れが地味に危ない😇
 `noImplicitReturns` をONにすると「全部の分岐でreturnしてる？」をチェックしてくれるよ。([TypeScript][2])

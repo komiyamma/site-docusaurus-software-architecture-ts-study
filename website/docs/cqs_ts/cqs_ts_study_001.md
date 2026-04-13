@@ -16,6 +16,8 @@
 
 ### Command（コマンド）🔧💥
 
+![Command Tools](./picture/cqs_ts_study_001_command_tools.png)
+
 「何かをする」「変更する」系だよ〜✨
 例👇
 
@@ -28,6 +30,8 @@
 
 ### Query（クエリ）🔍📖
 
+![Query Tools](./picture/cqs_ts_study_001_query_tools.png)
+
 「知りたい」「取得したい」系だよ〜✨
 例👇
 
@@ -36,6 +40,8 @@
 * 1件だけ探す 🕵️‍♀️
 
 👉 ポイント：**“見るだけ（副作用なし）”**が理想🍃
+
+![Decision Flowchart](./picture/cqs_ts_study_001_decision_flowchart.png)
 
 ```mermaid
 flowchart LR
@@ -86,6 +92,8 @@ Fowler も「状態を変えない問い合わせ（Query）は安心して差�
 
 ### 4-1. 混ぜ混ぜ（事故りやすい）例😱🧨
 
+![Mixed Code Chaos](./picture/cqs_ts_study_001_mixed_code_chaos.png)
+
 ```ts
 let todos: { id: number; title: string; done: boolean }[] = [];
 let nextId = 1;
@@ -104,6 +112,8 @@ export function getTodos(): { id: number; title: string; done: boolean }[] {
 ---
 
 ### 4-2. CQSっぽく分けた例🥳🍃
+
+![Separated Clean](./picture/cqs_ts_study_001_separated_clean.png)
 
 ```ts
 let todos: { id: number; title: string; done: boolean }[] = [];
@@ -142,6 +152,8 @@ export function getViewCount(): number {
 ## 5. 今日のミニ演習🎮✨（5〜10分）
 
 ### 演習A：これはどっち？仕分けしよう🎯
+
+![Quiz Sorting](./picture/cqs_ts_study_001_quiz_sorting.png)
 
 次の関数名、Command / Queryどっちっぽい？🤔💭
 
@@ -194,6 +206,8 @@ AIは“分割案”を出すの得意だけど、**最後の判断はあなた�
 ---
 
 ## 7. 今日のまとめ🌸💻✨
+
+![Motto Banner](./picture/cqs_ts_study_001_motto_banner.png)
 
 * **Command**＝変える🔧（基本、値を返さない）
 * **Query**＝読む📖（基本、状態を変えない）

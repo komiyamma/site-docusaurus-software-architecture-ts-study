@@ -10,6 +10,10 @@
 
 ## まずは超ショート復習🧸📌
 
+![basic_definition](./picture/cqs_ts_study_006_basic_definition_01.png)
+
+
+
 * **Command**：状態を変える／外に影響を出す（保存・送信・ログ・UI更新など）🔧💥
 * **Query**：状態を読む／基本は“読むだけ”（できれば副作用ゼロ）📖🍃
 
@@ -41,6 +45,10 @@ flowchart TD
 
 
 次の質問に **1つでもYES** があったら、だいたい **Command寄り** だよ✅
+
+![five_checks](./picture/cqs_ts_study_006_five_checks_01.png)
+
+
 
 1. **保存・更新・削除**してる？（DB / ファイル / localStorage / メモリ状態）💾🗑️
 2. **外部へ送ってる**？（HTTP POST/PUT、通知、分析イベント、メール）📡📨
@@ -92,6 +100,10 @@ GET自体は“読み”だけど、**取得結果を保存してキャッシュ
 
 ## 🎯分類ゲーム：問題編（15問）🎮✨
 
+![classification_game_start](./picture/cqs_ts_study_006_classification_game_start_01.png)
+
+
+
 まずは直感でOK！「どっち寄り？」って考えてみてね😊🌸
 （※この章のコツ：**迷ったら“観測できる変化があるか”**👀）
 
@@ -117,6 +129,8 @@ GET自体は“読み”だけど、**取得結果を保存してキャッシュ
 
 ## 1. `addTodo(text)` → **Command** 🔧💾
 
+![add_todo_mechanics](./picture/cqs_ts_study_006_add_todo_mechanics_01.png)
+
 保存で状態が変わる！観測可能な変化があるよね👀✨
 
 ## 2. `getTodos()` → **Query** 📖📋
@@ -128,6 +142,8 @@ GET自体は“読み”だけど、**取得結果を保存してキャッシュ
 完了状態に更新＝状態変化！
 
 ## 4. `completeTodoAndReturnList(id)` → **Command（混ぜ混ぜ注意）** 🧨
+
+![split_mixed_function](./picture/cqs_ts_study_006_split_mixed_function_01.png)
 
 “更新（Command）”しつつ“一覧取得（Query）”もやってる💥
 ➡️ ベストはこう👇
@@ -172,6 +188,8 @@ GET自体は“読み”だけど、**取得結果を保存してキャッシュ
 外部へ送ってる＝影響大。Command！
 
 ## 12. `generateId()` → **グレー：Queryっぽいけど“純粋じゃない”** 🧠🎲
+
+![gray_zone_inputs](./picture/cqs_ts_study_006_gray_zone_inputs_01.png)
 
 状態は変えないからQueryっぽい。だけど乱数で結果が変わる！
 ➡️ コツ：**ID生成を“境界”扱い**にして、必要なら注入できる形にすると後で困らない✨
@@ -226,6 +244,10 @@ graph LR
 ---
 
 ## 🤖AIミニコーナー：分類ゲームを強化する使い方✨
+
+![ai_classification_help](./picture/cqs_ts_study_006_ai_classification_help_01.png)
+
+
 
 Copilot Chat などに、こう投げるとすごく練習になるよ👇（IDE内チャットが前提の機能として案内されてるよ）([GitHub Docs][2])
 

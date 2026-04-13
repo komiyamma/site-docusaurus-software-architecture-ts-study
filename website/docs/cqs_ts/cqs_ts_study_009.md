@@ -22,6 +22,10 @@
 
 ## 1. Queryの副作用ってなに？（ふわっと→くっきり）🍃
 
+![query_ideal_vs_reality](./picture/cqs_ts_study_009_query_ideal_vs_reality_01.png)
+
+
+
 ### ✅ Queryの理想
 
 * **同じ入力なら、いつ呼んでも同じ結果**
@@ -75,6 +79,10 @@ Queryって「読んでるだけのつもり」でも、地雷があるの…�
 
 ### 2-3. 配列の `sort()` が“その場で並べ替える”🧨
 
+![sort_destructive](./picture/cqs_ts_study_009_sort_destructive_01.png)
+
+
+
 `sort()` は配列を **in-place（その場）でソートしてしまう**よ〜⚠️ ([MDN ウェブドキュメント][5])
 Queryで `sort()` したつもりが、元データを壊してるパターン超ある…😇
 
@@ -95,6 +103,10 @@ Queryで `sort()` したつもりが、元データを壊してるパターン�
 ---
 
 ## 3. 「副作用ゼロQuery」を作る3つの型🧩✨
+
+![pure_query_types](./picture/cqs_ts_study_009_pure_query_types_01.png)
+
+
 
 ![Injecting Time](./picture/cqs_ts_study_009_injecting_time.png)
 
@@ -169,6 +181,10 @@ export function getTodos_ok(todos: readonly Todo[]): Todo[] {
 
 ### 4-2. もう一個の地雷：Queryが “時刻” に触る⏰💥
 
+![time_dependency_trap](./picture/cqs_ts_study_009_time_dependency_trap_01.png)
+
+
+
 ```ts
 export function getOverdueTodos_bad(todos: readonly Todo[]): Todo[] {
   const now = Date.now(); // ❌ 呼ぶたび変わる
@@ -179,6 +195,10 @@ export function getOverdueTodos_bad(todos: readonly Todo[]): Todo[] {
 `Date.now()` は呼ぶたび“今の値”だから、結果がブレやすいよ〜 ([MDN ウェブドキュメント][4])
 
 ✅ 改善：**「今」を外から渡す**（注入💉）
+
+![time_injection_stability](./picture/cqs_ts_study_009_time_injection_stability_01.png)
+
+
 
 ```ts
 export function getOverdueTodos_ok(
@@ -224,6 +244,10 @@ sequenceDiagram
 
 ### 5-2. “ラッパー”で包む（Queryは汚さない）🎁✨
 
+![query_logging_wrapper](./picture/cqs_ts_study_009_query_logging_wrapper_01.png)
+
+
+
 ```ts
 export function withQueryLog<TArgs extends unknown[], TResult>(
   name: string,
@@ -243,6 +267,10 @@ Query本体は純粋のまま🍃
 ---
 
 ## 6. 仕上げ：Query副作用ゼロの「最終チェック」✅👀
+
+![side_effect_shield](./picture/cqs_ts_study_009_side_effect_shield_01.png)
+
+
 
 Queryを書いたら、これを自分に質問してね🧸✨
 

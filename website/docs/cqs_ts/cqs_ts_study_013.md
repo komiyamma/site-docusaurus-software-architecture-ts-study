@@ -47,6 +47,8 @@ Query の理想はこれ👇
 
 ## 3) テスト道具はどうする？🧰✨（おすすめ：Vitest）
 
+![vitest_logo](./picture/cqs_ts_study_013_vitest_logo.png)
+
 TypeScriptでサクッと書きやすくて、動作も速くて、今どきの開発と相性いいのが **Vitest** だよ〜⚡️🧪
 （2025年秋にVitest 4が出て、npmでも4系が最新として更新されてるよ） ([vitest.dev][1])
 
@@ -85,6 +87,8 @@ npm test
 * `queryTodos()`：並び替え・絞り込み・検索（表示用に欲しくなるやつ！）
 
 ### フォルダの置き方（イメージ）📁✨
+
+![folder_structure](./picture/cqs_ts_study_013_folder_structure.png)
 
 * `src/core/`：ドメイン（Query/Commandの中心）
 * `src/ui/`：表示やイベント（ここは今回触らない）
@@ -149,8 +153,12 @@ export function queryTodos(
 ポイントだよ〜👇🥰
 
 * `ReadonlyArray` を受け取る → **破壊しない意識**が強制される💖
+
+![readonly_shield](./picture/cqs_ts_study_013_readonly_shield.png)
 * `Date` を持たず `createdAt: number` にする → **テストが固定できる**🧊
 * `sort()` は破壊的だから、必ず `[...]` でコピーしてから！⚠️
+
+![destructive_sort](./picture/cqs_ts_study_013_destructive_sort.png)
 
 ---
 
@@ -244,6 +252,8 @@ graph TD
 ![Testing Accidents](./picture/cqs_ts_study_013_testing_accidents.png)
 
 ### 事故①：Queryの中で `Date.now()` を使う🕒💥
+
+![stable_vs_flaky](./picture/cqs_ts_study_013_stable_vs_flaky.png)
 
 * 毎回結果が変わってテストが不安定に…😇
   対策：

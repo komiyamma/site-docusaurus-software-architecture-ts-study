@@ -35,6 +35,10 @@
 
 ## 12-2. なんでCQSだとキャッシュしやすいの？💖
 
+![stable_query](./picture/cqs_ts_study_012_stable_query_01.png)
+
+
+
 ここが今日のメイン🥰
 
 **Query は「読むだけ」**だから、理想は👇
@@ -49,6 +53,10 @@
 ---
 
 ## 12-3. キャッシュの種類（イメージだけでOK）🧠💡
+
+![cache_types](./picture/cqs_ts_study_012_cache_types_01.png)
+
+
 
 ## A) メモ化（関数キャッシュ）🧩
 
@@ -66,6 +74,10 @@
 ---
 
 ## 12-4. 「キャッシュしていいQuery」チェックリスト✅🍯
+
+![cacheable_checklist](./picture/cqs_ts_study_012_cacheable_checklist_01.png)
+
+
 
 ```mermaid
 mindmap
@@ -113,6 +125,10 @@ Queryがこの条件を満たすほど、キャッシュして事故りにくい
 
 ## 12-5. ToDo題材：キャッシュしやすいQueryの作り方📝✨
 
+![pure_pipe_query](./picture/cqs_ts_study_012_pure_pipe_query_01.png)
+
+
+
 ## 例：フィルタ済み一覧を返す Query
 
 ポイントは👇
@@ -143,6 +159,10 @@ export function getVisibleTodos(todos: readonly Todo[], filter: Filter): Todo[] 
 ---
 
 ## 12-6. “メモ化”を超ミニでやってみよ🧩🍯
+
+![memoization_mechanics](./picture/cqs_ts_study_012_memoization_mechanics_01.png)
+
+
 
 「同じ入力なら同じ出力」な Query は、メモ化の王道👑
 
@@ -223,6 +243,10 @@ Command は状態を変えるから、**今までのQuery結果が古くなる**
 
 ## 12-8. API取得のキャッシュ：考え方だけ先取り🌐🍯
 
+![smart_cache_lib](./picture/cqs_ts_study_012_smart_cache_lib_01.png)
+
+
+
 フロントで「サーバーから取るデータ」をキャッシュする世界では、専用ライブラリが超強いよ💪✨
 たとえば👇
 
@@ -237,6 +261,10 @@ Command は状態を変えるから、**今までのQuery結果が古くなる**
 ---
 
 ## 12-9. キャッシュの“やりすぎ注意”ポイント⚠️😇
+
+![stale_data_hazard](./picture/cqs_ts_study_012_stale_data_hazard_01.png)
+
+
 
 キャッシュは正義っぽいけど、雑にやると事故るよ〜😱💦
 

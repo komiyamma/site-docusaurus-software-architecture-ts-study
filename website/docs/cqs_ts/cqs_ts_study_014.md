@@ -17,6 +17,8 @@
 
 ## 2) Commandのテストが難しい理由😵‍💫（副作用のせい）
 
+![side_effect_monster](./picture/cqs_ts_study_014_side_effect_monster.png)
+
 Commandってだいたいこういうのを触るよね👇
 
 * DB/ファイル/localStorage を更新する💾
@@ -123,6 +125,8 @@ Commandは **TodoRepo を「使う」だけ**で、DBとかlocalStorageの存在
 
 ### 4.3 Command本体（判断ロジック）🔧✨
 
+![command_flow](./picture/cqs_ts_study_014_command_flow.png)
+
 「Commandは返していいもの／ダメなもの」ルールに合わせて、ここでは **最小の結果だけ**返すよ🎁（成功/失敗）
 
 ```ts
@@ -226,6 +230,8 @@ package.json はこんな感じ👇
 
 ### 5.2 テスト：Fake repo + 固定時計で安定化🕒🧪
 
+![fake_repository](./picture/cqs_ts_study_014_fake_repository.png)
+
 ```ts
 // src/app/commands/completeTodo.spec.ts
 import { describe, it, expect, vi } from "vitest";
@@ -310,6 +316,8 @@ describe("completeTodo (Command)", () => {
 コツはこれだよ〜💡💖
 
 * **固定時刻**にする（clock）→ “たまに落ちる”が消える🕒✨
+
+![fixed_clock](./picture/cqs_ts_study_014_fixed_clock.png)
 * Fake repo で “保存された内容”までチェックできる💾👀
 * Mock は「呼ばれたか」だけ見たいときに使う（使いすぎ注意）⚠️
 
@@ -318,6 +326,8 @@ describe("completeTodo (Command)", () => {
 ## 6) 依存関係ルール（Dependency Rule）を超ざっくり🍩✨
 
 ![Plug Socket](./picture/cqs_ts_study_014_plug_socket.png)
+
+![dependency_layers](./picture/cqs_ts_study_014_dependency_layers.png)
 
 ここでのルールはめちゃシンプルに言うと👇
 

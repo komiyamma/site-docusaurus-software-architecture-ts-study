@@ -79,6 +79,8 @@ TypeScript 5.9 では `tsc --init` の初期設定がかなり“ガチ寄り”
 * 「更新ロジック」と「表示整形」が絡まって事故る💥
 
 **実務の落とし所（ここ超大事）⚖️✨**
+
+![command_return_rules](./picture/cqs_ts_study_015_command_return_rules.png)
 Commandが返してOKなのは、だいたいこのへん👇
 
 * ✅ **ID**（新規作成したID）
@@ -116,6 +118,8 @@ sequenceDiagram
 
 ## 🥉 失敗3：分けたのに命名が微妙で読めない📛😇
 
+![naming_convention_tags](./picture/cqs_ts_study_015_naming_convention_tags_01.png)
+
 **ありがち症状**
 
 * `processTodo()` とか `handle()` とか “何やるの？”って名前
@@ -150,6 +154,8 @@ CQSは「守りすぎて苦しくなる」と本末転倒😇
 
 ## 15-4. CQS と CQRS は別物だよ⚖️（やりすぎ注意）
 
+![cqs_vs_cqrs_scale](./picture/cqs_ts_study_015_cqs_vs_cqrs_scale.png)
+
 * **CQS**：1つのコードベースの中で「書く/読む」を混ぜない🧩
 * **CQRS**：さらに踏み込んで「読み取りモデルと書き込みモデルを分ける（場合によってはDBも）」みたいな世界🌍
 
@@ -178,6 +184,8 @@ graph LR
 ---
 
 ## 15-5. 卒業チェックリスト✅🎓✨（PR前に見るやつ）
+
+![graduation_diploma](./picture/cqs_ts_study_015_graduation_diploma.png)
 
 ## ✅ CQSチェック
 
@@ -237,6 +245,8 @@ ToDoアプリにこの3つを足してみて👇（CQSが効きまくるやつ�
 ---
 
 ## 15-8. 次に学ぶと強いロードマップ📚✨（CQSの次の一歩）
+
+![roadmap_path](./picture/cqs_ts_study_015_roadmap_path.png)
 
 CQSを覚えた人が伸びる順番、だいたいこれ💪💕
 

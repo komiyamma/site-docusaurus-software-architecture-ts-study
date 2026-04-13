@@ -21,6 +21,10 @@
 
 ## 1) “境界”ってなに？🚪✨（超かんたん）
 
+![boundary_concept](./picture/cqs_ts_study_008_boundary_concept_01.png)
+
+
+
 **境界**＝「ここから先は UI の担当、こっちはロジックの担当ね！」って決める **境目**のことだよ〜🙂💡
 
 * **UI（外側）**：入力を受け取る、ボタン押下、DOM描画、アラート表示、フォーム操作…など 🎨🖱️
@@ -32,6 +36,10 @@ UI は副作用まみれでもOK。でも **Query は副作用ゼロでいたい
 ---
 
 ## 2) なぜ UI とロジックを分けるの？🤔💥
+
+![mixed_hazards](./picture/cqs_ts_study_008_mixed_hazards_01.png)
+
+
 
 UI とロジックが混ざってると、ありがちな事故が起きるよ〜😱
 
@@ -61,6 +69,10 @@ UI とロジックが混ざってると、ありがちな事故が起きるよ�
 この章は、まず **レベル2** を目標にするのがちょうどいいよ〜🙂💖
 
 ### 境界レベル（おすすめ順）📈
+
+![separation_levels](./picture/cqs_ts_study_008_separation_levels_01.png)
+
+
 
 * **レベル1：同ファイルで区切る**（コメントの壁でもOK）🧱
 * **レベル2：ファイル/フォルダを分ける（おすすめ）** 📁✨
@@ -126,6 +138,10 @@ graph LR
 
 ### ゴールの構成（おすすめ）📁✨
 
+![file_structure](./picture/cqs_ts_study_008_file_structure_01.png)
+
+
+
 ```
 src/
   core/
@@ -157,6 +173,10 @@ graph TD
 ---
 
 ## 6) core/todo.ts：まず “純粋ロジック” を作る🍃✨
+
+![pure_logic_flow](./picture/cqs_ts_study_008_pure_logic_flow_01.png)
+
+
 
 ここはできるだけ **副作用なし**でいくよ〜🧪🥳
 
@@ -202,6 +222,10 @@ export function completeTodo(todos: readonly Todo[], id: TodoId): Todo[] {
 
 ## 7) core/todoStore.ts：状態（副作用）を “器” に閉じ込める📦🧩
 
+![store_container](./picture/cqs_ts_study_008_store_container_01.png)
+
+
+
 UI が配列を直接いじり出すとまた混ざるから、**状態は Store に持たせる**のが楽だよ〜🙂✨
 
 ```ts
@@ -239,6 +263,10 @@ export class TodoStore {
 ---
 
 ## 8) ui/main.ts：UIは “呼ぶだけ＆描くだけ” にする🎨🖱️✨
+
+![ui_dumb_terminal](./picture/cqs_ts_study_008_ui_dumb_terminal_01.png)
+
+
 
 UIは副作用の塊でOK！その代わり **判断を持ち込まない**のが大事🙂💖
 

@@ -14,6 +14,10 @@
 
 ## 11-1. 非同期って、結局なに？🤔💭
 
+![promise_concept](./picture/cqs_ts_study_011_promise_concept_01.png)
+
+
+
 非同期＝「待ち時間がある処理（ネットワーク/DB/ファイルなど）を、Promiseで扱う」ってことだよ〜⏳📦
 
 * `fetch()` は **Promise** を返す（将来の `Response` を約束してる） ([MDN ウェブドキュメント][1])
@@ -27,6 +31,10 @@
 ---
 
 ## 11-2. 非同期でもCQSのルールは同じ✅✨
+
+![http_cqs_mapping](./picture/cqs_ts_study_011_http_cqs_mapping_01.png)
+
+
 
 ```mermaid
 graph TD
@@ -60,6 +68,10 @@ graph TD
 ---
 
 ## 11-3. `fetch` の最小セット（これだけ覚えよ）🧩✨
+
+![fetch_flow](./picture/cqs_ts_study_011_fetch_flow_01.png)
+
+
 
 `fetch` は「成功っぽく見えても失敗してる」ことがあるので、**`response.ok` を必ず見る**のが基本だよ👀✨ ([MDN ウェブドキュメント][1])
 
@@ -114,6 +126,8 @@ type TodoListResponse = {
 
 ### ② Query：一覧を取る（`Promise<Todo[]>`）📖✨
 
+![query_fetch](./picture/cqs_ts_study_011_query_fetch_01.png)
+
 ```ts
 import { fetchJson } from "./fetchJson";
 import type { Todo } from "./types";
@@ -137,6 +151,8 @@ export async function getTodosQuery(): Promise<Todo[]> {
 ---
 
 ### ③ Command：追加する（基本は `Promise<void>`）➕🔧✨
+
+![command_post](./picture/cqs_ts_study_011_command_post_01.png)
 
 まずは王道の「返さない」版（シンプル！）👇
 
@@ -251,6 +267,10 @@ function render(list: typeof todos) {
 
 ## 11-6. あるある事故集😇→😱（ここだけ先に潰す）
 
+![async_accidents](./picture/cqs_ts_study_011_async_accidents_01.png)
+
+
+
 ### 😱 事故1：`await` 付け忘れ
 
 * `response.json()` もPromiseだから、`await` 忘れると中身が取れないよ〜 ([MDN ウェブドキュメント][2])
@@ -286,6 +306,10 @@ function render(list: typeof todos) {
 ---
 
 ## 章末：AIコーナー🤖✨（そのままコピペOK）
+
+![ai_async_check](./picture/cqs_ts_study_011_ai_async_check_01.png)
+
+
 
 * 「この関数はCommand？Query？理由も一言で」🧠
 * 「`fetch` 周りの例外処理、初心者向けに読みやすくして」🧼
