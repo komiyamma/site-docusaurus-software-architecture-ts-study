@@ -14,6 +14,8 @@
 
 ## ① ビルドが落ちる（コンパイルで止まる）🟥🔨
 
+![Build Error Wall](./picture/api_contract_ts_study_002_build_error_wall.png)
+
 ```mermaid
 flowchart TD
     Change[コードの変更] --> Check{壊れ方は？}
@@ -34,6 +36,8 @@ TypeScriptが怒って、先に進めないやつ。
 
 ## ② 実行時エラー（動かしてから死ぬ）💣🏃‍♀️
 
+![Runtime Crash](./picture/api_contract_ts_study_002_runtime_crash.png)
+
 ビルドは通るのに、起動した瞬間（または特定操作で）落ちるやつ。
 
 * 例：`undefined is not a function`
@@ -45,6 +49,8 @@ TypeScriptが怒って、先に進めないやつ。
 ---
 
 ## ③ サイレント破壊（落ちないけど、挙動が変わる）😇➡️😱
+
+![Silent Failure Scale](./picture/api_contract_ts_study_002_silent_fail_scale.png)
 
 これがいちばん怖い…！
 落ちないから気づきにくいのに、結果が変わって事故るやつ。
@@ -74,6 +80,8 @@ Node.jsはメジャー間の移行で breaking change がまとまって出る�
 ---
 
 ## ✅ import まわり（ESM/CJS、exports、解決ルール）で壊れる📦🌀
+
+![Module Crossroads](./picture/api_contract_ts_study_002_module_crossroads.png)
 
 TypeScriptの `moduleResolution`（import の探し方）や `module` 設定が噛み合ってないと、突然こうなる：
 

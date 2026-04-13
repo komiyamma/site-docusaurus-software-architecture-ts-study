@@ -12,6 +12,8 @@
 
 ## 1) まず大事な考え方：エラーも“契約”の一部だよ📜⚠️
 
+![contract_two_sides](./picture/api_contract_ts_study_016_contract_two_sides.png)
+
 関数やAPIって「入力したら、こう返すよ」って約束（契約）をしてるよね🤝
 で、**成功だけじゃなくて失敗も約束の一部**なんだよ〜！
 
@@ -80,6 +82,8 @@
 
 ## 3) 境界（boundary）ってなに？🧱🚪
 
+![boundary_translator](./picture/api_contract_ts_study_016_boundary_translator.png)
+
 **境界**はカンタンに言うと、こういう“つなぎ目”のこと！
 
 * モジュールとモジュールの境目
@@ -93,6 +97,8 @@
 ---
 
 ## 4) なんで境界で整えるの？（やらないと起きる悲劇😱）
+
+![user_confusion](./picture/api_contract_ts_study_016_user_confusion.png)
 
 もし境界で整えないと…
 
@@ -116,6 +122,8 @@ flowchart LR
 
 ### 5-1) `catch` の中は“unknown”が基本だよ🕵️‍♀️
 
+![unknown_gloves](./picture/api_contract_ts_study_016_unknown_gloves.png)
+
 `catch (e)` の `e` を **unknownとして扱う**設定があるよ。これを使うと、雑に `e.message` とか触れなくなるので安全になる🛡️
 （`useUnknownInCatchVariables`）([typescriptlang.org][1])
 
@@ -127,6 +135,8 @@ flowchart LR
 ---
 
 ### 5-2) 3分類を“型”で表現する（おすすめは判別しやすい形）🧷✨
+
+![typed_error_cards](./picture/api_contract_ts_study_016_typed_error_cards.png)
 
 「種類」が一瞬でわかるように、**識別子（kind）**を入れておくのが超おすすめ🎀
 
@@ -159,6 +169,8 @@ type AppError = DomainError | InputError | InfraError;
 ## 6) 境界でやる“翻訳”の基本パターン🧠➡️🧾
 
 ### パターン①：外部ライブラリの例外をキャッチして、インフラエラーにする🌩️
+
+![error_root_cause](./picture/api_contract_ts_study_016_error_root_cause.png)
 
 内部ではライブラリがいろんな形でthrowしてくるから、境界で統一する！
 
@@ -216,6 +228,8 @@ HTTP APIの場合、エラー応答の形式を標準化する方法として **
 ---
 
 ## 7) “どこまで外に見せる？”の線引きルール📏✨
+
+![info_filter](./picture/api_contract_ts_study_016_info_filter.png)
 
 ここ、初心者が一番迷うところ！なのでシンプルに覚えよう🧠💕
 

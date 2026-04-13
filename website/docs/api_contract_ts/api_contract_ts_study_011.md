@@ -11,6 +11,8 @@
 
 ## 11-1. なんで“一気に変える”と事故るの？😵‍💫💥
 
+![big_bang_vs_phased](./picture/api_contract_ts_study_011_big_bang_vs_phased.png)
+
 「契約（Contract）」って、利用者との約束だよね🤝
 ここを急に変えると、こんな事故が起きがち👇
 
@@ -23,6 +25,8 @@
 ---
 
 ## 11-2. 段階移行の“道具セット”🧰🌈
+
+![migration_toolbox](./picture/api_contract_ts_study_011_migration_toolbox.png)
 
 段階移行でよく使う道具はこの3つ＋おまけ1つだよ👇
 
@@ -84,6 +88,8 @@ flowchart LR
 
 ## 11-4. 例①：関数APIを段階移行してみよう（旧→新）🧁🧩
 
+![function_evolution](./picture/api_contract_ts_study_011_function_evolution.png)
+
 ここでは「日付フォーマット関数」を例にするね📅✨
 
 ## 目標 🎯
@@ -144,6 +150,8 @@ export function formatDateV1(date: Date): string {
 
 ## 11-5. 例②：JSONフィールド名変更の段階移行（データ契約）🧾🧬
 
+![json_transition](./picture/api_contract_ts_study_011_json_transition.png)
+
 ## 状況 😵‍💫
 
 * 旧：userName
@@ -202,6 +210,8 @@ function normalizeUserInput(input: UserInput): { displayName: string } {
 
 ## 11-6. フラグで安全に切り替える（でも片づけ必須！）🚦🧹
 
+![flag_cleanup](./picture/api_contract_ts_study_011_flag_cleanup.png)
+
 「新ロジックをちょっとずつONにしたい」って時はフラグが便利💡
 ただし放置すると分岐が増えて地獄になるから、フラグの寿命を決めようね🪦😂
 フラグは“ライフサイクル管理”や“削除”が大事ってガイドでも強調されてるよ ([LaunchDarkly][1])
@@ -231,6 +241,8 @@ export function calcPrice(base: number, flags: Flags): number {
 ---
 
 ## 11-7. “移行が終わった！”の判断材料 📊👀
+
+![usage_dashboard](./picture/api_contract_ts_study_011_usage_dashboard.png)
 
 段階移行って、「気持ち」じゃなくて「数字」で終わらせると強い💪✨
 
@@ -272,6 +284,8 @@ export function calcPrice(base: number, flags: Flags): number {
 ---
 
 ## 11-10. AI活用プロンプト集 🤖💖（そのまま投げてOK）
+
+![ai_planner](./picture/api_contract_ts_study_011_ai_planner.png)
 
 ※ GitHub の Copilot や OpenAI 系のAI補助を「レビュー係」にすると超ラクだよ〜🧁✨
 

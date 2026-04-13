@@ -40,6 +40,8 @@ SemVerの超基本はこれだけでOK👇✨（**1.0.0以降**の話ね）
 
 ## 7.3 “公開API（Public Surface）”が分かると、判定が激ラク🎭🚪
 
+![SemVer Sensitivity Gauge](./picture/api_contract_ts_study_007_public_surface_gauge.png)
+
 SemVerは「利用者に約束してる部分＝公開API」が変わったかで決めるよ📌
 たとえば TypeScript のライブラリなら、だいたいこのへんが公開APIになりがち👇
 
@@ -53,6 +55,8 @@ SemVerは「利用者に約束してる部分＝公開API」が変わったか�
 ---
 
 ## 7.4 迷ったらこれ！判定フロー🧭✨
+
+![SemVer Decision Flowchart](./picture/api_contract_ts_study_007_decision_flowchart.png)
 
 変更を見たら、順番にこれだけ聞けばOKだよ👇😺
 
@@ -79,6 +83,8 @@ flowchart TD
 ---
 
 ## 7.5 TypeScriptでよくある変更パターン集🧩🟦
+
+![Change Pattern Visualization](./picture/api_contract_ts_study_007_change_patterns.png)
 
 ### A. これは PATCH 🩹✨（だいたい安全）
 
@@ -141,6 +147,8 @@ export function greet(name: string, lang: "ja" | "en") {
 
 ## 7.6 0.y.z（0系）ってどう扱うの？🧪🌀
 
+![Zero Version Construction Zone](./picture/api_contract_ts_study_007_zero_version_zone.png)
+
 SemVerでは **0.y.z は「初期開発」**扱いで、公開APIは安定してない前提だよ⚠️
 つまり「なんでも変わり得る」ゾーン😵‍💫 ([Semantic Versioning][1])
 
@@ -189,6 +197,8 @@ npm の範囲指定は、だいたいこう覚えるとOKだよ👇
 ---
 
 ## 7.8 TypeScriptならでは：**型も契約**だよ🟦🤝
+
+![Type Contract Break](./picture/api_contract_ts_study_007_type_contract_break.png)
 
 TypeScriptのライブラリって、**型定義がそのまま契約**になりやすいよね✨
 だから「動く」だけじゃなくて「型が通る」も大事！
@@ -254,6 +264,8 @@ TypeScriptのライブラリって、**型定義がそのまま契約**になり
 ---
 
 ## 7.12 リリースノート＆CHANGELOGの型📰📚
+
+![Changelog Bins](./picture/api_contract_ts_study_007_changelog_bins.png)
 
 SemVerは「番号で伝える」だけど、実務では **文章で伝える**のがセットだよ✍️✨
 有名な型として **Keep a Changelog** では、変更をこう分類するのがおすすめされてるよ👇

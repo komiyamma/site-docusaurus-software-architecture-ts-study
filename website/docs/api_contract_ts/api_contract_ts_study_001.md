@@ -2,6 +2,8 @@
 
 ## 1. 「契約」＝“利用者に約束すること”だよ🧾💞
 
+![Contract Handshake](./picture/api_contract_ts_study_001_contract_handshake.png)
+
 プログラムって、だいたい **誰かが使う** よね？👥
 その「使う人（＝利用者）」に対して、
 
@@ -57,6 +59,8 @@ graph LR
 
 ## 4. TypeScriptだと「型」が契約の入口になる🟦🧩
 
+![Type as Contract Mold](./picture/api_contract_ts_study_001_type_as_contract.png)
+
 TypeScriptは、契約を **型** で表しやすいのが強み✨
 たとえば「ユーザーを取得する関数」の契約👇
 
@@ -98,6 +102,8 @@ flowchart TD
 ---
 
 ## 5. 契約は「最小でいい」💡✂️
+
+![Minimal Contract Backpack](./picture/api_contract_ts_study_001_minimal_contract.png)
 
 契約は大きいほど、後で変えるのが大変😵‍💫💦
 なので最初は **公開するものを小さくする** のがコツ！
@@ -142,6 +148,8 @@ flowchart TD
 ---
 
 ## 8. AI活用：契約を“言語化”するプロンプト集🧠🤖✨
+
+![AI Contract Translator](./picture/api_contract_ts_study_001_ai_language.png)
 
 コードを見ても「約束」を言葉にするのって、最初むずいよね🥺
 AIにはここを手伝ってもらおう！

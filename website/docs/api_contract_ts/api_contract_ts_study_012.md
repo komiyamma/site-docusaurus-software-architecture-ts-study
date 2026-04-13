@@ -13,6 +13,8 @@
 
 ## 12.1 Deprecationってなに？🤔💭
 
+![graduation_ceremony](./picture/api_contract_ts_study_012_graduation_ceremony.png)
+
 Deprecation（非推奨）は、ざっくり言うと…
 
 * **今すぐ壊す（破壊的変更）じゃない**🙅‍♀️💥
@@ -46,6 +48,8 @@ flowchart LR
 
 ## 12.3 非推奨にする“よくある理由”あるある🧠✨
 
+![reasons_trio](./picture/api_contract_ts_study_012_reasons_trio.png)
+
 * もっと良いAPIを作った（設計を改善した）🛠️🌟
 * セキュリティや事故の温床だった（危険だから卒業）🧯⚠️
 * 名前が分かりにくい／意味がズレた（誤解される）😵‍💫🌀
@@ -54,6 +58,8 @@ flowchart LR
 ---
 
 ## 12.4 “良い非推奨メッセージ”のテンプレ🍰📝
+
+![message_template](./picture/api_contract_ts_study_012_message_template.png)
 
 非推奨コメントは、**読む人が行動できる**のが正解だよ🧡
 
@@ -70,6 +76,8 @@ flowchart LR
 ---
 
 ## 12.5 TypeScriptで非推奨を出す：@deprecated を付けよう🟦🚧
+
+![editor_strikethrough](./picture/api_contract_ts_study_012_editor_strikethrough.png)
 
 TypeScriptは **JSDocの `@deprecated`** を理解して、VS Codeなどで警告表示してくれるよ👀✨ ([TypeScript][2])
 
@@ -127,6 +135,8 @@ TypeScriptは `@deprecated` を理解するけど、**実行を止めたりは�
 
 ## 12.6 “実行時”にも気づかせたい時（ライブラリ向け）🔔🖥️
 
+![console_warning](./picture/api_contract_ts_study_012_console_warning.png)
+
 型やエディタ警告は便利だけど、利用者がJSで使ってたり、警告を見てなかったりもするよね😵‍💫
 そういうときは「実行時に1回だけ警告」もアリ！
 
@@ -167,6 +177,8 @@ npm deprecate my-lib@"< 2.3.0" "重大バグあり。v2.3.0以上へ更新して
 
 ## 12.8 “非推奨を使ってたら警告/エラー”を自動化する✅🧪
 
+![lint_robot](./picture/api_contract_ts_study_012_lint_robot.png)
+
 「見落とし」を防ぐには、**ルールで検知して止める**のが強い🔥
 
 ### 12.8.1 ESLint（TypeScript ESLint）の no-deprecated 🧯
@@ -184,6 +196,8 @@ npm deprecate my-lib@"< 2.3.0" "重大バグあり。v2.3.0以上へ更新して
 ---
 
 ## 12.9 よくある失敗パターン集😱🧯
+
+![failure_signs](./picture/api_contract_ts_study_012_failure_signs.png)
 
 ### 失敗1：代替がない（移行先ゼロ）🙅‍♀️
 

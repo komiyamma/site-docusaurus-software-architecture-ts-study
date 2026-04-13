@@ -23,6 +23,8 @@
 
 # 10-1. まず覚える“危険度3段階”🧯✨
 
+![Danger Level Gauge](./picture/api_contract_ts_study_010_danger_gauge.png)
+
 ## ✅ 安全（MINORで出しやすい）
 
 * **追加**（しかも既存が壊れない追加）✨
@@ -41,6 +43,8 @@
 
 # 10-2. 後方互換を守る「黄金ルール3つ」🥇✨
 
+![Three Golden Shields](./picture/api_contract_ts_study_010_three_shields.png)
+
 1. **削除しない**（消したくなったら“非推奨→移行→削除”の順）🚧➡️✅
 2. **必須を増やさない**（追加するなら“任意”か“デフォルト”）🎁
 3. **意味を変えない**（同じ入力で別の結果になるのは実質破壊💥）
@@ -50,6 +54,8 @@
 # 10-3. パターン集🧰✨（まずはここだけ覚えたら勝ち💖）
 
 ## パターンA：新機能は「追加」で出す（既存はそのまま）➕✨
+
+![Extension vs Modification](./picture/api_contract_ts_study_010_extension_vs_modification.png)
 
 **やりたいこと**：機能を増やしたい
 **安全なやり方**：新しい関数・新しいオプション・新しいエンドポイントを“追加”する
@@ -86,6 +92,8 @@ export function formatPrice(yen: number): string {
 ---
 
 ## パターンB：引数を増やすなら「任意」か「オプションオブジェクト」🎁🧺
+
+![Optional Argument Key](./picture/api_contract_ts_study_010_optional_key.png)
 
 **地雷**：既存関数に“必須引数”を増やすのは破壊になりがち💥
 （第9章の例にも「必須パラメータ追加」は破壊の代表って書いてあるよ）
@@ -128,6 +136,8 @@ export function saveUser(user: User, options: SaveUserOptions = {}) {
 ---
 
 ## パターンC：型を変えたい時は「受け入れを広げる」🔓✨（狭めない！）
+
+![Widening Gate](./picture/api_contract_ts_study_010_widening_gate.png)
 
 後方互換のコツは、基本 **“入力は広く” “出力は慎重に”** だよ😊
 
@@ -247,6 +257,8 @@ function handle(payload: PayloadNew) {
 だから「変えるなら切り替え式」にするのがコツだよ！
 
 ## パターンF：フラグで段階移行🎛️🪜
+
+![Feature Flag Switch](./picture/api_contract_ts_study_010_feature_flag_switch.png)
 
 ```ts
 type Options = { useNewRule?: boolean };

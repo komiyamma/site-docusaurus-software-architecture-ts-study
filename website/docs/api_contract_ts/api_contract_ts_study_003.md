@@ -44,6 +44,8 @@ mindmap
 
 ## 2) コード契約（Code Contract）🧩🟦
 
+![Code Contract Puzzle](./picture/api_contract_ts_study_003_code_contract_puzzle.png)
+
 ## 2-1. 何が契約になるの？🤝
 
 TypeScriptで一番イメージしやすいのがこれ💡
@@ -66,6 +68,8 @@ TypeScriptで一番イメージしやすいのがこれ💡
 ---
 
 ## 3) データ契約（Data Contract）🧾📦
+
+![Data Contract Document](./picture/api_contract_ts_study_003_data_contract_document.png)
 
 ## 3-1. 何が契約になるの？🤝
 
@@ -122,6 +126,8 @@ npm配布の `package.json` は運用契約の代表格です📦([npmドキュ�
 
 ## 5) 3種類が混ざると事故る😵‍💫💥（例で体感）
 
+![Contract Mix Accident](./picture/api_contract_ts_study_003_contract_mix_accident.png)
+
 ## 例：`getProfile()` を提供するライブラリ🧩📦
 
 * **コード契約**：`export function getProfile(id: string): Promise<Profile>`
@@ -165,6 +171,8 @@ npm配布の `package.json` は運用契約の代表格です📦([npmドキュ�
 ## 7) TypeScript視点：型は “契約の入口” 🟦🚪（でも万能じゃない）
 
 ## 7-1. `satisfies` は「契約チェック」に超便利🧁✨
+
+![Satisfies Check](./picture/api_contract_ts_study_003_satisfies_check.png)
 
 設定オブジェクトとか「形は守りたい、でも推論も欲しい」時に強いです💪
 （最近も解説が更新されてて、学びやすくなってます）([TypeScript入門『サバイバルTypeScript』][6])

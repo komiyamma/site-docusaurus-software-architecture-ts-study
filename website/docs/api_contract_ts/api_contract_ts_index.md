@@ -2,12 +2,16 @@
 
 ## 第1章：契約ってなに？🤝✨
 
+![Contract Landscape Map](./picture/api_contract_ts_index_contract_landscape.png)
+
 * **ねらい**：契約＝「利用者に約束すること」をつかむ
 * **学ぶ**：契約の例（関数API／HTTP API／JSON／イベント）
 * **ミニ演習**：自分の過去コードから「これは契約っぽい」を3つ探す🔍
 * **AI活用**：*「この機能の“利用者との約束”を箇条書きにして」* 🧠🤖
 
 ## 第2章：互換性が壊れると何が起きる？😱💥
+
+![Compatibility Break](./picture/api_contract_ts_index_compatibility_break.png)
 
 * **ねらい**：破壊変更の怖さを“具体例”で理解
 * **学ぶ**：壊れ方（ビルド落ち／実行時エラー／挙動が変わる）
@@ -16,6 +20,8 @@
 
 ## 第3章：契約の種類を整理しよう🗂️🌈
 
+![Contract Types Icons](./picture/api_contract_ts_index_contract_types.png)
+
 * **ねらい**：何に契約があるか“分類できる”ように
 * **学ぶ**：コード契約／データ契約／運用契約（サポート期間など）
 * **ミニ演習**：自作アプリを契約マップにする🗺️
@@ -23,12 +29,16 @@
 
 ## 第4章：TypeScriptの型は契約の入り口🟦🧩
 
+![TypeScript Gate](./picture/api_contract_ts_index_typescript_gate.png)
+
 * **ねらい**：型＝契約（でも万能じゃない）を理解
 * **学ぶ**：型で守れること／守れないこと（実行時）
 * **ミニ演習**：型だけで防げない例を1つ書く✍️
 * **AI活用**：*「この型の弱点（実行時）を教えて」* ⚠️🤖
 
 ## 第5章：公開API面（Public Surface）を決める🎭🚪
+
+![Public Surface Iceberg](./picture/api_contract_ts_index_public_surface.png)
 
 * **ねらい**：どこを“約束”として公開するか決める
 * **学ぶ**：Public/Private、internalの考え方
@@ -43,6 +53,8 @@
 * **AI活用**：*「これは後方互換？理由も」* 🧑‍🏫🤖
 
 ## 第7章：SemVer（X.Y.Z）をやさしく理解する🔢✨
+
+![SemVer Blocks](./picture/api_contract_ts_index_semver_blocks.png)
 
 * **ねらい**：MAJOR/MINOR/PATCHの判断ができる
 * **学ぶ**：破壊変更＝MAJOR、追加＝MINOR、修正＝PATCH
@@ -71,6 +83,8 @@
 * **AI活用**：*「互換を守る書き方に直して」* 🔧🤖
 
 ## 第11章：段階的に変える（移行設計）🪜⏳
+
+![Migration Steps](./picture/api_contract_ts_index_migration_steps.png)
 
 * **ねらい**：一気に変えない設計ができる
 * **学ぶ**：旧新併存、フラグ、段階リリース

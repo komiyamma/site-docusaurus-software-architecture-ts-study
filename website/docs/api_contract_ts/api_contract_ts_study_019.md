@@ -12,6 +12,8 @@
 
 ## 1) なんで型だけじゃ足りないの？😵‍💫
 
+![Type Illusion](./picture/api_contract_ts_study_019_type_illusion.png)
+
 TypeScriptの型は、基本的に **実行時には存在しない**（コードとして動いてくれない）からだよ〜！
 だから「型が合ってる前提」で進むと、外から来たデータ（HTTP/JSON/フォーム/DB/環境変数など）で普通に事故る💥
 
@@ -47,6 +49,8 @@ async function demo() {
 ---
 
 ## 2) 解決の基本方針：「境界でチェック、内部は信頼」🧠🔒
+
+![Boundary Flow](./picture/api_contract_ts_study_019_boundary_flow.png)
 
 おすすめの考え方はこれ！
 
@@ -90,6 +94,8 @@ flowchart LR
 * JSON Schema を使う派なら強い💪
 * TSと組み合わせる機能（型ガード等）もあるよ🧠([ajv.js.org][4])
 
+![Validator Choice](./picture/api_contract_ts_study_019_validator_choice.png)
+
 この章では、まず **Zod** で「境界で守る型」を体験していくよ〜😊🧁
 
 ---
@@ -124,6 +130,8 @@ type CreateUserInput = z.infer<typeof CreateUserInput>;
 Zodは、スキーマを定義して `.parse()` で検証し、成功すれば型付きデータを返してくれるよ✅([Zod][2])
 
 ### 4-3. 境界で safeParse（失敗も丁寧に扱える）🧯
+
+![SafeParse vs Parse](./picture/api_contract_ts_study_019_safeparse_vs_throw.png)
 
 `.parse()` は失敗すると例外になるけど、`.safeParse()` は **成功/失敗の結果オブジェクト**で返してくれるから扱いやすいよ〜😊
 （成功/失敗の分岐が書きやすい形になってる）([Zod][2])
@@ -186,6 +194,8 @@ async function handleCreateUser(body: unknown) {
 
 ## 5) Zod 4 の「オブジェクトの厳しさ」どうする？🤔🔧
 
+![Strict vs Loose](./picture/api_contract_ts_study_019_strict_vs_loose.png)
+
 「余計なキーが来たらどうする？」って、契約ではわりと大事だよね👀
 
 Zod 4 では、オブジェクトの扱いとして **strict / loose** 方向のAPIが用意されてるよ（移行ガイドで触れられてる）🧭([Zod][5])
@@ -212,6 +222,8 @@ Zod 4 では、オブジェクトの扱いとして **strict / loose** 方向の
 
 ## 7) よくある落とし穴あるある😇💣
 
+![Validation Pitfalls](./picture/api_contract_ts_study_019_pitfalls_trap.png)
+
 * `as SomeType` で“信じ込む” → 契約違反が内部まで侵入する🧟‍♀️
 * `any` を境界に置く → 事故が静かに増える🫠
 * バリデーションのエラーが「Invalid input」だけ → 利用者が直せない😢
@@ -222,6 +234,8 @@ Zod 4 では、オブジェクトの扱いとして **strict / loose** 方向の
 ---
 
 ## 8) AI活用プロンプト集🤖💖
+
+![AI Schema Generator](./picture/api_contract_ts_study_019_ai_schema_gen.png)
 
 コピペで使えるやつ置いとくね〜🎁✨
 

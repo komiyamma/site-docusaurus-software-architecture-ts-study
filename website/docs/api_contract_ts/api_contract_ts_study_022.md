@@ -40,6 +40,8 @@ flowchart LR
 
 ## 22.3 入力（Request）を「どこに・何を・どう入れるか」決めよう 📥🧾✨
 
+![Input Locations](./picture/api_contract_ts_study_022_input_locations.png)
+
 ### A) 入力の置き場所は4種類 🧺🌼
 
 * **Path**：リソースの場所（例：`/memos/{memoId}`）🧭
@@ -68,6 +70,8 @@ APIの入力は、これだけ書けば最低限の契約になるよ👇
 
 ## 22.4 出力（Response）を「成功の形」で固定しよう 📤🎁✨
 
+![Success Response Types](./picture/api_contract_ts_study_022_success_types.png)
+
 ### A) まずは成功レスポンスの基本パターン3つ 🌟
 
 * **200 OK**：取得・更新結果を返す（Bodyあり）📦
@@ -91,6 +95,8 @@ APIの入力は、これだけ書けば最低限の契約になるよ👇
 
 ## 22.5 ステータスコードの選び方：最小ルールだけ覚えよっ 🔢🧠✨
 
+![Status Code Classes](./picture/api_contract_ts_study_022_status_classes.png)
+
 ### A) まずは「3分類」でOK！🍡
 
 * **2xx**：成功 🎉
@@ -100,6 +106,8 @@ APIの入力は、これだけ書けば最低限の契約になるよ👇
 この「クラス分け」自体がHTTPの基本の考え方だよ([IETF Datatracker][2])
 
 ### B) よく使う定番セット（最初はこれで戦える）🔥
+
+![Status Code Cards](./picture/api_contract_ts_study_022_status_cards.png)
 
 * **200 OK**：GET成功 / 更新結果返す
 * **201 Created**：POSTで新規作成成功
@@ -147,6 +155,8 @@ RFC 9457で定義されている基本フィールド（type/title/status/detail
 
 ## 22.7 仕様を書いてみよう：1本のAPIをテンプレで固める 🧾🛠️✨
 
+![API Spec Template](./picture/api_contract_ts_study_022_spec_template.png)
+
 ### A) 仕様テンプレ（文章版）📄🌸
 
 まずはこれをコピペして埋めてね👇
@@ -170,6 +180,8 @@ RFC 9457で定義されている基本フィールド（type/title/status/detail
 * **例（curl的なやつ）**：リクエスト例とレスポンス例（Good/Bad）
 
 ### B) OpenAPIで「契約をファイル化」する（入口だけ）📘✨
+
+![OpenAPI YAML](./picture/api_contract_ts_study_022_openapi_yaml.png)
 
 OpenAPIはHTTP APIの標準的な記述形式だよ（人も機械も理解しやすい）([Swagger][4])
 バージョンは3.1系だけじゃなく、3.2.0の仕様ページも公開されてるよ([OpenAPI Initiative Publications][5])
@@ -222,6 +234,8 @@ Problem DetailsのContent-Type（`application/problem+json`）もRFCで定義さ
 ---
 
 ## 22.8 例題：メモ作成APIを「契約の骨格」で完成させる 📝🧠✨
+
+![Memo API Example](./picture/api_contract_ts_study_022_memo_api_example.png)
 
 ### API：`POST /memos` 🧡
 

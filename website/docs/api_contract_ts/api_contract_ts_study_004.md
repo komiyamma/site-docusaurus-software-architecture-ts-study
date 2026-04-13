@@ -41,7 +41,11 @@ calcTotal(120, 3);
 
 ## 2. でも万能じゃない：型で守れない世界（実行時）🌪️😵‍💫
 
+![Compile Time Shield vs Runtime Vulnerability](./picture/api_contract_ts_study_004_compile_vs_runtime_shield.png)
+
 ### 2-1. JSONは“型を無視して入ってくる”📦⚠️
+
+![JSON Trojan Horse](./picture/api_contract_ts_study_004_json_trojan_horse.png)
 
 外部（API/ファイル/DB/localStorageなど）から来るデータは、型がついてないことが多いよね。
 
@@ -179,6 +183,8 @@ loadUser(uid); // ✅
 
 ## 6. オプショナル（?）は契約の地雷💣😵（absence と undefined は別！）
 
+![Exact Optional Switch](./picture/api_contract_ts_study_004_exact_optional_switch.png)
+
 ### 6-1. ありがちな誤解：「? は undefined もOKでしょ？」🤔
 
 実は、設定で挙動が変わるよ⚙️
@@ -205,6 +211,8 @@ const a: Profile = {}; // ✅ 省略OK
 
 ## 7. `noUncheckedIndexedAccess` で「取り出しは危険」を型に出す🧪⚠️
 
+![Indexed Access Roulette](./picture/api_contract_ts_study_004_indexed_access_roulette.png)
+
 配列や辞書の `[]` って、存在しないかもだよね？
 
 `noUncheckedIndexedAccess: true` を有効にすると、**存在しない可能性（undefined）を型に出してくれる**よ✅ ([TypeScript][3])
@@ -222,6 +230,8 @@ const price = map["banana"];
 ---
 
 ## 8. `satisfies`：チェックだけして推論は残す🎀✨
+
+![Satisfies Inspector](./picture/api_contract_ts_study_004_satisfies_inspector.png)
 
 「型に合ってるかチェックしたい。でも推論の便利さは失いたくない！」って時に神👼
 
@@ -284,6 +294,8 @@ const routes = [
 ---
 
 ## 11. AI活用コーナー🧠🤖✨（レビュー係にしてラクしよ）
+
+![AI Contract Reviewer](./picture/api_contract_ts_study_004_ai_contract_reviewer.png)
 
 ### 11-1. 契約を言語化してもらう📝
 

@@ -14,6 +14,8 @@
 
 ## まず「移行」と「併存」って何？🧾🤝
 
+![Migration vs Coexistence](./picture/api_contract_ts_study_021_migration_vs_coexistence.png)
+
 * **移行（migration）**：昔の形のデータを、新しい形に **変えていく** こと🔄
 * **併存**：移行期間中に、v1とv2が **混ざって存在しても壊れない** ようにすること🧁🍰
 
@@ -28,6 +30,8 @@
 ---
 
 ## ありがちな事故😱💥（これ、ほんとに起きる）
+
+![v1 Data Crash](./picture/api_contract_ts_study_021_v1_v2_crash.png)
 
 たとえば、v1ではこうだったとするね👇
 
@@ -53,6 +57,8 @@ v2で「doneは分かりづらいから status にしよ〜」って変えた�
 
 ## まず覚える「3つの基本作戦」🧠🛠️✨
 
+![3 Basic Strategies](./picture/api_contract_ts_study_021_strategy_trio.png)
+
 ### 作戦①：変換する（アップキャスト）🔄⬆️
 
 古い形（v1）を受け取ったら、**新しい形（v2相当）に変換**してから使う。
@@ -71,6 +77,8 @@ v2で増えた項目が無いなら、**安全なデフォルト値**を入れ�
 ---
 
 ## いちばん大事：境界で「正規化」する🚪✨
+
+![Normalize Gate](./picture/api_contract_ts_study_021_normalize_gate.png)
 
 おすすめの型はこれ👇
 
@@ -173,6 +181,8 @@ export function saveTodos(todos: ReturnType<typeof normalizeTodo>[]) {
 
 ## もう一段強くする：バージョン印（schemaVersion）を付ける🏷️✨
 
+![Schema Version Tag](./picture/api_contract_ts_study_021_version_tag.png)
+
 「形で判別できるからOK」でもいいんだけど、
 将来の変更が増えると判定が難しくなることがあるの🥲
 
@@ -199,6 +209,8 @@ Ajvは draft 2020-12 をサポートしていて、ただし **2020-12 と旧dra
 ---
 
 ## 移行戦略：どれを選ぶ？🧭🔁
+
+![Migration Strategies Paths](./picture/api_contract_ts_study_021_migration_paths.png)
 
 ### A) 読むとき移行（Read-time migration）📖✨
 
@@ -227,6 +239,8 @@ Ajvは draft 2020-12 をサポートしていて、ただし **2020-12 と旧dra
 ---
 
 ## 段階移行：4ステップの鉄板テンプレ🗓️✅✨
+
+![4 Step Migration Ladder](./picture/api_contract_ts_study_021_4step_ladder.png)
 
 ミニ演習でも使う「超よくある勝ちパターン」だよ🎀
 

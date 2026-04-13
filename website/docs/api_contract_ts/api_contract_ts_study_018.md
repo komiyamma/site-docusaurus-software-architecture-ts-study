@@ -12,6 +12,8 @@
 
 ## 1) JSONの“契約”ってなに？🤔📦
 
+![JSON Contract Letter](./picture/api_contract_ts_study_018_json_letter.png)
+
 JSONは、作る側（Producer）と使う側（Consumer）の間で渡される「データの手紙」💌
 この手紙には “約束” が必要だよね。
 
@@ -27,6 +29,8 @@ JSON自体の基本ルール（型や構文）は標準で決まってるよ。(
 ---
 
 ## 2) まずは超重要ワード4つ✨（ここが沼ポイント😵‍💫）
+
+![Four JSON States](./picture/api_contract_ts_study_018_four_states.png)
 
 ### ✅ 必須（required）
 
@@ -65,6 +69,8 @@ mindmap
 
 ## 3) いちばん間違えやすい：「無い」「null」「空文字」🌀😵‍💫
 
+![Missing vs Null vs Empty](./picture/api_contract_ts_study_018_missing_vs_null.png)
+
 ここ、ちゃんと区別すると超つよい💪✨
 
 * **キーが無い**：そもそも情報が提供されてない
@@ -84,6 +90,8 @@ mindmap
 ---
 
 ## 4) “伝わるJSON契約”の書き方：3点セット🧰✨
+
+![Contract Pillars](./picture/api_contract_ts_study_018_contract_pillars.png)
 
 JSON契約は、だいたいこの3つを揃えると強いよ💪
 
@@ -178,6 +186,8 @@ JSON Schema は「何が来てOKか」を宣言できるよ（2020-12 が現行�
 
 ### 6-2) このSchemaの読み方（ここだけ押さえればOK✨）
 
+![Reading JSON Schema](./picture/api_contract_ts_study_018_schema_reading.png)
+
 * `required` に書かれたキーが **必須** ✅
 * `properties` にあるけど `required` に無いキーは **任意** ☑️
 * `type: ["string", "null"]` で **null許容** 🫥
@@ -190,6 +200,8 @@ JSON Schema は「何が来てOKか」を宣言できるよ（2020-12 が現行�
 ---
 
 ## 7) 互換性の観点：JSON変更の「安全/注意/危険」⚖️🧨
+
+![Compatibility Safety Levels](./picture/api_contract_ts_study_018_compatibility_levels.png)
 
 “データ契約”は変更で壊れやすい💥
 ざっくり基準👇
@@ -249,6 +261,8 @@ JSON Schema は「何が来てOKか」を宣言できるよ（2020-12 が現行�
 ---
 
 ## 9) AI活用コーナー🤖💞（レビュー係にしてラクしよ）
+
+![AI Spec Helper](./picture/api_contract_ts_study_018_ai_spec_helper.png)
 
 ### 9-1) 仕様を読みやすく整理してもらう🧠✨
 

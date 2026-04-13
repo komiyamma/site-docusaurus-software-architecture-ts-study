@@ -10,6 +10,8 @@
 
 ## 23.1 まず大事：認証(Authentication)と認可(Authorization)は別モノ💡👀
 
+![401 vs 403](./picture/api_contract_ts_study_023_401_vs_403.png)
+
 * **認証（Authentication）🔑**
   「あなた誰？」を確かめる（トークン持ってる？本物？期限切れ？など）
 
@@ -44,6 +46,8 @@ HTTP仕様でも、403は「分かってるけど拒否する」って意味だ�
 ---
 
 ## 23.3 Bearerトークンの“送る場所”を契約にする📮🪪
+
+![Bearer Token Flow](./picture/api_contract_ts_study_023_bearer_flow.png)
 
 よくある契約はこれ👇
 
@@ -98,7 +102,11 @@ RFCの例もこんな感じ（403の例）で出てるよ〜🧾 ([RFCエディ�
 
 ## A) 認証失敗（401）テンプレ🔑❌
 
+![401 Error Template](./picture/api_contract_ts_study_023_401_template.png)
+
 ### HTTP
+
+![WWW-Authenticate](./picture/api_contract_ts_study_023_www_authenticate.png)
 
 * Status: `401`
 * Header: `WWW-Authenticate` を必ず付ける ([RFCエディタ][1])
@@ -122,6 +130,8 @@ Bearer周りは仕様に **error値**があるよ（例：`invalid_request` / `i
 ---
 
 ## B) 権限不足（403）テンプレ🎫❌
+
+![403 Error Template](./picture/api_contract_ts_study_023_403_template.png)
 
 ### HTTP
 
@@ -220,6 +230,8 @@ function verifyAccessToken(token: string): VerifyResult {
 
 ## 3) 401 / 403 を統一して返すイメージ🚦
 
+![Auth Middleware Pipeline](./picture/api_contract_ts_study_023_auth_middleware.png)
+
 （Expressっぽい擬似コード）
 
 ```ts
@@ -299,6 +311,8 @@ flowchart TD
 ---
 
 ## 23.9 クライアント側（fetch）の扱い方🍪🌐
+
+![Client Reaction](./picture/api_contract_ts_study_023_client_reaction.png)
 
 ## ✅ クライアントの基本行動ルール
 

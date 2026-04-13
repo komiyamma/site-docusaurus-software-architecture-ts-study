@@ -24,6 +24,8 @@
 
 ## 8.2 “誰が困るか”で決めるのがコツ👥🧠
 
+![Breaking Change Triangle](./picture/api_contract_ts_study_008_breaking_triangle.png)
+
 破壊かどうかは「変更の大きさ」じゃなくて、**困る人がいるか**で決まるよ🙂
 
 ### ✅ 破壊変更の判定で見るべき3つ
@@ -56,6 +58,8 @@
 👉 ここが曖昧だと「どこからが破壊？」が毎回ブレるよ〜😵‍💫
 
 ### ステップ②：「破壊変更」を“カテゴリ”で固定する🗂️✨
+
+![Breaking Change Quadrant](./picture/api_contract_ts_study_008_breaking_quadrant.png)
 
 おすすめは、破壊変更を **4カテゴリ** に分けて定義すること！
 
@@ -131,6 +135,8 @@ export type Mode = "easy" | "hard";
 
 ### D) 「動くけど意味が変わる」＝一番こわい🌀😱
 
+![Silent Breaking Change](./picture/api_contract_ts_study_008_silent_killer.png)
+
 これ、型では検出できないことが多いから、**破壊変更として扱う方が安全**だよ⚠️💦
 
 例👇
@@ -169,6 +175,8 @@ npmのドキュメントでも、依存関係が壊れるような変更は **ma
 ---
 
 ## 8.5 “破壊かどうか”の超かんたん判定フロー🔍✅
+
+![Is It Breaking? Flow](./picture/api_contract_ts_study_008_decision_flow.png)
 
 迷ったらこれでOK👇✨
 
@@ -230,6 +238,8 @@ flowchart TD
 ---
 
 ## 8.7 破壊変更チェックリスト（レビュー用）✅🧁
+
+![Release Gatekeeper Checklist](./picture/api_contract_ts_study_008_release_checklist.png)
 
 リリース前に、ここだけ見ればかなり防げるよ〜！✨
 

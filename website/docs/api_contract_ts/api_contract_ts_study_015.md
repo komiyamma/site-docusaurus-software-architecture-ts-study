@@ -10,6 +10,8 @@
 
 ## 15.1 まず超ざっくり：依存の向きってなに？🧭
 
+![dependency_map](./picture/api_contract_ts_study_015_dependency_map.png)
+
 **依存**っていうのは、かんたんに言うと👇
 「AがBを使う（importする / 呼び出す）＝ AはBに依存してる」だよ📦➡️📦
 
@@ -85,6 +87,8 @@ graph TD
 
 ## 15.4 TypeScriptでの「内側・外側」の切り分け例 🗂️✨
 
+![layered_onion](./picture/api_contract_ts_study_015_layered_onion.png)
+
 フォルダ構成の一例だよ👇（小さく始めてOK🙆‍♀️）
 
 ```text
@@ -104,6 +108,8 @@ src/
 ---
 
 ## 15.5 具体例：Repository（口）を内側に置いて逆転する🔁💖
+
+![dip_inversion](./picture/api_contract_ts_study_015_dip_inversion.png)
 
 ## ① 内側：契約（interface）を定義する📜
 
@@ -199,6 +205,8 @@ console.log(todo);
 
 ## 15.6 ミニ演習：依存が逆向きになってる場所を探そう🔍🧯
 
+![leakage_alert](./picture/api_contract_ts_study_015_leakage_alert.png)
+
 ## ✅ チェックしてほしい“やばい匂い”リスト
 
 次があったら、依存の向きが崩れてる可能性高めだよ😵‍💫
@@ -217,6 +225,8 @@ console.log(todo);
 ---
 
 ## 15.7 リファクタ手順：やさしい4ステップ🪜😊
+
+![refactor_steps](./picture/api_contract_ts_study_015_refactor_steps.png)
 
 ## Step1：境界線を引く🖊️
 
@@ -241,6 +251,8 @@ console.log(todo);
 
 ## 15.8 2026っぽい注意点：import周りで契約が崩れやすい😵‍💫📦
 
+![esm_cjs_chaos](./picture/api_contract_ts_study_015_esm_cjs_chaos.png)
+
 最近のNodeは **ESM / CJS 混在**が前提になってて、`package.json` の `"exports"` とかで「どこを公開するか」を強くコントロールできるよ📦🚪（逆に言うと、設定ミスると利用者が即死しがち…！）([nodejs.org][1])
 
 さらに、TypeScript側も `moduleResolution` に `node16` / `nodenext` みたいな **“Nodeの解決ルール再現モード”** があって、ESM/CJSや `"exports"` の影響を受けやすいの🥺([typescriptlang.org][2])
@@ -252,6 +264,8 @@ console.log(todo);
 ---
 
 ## 15.9 ちいさなチェックリスト✅✨（これだけ守ると強い）
+
+![shield_checklist](./picture/api_contract_ts_study_015_shield_checklist.png)
 
 * 内側は外側を import しない🙅‍♀️
 * 外側の都合は adapter に閉じ込める🧰

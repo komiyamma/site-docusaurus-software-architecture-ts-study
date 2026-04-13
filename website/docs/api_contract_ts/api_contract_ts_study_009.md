@@ -19,6 +19,8 @@
 
 ## 9-1. まず決める：このポリシーの“読者”は誰？👀
 
+![Policy Readers Trio](./picture/api_contract_ts_study_009_policy_readers.png)
+
 ポリシーって、読者によって必要な情報が変わるよ〜！
 
 * **利用者（呼び出し側）**：壊れる？いつ移行？どこ見ればいい？😵‍💫
@@ -28,6 +30,8 @@
 ---
 
 ## 9-2. “A4 1枚”に入れるべき必須パーツ🧩✨
+
+![Policy Pillars](./picture/api_contract_ts_study_009_policy_pillars.png)
 
 ここからが本題！この8つが入ってると強いよ💪
 
@@ -84,6 +88,8 @@ mindmap
 
 ## ④ 非推奨（Deprecation）ルール🚧📣
 
+![Deprecation Lifecycle](./picture/api_contract_ts_study_009_deprecation_lifecycle.png)
+
 「いきなり削除しない」ための礼儀作法だよ🧁✨
 
 * 非推奨にしたら：**まず告知**📣
@@ -116,6 +122,8 @@ stateDiagram-v2
 ---
 
 ## ⑥ 変更の伝え方（CHANGELOG / リリースノート）📰
+
+![Changelog Structure](./picture/api_contract_ts_study_009_changelog_structure.png)
 
 「どこを見れば変更が分かる？」を固定しよう✨
 定番は **Keep a Changelog 形式**！カテゴリが分かりやすいよ🧡([Keep a Changelog][4])
@@ -198,6 +206,8 @@ stateDiagram-v2
 
 ## 9-4. TypeScriptでの「非推奨」の見せ方（小ネタだけど超効く）✨
 
+![Strikethrough Effect](./picture/api_contract_ts_study_009_strikethrough_effect.png)
+
 たとえば「古い関数を残しつつ、新しい関数へ誘導」したい時👇
 
 ```ts
@@ -242,6 +252,8 @@ export function parseUserIdV2(input: string): number {
 ---
 
 ## 9-6. よくある事故パターン😱💥（ポリシーで防げる！）
+
+![Policy Shield](./picture/api_contract_ts_study_009_policy_shield.png)
 
 * **「意味を変えただけ」事故**：型は同じでも意味が変わると実質破壊💥
 * **ドキュメント未更新**：利用者が古い仕様で実装して詰む🧊

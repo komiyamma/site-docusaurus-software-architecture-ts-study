@@ -40,6 +40,8 @@ HTTP APIや関数APIって、だいたいこう👇
 
 ## 6.4 超わかる！2×2の“混在表”📊✨
 
+![Server Client Compatibility Matrix](./picture/api_contract_ts_study_006_compatibility_matrix.png)
+
 「どっちが先にアップデートされる？」で事故りやすいので、まずこれを頭に置くよ🧷
 
 | 組み合わせ              | 起きがちな現実       | 欲しい性質                                  |
@@ -71,6 +73,8 @@ HTTP APIや関数APIって、だいたいこう👇
 ---
 
 ## 6.6 TypeScriptで体感：レスポンスに項目が増えた📦➕
+
+![Safe Optional Addition](./picture/api_contract_ts_study_006_safe_optional_addition.png)
 
 たとえば、最初はこうだった👇
 
@@ -113,6 +117,8 @@ sequenceDiagram
 
 ## 6.7 逆に危険：必須にする／名前を変える／型を狭める⚠️💥
 
+![Breaking Change Trio](./picture/api_contract_ts_study_006_breaking_change_trio.png)
+
 同じ `User` でも、こうすると壊れやすい…😱
 
 ### ❌ 名前変更（rename）
@@ -133,6 +139,8 @@ sequenceDiagram
 ---
 
 ## 6.8 “前方互換”の最強トラップ：enum追加で落ちるやつ😇🧨
+
+![Enum Explosion](./picture/api_contract_ts_study_006_enum_explosion.png)
 
 サーバ側で「状態」を増やしたときに、クライアントが落ちるのあるある💥
 （例：`status: "draft" | "published"` に `"archived"` が追加される）
@@ -157,6 +165,8 @@ function normalizeStatus(raw: string): KnownStatus | "unknown" {
 ---
 
 ## 6.9 SemVerとつながる：互換を守るなら MINOR / 壊すなら MAJOR🔢✨
+
+![SemVer Traffic Light](./picture/api_contract_ts_study_006_semver_traffic_light.png)
 
 バージョニングの超有名ルール「SemVer」では、
 

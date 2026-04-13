@@ -15,6 +15,8 @@
 
 ## 17.2 まず結論：良いエラーは「4点セット」🎁🧁
 
+![four_item_set](./picture/api_contract_ts_study_017_four_item_set.png)
+
 利用者が困るのは、だいたいこの2パターンです😵‍💫
 
 * 「何が起きたか分からない」
@@ -35,6 +37,8 @@
 ---
 
 ## 17.3 HTTP APIなら “Problem Details” が大本命🦴🌐✨
+
+![problem_details_blueprint](./picture/api_contract_ts_study_017_problem_details_blueprint.png)
 
 HTTP APIのエラーレスポンスは、**Problem Details** という標準があって、今は **RFC 9457** が最新版です📜✨（昔のRFC 7807を置き換え）([rfc-editor.org][1])
 
@@ -62,6 +66,8 @@ HTTP APIのエラーレスポンスは、**Problem Details** という標準が�
 
 ### 17.4.2 「良い例」🌸✨（Problem Details + 拡張フィールド）
 
+![good_json_response](./picture/api_contract_ts_study_017_good_json_response.png)
+
 ```json
 {
   "type": "https://example.com/problems/validation-error",
@@ -86,6 +92,8 @@ HTTP APIのエラーレスポンスは、**Problem Details** という標準が�
 
 ## 17.5 ステータスコードの選び方（よく使う7つ）🎛️✨
 
+![status_code_switchboard](./picture/api_contract_ts_study_017_status_code_switchboard.png)
+
 HTTPステータスコードは「何が起きたか」の大分類です📌
 意味づけは HTTP 仕様で定義されています📜([datatracker.ietf.org][4])
 
@@ -102,6 +110,8 @@ HTTPステータスコードは「何が起きたか」の大分類です📌
 ---
 
 ## 17.6 TypeScriptの関数・ライブラリは「Result型」か「例外」か🎭🟦
+
+![result_vs_exception](./picture/api_contract_ts_study_017_result_vs_exception.png)
 
 HTTPだけじゃなく、**関数APIも契約**だよ〜😊✨
 ここでは「呼び出し側が扱いやすい」設計に寄せます🎁
@@ -190,6 +200,8 @@ function assertUserNotExists(email: string) {
 
 ## 17.7 エラーコード設計：互換性の“地雷”を避ける💣➡️🌸
 
+![stable_anchor](./picture/api_contract_ts_study_017_stable_anchor.png)
+
 エラーコードは「契約そのもの」なので、ここが雑だと後で詰みます😇💥
 
 ### ✅ エラーコードのルール（おすすめ）🏷️
@@ -209,6 +221,8 @@ function assertUserNotExists(email: string) {
 ---
 
 ## 17.8 セキュリティとやさしさを両立するコツ🛡️🎀
+
+![security_bouncer](./picture/api_contract_ts_study_017_security_bouncer.png)
 
 「親切にしたい！」の気持ちで、内部情報を出しすぎると危険です⚠️
 **スタックトレース、ファイルパス、SQL、秘密情報**は返さないのが基本🚫([devguide.owasp.org][2])

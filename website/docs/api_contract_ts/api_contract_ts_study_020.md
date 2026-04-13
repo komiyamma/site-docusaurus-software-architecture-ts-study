@@ -16,6 +16,8 @@
 
 ## 20-1. まずは「誰が読む？」で安全度が変わる👀🔁
 
+![Data Contract Growth](./picture/api_contract_ts_study_020_growth_tree.png)
+
 データの変更って、じつは **“読む側（Consumer）” がどれだけ厳しいか**で事故りやすさが激変します💥
 
 ## 代表的な2タイプ🧩
@@ -32,6 +34,8 @@ JSON Schema では、`additionalProperties` が **デフォルトで true**（= 
 ---
 
 ## 20-2. いちばん大事：安全度の“ざっくりルール”🧠✨
+
+![Change Sorter](./picture/api_contract_ts_study_020_change_sorter.png)
 
 ## ✅ 安全寄り（だいたいOK）
 
@@ -66,6 +70,8 @@ graph TD
 
 ## 20-3. 安全/危険 早見表📋🧡（OK/注意/NG）
 
+![Safety Quick Reference](./picture/api_contract_ts_study_020_safety_table.png)
+
 ここでは **「古いクライアントが新しいデータを受け取る」**ケース（後方互換の典型）を中心に見ます🔁
 ※「新しいクライアントが古いデータを読む」も同じように考えるよ！
 
@@ -86,6 +92,8 @@ graph TD
 ---
 
 ## 20-4. JSON Schemaの“必須/任意”の基本（超重要）📌✨
+
+![Default is a Hint](./picture/api_contract_ts_study_020_default_hint.png)
 
 JSON Schemaは、`properties` に書いた項目は **デフォルトでは必須じゃない**です。必須にしたいものだけ `required` 配列で指定します。([JSON Schema][3])
 
@@ -112,6 +120,8 @@ export type UserV1 = z.infer<typeof UserV1>;
 ---
 
 ## ✅ ケースA：任意フィールド追加（だいたい安全）➕🙂
+
+![Strict vs Loose Receiver](./picture/api_contract_ts_study_020_strict_loose_receiver.png)
 
 ```ts
 export const UserV2 = UserV1.extend({
@@ -171,6 +181,8 @@ export const UserV2VeryBad = z.object({
 
 ## ⚠️ ケースD：enumに値追加（注意）🎲
 
+![Enum Switch Fall](./picture/api_contract_ts_study_020_enum_fall.png)
+
 「追加は安全！」って言いたいけど、現場あるある👇
 
 * クライアントが `switch` で **defaultなし**
@@ -208,6 +220,8 @@ JSON Schema の世界では、**open/closed content model**（`additionalPropert
 * 新しい意味は `statusV2` とか、別名で追加して段階移行が安全🪜
 
 ## ③ rename は「旧→新の併存期間」を作る🪄
+
+![Rename Parallel Bridge](./picture/api_contract_ts_study_020_rename_parallel.png)
 
 * 旧フィールドを残しつつ、新フィールドも追加
 * 送信側は両方出す期間を作って、受信側が移行したら旧を消す（第21章へ）⏳

@@ -26,6 +26,8 @@
 
 ## 2) まず最初に決めること：利用者はだれ？👥🧠
 
+![Audience Impact Scale](./picture/api_contract_ts_study_005_audience_scale.png)
+
 公開API面は「誰に約束するか」で大きさが変わるよ🌸
 
 * **自分だけ（アプリ内部）**：公開面は “チーム内ルール” くらいの強さでもOK👌
@@ -45,6 +47,8 @@
 ---
 
 ## 4) ルール：公開するもの / 隠すもの🧺🔒
+
+![Public vs Private Sorting](./picture/api_contract_ts_study_005_public_private_sorting.png)
 
 迷ったら、まずこの基準でOK🙆‍♀️✨
 
@@ -96,6 +100,8 @@ graph TD
 
 ## 6) “export の仕方” で公開範囲が決まる🎭🧩
 
+![Explicit vs Wildcard Export](./picture/api_contract_ts_study_005_export_filter.png)
+
 ### ✅ おすすめ：明示的に export（事故りにくい）🧁
 
 ```ts
@@ -115,6 +121,8 @@ export * from "./internal/calcCore"; // 余計なものまで漏れやすい
 
 ## 7) バレル（barrel）ファイルの注意点📦⚡
 
+![Barrel Build Bottleneck](./picture/api_contract_ts_study_005_barrel_bottleneck.png)
+
 `public-api.ts` や `index.ts` みたいな “まとめexport” は便利だけど、**増えすぎると** ビルドやエディタが重くなることがあるよ😵‍💫💦
 実際に大規模コードで「バレルを減らしたらビルドが大幅に速くなった」事例もあるの。だから👇が現実的🌸
 
@@ -126,6 +134,8 @@ export * from "./internal/calcCore"; // 余計なものまで漏れやすい
 ---
 
 ## 8) “強制的に” 入口だけにする：`package.json` の `"exports"` 🧱🚪
+
+![Package Exports Guard](./picture/api_contract_ts_study_005_package_exports_guard.png)
 
 npm公開や社内パッケージなら、さらに強く守れるよ✨
 `package.json` の `"exports"` を使うと👇
@@ -199,6 +209,8 @@ TypeScriptは `moduleResolution` が `node16` / `nodenext` / `bundler` のとき
 ---
 
 ## 11) AI活用（コピペでOK）🤖💞
+
+![AI Architecture Advisor](./picture/api_contract_ts_study_005_ai_architect_advisor.png)
 
 * 「このフォルダ構成から、公開API面を最小にする `public-api.ts` を提案して。理由もつけて」🧠
 * 「この変更は公開API面に影響ある？ SemVer的にどれ？（理由つき）」🔢

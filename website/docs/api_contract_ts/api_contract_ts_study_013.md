@@ -12,6 +12,8 @@
 
 ## 13-1. 公開API面ってなに？🤝✨
 
+![public_surface_map](./picture/api_contract_ts_study_013_public_surface_map.png)
+
 npmパッケージの公開API面（Public Surface）は、ざっくり言うと👇
 
 * 利用者が import できる “入口” の集合🚪
@@ -24,6 +26,8 @@ npmパッケージの公開API面（Public Surface）は、ざっくり言うと
 ---
 
 ## 13-2. 公開面が大きいと何が起きる？😵‍💫💣
+
+![bloated_monster](./picture/api_contract_ts_study_013_bloated_monster.png)
 
 公開面が大きいと、こんな地獄が起きがち👇
 
@@ -51,6 +55,8 @@ npmパッケージの公開API面（Public Surface）は、ざっくり言うと
 
 ## 13-4. “公開を増やしてしまう”典型事故⚠️😇
 
+![barrel_explosion](./picture/api_contract_ts_study_013_barrel_explosion.png)
+
 ## 事故①：全部入り index（巨大バレル）にしちゃう🧺💥
 
 便利そうに見えて、公開面が勝手に太る…！
@@ -67,6 +73,8 @@ npmパッケージの公開API面（Public Surface）は、ざっくり言うと
 ---
 
 ## 13-5. 公開面を小さくする基本設計🧱✨
+
+![folder_structure](./picture/api_contract_ts_study_013_folder_structure.png)
 
 ## ① 「公開用フォルダ」を作って、そこだけが“表”🌞
 
@@ -95,6 +103,8 @@ graph TD
 
 ## 13-6. exports で「利用者が触れる入口」を固定する🔒🚪
 
+![exports_tunnel](./picture/api_contract_ts_study_013_exports_tunnel.png)
+
 Node の package.json の exports は、**“このパッケージの出口（公開される道）”**を宣言する仕組みだよ📦✨
 ポイントは👇
 
@@ -108,6 +118,8 @@ Webpack も「exports は package の公開範囲を宣言する」と整理し�
 ---
 
 ## 13-7. TypeScriptで壊れにくい公開面を作るコツ🟦🧾
+
+![types_scroll](./picture/api_contract_ts_study_013_types_scroll.png)
 
 ## ✅ 「型の入口」も “公開面” だよ！
 
@@ -236,6 +248,8 @@ subpath pattern を使う場合は、Node の docs で「private を null で除
 ---
 
 ## 13-11. 公開API面チェックリスト✅🧡
+
+![pilot_check](./picture/api_contract_ts_study_013_pilot_check.png)
 
 リリース前にこれだけ見ておくと事故が減るよ✨
 

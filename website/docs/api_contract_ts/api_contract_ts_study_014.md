@@ -13,6 +13,8 @@
 
 ## 14.1 「配布の契約」ってなに？🤝📦
 
+![shipping_box_contract](./picture/api_contract_ts_study_014_shipping_box_contract.png)
+
 npmパッケージって、**zipみたいに固めて配る**よね📦
 このとき利用者が頼るのは主にこの3つ👇
 
@@ -25,6 +27,8 @@ npmパッケージって、**zipみたいに固めて配る**よね📦
 ---
 
 ## 14.2 入口の基本：`main` と `exports` の関係🚪🧩
+
+![main_vs_exports](./picture/api_contract_ts_study_014_main_vs_exports.png)
 
 いまのNodeでは、入口は主に `package.json` の **`main`** と **`exports`** で決まるよ📌
 ポイントはこれ👇
@@ -56,6 +60,8 @@ TypeScript側は、パッケージの `exports` をちゃんと読むために�
 
 ## 14.4 型の入口：`types` と `exports` の「types条件」🟦🧠
 
+![types_priority](./picture/api_contract_ts_study_014_types_priority.png)
+
 「実行の入口」と「型の入口」がズレやすいのがnpmの罠ポイント😇💣
 
 TypeScriptは `exports` の中で、**型のための条件 `"types"`** を扱えるよ✨
@@ -70,6 +76,8 @@ TypeScriptは「`exports` を見て解決する」挙動が強くなっていて
 ---
 
 ## 14.5 まずは鉄板：シンプルな“ESMのみ”パッケージ例🌿📦
+
+![esm_box](./picture/api_contract_ts_study_014_esm_box.png)
 
 「まず動けばOK！」な最小構成からいこう😊✨
 （ESMのみなら事故が少なめ🌈）
@@ -109,6 +117,8 @@ TypeScriptは「`exports` を見て解決する」挙動が強くなっていて
 ---
 
 ## 14.6 次に鉄板：“ESM/CJS両対応（デュアル）”パッケージ例⚔️📦
+
+![dual_package](./picture/api_contract_ts_study_014_dual_package.png)
 
 現場だと「require使う人もいる」問題があるので、両対応したくなることが多いよね🙂‍↕️
 その場合は **条件付きexports** を使うのが定番✨ ([nodejs.org][2])
@@ -157,6 +167,8 @@ flowchart TD
 
 ## 14.7 “奥を読まれる事故”を防ぐ：Subpath exportsで公開範囲を固定🔒🧱
 
+![secured_building](./picture/api_contract_ts_study_014_secured_building.png)
+
 たとえば利用者がこう書いちゃうやつ👇
 
 * `import { x } from "my-lib/dist/internal/x.js"` 😇
@@ -183,6 +195,8 @@ flowchart TD
 ---
 
 ## 14.8 配布で起きがちな事故あるある😱💥（と対策）
+
+![distribution_accidents](./picture/api_contract_ts_study_014_distribution_accidents.png)
 
 ## 事故①：型ファイルが入ってない
 
