@@ -18,14 +18,14 @@
 
 たとえば👇
 
-* ⏰ **時間**：`new Date()` / `Date.now()` / タイマー（`setTimeout`）\n\n![Chaos Elements](./picture/tdd_ts_study_041_chaos_elements.png)
+* ⏰ **時間**：`new Date()` / `Date.now()` / タイマー（`setTimeout`）\n\n
 * 🎲 **乱数**：`Math.random()` / `crypto.getRandomValues()`
 * 🌐 **I/O**：ファイル読み書き / ネット（`fetch`）/ DB / localStorage
 * 🧊 **環境**：`process.env` / OSの設定 / グローバル状態
 
 依存が多いほど、テストはこうなりがち😇
 
-* 「たまに落ちる（フレーク）」💥\n\n![Flaky Balance](./picture/tdd_ts_study_041_flaky_balance.png)
+* 「たまに落ちる（フレーク）」💥\n\n
 * 遅くなる🐢
 * 再現しない😵‍💫
 
@@ -49,7 +49,7 @@ TDDで嬉しいのは「**同じことをしたら、いつも同じ結果**」�
 
 ---
 
-## 🔍依存を見つける“依存レーダー”📡✨\n\n![Dependency Radar](./picture/tdd_ts_study_041_dependency_radar.png)
+## 🔍依存を見つける“依存レーダー”📡✨\n\n
 
 コードを読んだら、次の質問を自分に投げてみてね👇
 
@@ -79,7 +79,7 @@ TDDで嬉しいのは「**同じことをしたら、いつも同じ結果**」�
 
 ---
 
-## ⏰依存①：時間（Time）を見抜くコツ\n\n![Time Dependency](./picture/tdd_ts_study_041_time_bomb.png)
+## ⏰依存①：時間（Time）を見抜くコツ\n\n
 
 時間が絡むと、**テストは一気に不安定**になりやすい💥
 
@@ -99,7 +99,7 @@ Vitestには “時間を固定する道具” があるよ🪄
 
 ---
 
-## 🎲依存②：乱数（Random）を見抜くコツ\n\n![Random Dependency](./picture/tdd_ts_study_041_dice_roll.png)
+## 🎲依存②：乱数（Random）を見抜くコツ\n\n
 
 乱数は “毎回違う” が本質だから、そのままユニットテストに入れると事故る😇
 
@@ -115,7 +115,7 @@ Vitestには “時間を固定する道具” があるよ🪄
 
 ---
 
-## 🌐依存③：I/O（ファイル・ネット・DB）を見抜くコツ\n\n![I/O Turtle](./picture/tdd_ts_study_041_slow_turtle.png)
+## 🌐依存③：I/O（ファイル・ネット・DB）を見抜くコツ\n\n
 
 I/Oはだいたい **遅い＆壊れやすい**🐢💥
 
@@ -162,7 +162,7 @@ export function createCouponCode(userId: string) {
 
 ---
 
-### ②“依存マップ”を作る🗺️📝（これが提出物🎁）\n\n![Dependency Map](./picture/tdd_ts_study_041_heat_map.png)
+### ②“依存マップ”を作る🗺️📝（これが提出物🎁）\n\n
 
 `docs/dependency-map.md` を作って、こんな感じで書くよ👇
 

@@ -1,4 +1,4 @@
-﻿# 第06章：CQSの基本（更新と参照は混ぜない）🔀✅
+# 第06章：CQSの基本（更新と参照は混ぜない）🔀✅
 
 この章は、CQRSの前にやる“準備運動”だよ〜！🏃‍♀️💨
 いきなり「CommandHandler！QueryService！」って分ける前に、まずは **「同じクラスの中でもいいから、更新と参照は混ぜない」** を体に染み込ませます😊🧠✨
@@ -16,7 +16,6 @@
 ---
 
 ## 1) まずCQSってなに？（CQRSとの違いも軽く）🙂📚
-![CQS Traffic Control](./picture/cqrs_ts_study_006_cqs_traffic_control.png)
 
 ### CQS（Command Query Separation）って？
 
@@ -37,7 +36,6 @@
 ---
 
 ## 2) Command / Query の見分け方👀✨（迷ったらこれ！）
-![Side Effects Ripple](./picture/cqrs_ts_study_006_side_effects_ripple.png)
 ![cqrs_ts_study_006_cqs_concept.png](./picture/cqrs_ts_study_006_cqs_concept.png)
 
 ```mermaid
@@ -66,7 +64,6 @@ flowchart TD
 ---
 
 ## 3) 命名のコツ（ここが地味に超効く）✍️✨😆
-![Naming Labels](./picture/cqrs_ts_study_006_naming_labels.png)
 
 ### Commandの命名✅（動詞で“やる”感じ）
 
@@ -91,7 +88,6 @@ flowchart TD
 ---
 
 ### 4-1) ダメな例：読み取りが“こっそり更新”してる😱💥
-![Silent Update Trap](./picture/cqrs_ts_study_006_silent_trap.png)
 
 よくある事故：**一覧取得（Query）のつもりが、閲覧日時を更新してた**とか…😭
 
@@ -134,7 +130,6 @@ export class OrderService {
 ---
 
 ### 4-2) まずは“読み取りはDTOで返す”にする🎁✨
-![DTO Gift Box](./picture/cqrs_ts_study_006_dto_gift_box.png)
 
 Queryの返り値は **ドメインそのもの（Order）** じゃなくて、
 **画面に必要な形（DTO）** にして返すと事故が減るよ😊✨
@@ -207,7 +202,6 @@ export class OrderService {
 ---
 
 ## 5) ミニ演習：それ、Command？Query？📝✨😆
-![Code Smell Detector](./picture/cqrs_ts_study_006_smell_detector.png)
 
 次のメソッド名を見て、どっちか当ててみて〜！🎯
 
@@ -249,7 +243,6 @@ export class OrderService {
 ---
 
 ## 7) AI活用コーナー🤖💖（CQSはAIにめっちゃ相性いい！）
-![AI Code Reviewer](./picture/cqrs_ts_study_006_ai_reviewer.png)
 
 ### プロンプト例1：Command/Query判定をAIにやらせる👀
 

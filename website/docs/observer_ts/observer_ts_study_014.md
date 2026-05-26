@@ -7,7 +7,6 @@
 
 ## 0. まず“あるある地獄”を見て…😵‍💫🌀
 
-![Log Spaghetti vs Threads](./picture/observer_ts_study_014_log_spaghetti.png)
 
 同時アクセスがあるとログがこうなる👇（IDなし）
 
@@ -42,7 +41,6 @@ done /slow
 
 ![画像を挿入予定](./picture/observer_ts_study_014_request_id_chain.png)
 
-![Tagging Process](./picture/observer_ts_study_014_tagging_process.png)
 
 * **相関ID**：同じ処理のログを結びつけるための「タグ」🏷️
 * Node/TSだとリクエストが非同期で混ざるから、**“つなぐ鍵”**が必要になるよ🔑✨
@@ -71,7 +69,6 @@ Node公式も、非同期コンテキストの用途では **AsyncLocalStorage�
 
 ### 3-1) `context.ts`（リクエストの文脈置き場）📦
 
-![Async Context Orb](./picture/observer_ts_study_014_async_context_orb.png)
 
 ```ts
 // src/context.ts
@@ -100,7 +97,6 @@ export function getContext(): RequestContext | undefined {
 
 ### 3-2) `traceparent.ts`（将来のためにtrace-idも拾えるように）🧵🌍
 
-![Traceparent Train](./picture/observer_ts_study_014_traceparent_train.png)
 
 `traceparent` は `version-traceid-parentid-flags` の形（W3C標準）だよ。 ([W3C][1])
 
@@ -123,7 +119,6 @@ export function tryParseTraceId(traceparent: string | undefined): string | undef
 
 ### 3-3) `logger.ts`（ログ出すだけで自動でrequestIdが入る✨）🪵💖
 
-![Logger Wrapper](./picture/observer_ts_study_014_logger_wrapper.png)
 
 Pinoは **`child()` で共通フィールドを“貼り付けたlogger”を作れる**のが強いよ🌲 ([GitHub][3])
 ここでは「ラッパー関数」で雑に安全にいくね😺
@@ -169,7 +164,6 @@ export const log = {
 
 ## 4. Expressに組み込む（これで完成！）🚀✨
 
-![Middleware Flow](./picture/observer_ts_study_014_middleware_flow.png)
 
 ### 4-1) `app.ts`（ミドルウェアでrequestId発行→ALSに保存→ログ自動付与）
 
@@ -288,7 +282,6 @@ curl.exe -H "X-Request-Id: demo-001" http://localhost:3000/work
 
 ## 6. さらに一歩：`traceparent` を尊重すると未来が楽🌍🧵✨
 
-![Trace Propagation](./picture/observer_ts_study_014_trace_propagation.png)
 
 `traceparent` は分散トレースの標準ヘッダーで、trace-idが入るよ。 ([W3C][1])
 OpenTelemetryでは **コンテキスト伝播（Context Propagation）**で、ログ/トレース/メトリクスを相関させるのが基本思想なの。 ([OpenTelemetry][4])

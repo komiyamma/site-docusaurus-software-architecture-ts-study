@@ -1,4 +1,4 @@
-﻿# 第08章：Windows＋VS Code＋TSのプロジェクト土台づくり🪟🧰
+# 第08章：Windows＋VS Code＋TSのプロジェクト土台づくり🪟🧰
 
 この章のゴールはこれ👇
 **「Command/Query/Domain/Infrastructure を“最初から分けた形”で、すぐ動いて・すぐテストできて・すぐ整形できる」**状態を作ることだよ〜😊💕
@@ -6,7 +6,6 @@
 ---
 
 ## 8-1. フォルダ構成はこの形で固定しちゃおう📁✨
-![CQRS Folder Organizer](./picture/cqrs_ts_study_008_cqrs_desk_organizer.png)
 ![cqrs_ts_study_008_folder_structure.png](./picture/cqrs_ts_study_008_folder_structure.png)
 
 ```mermaid
@@ -58,7 +57,6 @@ npm init -y
 ```
 
 ### ② 必要パッケージを入れる（2026の定番セット）🤖✨
-![Developer Starter Kit](./picture/cqrs_ts_study_008_tool_starter_kit.png)
 
 * **TypeScript**：型チェック＆ビルド
 * **tsx**：TSをそのまま実行＆watch（開発体験がラク）⚡
@@ -78,7 +76,6 @@ npm install -D vitest
 ---
 
 ## 8-3. `package.json` を“回せる形”にする🔁✨
-![Development Cycle](./picture/cqrs_ts_study_008_dev_cycle_wheel.png)
 
 `scripts` をこうしておくと、開発が超スムーズ💨
 
@@ -103,7 +100,6 @@ npm install -D vitest
 ---
 
 ## 8-4. `tsconfig.json` を用意する🧠🛠️
-![TSConfig Foundation](./picture/cqrs_ts_study_008_tsconfig_foundation.png)
 
 ここ、最初に決めると後で助かるよ〜😊✨
 **Nodeの現代的な解決ルール**に合わせて `moduleResolution` を `nodenext` にするのが定番（TypeScript公式も node16/nodenext を“モダンNode向け”として説明してるよ） ([typescriptlang.org][3])
@@ -139,7 +135,6 @@ npm install -D vitest
 ---
 
 ## 8-5. ESLint（Flat Config）を最小で入れる🧹🚨
-![ESLint Guard](./picture/cqrs_ts_study_008_eslint_guard.png)
 
 `eslint.config.mjs` を作って、公式の“最短ルート”でいくよ〜✨
 （typescript-eslint の Quickstart がこの形を推してる） ([typescript-eslint.io][4])
@@ -169,7 +164,6 @@ npm run lint
 ---
 
 ## 8-6. Vitestで“土台テスト”を1本だけ作る🧪✨
-![Vitest Rocket](./picture/cqrs_ts_study_008_vitest_rocket.png)
 
 `vitest` は設定が軽くて速いのがウリ⚡（公式も導入手順がシンプル） ([vitest.dev][5])
 
@@ -207,7 +201,6 @@ npm run test:watch
 ---
 
 ## 8-7. CQRSフォルダに“最小のダミー”を置いて動作確認🎮✨
-![Connection Success](./picture/cqrs_ts_study_008_connection_success.png)
 
 「分けた構成で import が通るか」だけを確認するミニコードだよ〜😊
 

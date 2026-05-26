@@ -38,7 +38,6 @@ sequenceDiagram
 
 ## 19.2 なぜ「上書き」が危ないの？😱🧨（lost update 体験）
 
-![Lost Update Painters](./picture/cap_ts_study_019_lost_update_painters.png)
 
 
 
@@ -60,7 +59,6 @@ sequenceDiagram
 
 ## 19.3 「加算」にすると何が嬉しい？🎁✨（競合に強い）
 
-![Commutativity Blocks](./picture/cap_ts_study_019_commutativity_blocks.png)
 
 
 
@@ -81,7 +79,6 @@ sequenceDiagram
 
 ## 19.4 カウンタ設計：3つのレベル感 🧩📚
 
-![Counter Levels](./picture/cap_ts_study_019_counter_levels.png)
 
 
 
@@ -153,7 +150,6 @@ export type LikeDeltaEvent = {
 
 ### ② まず悪い例：上書きAPI（消えるやつ）😱
 
-![Bad Overwrite](./picture/cap_ts_study_019_bad_overwrite.png)
 
 
 
@@ -182,7 +178,6 @@ export function overwriteLikes(postId: string, newLikes: number) {
 
 ### ③ 良い例：APIは「+1イベント」を積む 📨➕
 
-![Good Delta](./picture/cap_ts_study_019_good_delta.png)
 
 
 
@@ -318,7 +313,6 @@ console.log(getPost("p1"));
 
 ### 落とし穴1：デルタは強いけど「重複」には弱い 📨🌀
 
-![Duplicate Pitfall](./picture/cap_ts_study_019_duplicate_pitfall.png)
 
 
 

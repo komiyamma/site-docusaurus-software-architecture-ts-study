@@ -17,7 +17,6 @@
 
 ### 事故①：片方の変更が消える（Lost Update）🫥💥
 
-![Lost Update Tags](./picture/cap_ts_study_020_lost_update_tags.png)
 
 
 
@@ -33,7 +32,6 @@
 
 ## 20.3 合体しやすい3兄弟：集合・履歴・イベント👭✨
 
-![Three Brothers](./picture/cap_ts_study_020_three_brothers.png)
 
 
 
@@ -187,7 +185,6 @@ export type OrderEvent =
 
 ### 20.5.3 イベントを「追記で保存」する（JSONL）📝📚
 
-![Append Log](./picture/cap_ts_study_020_append_log.png)
 
 
 
@@ -408,7 +405,6 @@ npx tsx src/ch20/demo.ts
 
 ### 集合は「合体」できる🧺
 
-![Set Merge](./picture/cap_ts_study_020_set_merge.png)
 
 
 
@@ -422,7 +418,6 @@ npx tsx src/ch20/demo.ts
 
 ### イベントは「足し算」できる📣
 
-![Event Stacking](./picture/cap_ts_study_020_event_stacking.png)
 
 
 
@@ -505,7 +500,6 @@ npx vitest
 
 ## 20.8 よくある落とし穴（でも今は気にしすぎなくてOK）😵‍💫⚠️
 
-![Reverse Order](./picture/cap_ts_study_020_reverse_order.png)
 
 
 

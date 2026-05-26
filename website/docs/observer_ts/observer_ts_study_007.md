@@ -1,4 +1,4 @@
-﻿# 第07章：観測ポリシー1枚化📄✨（後でブレない！）
+# 第07章：観測ポリシー1枚化📄✨（後でブレない！）
 
 この章は「ログ/メトリクス/トレースを、**迷わず同じルールで**出し続けるための“校則”を1枚にまとめる」回だよ〜😺🫶
 ここが決まると、後の章（ログ編・メトリクス編・トレース編）がぜんぶスムーズになる✨
@@ -16,7 +16,7 @@
 
 ## 7.1 なんで“1枚”が最強なの？
 
-![three_principles](./picture/observer_ts_study_007_three_principles.png)💪📄
+💪📄
 
 ![画像を挿入予定](./picture/observer_ts_study_007_policy_scroll.png)
 
@@ -46,7 +46,7 @@ flowchart LR
 
 ## 7.2 “1枚ポリシー”に入れる項目（最小セット）
 
-![trace_context_flow](./picture/observer_ts_study_007_trace_context_flow.png)🧩✨
+🧩✨
 
 「盛り盛り」にしないで、まずはこれだけでOK🙆‍♀️💕
 
@@ -63,7 +63,7 @@ flowchart LR
 
 ### C. “名前”を標準に寄せる
 
-![standardization](./picture/observer_ts_study_007_standardization.png)（将来の自分が助かる）🏷️✨
+（将来の自分が助かる）🏷️✨
 
 OpenTelemetryのSemantic Conventions（属性名の標準）があるから、**可能なら寄せる**のがおすすめ！ ([OpenTelemetry][3])
 たとえば環境名は `deployment.environment.name` が推奨（旧 `deployment.environment` は置き換え） ([OpenTelemetry][4])
@@ -112,7 +112,6 @@ OpenTelemetryのSemantic Conventions（属性名の標準）があるから、**
 - エラー時は error.name / error.message / error.stack（stackは必要最小限）
 ### 禁止（絶対ダメ）🚫
 
-![redacted_info](./picture/observer_ts_study_007_redacted_info.png)
 - パスワード/トークン/秘密鍵/クレカ/メール本文/個人特定情報
 - 生の userId をそのままログに出す（必要なら匿名化IDにする）
 
@@ -143,7 +142,7 @@ OpenTelemetryのSemantic Conventions（属性名の標準）があるから、**
 
 ## 7.4 具体例（これくらいの粒度でOK）
 
-![good_vs_bad_logs](./picture/observer_ts_study_007_good_vs_bad_logs.png)🧁✨
+🧁✨
 
 ### ✅ 良いログ（1行JSONのイメージ）🪵
 

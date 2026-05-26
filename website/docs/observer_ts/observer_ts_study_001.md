@@ -1,4 +1,4 @@
-﻿# 第01章：オブザーバビリティって何？👀✨
+# 第01章：オブザーバビリティって何？👀✨
 
 ## 1) この章のゴール🎯
 
@@ -12,7 +12,6 @@
 
 ## 2) まずは“あるある”から😵‍💫💥
 
-![unknown_unknowns](./picture/observer_ts_study_001_unknown_unknowns.png)
 
 TypeScript/Nodeでよく起きるやつ👇
 
@@ -29,7 +28,6 @@ TypeScript/Nodeでよく起きるやつ👇
 
 ## 3) オブザーバビリティを一言でいうと？💡
 
-![asking_questions](./picture/observer_ts_study_001_asking_questions.png)
 
 **オブザーバビリティ = “外に出てくる情報（出力）から、中の状態を理解できる力”**。 ([OpenTelemetry][1])
 
@@ -81,7 +79,6 @@ OpenTelemetryの説明でも「リクエストがアプリを通る“道筋”�
 
 ## 5) 監視（Monitoring）と何が違うの？🤔💭
 
-![health_vs_mri](./picture/observer_ts_study_001_health_vs_mri.png)
 
 ![画像を挿入予定](./picture/observer_ts_study_001_monitoring_vs_observability.png)
 
@@ -96,7 +93,6 @@ OpenTelemetryの説明でも「リクエストがアプリを通る“道筋”�
 
 ## 6) 「あとで原因に辿り着く」って具体的にどういうこと？🧭✨
 
-![blindfolded_debugging](./picture/observer_ts_study_001_blindfolded_debugging.png)
 
 理想の調査導線はこんな感じ👇
 

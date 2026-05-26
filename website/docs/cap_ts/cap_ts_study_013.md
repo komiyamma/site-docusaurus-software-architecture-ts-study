@@ -11,7 +11,6 @@
 
 ## 1. レプリケーションってなに？🪞✨（超ざっくり）
 
-![King and Mirror](./picture/cap_ts_study_013_leader_follower_metaphor.png)
 
 レプリケーションは、**同じデータを複数台にコピーして持つ**ことだよ〜📦📦📦
 
@@ -39,7 +38,6 @@
 
 ### 2-2. 文章だけ図解（脳内イメージ用）🗺️🤖
 
-![Read/Write Path](./picture/cap_ts_study_013_architecture_flow.png)
 
 * 書く流れ（Write path）✍️
   ユーザー → Leader に書き込み → Leader が「変更ログ」を流す → Follower が追従
@@ -348,7 +346,6 @@ Follower側ログに「applied … lag=xxxxms」って出るのも見てね👀�
 
 ### 5-1. “古い読み取り”の正体 🧟‍♀️📖
 
-![Types of Stale Reads](./picture/cap_ts_study_013_old_read_types.png)
 
 Followerは **Leaderの変更を後追い**してるから、次のどれかが起きるよ👇
 
@@ -366,7 +363,6 @@ Followerから読めば、分断や遅延があっても「とりあえず返せ
 
 ## 6. “本物のDB”だと何が流れてるの？📦📚（雰囲気だけ）
 
-![WAL Stream](./picture/cap_ts_study_013_wal_stream.png)
 
 実際のDBだと、だいたい「変更ログ」を流してるよ。
 たとえばPostgreSQLだとWAL（ログ）を送り、受け側が受け取って追従する仕組みがあるよ〜🧾➡️🪞 ([wiki.postgresql.org][3])
@@ -437,7 +433,6 @@ C. 競合ゼロ
 
 ## 10. この章の結論（1行）✍️✨
 
-![Replication Race](./picture/cap_ts_study_013_replication_race.png)
 
 **Leaderに書いてFollowerが遅れて追いかけるので、Follower読みは速いけど“古いかも”が基本だよ 🪞🐢⚡**
 

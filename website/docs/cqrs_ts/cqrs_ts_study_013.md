@@ -1,4 +1,4 @@
-﻿# 第13章：CommandHandlerの責務（薄く・強く）🧠🧩
+# 第13章：CommandHandlerの責務（薄く・強く）🧠🧩
 
 この章はね、「CommandHandlerってどこまでやっていいの？🤔」問題をスッキリさせる回だよ〜！
 **結論：Handlerは“流れ（手順）”担当、ドメインは“ルール（制約）”担当**にすると、CQRSが一気に気持ちよくなる☺️✨
@@ -57,7 +57,6 @@ flowchart LR
 ---
 
 ## 13.3 ありがちNG：Handlerが太るとこうなる😇💥
-![cqrs_ts_study_013_fat_handler.png](./picture/cqrs_ts_study_013_fat_handler.png)
 
 ### ❌ 太いHandlerの典型パターン
 
@@ -112,7 +111,6 @@ export class PayOrderHandler {
 ---
 
 ### ① ドメインにルールを寄せる（Orderが賢くなる）📦🧠
-![cqrs_ts_study_013_logic_move.png](./picture/cqrs_ts_study_013_logic_move.png)
 
 ```ts
 export type OrderStatus = "ORDERED" | "PAID";
@@ -165,7 +163,6 @@ export class Order {
 ---
 
 ### ② Handlerは“手順だけ”を書く（台本）🎬✨
-![cqrs_ts_study_013_handler_script.png](./picture/cqrs_ts_study_013_handler_script.png)
 
 ```ts
 export type PayOrderCommand = {
@@ -225,7 +222,6 @@ export class PayOrderHandler {
 ---
 
 ## 13.5 どこに書く？早見表🗺️✨
-![cqrs_ts_study_013_placement_map.png](./picture/cqrs_ts_study_013_placement_map.png)
 
 | やりたいこと                   | 置き場所                         | 理由             |
 | ------------------------ | ---------------------------- | -------------- |
@@ -238,7 +234,6 @@ export class PayOrderHandler {
 ---
 
 ## 13.6 ミニハンズオン：太いPayOrderHandlerを“薄く”する✂️✨
-![cqrs_ts_study_013_refactoring_cut.png](./picture/cqrs_ts_study_013_refactoring_cut.png)
 
 やることはこの順でOK！🧠
 
@@ -254,7 +249,6 @@ export class PayOrderHandler {
 ---
 
 ## 13.7 テストどうする？（ここ超大事）🧪💕
-![cqrs_ts_study_013_test_focus.png](./picture/cqrs_ts_study_013_test_focus.png)
 
 ### ✅ ドメインのテスト（最優先！）
 

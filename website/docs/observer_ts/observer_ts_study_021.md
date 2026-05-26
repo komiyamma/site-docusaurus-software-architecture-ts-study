@@ -32,7 +32,6 @@ Prometheus系だとこれが特に効いてくるよ〜😵‍💫（“ラベ�
 
 ## 2) cardinality（爆発）ってなに？💣📈
 
-![Cardinality Math](./picture/observer_ts_study_021_cardinality_math.png)
 
 ![画像を挿入予定](./picture/observer_ts_study_021_label_explosion.png)
 
@@ -74,7 +73,6 @@ OpenTelemetry でも「属性（= ラベル相当）の組み合わせ数＝card
 
 ## 3) まず結論：ラベルは「有限で」「分類っぽいもの」だけ🧁✅
 
-![Infinite Label Danger](./picture/observer_ts_study_021_infinite_label.png)
 
 ラベルにして良いのは、だいたいこの条件👇
 
@@ -112,7 +110,6 @@ Expressなどの計装は「routeを低cardinalityにする」前提で設計さ
 
 ## 5) TypeScript（Express）で「良いrouteラベル」を作る🧩🛠️✨
 
-![Route Template Normalization](./picture/observer_ts_study_021_route_template.png)
 
 ## ✅目標：`/users/12345` を `/users/:userId` に正規化する！
 
@@ -249,7 +246,6 @@ app.listen(3000, () => {
 
 ## 7) “cardinality保険”をかける🛡️✨（やらかし防止）
 
-![Unknown Fallback](./picture/observer_ts_study_021_label_insurance.png)
 
 ## ✅保険1：unknown / other に寄せる
 

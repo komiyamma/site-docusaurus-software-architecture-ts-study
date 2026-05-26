@@ -1,4 +1,4 @@
-﻿# 第09章：どこは即時必須？どこは遅れてOK？を仕分ける🧩✅
+# 第09章：どこは即時必須？どこは遅れてOK？を仕分ける🧩✅
 
 ## 今日の結論1行✍️
 
@@ -10,7 +10,6 @@
 
 # 1. まず「一致してほしいもの」を3種類に分ける🧠🔍
 
-![Three Data Types (State/Fact/View)](./picture/cap_ts_study_009_three_data_types.png)
 
 分散の話って、いきなり難しく見えるけど…実は「何を一致させたいの？」が混ざってるだけです😵‍💫
 
@@ -49,7 +48,6 @@ mindmap
 
 ## 2-1. 危険度チェック（超重要）📋✅
 
-![Danger Criteria Checklist](./picture/cap_ts_study_009_danger_criteria.png)
 
 次の質問に「YES」が多いほど、**強めの整合性が必要（赤寄り）**です🟥
 
@@ -78,7 +76,6 @@ mindmap
 
 # 3. 3色ルール：赤🟥/黄🟨/緑🟩で切る🎨✨
 
-![Consistency Traffic Lights](./picture/cap_ts_study_009_traffic_colors.png)
 
 ここからは、迷わないための“型”です👍
 
@@ -111,7 +108,6 @@ mindmap
 
 ## 4-1. 仕分け例（完成形イメージ）🟥🟨🟩
 
-![Domain Color Map](./picture/cap_ts_study_009_domain_colors.png)
 
 | 領域   | 具体項目               |   推奨色 | 理由（危険度）                                 |
 | ---- | ------------------ | ----: | --------------------------------------- |
@@ -151,7 +147,6 @@ mindmap
 
 ## 6-1. `consistency-map.json` を作る📄
 
-![Consistency Policy Code](./picture/cap_ts_study_009_consistency_json.png)
 
 ```json
 {
@@ -197,7 +192,6 @@ export function mustBeStrong(op: string, map: PolicyMap): boolean {
 
 # 7. AIで“仕分け基準チェックリスト”を作って、ブレを減らす🤖📋✨
 
-![AI Consistency Judge](./picture/cap_ts_study_009_ai_judge.png)
 
 人間って、日によって判断がブレます😂
 だから、ここはAIを“基準の見張り役”にするのが強いです👀✅
@@ -227,7 +221,6 @@ export function mustBeStrong(op: string, map: PolicyMap): boolean {
 
 # 9. ミニクイズ（理解チェック）🧠✅
 
-![Consistency Quiz Show](./picture/cap_ts_study_009_quiz_show.png)
 
 ## Q1：商品一覧の「在庫あと3個！」は何色？🎨
 

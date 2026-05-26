@@ -29,7 +29,6 @@
 
 ## 10.2 UXで支えないと起きる事故あるある 😱📉
 
-![UX Accidents](./picture/cap_ts_study_010_ux_accidents.png)
 
 “遅れて確定”をUXで支えないと、こうなるよ👇
 
@@ -51,7 +50,6 @@
 
 ## 10.3 “UXで支える”ための3点セット 🧰✨
 
-![UX Support Toolbox](./picture/cap_ts_study_010_ux_toolbox.png)
 
 最終的整合性をやるなら、だいたいこの3つをセットで考えるよ👇
 
@@ -72,7 +70,6 @@
 
 ## 10.4 ステータス設計：まずは最小でOK 🧩✅
 
-![Order Status Machine](./picture/cap_ts_study_010_state_machine.png)
 
 いきなり細かい状態を作ると、画面も実装も大変になるよ〜😵‍💫
 まずは最小セットがおすすめ👇
@@ -108,7 +105,6 @@ stateDiagram-v2
 
 ## 10.5 文言（コピー）のコツ：嘘をつかずに安心させる 💬🫶
 
-![Wording Comparison](./picture/cap_ts_study_010_wording_comparison.png)
 
 最終的整合性のUXで最重要なのは **言い方**🥺✨
 ポイントはこれ👇
@@ -133,7 +129,6 @@ stateDiagram-v2
 
 ## 10.6 ハンズオン：注文後に「反映待ち」ステータスを入れる 🛒⏳✅
 
-![Hands-on Architecture Flow](./picture/cap_ts_study_010_hands_on_flow.png)
 
 ここから手を動かすよ〜🧪✨
 狙いはこれ👇
@@ -540,7 +535,6 @@ npx tsx apps/worker/src/index.ts
 
 ## 10.8 よくある落とし穴（初心者が踏みがち）🕳️😵‍💫
 
-![UX Pitfalls](./picture/cap_ts_study_010_pitfalls.png)
 
 ### 落とし穴①：PENDINGなのに「完了」って言っちゃう 🙅‍♀️
 
@@ -559,7 +553,6 @@ npx tsx apps/worker/src/index.ts
 
 ## 10.9 AI活用：画面文言を“安心する日本語”にする 💬🤖✨
 
-![AI Copywriter](./picture/cap_ts_study_010_ai_copywriter.png)
 
 この章のAIは、**実装よりも“言い方”づくり**が最強だよ🥺🫶
 

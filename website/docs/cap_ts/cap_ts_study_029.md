@@ -21,7 +21,7 @@
 
 # 1) 配達保証の3兄弟👯‍♀️👯‍♂️👯
 
-![Delivery Guarantees Trio](./picture/cap_ts_study_029_three_guarantees.png) <!-- ref: 382 -->
+ <!-- ref: 382 -->
 
 ## At-most-once（多くても1回）🫥
 
@@ -43,7 +43,7 @@
 
 ## 典型事故：処理は成功、でもACKが届かない📬💥
 
-![ACK Failure Scenario](./picture/cap_ts_study_029_ack_fail.png) <!-- ref: 383 -->
+ <!-- ref: 383 -->
 
 ざっくり図にするとこう👇
 
@@ -63,7 +63,7 @@ RabbitMQみたいに「ACKしないと再配達」系は、まさにこの世界
 
 # 3) 「世の中の保証」って実際どうなってるの？🌍📮
 
-![Cloud Service Guarantees](./picture/cap_ts_study_029_service_map.png) <!-- ref: 384 -->
+ <!-- ref: 384 -->
 
 現場でよく見る例を、超ざっくり並べるね👇（覚えるより“感覚”！）
 
@@ -80,7 +80,7 @@ RabbitMQみたいに「ACKしないと再配達」系は、まさにこの世界
 
 # 4) 現実に勝つための“4点セット”🧰✨
 
-![Four Reliability Tools](./picture/cap_ts_study_029_four_tools.png) <!-- ref: 385 -->
+ <!-- ref: 385 -->
 
 ## ① 冪等なコンシューマ（重複に勝つ）🧷✅
 
@@ -110,7 +110,7 @@ RabbitMQみたいに「ACKしないと再配達」系は、まさにこの世界
 
 ## 5-1. DBを用意する（正本・キュー・Inbox・投影）🗄️✨
 
-![DB Schema Diagram](./picture/cap_ts_study_029_db_schema.png) <!-- ref: 386 -->
+ <!-- ref: 386 -->
 
 2026のNodeでは `node:sqlite` が使えるよ（まだ実験扱いだけど、`--experimental-sqlite` なしで使える状態になってる）🧪 ([nodejs.org][2])
 Node 24系はActive LTSで、Windows向けインストーラもあるよ🪟✨ ([nodejs.org][6])
@@ -259,7 +259,7 @@ server.listen(3000, () => {
 
 ## 5-3. Worker：At-least-once（再配達）を再現しながら処理する🧑‍🏭📨🔁
 
-![Worker Process Logic](./picture/cap_ts_study_029_worker_logic.png) <!-- ref: 387 -->
+ <!-- ref: 387 -->
 
 ポイントはここ👇
 
@@ -451,7 +451,7 @@ curl -X POST http://localhost:3000/orders -H "content-type: application/json" ^
 
 # 6) 欠落（消えた）っぽいときの“再同期”🧹✨
 
-![Reconciliation Process](./picture/cap_ts_study_029_reconciliation.png) <!-- ref: 388 -->
+ <!-- ref: 388 -->
 
 At-least-onceは「欠落しにくい」寄りだけど、
 設計や運用のミス（例えば auto-ack 的な扱い）で欠落は普通に起きうるよ😱 ([rabbitmq.com][1])

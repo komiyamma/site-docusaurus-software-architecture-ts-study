@@ -23,7 +23,6 @@
 
 ## 2) 3つの読み先を“キャラ化”して覚えよう🧠🎭
 
-![Data Source Characters](./picture/cap_ts_study_014_source_characters.png)
 
 ### Primary（Primary Read）👑
 
@@ -49,7 +48,6 @@
 
 ## 3) どれを選ぶ？判断のコツ（速さ vs 新しさ）⚖️✨
 
-![Freshness vs Speed Balance](./picture/cap_ts_study_014_freshness_vs_speed.png)
 
 ### まず“新しさが必要な瞬間”を押さえる✅
 
@@ -201,7 +199,6 @@ export class SimpleCache<T> {
 
 ## 4-4) “読む場所を選ぶ” ReadRouter を作る👀🧭
 
-![Read Router Logic](./picture/cap_ts_study_014_read_router_logic.png)
 
 ここが第14章の主役だよ〜！✨
 
@@ -252,7 +249,6 @@ export class ReadRouter {
 
 ## 4-5) “古い読み”を再現するシナリオ（ミニ実験）🧪💥
 
-![Stale Read Accident](./picture/cap_ts_study_014_stale_read_accident.png)
 
 ### 実験セット
 
@@ -295,7 +291,6 @@ export class ReadRouter {
 
 ## 6) 判断フローチャート（文章版）🤖🧩
 
-![Read Source Decision Tree](./picture/cap_ts_study_014_decision_tree.png)
 
 困ったら、これを上から読むだけでOK👇
 

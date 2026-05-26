@@ -19,7 +19,6 @@
 
 ### 2.1 よくある悲劇ストーリー📖💥
 
-![Stale Cache Truck](./picture/cap_ts_study_018_stale_cache_truck.png)
 
 
 
@@ -61,7 +60,6 @@ sequenceDiagram
 
 ## 3. キャッシュの基本用語ミニ辞典📖🐣
 
-![Cache Terms](./picture/cap_ts_study_018_cache_terms_icons.png)
 
 
 
@@ -90,7 +88,6 @@ sequenceDiagram
 
 ### 5.1 `cache.ts`（TTLキャッシュ本体）🧠🧊
 
-![TTL Shelf](./picture/cap_ts_study_018_ttl_shelf.png)
 
 
 
@@ -181,7 +178,6 @@ function sleep(ms: number) {
 
 ## 7. 実装：API（キャッシュありGET、キャッシュ放置のPOST）😈🧊
 
-![Cache Aside](./picture/cap_ts_study_018_cache_aside_pattern.png)
 
 
 
@@ -307,7 +303,6 @@ TypeScriptをNodeでサクッと動かす用途で `tsx` を使う流れがま�
 
 ## 9. 改善①：更新したら“そのキーだけ消す”🗑️✅
 
-![Invalidation Button](./picture/cap_ts_study_018_invalidation_button.png)
 
 
 
@@ -347,7 +342,6 @@ TTLって、気合いで決めるとだいたい事故る😇
 
 ### 11.1 キャッシュスタンピード（雪崩）❄️💥
 
-![Cache Stampede](./picture/cap_ts_study_018_cache_stampede.png)
 
 
 

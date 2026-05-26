@@ -17,7 +17,7 @@
 
 ## 2) そもそも「冪等」って何？🧠
 
-![Idempotency Concept](./picture/cap_ts_study_028_idempotent_concept.png) <!-- ref: 375 -->
+ <!-- ref: 375 -->
 
 ざっくり言うと…
 
@@ -77,7 +77,7 @@ sequenceDiagram
 
 ### 落とし穴A：同じキーで“違う内容”を送っちゃう 🧨
 
-![Payload Mismatch Conflict](./picture/cap_ts_study_028_payload_mismatch.png) <!-- ref: 376 -->
+ <!-- ref: 376 -->
 
 例：
 
@@ -91,14 +91,14 @@ sequenceDiagram
 
 ### 落とし穴B：キーの保存が “メモリだけ” 🫠
 
-![Memory Storage Risk](./picture/cap_ts_study_028_memory_leak.png) <!-- ref: 377 -->
+ <!-- ref: 377 -->
 
 サーバー再起動したら忘れて、また二重実行します🔥
 教材ではまず **メモリ実装**で感覚を掴むけど、実戦では **DB/Redis** に置くのが基本だよ〜🏗️✨
 
 ### 落とし穴C：並行リクエスト（同時に2回来る）⚔️
 
-![Concurrent Request Race](./picture/cap_ts_study_028_concurrent_requests.png) <!-- ref: 378 -->
+ <!-- ref: 378 -->
 
 ほぼ同時に同じキーが飛ぶと、
 「まだ保存してないから両方実行」が起きがち😵
@@ -290,7 +290,7 @@ export class InMemoryOrderRepo {
 
 ## 9) 実装：`POST /orders` を冪等化する ✅🔑
 
-![Idempotency Architecture](./picture/cap_ts_study_028_architecture.png) <!-- ref: 379 -->
+ <!-- ref: 379 -->
 
 ### `apps/api/src/server.ts`
 
@@ -410,7 +410,7 @@ Invoke-RestMethod -Method Get -Uri http://127.0.0.1:3000/debug/orders/count
 
 ## 11) テスト：同一キー2回を自動チェック 🧪🤖
 
-![Automated Idempotency Test](./picture/cap_ts_study_028_test_automation.png) <!-- ref: 380 -->
+ <!-- ref: 380 -->
 
 ### `apps/api/src/server.test.ts`
 
@@ -487,7 +487,7 @@ node --test
 
 ## 12) “実戦”での設計メモ（ここが強くなる）🏋️‍♀️✨
 
-![Real World Idempotency](./picture/cap_ts_study_028_real_world.png) <!-- ref: 381 -->
+ <!-- ref: 381 -->
 
 教材のメモリ実装を、実戦に寄せるならこう考えるよ〜🧠
 

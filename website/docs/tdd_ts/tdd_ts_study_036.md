@@ -1,4 +1,4 @@
-﻿# 第36章：ブランド型（ID取り違え防止）🏷️
+# 第36章：ブランド型（ID取り違え防止）🏷️
 
 ![ブランド型](./picture/tdd_ts_study_036_brand_tag.png)
 
@@ -11,8 +11,8 @@
 
 ## 📚学ぶこと
 
-* 🧠 TypeScriptは「構造的型付け」なので、同じ `string` は基本同じ扱いになりがち\n\n![Structural Typing Risk](./picture/tdd_ts_study_036_structural_typing_risk.png)
-* 🏷️ **ブランド型（Branded / Opaque / Nominalっぽくする）**で「意味」を型に乗せる\n\n![Brand Sticker](./picture/tdd_ts_study_036_brand_sticker.png)
+* 🧠 TypeScriptは「構造的型付け」なので、同じ `string` は基本同じ扱いになりがち\n\n
+* 🏷️ **ブランド型（Branded / Opaque / Nominalっぽくする）**で「意味」を型に乗せる\n\n
 * 🛡️ 2つの作り方
 
   * ① かんたん版：`__brand` を足す（学習しやすい）
@@ -40,7 +40,7 @@ export function addToCart(userId: string, productId: string) {
   return { userId, productId }
 }
 
-// どっちも string だから、入れ替えても通っちゃう…\n\n![Swap Crash](./picture/tdd_ts_study_036_swap_crash.png)
+// どっちも string だから、入れ替えても通っちゃう…\n\n
 addToCart("prd_001", "usr_001") // 😱
 ```
 
@@ -68,7 +68,7 @@ import { addToCart2, UserId, ProductId } from "./ids.js"
 addToCart2(UserId("usr_001"), ProductId("prd_001"))
 
 // 入れ替えたらコンパイルで落ちてほしい！
-// @ts-expect-error - userId と productId を取り違えたらダメ🙅‍♀️\n\n![Compile Shield](./picture/tdd_ts_study_036_compile_shield.png)
+// @ts-expect-error - userId と productId を取り違えたらダメ🙅‍♀️\n\n
 addToCart2(ProductId("prd_001"), UserId("usr_001"))
 ```
 
@@ -89,7 +89,7 @@ type Brand<T, Name extends string> = T & { readonly __brand: Name }
 export type UserId = Brand<string, "UserId">
 export type ProductId = Brand<string, "ProductId">
 
-// 💡 生成関数で “as” を隠す（アプリ側に撒かないのがコツ！）\n\n![Factory Gate](./picture/tdd_ts_study_036_factory_gate.png)
+// 💡 生成関数で “as” を隠す（アプリ側に撒かないのがコツ！）\n\n
 export function UserId(value: string): UserId {
   // ここは軽いチェックでもOK（好みで強化してね）
   if (!value.startsWith("usr_")) throw new Error("UserId must start with usr_")
@@ -116,7 +116,7 @@ export function addToCart2(userId: UserId, productId: ProductId) {
 ## 4) 🧹 Refactor：強つよ版（unique symbol）も知っておく💪✨
 
 チームや規模が大きいと「同名ブランド」衝突が怖いことがあるのね🫠
-その対策として **`unique symbol` をキーにする**やり方があるよ\n\n![Unique Symbol Seal](./picture/tdd_ts_study_036_unique_symbol_seal.png)（より衝突しにくい） ([DEV Community][1])
+その対策として **`unique symbol` をキーにする**やり方があるよ\n\n（より衝突しにくい） ([DEV Community][1])
 
 ```ts
 // src/ids-unique.ts
@@ -189,7 +189,7 @@ ID/金額/日付/メール等の取り違え事故になりそうな箇所を指
 
 ## ☠️よくある落とし穴（ここだけ注意！）⚠️
 
-* 😈 **`as UserId` をどこでも使い始める** → 型安全が崩壊するので、生成関数へ隔離しよ！\n\n![As Cast Risk](./picture/tdd_ts_study_036_as_cast_risk.png)
+* 😈 **`as UserId` をどこでも使い始める** → 型安全が崩壊するので、生成関数へ隔離しよ！\n\n
 * 🫠 IDの形式チェックをゼロにすると「なんでもUserId」になりがち
   → 最低限 `usr_` / `prd_` だけでも守ると事故が激減するよ👍
 * 🧩 似た概念もブランド分け推奨：`Email` / `Url` / `Money` / `ISODateString` など✨

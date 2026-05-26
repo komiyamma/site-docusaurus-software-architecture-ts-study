@@ -14,7 +14,6 @@
 
 ## 11.1 Strong と Eventual を“1分で”つかむ ⏱️🧠
 
-![Strong vs Eventual Metaphor](./picture/cap_ts_study_011_strong_vs_eventual_metaphor.png)
 
 ### ✅ Strong（強整合）って？
 
@@ -38,7 +37,6 @@
 
 ## 11.3 ざっくり比較表（まずこれだけ覚えよ📊✨）
 
-![Speed Comparison](./picture/cap_ts_study_011_speed_comparison.png)
 
 | 観点        | Strong（強整合）🧱         | Eventual（最終的整合）🕊️      |
 | --------- | --------------------- | ----------------------- |
@@ -53,7 +51,6 @@
 
 # 11.4 ハンズオン：Strong版/ Eventual版を作って“差”を体感しよう 🧪🔥
 
-![Hands-on Map](./picture/cap_ts_study_011_hands_on_map.png)
 
 ここでは **「Worker＝主データ（Primary）」**、**「API＝レプリカ（Replica）を持って読む」** みたいな形で作るよ👑🪞
 （現実のDBそのままではないけど、“体感”には十分！）
@@ -378,7 +375,6 @@ curl.exe http://127.0.0.1:4000/inventory/apple-juice?read=primary
 
 # 11.5 体感のまとめ（ここが“肌感覚”💡）
 
-![UX Contrast](./picture/cap_ts_study_011_ux_contrast.png)
 
 * Strong 🧱：
 
@@ -394,7 +390,6 @@ curl.exe http://127.0.0.1:4000/inventory/apple-juice?read=primary
 
 # 11.6 “選び方”のミニ指針（超ざっくり）🧭✨
 
-![Selection Compass](./picture/cap_ts_study_011_selection_compass.png)
 
 * **Strong寄り**にしたい✅
 
@@ -412,7 +407,6 @@ curl.exe http://127.0.0.1:4000/inventory/apple-juice?read=primary
 
 # 11.7 AI の使い方（この章は“比較”が強い📊🤖）
 
-![AI Comparator](./picture/cap_ts_study_011_ai_comparator.png)
 
 ## ✅ 比較表を作らせるプロンプト例 📊🤖
 

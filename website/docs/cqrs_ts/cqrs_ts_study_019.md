@@ -1,4 +1,4 @@
-﻿# 第19章：QueryServiceの責務（副作用ゼロ！）🧼🚫
+# 第19章：QueryServiceの責務（副作用ゼロ！）🧼🚫
 （この章は **CQRSの気持ちよさ**が一気にわかる回だよ😆💘）
 
 ---
@@ -30,7 +30,6 @@ flowchart TD
 
 ## まず結論：QueryServiceは「読むだけ係」📖👀
 
-![reading_only_librarian](./picture/cqrs_ts_study_019_reading_only_librarian.png)
 
 QueryService は一言でいうと、
 
@@ -47,7 +46,6 @@ QueryService は一言でいうと、
 
 ## 「副作用」ってなに？（超やさしく）🙂🧠
 
-![side_effect_accident](./picture/cqrs_ts_study_019_side_effect_accident.png)
 
 **副作用 = “読んだついでに、何かが変わること”**だよ⚡
 
@@ -64,7 +62,6 @@ QueryService は一言でいうと、
 
 ## QueryServiceの鉄の掟（やさしめ版）🧼🪨
 
-![five_rules_tablet](./picture/cqrs_ts_study_019_five_rules_tablet.png)
 
 QueryServiceはこの5つを守ると、ほぼ勝ち🏆✨
 
@@ -78,7 +75,6 @@ QueryServiceはこの5つを守ると、ほぼ勝ち🏆✨
 
 ## “副作用ゼロ”を守るコツ（根性じゃなく設計で！）🛡️😆
 
-![dependency_blinders](./picture/cqrs_ts_study_019_dependency_blinders.png)
 
 ここ大事！💘
 「気をつけます！」だと絶対破れるから、**破れない形**にするよ〜✨
@@ -138,7 +134,6 @@ export type OrderListItemDto = {
 
 ## 2) ReadRepository（読む専用の口）を作る🗄️🔎
 
-![read_interface_panel](./picture/cqrs_ts_study_019_read_interface_panel.png)
 
 ここが **“副作用ゼロの防波堤”**だよ🛡️✨
 更新メソッドを置かないのがポイント！
@@ -256,7 +251,6 @@ main().catch(console.error);
 
 ## Q1. 「閲覧数 +1」したいんだけど…Queryじゃダメ？👀➕
 
-![view_count_separation](./picture/cqrs_ts_study_019_view_count_separation.png)
 
 **ダメじゃないけど、それは “更新” だから Command にするのが安全**🙂
 つまり、

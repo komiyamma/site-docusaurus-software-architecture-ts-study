@@ -1,4 +1,4 @@
-﻿# 第07章：CQRSの最小形（CommandHandler / QueryService）🧩✨
+# 第07章：CQRSの最小形（CommandHandler / QueryService）🧩✨
 
 今日は **CQRSの“骨格だけ”** を作ります☺️💡
 「難しいことは後回し！」で、まずは **分けた瞬間にスッキリする体験** を優先します🎀
@@ -14,7 +14,6 @@
 ---
 
 ## 1. 今日つくる“最小のCQRS”の形（これだけ覚えればOK）🧠✨
-![Minimal CQRS Skeleton](./picture/cqrs_ts_study_007_skeleton_structure.png)
 
 ### ✅ CQRS最小形ルール
 
@@ -69,7 +68,6 @@ npx tsc --init
 ---
 
 ## 4. ファイル構成（今日の最小セット）📁✨
-![Project Folder Map](./picture/cqrs_ts_study_007_folder_map.png)
 
 ```text
 src/
@@ -89,7 +87,6 @@ src/
 ## 5. 実装していくよ✍️✨（コピペでOK！）
 
 ### 5-1. domain：注文の“形”だけ作る📦🙂
-![Domain Shape Mold](./picture/cqrs_ts_study_007_domain_shape.png)
 
 `src/domain/order.ts`
 
@@ -180,7 +177,6 @@ export class OrderStore {
 ---
 
 ### 5-3. commands：PlaceOrderCommand と Handler を作る🧾✅
-![Handler Assembly Line](./picture/cqrs_ts_study_007_handler_assembly.png)
 
 `src/commands/placeOrder.ts`
 
@@ -225,7 +221,6 @@ export class PlaceOrderHandler {
 ---
 
 ### 5-4. queries：QueryService（読むだけ）を作る🔎📋
-![Query Service Worker](./picture/cqrs_ts_study_007_query_worker.png)
 
 `src/queries/orderQueryService.ts`
 
@@ -281,7 +276,6 @@ export class OrderQueryService {
 ---
 
 ### 5-5. main：つなげて動かす🎮✨
-![Main Ignition](./picture/cqrs_ts_study_007_main_ignition.png)
 
 `src/main.ts`
 
@@ -355,7 +349,6 @@ npx tsx src/main.ts
 ---
 
 ## 8. よくあるつまずき（先に潰す🪤）😵‍💫
-![Query Side Effect Trap](./picture/cqrs_ts_study_007_query_trap.png)
 
 * **Queryで更新しちゃう**：ログ用カウンタ更新とかも“最初は”我慢！🥲
 * **CommandHandlerが太りだす**：分岐まみれになったら、Domainへ寄せる合図🚨

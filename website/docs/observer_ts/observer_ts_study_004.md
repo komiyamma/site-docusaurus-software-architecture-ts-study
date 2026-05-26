@@ -1,4 +1,4 @@
-﻿# 第04章：VS CodeとAIで“観測の下準備”🧰🤖✨
+# 第04章：VS CodeとAIで“観測の下準備”🧰🤖✨
 
 [![Getting started with Copilot Chat in VS Code](https://tse2.mm.bing.net/th/id/OIP.VWwdfYYgYW-DIbDAZC44ugHaEb?pid=Api)](https://code.visualstudio.com/docs/copilot/getting-started-chat?utm_source=chatgpt.com)
 
@@ -80,7 +80,6 @@ VS Codeは、ワークスペース直下の **`.github/copilot-instructions.md`*
 
 ## 3) “再利用プロンプト”で、観測テンプレを量産する📦✨
 
-![ai_instructions](./picture/observer_ts_study_004_ai_instructions.png)
 
 ### 3-1) Prompt files を使う💾✨
 
@@ -109,7 +108,6 @@ description: "観測TODOを章の内容に合わせて更新する"
 
 ## 4) 実行・テスト・デバッグを“ボタン化”する🔘▶️🧪
 
-![debug_button](./picture/observer_ts_study_004_debug_button.png)
 
 ### 4-1) Tasks（タスク）で「いつもの実行」を固定する🧷✨
 
@@ -182,7 +180,6 @@ VS Codeは Node/TS のデバッグを標準でサポートしてて、`launch.js
 
 ## 5) ログを汚さず“覗き見”できる Logpoint が強すぎる💎👀✨
 
-![logpoint_magic](./picture/observer_ts_study_004_logpoint_magic.png)
 
 「ログ入れた→確認→消す」って、地味にだるい…😇
 そんな時は **Logpoint**（止めないブレークポイント）！
@@ -203,7 +200,6 @@ VS Code公式でも「ログ文を追加しなくて済むから便利」って�
 
 ## 6) 章ごとに使う「観測TODOテンプレ」を作る📝✅✨
 
-![todo_checklist](./picture/observer_ts_study_004_todo_checklist.png)
 
 `docs/observability.todo.md` を作って、毎章ここを更新するよ〜！
 

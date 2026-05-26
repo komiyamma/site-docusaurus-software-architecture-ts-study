@@ -19,7 +19,6 @@
 
 ## 2) まずは超重要：エラーは「設計」だよ🧩✨
 
-![Relay Race Throw vs Log](./picture/observer_ts_study_011_relay_throw_log.png)
 
 例外って、放っておくとこうなりがち👇😵‍💫
 
@@ -79,13 +78,11 @@ mindmap
 💡ポイント：
 **「想定内」はユーザー向けメッセージが必要**、**「想定外」は安全な固定文言**が基本だよ🙈🔐
 
-![Safe vs Internal Message](./picture/observer_ts_study_011_safe_vs_internal_msg.png)
 
 ---
 
 ## 4) “境界で拾う”ってどういうこと？🚧✨
 
-![Boundary Guard](./picture/observer_ts_study_011_boundary_guard.png)
 
 たとえば HTTP API なら、処理の流れはざっくりこう👇
 
@@ -103,7 +100,6 @@ Express なら、エラーは `next(err)` で後ろのエラーハンドラに�
 
 ## 5) 最小で強い「アプリ用エラー型」を作ろう🧱✨
 
-![AppError Blueprint](./picture/observer_ts_study_011_app_error_blueprint.png)
 
 ここでの狙いは👇
 
@@ -170,7 +166,6 @@ export const badRequest = (safeMessage: string, details?: Record<string, unknown
 
 ## 6) “causeで包む”練習をしよう🔗✨（原因を消さない）
 
-![Error Wrapping Dolls](./picture/observer_ts_study_011_error_wrapping_dolls.png)
 
 外部API呼び出しに失敗した時の例ね👇
 
@@ -206,7 +201,6 @@ export async function fetchProfile(userId: string) {
 
 ## 7) ログはどこで出す？答え：基本“境界だけ”🧹✨
 
-![Duplicate Log Panic](./picture/observer_ts_study_011_duplicate_log_panic.png)
 
 よくある事故👇😇💥
 
@@ -265,7 +259,6 @@ export function errorHandler(err: unknown, req: Request, res: Response, _next: N
 
 ## 8) 例外ログのテンプレ項目🧾✨（この章のミニ演習ここ！）
 
-![Log Template Checklist](./picture/observer_ts_study_011_log_template_checklist.png)
 
 「困った時に欲しい情報」だけを“固定セット”にしよ〜📌😊
 

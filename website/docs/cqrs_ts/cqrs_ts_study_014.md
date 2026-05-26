@@ -1,4 +1,4 @@
-﻿# 第14章：Write側の永続化を抽象化（Repository入門）🗄️🔁
+# 第14章：Write側の永続化を抽象化（Repository入門）🗄️🔁
 
 この章はね、「DBの都合」でアプリの大事なルール（業務ルール）がグチャッとなるのを防ぐための回だよ〜！😊💡
 **Repository（リポジトリ）**を入れると、コードがスッキリして、テストも超やりやすくなるよ🧪✨
@@ -58,7 +58,6 @@ Repositoryは一言でいうと…
 まずは **Mapで保存する in-memory 実装**で、Repositoryの気持ちよさを体験しよう〜🪶💕
 
 ### 3.1 ファイル配置イメージ📁✨
-![cqrs_ts_study_014_file_structure.png](./picture/cqrs_ts_study_014_file_structure.png)
 
 * `src/domain/order/Order.ts`
 * `src/domain/order/OrderRepository.ts`
@@ -69,7 +68,6 @@ Repositoryは一言でいうと…
 ## 4) 実装してみよう（コピペOK）🐣✍️
 
 ### 4.1 Order（集約ルート）📦
-![cqrs_ts_study_014_order_isolation.png](./picture/cqrs_ts_study_014_order_isolation.png)
 
 ```ts
 // src/domain/order/Order.ts
@@ -111,7 +109,6 @@ export class Order {
 ---
 
 ### 4.2 Repository interface（境界）🧩
-![cqrs_ts_study_014_dip_connection.png](./picture/cqrs_ts_study_014_dip_connection.png)
 
 ```ts
 // src/domain/order/OrderRepository.ts
@@ -130,7 +127,6 @@ export interface OrderRepository {
 ---
 
 ### 4.3 InMemory実装（保存の中身）🪶🗄️
-![cqrs_ts_study_014_inmemory_storage.png](./picture/cqrs_ts_study_014_inmemory_storage.png)
 
 ```ts
 // src/infrastructure/memory/InMemoryOrderRepository.ts
@@ -161,7 +157,6 @@ export class InMemoryOrderRepository implements OrderRepository {
 ---
 
 ## 5) HandlerからRepositoryを使ってみよう🚪🧠
-![cqrs_ts_study_014_handler_independence.png](./picture/cqrs_ts_study_014_handler_independence.png)
 
 ### 5.1 PlaceOrderHandler（注文する）🧾✨
 
@@ -216,7 +211,6 @@ export class PayOrderHandler {
 ---
 
 ## 6) ここが最高：テストがラクになる🧪💕
-![cqrs_ts_study_014_test_ease.png](./picture/cqrs_ts_study_014_test_ease.png)
 
 in-memoryを差し込めば、DBなしでユニットテストできるよ〜！
 
@@ -245,7 +239,6 @@ test("place order saves an order", async () => {
 ---
 
 ## 7) ありがちなミス集（ここ踏むとつらい）😵‍💫📌
-![cqrs_ts_study_014_repo_antipattern.png](./picture/cqrs_ts_study_014_repo_antipattern.png)
 
 ### ❌ ミス1：Repositoryに検索機能を盛りすぎる🔎💥
 

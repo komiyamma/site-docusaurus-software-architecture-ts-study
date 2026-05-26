@@ -1,4 +1,4 @@
-﻿# 第09章：ドメイン超入門（Orderって何を持つ？）📦🙂
+# 第09章：ドメイン超入門（Orderって何を持つ？）📦🙂
 
 * **Order / OrderItem / Money** の「言葉」を揃える🗣️✨
 * Orderが持つ情報を**“必要最小限”**にできる（KISS！）🧊
@@ -8,7 +8,6 @@
 ---
 
 ## 第1章　そもそも「ドメイン」ってなに？📦🙂
-![Domain Heart](./picture/cqrs_ts_study_009_domain_heart.png)
 
 ドメインは一言でいうと、
 
@@ -24,7 +23,6 @@ CQRSだと特に、**Write側（更新側）**でドメインが大活躍する�
 ---
 
 ## 2. まずは「言葉」を揃えよ〜🗂️✨（ユビキタス言語の超入門）
-![Ubiquitous Language Dictionary](./picture/cqrs_ts_study_009_ubiquitous_dictionary.png)
 
 いきなりクラス作らず、先にメモ📝✨
 
@@ -46,7 +44,6 @@ CQRSだと特に、**Write側（更新側）**でドメインが大活躍する�
 ---
 
 ## 3. Orderは「何を持つべき？」をKISSで決める🧊✨
-![KISS Principle Ice Cube](./picture/cqrs_ts_study_009_kiss_ice_cube.png)
 
 ここ、盛りすぎると死ぬポイント😇💥
 だからルールはこれ👇
@@ -54,7 +51,6 @@ CQRSだと特に、**Write側（更新側）**でドメインが大活躍する�
 > **「今から作る機能（注文する・払う）に必要な分だけ持つ」**✅
 
 ### 今回の最小セット（おすすめ）📦✨
-![Aggregate Structure Tree](./picture/cqrs_ts_study_009_aggregate_tree.png)
 ![cqrs_ts_study_009_aggregate_structure.png](./picture/cqrs_ts_study_009_aggregate_structure.png)
 
 ```mermaid
@@ -98,7 +94,6 @@ mindmap
 ---
 
 ## 4. ドメイン設計の“超ざっくり基本”🧠✨
-![Entity vs Value Object](./picture/cqrs_ts_study_009_entity_vs_value.png)
 ![cqrs_ts_study_009_domain_model.png](./picture/cqrs_ts_study_009_domain_model.png)
 
 ### Entity（エンティティ）って？🪪
@@ -121,7 +116,6 @@ OrderはEntity、MoneyはValue Object、って覚えるとラクだよ🙂✨
 （ドメインは **副作用なし** が基本！fetchしない！DB触らない！）
 
 ### 5-1. IDを「ただのstring」にしない（超おすすめ）🧷✨
-![Branded Types](./picture/cqrs_ts_study_009_branded_id.png)
 
 `OrderId` と `MenuId` が混ざる事故、あるある😇
 TypeScriptなら**Brand型**で防げるよ🛡️✨
@@ -140,7 +134,6 @@ export const MenuId  = (value: string) => value as MenuId;
 ---
 
 ### 5-2. Money（値オブジェクト）を作る💴✨
-![Money Value Object Safe](./picture/cqrs_ts_study_009_money_safe.png)
 
 ポイントは👇
 

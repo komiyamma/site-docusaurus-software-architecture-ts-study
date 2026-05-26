@@ -1,4 +1,4 @@
-﻿# 第03章：題材を決める🧱💻（Node API中心＋必要ならフロント任意）
+# 第03章：題材を決める🧱💻（Node API中心＋必要ならフロント任意）
 
 この章は「観測（ログ/メトリクス/トレース）を練習するための**“実験場”**を固定する」回だよ〜！🧪✨
 題材が毎回フラフラすると、あとでログやトレースを入れる時に迷子になりがち😵‍💫 なので先に**小さく決め切る**のが勝ちです🏁💕
@@ -32,7 +32,6 @@ TypeScript は 5.9 系が現行ラインで、公式リリースアナウンス�
 
 ## 今回の題材：Mini Observability API 🧪🚀
 
-![data_flow](./picture/observer_ts_study_003_data_flow.png)
 
 ![画像を挿入予定](./picture/observer_ts_study_003_mini_api_box.png)
 
@@ -41,7 +40,6 @@ TypeScript は 5.9 系が現行ラインで、公式リリースアナウンス�
 
 ### エンドポイント設計（固定しよう）🔩
 
-![endpoints_behavior](./picture/observer_ts_study_003_endpoints_behavior.png)
 
 | Endpoint       | 目的   | 期待する挙動                 |
 | -------------- | ---- | ---------------------- |
@@ -50,8 +48,6 @@ TypeScript は 5.9 系が現行ラインで、公式リリースアナウンス�
 | `GET /fail`    | 失敗   | 例外を投げて 500 を返す💥       |
 | `GET /healthz` | 生存確認 | すぐ返す（超速）🫧             |
 
-![slow_request](./picture/observer_ts_study_003_slow_request.png)
-![fail_request](./picture/observer_ts_study_003_fail_request.png)
 
 > **ポイント**：あとでログ/メトリクス/トレースを入れると、
 > `/slow` はレイテンシ原因探しに使えるし、`/fail` はエラー追跡に使えるよ🔍✨
@@ -71,7 +67,6 @@ flowchart LR
 
 ## “外部I/O風”の中身（リアルじゃなくてOK）📦✨
 
-![fake_components](./picture/observer_ts_study_003_fake_components.png)
 
 今回は教材なので、ガチDBや外部APIに繋がなくてもOK！
 代わりに **Fake DB / Fake Remote** を作って、遅延と失敗をコントロールするよ🎮

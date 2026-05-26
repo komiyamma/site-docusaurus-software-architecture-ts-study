@@ -1,4 +1,4 @@
-﻿# 第09章：構造化ログ入門 🧱✨
+# 第09章：構造化ログ入門 🧱✨
 
 （JSONの考え方：**「あとで絞り込めるログ」**にするよ！🔍）
 
@@ -48,7 +48,6 @@ graph LR
 
 ## 2. いちばん大事な考え方 🧠💡
 
-![Message + Properties Structure](./picture/observer_ts_study_009_message_plus_properties.png)
 
 ### 「message + properties」方式にする 🧱✨
 
@@ -68,7 +67,6 @@ graph LR
 
 ## 3. JSONログの形はこうする 🧾✨
 
-![NDJSON Stream](./picture/observer_ts_study_009_ndjson_stream.png)
 
 ### 1行1JSONが最強 ✅
 
@@ -86,7 +84,6 @@ graph LR
 
 ## 4. まず固定する 最小必須フィールド 🏷️📌
 
-![Minimum Fields Set](./picture/observer_ts_study_009_minimum_fields.png)
 
 「まずこれだけは毎回入れる」っていうセットを決めると、後で楽！🥹✨
 
@@ -108,7 +105,6 @@ graph LR
 
 ## 5. ライブラリは何を使う？🌲🧰
 
-![Pino vs Winston](./picture/observer_ts_study_009_pino_vs_winston.png)
 
 ### まずは Pino 推し 🥇✨
 
@@ -131,7 +127,6 @@ npm i -D pino-pretty
 
 ### 6.2 loggerを1ファイルにまとめる 🧱
 
-![Redact Mechanism](./picture/observer_ts_study_009_redact_mechanism.png)
 
 `src/log.ts`
 
@@ -187,7 +182,6 @@ logger.warn(
 
 ## 7. エラーは 文字列じゃなくて 構造として出す 💥🧯
 
-![Error Serialization](./picture/observer_ts_study_009_error_serialization.png)
 
 エラーを`msg`にベタ貼りすると、後で集計できなくて困る😢
 
@@ -220,7 +214,6 @@ node dist/server.js | npx pino-pretty
 
 ## 9. Windowsでログを絞り込む PowerShell編 🔎💻
 
-![PowerShell Filtering](./picture/observer_ts_study_009_powershell_filter.png)
 
 ログがNDJSON（1行1JSON）なら、PowerShellでこうできるよ✨
 

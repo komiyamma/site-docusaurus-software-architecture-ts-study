@@ -22,7 +22,6 @@
 
 ## 1. まずは型を知ろう：「Overview → Drilldown」🧩🔎
 
-![Navigation Flow](./picture/observer_ts_study_022_overview_drilldown_flow.png)
 
 ![画像を挿入予定](./picture/observer_ts_study_022_dashboard_pyramid.png)
 
@@ -54,7 +53,6 @@ Grafanaでも、ダッシュボードは大きく **2段構え**が基本にな�
 
 ## 2. 最強の“上から見る順番”はコレ：4つの黄金シグナル 🥇✨
 
-![4 Golden Signals Display](./picture/observer_ts_study_022_golden_signals_cards.png)
 
 「何を上に置く？」問題の答えとして超有名なのが、**4つの黄金シグナル**👇
 
@@ -73,7 +71,6 @@ Grafanaでも、ダッシュボードは大きく **2段構え**が基本にな�
 
 ## 3. 第22章のメイン：おすすめ“ウィジェット構成案”🧱✨（テンプレ）
 
-![Dashboard Layers](./picture/observer_ts_study_022_dashboard_layers.png)
 
 ここからが「下ごしらえ」本体だよ〜🍳✨
 あなたの題材API（/work /slow /fail みたいなやつ）に合わせて、まずは**画面の骨組み**を作っちゃおう！
@@ -116,7 +113,6 @@ Grafanaでも、ダッシュボードは大きく **2段構え**が基本にな�
 
 ### 3.4 3段目：調査へジャンプ（リンク導線）🔗🚀
 
-![Dashboard Links](./picture/observer_ts_study_022_dashboard_links.png)
 
 ここで「深掘りに行ける」ようにする！
 Grafanaにはリンクの考え方が整理されてて👇

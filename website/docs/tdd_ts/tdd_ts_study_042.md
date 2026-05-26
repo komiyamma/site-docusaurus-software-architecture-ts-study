@@ -1,4 +1,4 @@
-﻿# 第42章：依存の注入（関数引数DI）📦➡️
+# 第42章：依存の注入（関数引数DI）📦➡️
 
 ![差し替え可能なプラグ](./picture/tdd_ts_study_042_pluggable.png)
 
@@ -29,7 +29,6 @@ export function isCouponValid(expireAt: Date): boolean {
 * テスト時に「今」を固定できない😵
 * テストの実行タイミングで結果が変わる（フレーク）💥
 
-![flaky_balance](./picture/tdd_ts_study_042_flaky_balance.png)
 * 将来リファクタしたときに、別の“今”参照が混ざると地獄👻
 
 Vitestでも日付をモックする機能はあるけど、**“グローバルに時間を変える”**系は取り扱い注意（リセット忘れで事故りやすい）っていうクセがあるよ〜⚠️（例：`vi.setSystemTime` はテスト間で自動リセットされないので、戻す運用が必要） ([Vitest][1])

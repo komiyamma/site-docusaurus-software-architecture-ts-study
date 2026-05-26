@@ -10,7 +10,6 @@
 
 ## 1. まず“事故”を想像しよう 😱🛒
 
-![UX Disaster (Lost Order)](./picture/cap_ts_study_012_ux_disaster.png)
 
 ### ありがちな悲劇💥
 
@@ -41,7 +40,6 @@
 
 ### 3.1 Read Your Writes（RYW）👤✅
 
-![Read Your Writes (Diary)](./picture/cap_ts_study_012_ryw_diary.png)
 
 「自分が書いた変更は、そのあと自分が読むとき必ず反映されてる」って保証✨
 （論文や解説では “Read My Writes / Read Your Writes” とも呼ばれるよ）📄 
@@ -54,7 +52,6 @@
 
 ### 3.2 Monotonic Reads（単調読み取り）⏩✅
 
-![Monotonic Reads (Stairs)](./picture/cap_ts_study_012_monotonic_stairs.png)
 
 「一度“新しい状態”を見たなら、次に読んだとき“古い状態”に戻らない」保証✨
 つまり **タイムトラベル禁止**🚫🕰️ 
@@ -69,7 +66,6 @@
 
 ## 4. どうやって実現するの？（現場の定番パターン）🧰✨
 
-![Implementation Patterns](./picture/cap_ts_study_012_implementation_patterns.png)
 
 ### パターンA：しばらく“Primary読み”に寄せる👑📖
 
@@ -119,7 +115,6 @@
 
 ## 7. API側（apps/api）🧩🌐
 
-![Read Logic Flowchart](./picture/cap_ts_study_012_flowchart_illustration.png)
 
 ### 7.1 JSONストア（共通処理）を追加🧠
 
@@ -427,7 +422,6 @@ GET /orders/{id}?read=auto
 
 ## 10. Monotonic Reads（巻き戻り防止）を体感⏩✅
 
-![Time Travel Ban](./picture/cap_ts_study_012_time_travel_ban.png)
 
 次の順で試すと分かりやすいよ😊
 

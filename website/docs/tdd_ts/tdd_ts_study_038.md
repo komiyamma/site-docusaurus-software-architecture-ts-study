@@ -1,4 +1,4 @@
-﻿# 第38章：網羅性（exhaustive）で抜け漏れ防止🕳️🚫
+# 第38章：網羅性（exhaustive）で抜け漏れ防止🕳️🚫
 
 ![網羅性チェックの土台](./picture/tdd_ts_study_038_no_leak.png)
 
@@ -17,7 +17,7 @@
 
 ## 📚 学ぶこと（この章のキモ💡）
 
-### 1) `never` を使った “到達しないはず” チェック🧨\n\n![Never Void](./picture/tdd_ts_study_038_never_void.png)
+### 1) `never` を使った “到達しないはず” チェック🧨\n\n
 
 `never` は「ここに来るはずがない」型。
 **全部のcaseを書けてたら、最後に残る型は `never` になる** → これを利用して漏れを検出するよ✨
@@ -99,7 +99,7 @@ export function statusLabel(status: OrderStatus): string {
     case "paid":
       return "支払い済み";
   }
-  // ここが “網羅性のカギ” 🔑✨\n\n![Assert Guard](./picture/tdd_ts_study_038_assert_guard.png)
+  // ここが “網羅性のカギ” 🔑✨\n\n
   return assertNever(status);
 }
 ```
@@ -121,7 +121,7 @@ export type OrderStatus = "draft" | "submitted" | "paid" | "cancelled";
 ```
 
 すると… `statusLabel` の最後の `assertNever(status)` が **コンパイルで怒られる**はず！😳⚡
-「cancelled の case ないよ〜」ってことが、テスト実行前にバレるのが最高👏✨\n\n![Compile Alarm](./picture/tdd_ts_study_038_compile_alarm.png)
+「cancelled の case ないよ〜」ってことが、テスト実行前にバレるのが最高👏✨\n\n
 
 じゃあ追加👇
 
@@ -132,7 +132,7 @@ case "cancelled":
 
 ---
 
-## ✨ 別解：`Record` 対応表で “必ず全部埋める” 📒🧷\n\n![Record Map](./picture/tdd_ts_study_038_record_map.png)
+## ✨ 別解：`Record` 対応表で “必ず全部埋める” 📒🧷\n\n
 
 UIラベルみたいな「対応表」は `switch` よりコレが読みやすいこと多いよ〜😊
 
@@ -157,7 +157,7 @@ export function statusLabel(status: OrderStatus): string {
 
 ---
 
-## 🧹 ESLintでさらに漏れを減らす（おすすめ）📣\n\n![ESLint Robot](./picture/tdd_ts_study_038_eslint_robot.png)
+## 🧹 ESLintでさらに漏れを減らす（おすすめ）📣\n\n
 
 `@typescript-eslint/switch-exhaustiveness-check` を有効にすると、**union/enumのswitchでcase漏れを検出**してくれるよ✨ ([typescript-eslint.io][1])
 
@@ -173,7 +173,7 @@ export function statusLabel(status: OrderStatus): string {
 条件分岐が複雑になってくると、`ts-pattern` のパターンマッチが便利な場面もあるよ〜！
 `.exhaustive()` をつけると **網羅できてないとエラー**にできる✨ ([GitHub][2])
 
-（「switchがごちゃごちゃして読みにくい…🥲」って時の選択肢！）\n\n![TS Pattern Machine](./picture/tdd_ts_study_038_ts_pattern_machine.png)
+（「switchがごちゃごちゃして読みにくい…🥲」って時の選択肢！）\n\n
 
 ---
 
@@ -181,7 +181,7 @@ export function statusLabel(status: OrderStatus): string {
 
 コピペで使えるよ〜🫶
 
-* 「`OrderStatus` を増やすときに、漏れやすい箇所をリストアップして。`switch` と `Record` の両方で」📝\n\n![AI Test Generation](./picture/tdd_ts_study_038_ai_test_gen.png)
+* 「`OrderStatus` を増やすときに、漏れやすい箇所をリストアップして。`switch` と `Record` の両方で」📝\n\n
 * 「この `switch` を “網羅性チェック付き” に直して（`assertNever` 方式）」🧷
 * 「UIラベル、色、ボタン表示可否を status ごとに返したい。`Record` と型で漏れなく書く形にして」🎨🔘
 * 「このunionに1つ追加した想定で、壊れる箇所を予測して」🔮✨

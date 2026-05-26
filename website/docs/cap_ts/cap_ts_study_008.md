@@ -1,4 +1,4 @@
-﻿# 第08章：CAPの結論（PがあるならCかAどっち？）⚖️💥
+# 第08章：CAPの結論（PがあるならCかAどっち？）⚖️💥
 
 ## 結論1行 ✍️✨
 
@@ -14,7 +14,6 @@ CAPって「3文字の暗記」になりがちだけど、ここで欲しいの�
 
 > **分断中に、孤立した側へリクエストが来たらどう返す？** 🤔🔌
 
-![CAP Decision Fork](./picture/cap_ts_study_008_decision_fork.png)
 
 * **C（Consistency / 一致）を優先**：最新が保証できないなら **エラーにする** 🙅‍♀️
 * **A（Availability / 応答）を優先**：最新か怪しくても **とにかく返す** 🙆‍♀️
@@ -57,7 +56,6 @@ CAPのAはかなり厳密で、ざっくり言うと👇
 
 ### ざっくり構成 🧩
 
-![Experiment Architecture](./picture/cap_ts_study_008_experiment_arch.png)
 
 * `apps/worker`：在庫サービス（Inventory Service）📦
 * `apps/api`：注文受付API（Order API）🛒
@@ -375,7 +373,7 @@ async function fetchWithTimeout(url: string, init: RequestInit, timeoutMs: numbe
 }
 
 // ===== C寄り：在庫を“今”確保できなきゃ拒否 =====
-// ![C-Mode Logic Flow](./picture/cap_ts_study_008_c_mode_logic.png)
+//
 app.post("/inventory/try-reserve", async (req, res) => {
   const { sku, qty } = req.body as { sku: string; qty: number };
 
@@ -410,7 +408,7 @@ app.post("/inventory/try-reserve", async (req, res) => {
 });
 
 // ===== A寄り：注文は受付だけして、後で確定 =====
-// ![A-Mode Logic Flow](./picture/cap_ts_study_008_a_mode_logic.png)
+//
 app.post("/orders/accept", async (req, res) => {
   const { sku, qty } = req.body as { sku: string; qty: number };
   const id = newId();
@@ -496,7 +494,6 @@ curl.exe -s -X POST http://localhost:3000/inventory/try-reserve ^
 
 ### ② 分断ONにして、C寄りが“止まる”のを見る 🔌💥
 
-![Partition C Behavior](./picture/cap_ts_study_008_partition_c.png)
 
 ```powershell
 curl.exe -s -X POST http://localhost:3000/debug/partition/on
@@ -521,7 +518,6 @@ curl.exe -s -X POST http://localhost:3000/inventory/try-reserve ^
 
 ### ③ 分断ONのまま、A寄り（注文受付）を試す 🛒⏳
 
-![Partition A Behavior](./picture/cap_ts_study_008_partition_a.png)
 
 ```powershell
 curl.exe -s -X POST http://localhost:3000/orders/accept ^
@@ -571,7 +567,6 @@ CAPは「どっちが正しい？」じゃなくて、
 
 ## 8.9 どっちを選ぶ？ミニ判断ガイド🧭✨
 
-![C vs A Judgment Icons](./picture/cap_ts_study_008_judgment_guide.png)
 
 ### C寄りにしたいもの（例）🟥
 

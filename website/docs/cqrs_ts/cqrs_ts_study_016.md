@@ -1,4 +1,4 @@
-﻿# 第16章：クエリ設計①（GetOrderList：一覧）🔎📋
+# 第16章：クエリ設計①（GetOrderList：一覧）🔎📋
 ここでは **GetOrderList（注文一覧）** を題材に、**“画面が欲しい形が正義”** なクエリ設計を、手を動かしながら作っていくね☺️🧠💕
 
 ---
@@ -15,7 +15,6 @@
 ## まず大事な話：一覧Queryの「正解」はこれ💯✨
 
 ### ✅ Queryは「画面が欲しい形」を返す
-![cqrs_ts_study_016_view_shape.png](./picture/cqrs_ts_study_016_view_shape.png)
 
 一覧画面って、だいたいこういう1行が並ぶよね？👀
 
@@ -29,7 +28,6 @@
 ここでのコツは…
 
 ### ❌ ドメインをそのまま返さない
-![cqrs_ts_study_016_domain_vs_dto.png](./picture/cqrs_ts_study_016_domain_vs_dto.png)
 
 `Order` は「業務ルールのかたまり」だから、一覧に必要ない情報まで持ってたり、形がゴツかったりするの😵‍💫
 一覧は **“ビュー専用の軽い箱”** でOK！🎁🙂
@@ -37,7 +35,6 @@
 ---
 
 ## ありがちな事故あるある😇⚠️（先に潰す！）
-![cqrs_ts_study_016_query_accidents.png](./picture/cqrs_ts_study_016_query_accidents.png)
 
 * `Order` をそのまま返して、フロント側が地獄になる🫠
 * Queryなのに「ついでに既読フラグ更新」とかしちゃう（副作用💥）🙅‍♀️
@@ -107,7 +104,6 @@ export type GetOrderListResult = {
 ---
 
 ## 2) Readモデル（Query用の保存形）を決める🧱✨
-![cqrs_ts_study_016_read_flattening.png](./picture/cqrs_ts_study_016_read_flattening.png)
 
 Read側は **平たく**、**一覧で欲しい情報を持つ** のがコツ！📦✨
 
@@ -157,7 +153,6 @@ export interface OrderReadRepository {
 ---
 
 ## 4) QueryService（副作用ゼロ）を作る🧼🚫✨
-![cqrs_ts_study_016_query_librarian.png](./picture/cqrs_ts_study_016_query_librarian.png)
 
 ここは **「並べ方」「返す形」だけ責任** を持つよ〜！
 
@@ -204,7 +199,6 @@ export class GetOrderListQueryService {
 ```
 
 ### ✅ ここがえらいポイント💮
-![cqrs_ts_study_016_input_normalize.png](./picture/cqrs_ts_study_016_input_normalize.png)
 
 * `execute` の中で **更新しない**（ログやメトリクス以外）🧼🚫
 * 返す形は **DTOに固定**（画面が使いやすい）🎁✨
@@ -213,7 +207,6 @@ export class GetOrderListQueryService {
 ---
 
 ## 5) とりあえず動く！in-memory ReadRepository🪶✨
-![cqrs_ts_study_016_inmemory_query.png](./picture/cqrs_ts_study_016_inmemory_query.png)
 
 最初は配列でOKだよ〜🙂（ここで詰まると嫌になるから！😆）
 

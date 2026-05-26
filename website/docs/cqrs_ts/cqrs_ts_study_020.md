@@ -1,4 +1,4 @@
-﻿# 第20章：Readモデルの置き場（最初はシンプルでOK）📦🪶
+# 第20章：Readモデルの置き場（最初はシンプルでOK）📦🪶
 
 この章でやることはシンプルだよ〜😊✨
 **「Readモデル（表示用データ）って、どこに置くのがいいの？」**を、迷わず決められるようになるのがゴール！🎯💕
@@ -7,7 +7,6 @@
 
 ## 1) Readモデルの「置き場」を決めると何が嬉しいの？🤔💡
 
-![rebuildable_sandcastle](./picture/cqrs_ts_study_020_rebuildable_sandcastle.png)
 
 Readモデルって、**画面が欲しい形に整形された“表示専用データ”**だよね📋✨
 だから置き場は、ざっくりこういう性格があるとラク！
@@ -82,7 +81,6 @@ Node向けの `libsql-js` もあって、**better-sqlite3互換APIを目指す**
 
 ## 3) 迷ったらこの「4問」で決めよっか 🧭✨
 
-![decision_flowchart](./picture/cqrs_ts_study_020_decision_flowchart.png)
 
 ### Q1. 再起動してもデータ残したい？🔄
 
@@ -108,7 +106,6 @@ Node向けの `libsql-js` もあって、**better-sqlite3互換APIを目指す**
 
 ## 4) ハンズオン：ReadRepositoryを差し替え可能にする 🧩✨
 
-![interface_plug](./picture/cqrs_ts_study_020_interface_plug.png)
 
 ここが第20章のいちばん大事ポイント！
 **「置き場は後で変えてOK」**にするために、Read側は **Repositoryをインターフェース化**しておくよ💕
@@ -145,7 +142,6 @@ export interface OrderReadRepository {
 
 ## 5) 置き場A：in-memory 実装 🧠✨（最速で動く！）
 
-![memory_vs_sqlite](./picture/cqrs_ts_study_020_memory_vs_sqlite.png)
 
 ```ts
 // src/queries/readmodel/InMemoryOrderReadRepository.ts
@@ -265,7 +261,6 @@ export class SqliteOrderReadRepository implements OrderReadRepository {
 
 ## 7) QueryService 側は「置き場を意識しない」✨🧼
 
-![query_service_blindfold](./picture/cqrs_ts_study_020_query_service_blindfold.png)
 
 ```ts
 // src/queries/OrderQueryService.ts
@@ -329,7 +324,6 @@ export class OrderQueryService {
 
 ## 10) よくある落とし穴（ここだけ注意！）⚠️😵‍💫
 
-![domain_copy_waste](./picture/cqrs_ts_study_020_domain_copy_waste.png)
 
 * **Readに“更新ロजिक”を入れちゃう** → 第19章の「副作用ゼロ」を破るやつ🙅‍♀️
 * **Readモデルにドメインを丸ごとコピー** → 後で変更が地獄👹（必要な列だけ！）

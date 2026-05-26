@@ -1,4 +1,4 @@
-﻿# 第18章：ユースケース実装①（作成系）🆕✨
+# 第18章：ユースケース実装①（作成系）🆕✨
 
 ## この章でできるようになること 🎯😊
 
@@ -282,8 +282,6 @@ export const cartStreamId = (cartId: string) => `cart-${cartId}`;
 
 ### ちょいメモ（型の話）📝✨
 
-![Decide Logic Flow](./picture/es_ts_study_018_decide_logic.png)
-![Apply State Transition](./picture/es_ts_study_018_apply_transition.png)
 
 * 「Decideはイベントを返す」→ ここがイベントソーシングの心臓部💓
 * 「Applyは状態を作る」→ 復元もProjectionも、だいたいこの考え方でいける🔁

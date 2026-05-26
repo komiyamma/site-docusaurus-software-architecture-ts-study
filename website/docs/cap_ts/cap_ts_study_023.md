@@ -19,7 +19,7 @@
 
 ## 23.3 逆順・遅延・重複の“3点セット”ってなに？🔀⏳📨
 
-![Three Messaging Demons](./picture/cap_ts_study_023_three_demons.png) <!-- ref: 343 -->
+ <!-- ref: 343 -->
 
 ### ① 逆順（Out-of-order）🔀
 
@@ -67,7 +67,7 @@ graph LR
 
 ## 23.4 現実のメッセージング事情（超ざっくり）🌍📮
 
-![Messaging Guarantees Scale](./picture/cap_ts_study_023_messaging_guarantees.png) <!-- ref: 344 -->
+ <!-- ref: 344 -->
 
 「順番保証あるんじゃないの？」って思いがちだけど…**保証は“条件つき”** が多いです⚖️
 
@@ -94,7 +94,7 @@ graph LR
 
 ## 23.6 実装①：カオス配達ユーティリティ🧰🤖
 
-![Chaos Utility Dashboard](./picture/cap_ts_study_023_chaos_utility.png) <!-- ref: 345 -->
+ <!-- ref: 345 -->
 
 `apps/worker/src/chaos/chaosDelivery.ts` を作ってね📁✨
 
@@ -285,7 +285,7 @@ main().catch((e) => {
 
 ### まずは「naive」で実行😈
 
-![Naive State Failure](./picture/cap_ts_study_023_naive_failure.png) <!-- ref: 346 -->
+ <!-- ref: 346 -->
 
 `mode: "naive"` のまま実行してみてね！
 
@@ -294,7 +294,7 @@ main().catch((e) => {
 
 ### 次に「guard」で実行🛡️✨
 
-![Guard Shield](./picture/cap_ts_study_023_guard_shield.png) <!-- ref: 347 -->
+ <!-- ref: 347 -->
 
 `mode: "guard"` に変えると、最低限の防御が入って
 
@@ -324,7 +324,7 @@ main().catch((e) => {
 
 ## 23.10 AI（Copilot/Codex）でやると伸びる使い方🤖✨
 
-![AI Test Case Generator](./picture/cap_ts_study_023_ai_test_cases.png) <!-- ref: 348 -->
+ <!-- ref: 348 -->
 
 この章は AI と相性めちゃ良いです😊🌸
 （“生成させる”より “仕様を渡してレビューさせる” が特におすすめ👀）

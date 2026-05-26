@@ -1,4 +1,4 @@
-﻿# 第05章：テストは仕様書（読み物にする）📘
+# 第05章：テストは仕様書（読み物にする）📘
 
 ![設計図を見ながら建てる](./picture/tdd_ts_study_005_blueprint.png)
 
@@ -70,7 +70,6 @@ AAAは「読みやすさのための型」だよ📚
 
 ### 3) 🧸 データは「最小」かつ「意味がある」
 
-![ meaningful test data](./picture/tdd_ts_study_005_meaningful_test_data.png)
 
 ダメな例👇
 
@@ -196,7 +195,6 @@ describe("normalizeZipCode", () => {
 
 ### ② ケースが増えるなら “表で仕様” にする（テーブル駆動）📋✨
 
-![ table driven testing](./picture/tdd_ts_study_005_table_driven_testing.png)
 
 同じ仕様を入力違いでたくさん書きたいときは、Vitestの **test.each / test.for** が便利だよ🧪
 （test.each と test.for の使い分けは公式APIにあるよ） ([Vitest][3])

@@ -4,7 +4,6 @@
 
 ### 第1章：分散って何が大変なの？を先に体感😵‍💫🌍
 
-![cap_ts_index_distributed_juggling.png](./picture/cap_ts_index_distributed_juggling.png)
 
 
 * **目的**：単体アプリの常識が崩れるポイントを知る
@@ -46,7 +45,6 @@
 
 ### 第6章：CAPを日常例で理解する（まずは暗記しない）🍞📦
 
-![cap_ts_index_cap_triangle_spotlight.png](./picture/cap_ts_index_cap_triangle_spotlight.png)
 
 
 * **目的**：C/A/Pの直感を作る
@@ -88,7 +86,6 @@
 
 ### 第11章：整合性レベル① Strong vs Eventual 🧱🕊️
 
-![cap_ts_index_strong_vs_eventual_clocks.png](./picture/cap_ts_index_strong_vs_eventual_clocks.png)
 
 
 * **目的**：まず2択で語れるようにする
@@ -193,7 +190,6 @@
 
 ### 第25章：CRDT入門①「勝手に収束する」ってどういうこと？🧲✨
 
-![cap_ts_index_crdt_streams.png](./picture/cap_ts_index_crdt_streams.png)
 
 
 * **目的**：CRDTの思想を雰囲気で掴む（数学はやらない）
@@ -221,7 +217,6 @@
 
 ### 第28章：冪等性（同じ要求が何回来ても壊れない）🧷✅
 
-![cap_ts_index_idempotency_shield.png](./picture/cap_ts_index_idempotency_shield.png)
 
 
 * **目的**：二重実行の現実に強くなる
@@ -249,7 +244,6 @@
 
 ### 第31章：分散っぽいバグを捕まえるテスト（故障注入）🧪🎲
 
-![cap_ts_index_chaos_gremlin.png](./picture/cap_ts_index_chaos_gremlin.png)
 
 
 * **目的**：遅延・分断・重複をテストで再現する

@@ -1,4 +1,4 @@
-﻿# 第05章：「整合性」って何が一致してる状態？🧠🔍
+# 第05章：「整合性」って何が一致してる状態？🧠🔍
 
 ## この章でできるようになること ✅✨
 
@@ -22,7 +22,6 @@
 
 ## 5.2 一致対象は3つある（ここが超大事）🧠🔍
 
-![Three Types of Data](./picture/cap_ts_study_005_three_types.png)
 
 ### ① 状態（DB）🗃️
 
@@ -52,7 +51,6 @@
 
 ## 5.3 3つの関係を1枚でイメージ🗺️✨
 
-![Event to State to View Flow](./picture/cap_ts_study_005_data_flow.png)
 
 ```text
 （事実）イベント     →  （状態）DBの現在地     →  （表示）画面の見え方
@@ -81,7 +79,6 @@ graph TD
 
 ## 5.4 ハンズオン：同じ注文で「画面は処理中・DBは確定」を作る 🧪🐢
 
-![State vs View Mismatch](./picture/cap_ts_study_005_state_view_mismatch.png)
 
 ### ねらい 🎯
 
@@ -105,7 +102,6 @@ graph TD
 
 ### 5.4.2 データ置き場（3種類を分ける）📁
 
-![Hands-on Architecture](./picture/cap_ts_study_005_hands_on_arch.png)
 
 ルートに `data/` を作って、3種類を分けて保存するよ〜！
 
@@ -138,7 +134,6 @@ npm i -D typescript tsx @types/express
 
 ### 5.4.4 API（注文を作って、イベントを追記する）🛒📨
 
-![Append Only Log](./picture/cap_ts_study_005_append_only.png)
 
 `apps/api/src/index.ts`（例）
 
@@ -420,7 +415,6 @@ Invoke-RestMethod http://localhost:3000/events/<orderId>
 
 ### 5.4.7 観察ポイント（ここを“言語化”できると勝ち）🏆✨
 
-![Observation Timeline](./picture/cap_ts_study_005_observation_timeline.png)
 
 タイミングでこうなるはず👇
 
@@ -494,7 +488,6 @@ CAPの定義として「C/A/Pの3つの特性のうち2つしか同時に満た�
 
 ### Q1 🧠
 
-![Quiz Mismatch Scene](./picture/cap_ts_study_005_quiz_mismatch.png)
 
 「DBは confirmed なのに、画面が processing を表示している」
 このときズレているのはどれとどれ？

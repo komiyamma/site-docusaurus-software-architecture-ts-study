@@ -1,4 +1,4 @@
-﻿# 第03章：題材ドメインを決める（在庫・注文・決済）🛒📦💳
+# 第03章：題材ドメインを決める（在庫・注文・決済）🛒📦💳
 
 ## この章の結論（1行）✨
 
@@ -32,7 +32,6 @@
 
 ### 扱う3つの領域（ここが今回のタイトル！）🧱
 
-![Distributed Domain Domains](./picture/cap_ts_study_003_domain_rooms.png)
 
 1. **注文（Order）** 🧾
 2. **在庫（Inventory）** 📦
@@ -58,7 +57,6 @@ graph LR
 
 ### 名詞（Entityっぽいやつ）🧩
 
-![Entity Relationship Map](./picture/cap_ts_study_003_entity_relations.png)
 
 * **Product**：商品（価格・SKUなど）🏷️
 * **InventoryItem**：在庫の実体（在庫数）📦
@@ -77,7 +75,6 @@ graph LR
 
 ### 注文（Order）の状態案🧾
 
-![Order State Machine](./picture/cap_ts_study_003_order_state.png)
 
 * `Pending`：受付したよ（処理中）⏳
 * `Confirmed`：確定したよ✅
@@ -140,7 +137,6 @@ stateDiagram-v2
 
 ### ③ 紙テンプレ（そのまま写してOK）📝💗
 
-![Async UX Flow](./picture/cap_ts_study_003_ux_flow.png)
 
 ```text
 [注文ボタン押下]
@@ -169,7 +165,6 @@ CAPの話を始める前に、**業務ルールで優先順位を決める**よ�
 
 ### 例：この教材ドメインの仕分け案🟥🟨🟩
 
-![Consistency Priorities](./picture/cap_ts_study_003_consistency_buckets.png)
 
 * 🟥 **即時一致がほぼ必須**
 
@@ -203,7 +198,6 @@ pie title 整合性の使い分け
 
 ### イベント名（例）🏷️
 
-![Event Cards](./picture/cap_ts_study_003_event_names.png)
 
 * `OrderPlaced`（注文受付）🧾
 * `PaymentAuthorized`（与信OK）💳✅
@@ -225,7 +219,6 @@ pie title 整合性の使い分け
 
 ### ユーザーストーリーの型（これで統一）🧾
 
-![User Story Card](./picture/cap_ts_study_003_user_story.png)
 
 * **私は（誰として）**
 * **〜したい（何を）**

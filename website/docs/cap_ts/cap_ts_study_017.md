@@ -6,7 +6,6 @@
 
 ## 17.1 「古い読み取り」ってなに？😵‍💫📖
 
-![Stale Read Concept](./picture/cap_ts_study_017_stale_read_concept.png)
 
 
 
@@ -44,7 +43,6 @@ sequenceDiagram
 
 ## 17.2 どうして起きるの？（超ざっくり）🧠🔍
 
-![Causes of Lag](./picture/cap_ts_study_017_causes_lag.png)
 
 
 
@@ -67,7 +65,6 @@ sequenceDiagram
 
 ### ✅ テク1：更新直後だけ Primary を読む（いちばん効く）👑📌
 
-![Tech 1 Primary](./picture/cap_ts_study_017_tech_primary_after_update.png)
 
 
 
@@ -85,7 +82,6 @@ sequenceDiagram
 
 ### ✅ テク3：Read Repair（読んだついでに古いReplicaを直す）🩹📚
 
-![Tech 3 Read Repair](./picture/cap_ts_study_017_tech_read_repair.png)
 
 
 
@@ -109,7 +105,6 @@ sequenceDiagram
 
 ### 17.4.1 まずは“遅いReplica”を用意する🐢🪞
 
-![Lab Architecture](./picture/cap_ts_study_017_lab_architecture.png)
 
 
 
@@ -463,7 +458,6 @@ curl "http://localhost:3000/items/apple?read=replica"
 
 ### 17.5.2 次に改善を体験（autoにする）👑✨
 
-![Force Primary Map](./picture/cap_ts_study_017_force_primary_map.png)
 
 
 
@@ -501,7 +495,6 @@ curl "http://localhost:3000/items/apple?read=auto&repair=1"
 
 ## 17.7 いつこの手を使う？（適用条件まとめ）🤖✅
 
-![Use Cases](./picture/cap_ts_study_017_use_cases.png)
 
 
 

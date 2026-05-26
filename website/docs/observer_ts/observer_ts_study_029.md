@@ -13,7 +13,6 @@
 ## 1) ダッシュボードは「画面」じゃなくて「物語」📖✨
 
 ![画像を挿入予定](./picture/observer_ts_study_029_eye_path.png)
-![Dashboard Story](./picture/observer_ts_study_029_dashboard_story.png)
 
 ```mermaid
 graph TD
@@ -82,13 +81,11 @@ Grafanaのダッシュボード設計ガイドでも、**USEは原因、REDは�
 
 ### Step 2：最上段はRED（症状）で固める🚦
 
-![RED Signals](./picture/observer_ts_study_029_red_signals.png)
 
 Grafanaの解説でも、最初のダッシュボード設計はREDが扱いやすいって書かれてるよ📌([Grafana Labs][3])
 
 ### Step 3：次段は“絞り込み”用（どこ？何が？）🧩
 
-![Drill Down Funnel](./picture/observer_ts_study_029_drill_down_funnel.png)
 
 * endpoint別（route）
 * status code別
@@ -97,7 +94,6 @@ Grafanaの解説でも、最初のダッシュボード設計はREDが扱いや�
 
 ### Step 4：その次にUSE（原因候補）🧯
 
-![USE Method](./picture/observer_ts_study_029_use_method.png)
 
 Nodeなら特に👇が効くよ✨
 
@@ -107,7 +103,6 @@ Nodeなら特に👇が効くよ✨
 
 ### Step 5：一番下に“証拠へのリンク”🔗
 
-![Evidence Links](./picture/observer_ts_study_029_evidence_links.png)
 
 * **ログへ飛ぶ**（traceId/requestIdで絞る）🪵
 * **トレースへ飛ぶ**（遅い1件にジャンプ）🧵
@@ -256,7 +251,6 @@ Grafana Tempoの「Grafana上でトレースを見る」説明でも、**ログ�
 
 ## 9) よくあるダメ例😇😱（ここ踏むと迷子！）
 
-![Cluttered Dashboard](./picture/observer_ts_study_029_cluttered_dashboard.png)
 
 * グラフが多すぎて、どれから見ればいいか不明🌀
 * 1枚に“健康”も“原因調査”も“経営指標”も全部詰める📦💥

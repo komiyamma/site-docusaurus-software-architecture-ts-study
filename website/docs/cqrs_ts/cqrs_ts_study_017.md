@@ -1,4 +1,4 @@
-﻿# 第17章：クエリ設計②（GetSalesSummary：集計）📊✨
+# 第17章：クエリ設計②（GetSalesSummary：集計）📊✨
 
 **この章のゴール**：管理画面っぽい「売上サマリー（集計）」を、**Read側だけ**で気持ちよく作れるようになるよ〜！🍙🏆
 （CQRSの“うまみ”がいちばん出るところ🤭✨）
@@ -31,7 +31,6 @@ mindmap
 ---
 
 ### 2) まず決める：このアプリで「売上」ってなに？💳🧾
-![cqrs_ts_study_017_sales_filter.png](./picture/cqrs_ts_study_017_sales_filter.png)
 
 集計で迷子になる原因の9割はここ！😇
 今回はわかりやすく、こう決めよう👇
@@ -45,7 +44,6 @@ mindmap
 ---
 
 ### 3) 出力（DTO）設計：画面が欲しい形が正義👑📦
-![cqrs_ts_study_017_dashboard_dto.png](./picture/cqrs_ts_study_017_dashboard_dto.png)
 
 管理画面のイメージはこんな感じ👇
 「期間を選ぶ」→「サマリーが出る」→「日別とTOP3が見える」📈🍙
@@ -103,7 +101,6 @@ export type GetSalesSummaryQuery = {
 ---
 
 ### 5) Read側の“材料”を決める：集計に必要なデータだけ🍳✨
-![cqrs_ts_study_017_ingredients.png](./picture/cqrs_ts_study_017_ingredients.png)
 
 集計は **「注文と明細」**が要るね！
 Read用に最低限こういう形を想定するよ👇
@@ -165,7 +162,6 @@ export class InMemoryReadOrderRepository implements ReadOrderRepository {
 ```
 
 #### 6-2. 集計ロジック（本体）📊✨
-![cqrs_ts_study_017_aggregation_machine.png](./picture/cqrs_ts_study_017_aggregation_machine.png)
 
 「1回なめて、Mapで集計」すると読みやすいよ〜！
 
@@ -277,8 +273,6 @@ function enumerateDays(from: string, to: string): string[] {
 
 ---
 
-![cqrs_ts_study_017_fill_gaps.png](./picture/cqrs_ts_study_017_fill_gaps.png)
-![cqrs_ts_study_017_stable_sort.png](./picture/cqrs_ts_study_017_stable_sort.png)
 
 ### 7) 動作確認ミニ：ダミーデータで動かす🍙🧪
 
@@ -335,7 +329,6 @@ main().catch(console.error);
 ---
 
 ### 8) テスト観点（集計はテストが最強の味方）🧪🛡️
-![cqrs_ts_study_017_test_checklist.png](./picture/cqrs_ts_study_017_test_checklist.png)
 
 集計は「正しいっぽい」だけだと事故る😇
 最低でもこの4つをテストしよ👇

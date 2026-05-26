@@ -15,7 +15,6 @@
 
 ## 15.1 「同時実行」って、どういう意味？🧵👀
 
-![Concurrent Overlap Timeline](./picture/idem_ts_study_015_concurrent_overlap.png)
 
 
 

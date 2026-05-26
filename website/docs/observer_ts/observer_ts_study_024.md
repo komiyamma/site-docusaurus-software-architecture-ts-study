@@ -10,7 +10,6 @@
 ## 2) まず「粒度」ってなに？🍰🧁
 
 ![画像を挿入予定](./picture/observer_ts_study_024_cutting_tape.png)
-![Granularity Spectrum](./picture/observer_ts_study_024_granularity_spectrum.png)
 
 ```mermaid
 graph TD
@@ -47,7 +46,6 @@ Span は「ある作業の時間と結果」を表す“しおり”みたいな
 
 ### ✅ ① 外部I/Oは基本「切る」🌐🗄️📨
 
-![I/O Boundary](./picture/observer_ts_study_024_io_boundary.png)
 
 DB、外部HTTP、Queue、ファイル、キャッシュ…
 **アプリの外に出る瞬間**は、遅延・失敗・リトライが起きやすいので Span が超効く🥹✨
@@ -59,7 +57,6 @@ DB、外部HTTP、Queue、ファイル、キャッシュ…
 
 ### ✅ ② “業務の節目”で切る 🛒💳📦
 
-![Business Blocks](./picture/observer_ts_study_024_business_blocks.png)
 
 技術じゃなくて、**意味のある区切り**で切ると「読む人に優しい」🥰
 
@@ -169,7 +166,6 @@ export async function createOrder() {
 
 ### 👼 良い例（おすすめの最小セット）
 
-![Span Tree Visualization](./picture/observer_ts_study_024_span_tree_visualization.png)
 
 * `POST /orders`（自動計測のサーバSpanがある前提。Nodeは自動計測でリクエストごとの Span を作れるよ）([OpenTelemetry][4])
 
@@ -190,7 +186,6 @@ POST /orders
 
 ### 💡 ループがある場合（Spanを増やしすぎないコツ）🔁
 
-![Loop Aggregation](./picture/observer_ts_study_024_loop_aggregation.png)
 
 「商品が20個」みたいなとき…
 

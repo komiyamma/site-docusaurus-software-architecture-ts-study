@@ -12,7 +12,6 @@
 
 ## 21.2 競合ってなに？（超ざっくり）🧠🔀
 
-![Conflict Crash](./picture/cap_ts_study_021_conflict_crash.png)
 
 
 
@@ -66,7 +65,6 @@ sequenceDiagram
 
 ### B) 二重反映（Double Apply）📨📨➡️💥
 
-![Double Apply](./picture/cap_ts_study_021_double_apply.png)
 
 
 
@@ -81,7 +79,6 @@ sequenceDiagram
 
 ### C) 取り消し漏れ（Cancel Leak）🧨🕳️
 
-![Cancel Leak](./picture/cap_ts_study_021_cancel_leak.png)
 
 
 
@@ -115,7 +112,6 @@ sequenceDiagram
 
 ## 21.5 実装①：わざと壊れる「ナイーブ在庫リポジトリ」🧨
 
-![Sleep Trap](./picture/cap_ts_study_021_sleep_trap.png)
 
 
 
@@ -251,7 +247,6 @@ describe("競合（flaky版）", () => {
 
 ### 実行してみる🎮
 
-![Flaky Test](./picture/cap_ts_study_021_flaky_test.png)
 
 
 
@@ -271,7 +266,6 @@ npm test
 
 ## 21.8 “毎回” 壊れるようにする（再現性を作る）🎯✨
 
-![Barrier Race](./picture/cap_ts_study_021_barrier_race.png)
 
 
 

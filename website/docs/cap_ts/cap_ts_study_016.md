@@ -6,7 +6,6 @@
 
 ## 16.1 クォーラムってなに？（超ざっくり）🧠💡
 
-![Voting Box](./picture/cap_ts_study_016_voting_box.png)
 
 
 
@@ -24,7 +23,6 @@
 
 ## 16.2 N / W / R って何？🔤📌
 
-![N/W/R Definitions](./picture/cap_ts_study_016_nwr_definitions.png)
 
 
 
@@ -73,7 +71,6 @@ graph LR
 
 ## 16.4 3ノードでイメージしよう（N=3）🧑‍🤝‍🧑🧑‍🤝‍🧑🧑‍🤝‍🧑
 
-![Overlap Nodes](./picture/cap_ts_study_016_overlap_nodes.png)
 
 
 
@@ -271,7 +268,6 @@ npx tsx apps/sim/quorum.ts
 
 ### ✅ Case A（W=2, R=2）＝「多数決で一致を取りに行く」🗳️✅
 
-![Case A Majority](./picture/cap_ts_study_016_case_a_majority.png)
 
 
 
@@ -281,7 +277,6 @@ npx tsx apps/sim/quorum.ts
 
 ### ⚡ Case B（W=1, R=1）＝「速さ優先」⚡😆
 
-![Case B Speed](./picture/cap_ts_study_016_case_b_speed.png)
 
 
 
@@ -292,7 +287,6 @@ npx tsx apps/sim/quorum.ts
 
 ### 💥 Case C（W=3）＝「全員一致」🧱😇
 
-![Case C Strict](./picture/cap_ts_study_016_case_c_strict.png)
 
 
 
@@ -320,7 +314,6 @@ MongoDBの read concern `"majority"` は、**過半数で確認済みのデー�
 
 ### 勘違い①：クォーラム＝「必ず最新が見える魔法」ではない🪄❌
 
-![Misconception Magic](./picture/cap_ts_study_016_misconception_magic.png)
 
 
 

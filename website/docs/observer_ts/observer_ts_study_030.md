@@ -20,7 +20,6 @@
 ## 1. アラートって何者？📣👀（ログやメトリクスと違う）
 
 ![画像を挿入予定](./picture/observer_ts_study_030_smart_siren.png)
-![Alert Types](./picture/observer_ts_study_030_alert_types.png)
 
 ```mermaid
 flowchart LR
@@ -60,7 +59,6 @@ flowchart LR
 
 ### 原則A：アクションできる（行動がある）🏃‍♀️💨
 
-![Actionable Alert](./picture/observer_ts_study_030_actionable_alert.png)
 
 「鳴ったけど、どうしようもない」はアラートにしない🙅‍♀️
 Grafanaのベストプラクティスでも、**行動できないものはダッシュボードで見る**のが推奨されています。([Grafana Labs][2])
@@ -105,7 +103,6 @@ Prometheusのアラート定義でも、条件が一定時間続いたら発火�
 
 ### 4.1 継続時間（for）を入れる⏱️
 
-![Threshold Duration](./picture/observer_ts_study_030_threshold_duration.png)
 
 * 「瞬間的なスパイク」で鳴らないようにする
 * 例：**“3分続いたら鳴らす”**
@@ -127,7 +124,6 @@ Grafanaでも **まず単一ディメンションから始めて、必要なら�
 
 ## 5. 通知文のテンプレ（これが“動ける通知”）🧾✨
 
-![Alert Template](./picture/observer_ts_study_030_alert_template.png)
 
 通知には **ラベル（labels）** と **注釈（annotations）** を使い分けます。
 
@@ -208,7 +204,6 @@ groups:
 
 ## 7. 1枚Runbook（対応手順書）の最小形📄🧭✨
 
-![Runbook Flow](./picture/observer_ts_study_030_runbook_flow.png)
 
 Runbookは長くしない！まずは **「迷わない順番」** だけでOKです😊
 
@@ -267,7 +262,6 @@ Runbookは長くしない！まずは **「迷わない順番」** だけでOK�
 
 ### 8.1 演習の“制限時間”⏳（おすすめ）
 
-![Incident Timeline](./picture/observer_ts_study_030_incident_timeline.png)
 
 * 0〜5分：状況把握（影響と範囲）
 * 5〜12分：原因の当たり（どこが遅い？）

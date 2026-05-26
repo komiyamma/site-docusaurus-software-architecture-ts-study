@@ -50,7 +50,6 @@ Jepsen系の検証でも、LWWの自動解決が**新しい値を捨てたり、
 
 ## A. LWW（Last-Write-Wins）🕒👑
 
-![LWW Clock Skew](./picture/cap_ts_study_022_lww_clock_skew.png)
 
 
 
@@ -80,7 +79,6 @@ Jepsen系の検証でも、LWWの自動解決が**新しい値を捨てたり、
 
 ## B. ドメインルール（業務ルールで決める）📜🧱
 
-![Domain Rule Guard](./picture/cap_ts_study_022_domain_rule_guard.png)
 
 
 
@@ -105,7 +103,6 @@ Jepsen系の検証でも、LWWの自動解決が**新しい値を捨てたり、
 
 ## C. マージ（複数の更新を“合成”する）🧩🧲
 
-![Merge Puzzle](./picture/cap_ts_study_022_merge_puzzle.png)
 
 
 
@@ -127,7 +124,6 @@ CRDTみたいに「勝手に収束する」発想もここに入るよ〜（後�
 
 # 4) どれを選ぶ？判断チェックリスト ✅📋
 
-![Selection Checklist](./picture/cap_ts_study_022_selection_checklist.png)
 
 
 
@@ -157,7 +153,6 @@ CRDTみたいに「勝手に収束する」発想もここに入るよ〜（後�
 
 ## 5-1. まずは型を作る 🧱✨
 
-![LWW vs Rule](./picture/cap_ts_study_022_lww_vs_rule.png)
 
 
 
@@ -379,7 +374,6 @@ export function mergeSet<T>(a: ReadonlyArray<T>, b: ReadonlyArray<T>): T[] {
 
 # 7) よくある落とし穴ワースト5 😵‍💫⚠️
 
-![Discard Pitfall](./picture/cap_ts_study_022_discard_pitfall.png)
 
 
 

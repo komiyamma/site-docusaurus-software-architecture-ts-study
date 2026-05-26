@@ -1,4 +1,4 @@
-﻿# 第17章：Factory Method ② TypeScript流：関数Factoryから始めよう🧁
+# 第17章：Factory Method ② TypeScript流：関数Factoryから始めよう🧁
 
 ## ねらい🎯
 
@@ -66,7 +66,6 @@ Factory Method は「難しい仕組み」じゃなくて、
 * 出力：アプリ内部で使うので、整っててほしい（Dateになってるとか）✨
 
 
-![Input vs Output](./picture/gof_ts_study_017_input_output_types.png)
 
 ```ts
 // --- 注文アイテム（入力） ---

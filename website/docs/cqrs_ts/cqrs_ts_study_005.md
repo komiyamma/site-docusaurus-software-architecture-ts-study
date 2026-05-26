@@ -1,4 +1,4 @@
-﻿# 第05章：辛さの正体を言語化する（設計の目👓）🧠✨
+# 第05章：辛さの正体を言語化する（設計の目👓）🧠✨
 —「なんかツラい😵‍💫」を「どこが・なぜツラいか」に変える章だよ〜！
 
 ---
@@ -21,7 +21,6 @@
 第3〜4章の“分けない版”で起きてた辛さは、だいたいこの3つに集約されます👇
 
 ### ① 変更理由が混ざってる（SoCの崩壊）🧺🧦
-![Mixed Responsibilities Laundry](./picture/cqrs_ts_study_005_mixed_laundry.png)
 
 1つのクラス/関数に、違う種類の仕事が詰め込まれてる状態💦
 たとえば同じ `OrderService` の中に…
@@ -36,7 +35,6 @@
 ---
 
 ### ② 影響範囲が読めない（爆発半径💣）🌋
-![Blast Radius Explosion](./picture/cqrs_ts_study_005_explosion_impact.png)
 
 「これ変えたいだけなのに…どこまで壊れるの？」が読めない状態😱
 
@@ -47,7 +45,6 @@
 ---
 
 ### ③ I/Oが混ざってテストがしにくい（純粋性が消える）🧪🚫
-![I/O Pollution](./picture/cqrs_ts_study_005_polluted_beaker.png)
 
 I/Oっていうのは、ざっくりこういう“外部とやりとり”のこと👇
 
@@ -118,7 +115,6 @@ export class OrderService {
 ```
 
 ### このコードの「ツラさの正体」🔍😵‍💫
-![Code Pain Anatomy](./picture/cqrs_ts_study_005_code_xray.png)
 
 同じファイルに、変更理由が4種類くらい混ざってる👇
 
@@ -133,7 +129,6 @@ export class OrderService {
 ---
 
 ## 設計の目👓：今日覚える3つの言葉✨
-![Three Key Concepts](./picture/cqrs_ts_study_005_three_gems.png)
 
 ここ、超だいじ！この3つだけで会話が一気に“設計っぽく”なるよ😆✨
 
@@ -198,7 +193,6 @@ flowchart TD
 ---
 
 ## VS Codeで“影響範囲”を見える化する👀_tf
-![Visibility in VS Code](./picture/cqrs_ts_study_005_vscode_searchlight.png)
 
 （ここはすぐ使えるテク！✨）
 
@@ -212,7 +206,6 @@ flowchart TD
 ---
 
 ## AI活用🤖✨：「辛さの言語化」をAIに手伝わせる
-![AI Therapist](./picture/cqrs_ts_study_005_ai_therapist.png)
 
 ここ、めっちゃ相性いいです🙆‍♀️💕
 

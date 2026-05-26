@@ -8,7 +8,6 @@
 
 # 15.1 「同期 / 非同期 / キュー」って何が違うの？🤔💭
 
-![Sync vs Async vs Queue](./picture/cap_ts_study_015_sync_async_queue.png)
 
 同じ「注文を作る」でも、**書き方（処理の置き場所）**で世界が変わるよ〜🌍✨
 
@@ -60,7 +59,6 @@ Worker（別プロセス）が順番に処理するよ🧑‍🏭🔁
 
 # 15.3 ハンズオン：注文APIを「受付→キュー→Worker」にする🛒📦✨
 
-![Order vs Job States](./picture/cap_ts_study_015_order_job_states.png)
 
 この章ではこうするよ👇
 **API：注文を“受付”してキューに積む** → **Worker：後で在庫処理して注文を確定** ✅
@@ -92,7 +90,6 @@ stateDiagram-v2
 
 # 15.4 今回の「最小キュー」方針📦（外部サービスなし版）
 
-![File Lock Queue](./picture/cap_ts_study_015_file_lock_queue.png)
 
 本物の現場では Redis などを使うキュー（例：BullMQ）がよく使われるよ📮✨
 BullMQは **Redis backed のジョブキュー**で、バックグラウンド処理を作れる定番の一つだよ。([bullmq.io][2])
@@ -288,7 +285,6 @@ export async function updateOrderStatus(orderId: string, status: OrderStatus, no
 
 # 15.7 API：注文は「受付」だけ返す（202）📨✨
 
-![202 Ticket](./picture/cap_ts_study_015_202_ticket.png)
 
 ## `apps/api/src/index.ts` 🧡
 
@@ -474,7 +470,6 @@ curl http://localhost:3000/orders/<orderId>
 
 ## 15.11 よくある事故（今のうちに“言葉”で押さえる）⚠️😇
 
-![Queue Accidents](./picture/cap_ts_study_015_queue_accidents.png)
 
 ### ✅ 事故1：APIで全部やってタイムアウト⏳💥
 

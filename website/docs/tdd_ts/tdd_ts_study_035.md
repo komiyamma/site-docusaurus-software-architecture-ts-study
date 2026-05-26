@@ -1,4 +1,4 @@
-﻿# 第35章：unionで状態を表す（ifを減らす）🧷
+# 第35章：unionで状態を表す（ifを減らす）🧷
 
 ![ユニオン型とピン](./picture/tdd_ts_study_035_union_pin.png)
 
@@ -13,7 +13,7 @@
 
 * **リテラル型**：\n\n![Literal vs Union](./picture/tdd_ts_study_035_literal_vs_union.png)`"idle"` みたいに「この文字列だけ」って固定する型🧷
 * **union型**：`A | B | C` みたいに「どれか」って表す型🎲
-* **discriminated union**：\n\n![Discriminated Union Tag](./picture/tdd_ts_study_035_discriminated_union_tag.png)`kind: "idle" | "loading" ...` みたいに、**目印（識別子）で分岐できるunion**🌟 ([typescriptlang.org][1])
+* **discriminated union**：\n\n`kind: "idle" | "loading" ...` みたいに、**目印（識別子）で分岐できるunion**🌟 ([typescriptlang.org][1])
 * **narrowing**：`if (state.kind === "success")` で型が絞られて安全になるやつ🧤 ([typescriptlang.org][2])
 
 ---
@@ -34,7 +34,7 @@ type AuthStateBad = {
 };
 ```
 
-これ、**矛盾した状態が作れちゃう**のが問題💥\n\n![Bad State Paradox](./picture/tdd_ts_study_035_bad_state_paradox.png)
+これ、**矛盾した状態が作れちゃう**のが問題💥\n\n
 
 * `status: "success"` なのに `user` が無い…😱
 * `status: "error"` なのに `errorMessage` が無い…😵
@@ -69,7 +69,7 @@ export type AuthState = Idle | Loading | Success | ErrorState;
 
 ## つくるもの🎁
 
-* `reduceAuth(state, event)`：状態遷移（state machineの超ミニ版）🔁\n\n![State Machine Flow](./picture/tdd_ts_study_035_state_machine_flow.png)
+* `reduceAuth(state, event)`：状態遷移（state machineの超ミニ版）🔁\n\n
 * `viewModel(state)`：画面表示用の情報を作る（if地獄になりがちな所！）🖥️✨
 
 ---
@@ -157,7 +157,7 @@ export function reduceAuth(state: AuthState, event: AuthEvent): AuthState {
 }
 
 export function viewModel(state: AuthState): { headline: string; canSubmit: boolean; error?: string } {
-  // ✅ if を減らしたいので、ここは switch が相性よし🌟\n\n![Switch Safety](./picture/tdd_ts_study_035_switch_safety.png)
+  // ✅ if を減らしたいので、ここは switch が相性よし🌟\n\n
   switch (state.kind) {
     case "idle":
       return { headline: "ログインしてね🙂", canSubmit: true };
@@ -172,7 +172,7 @@ export function viewModel(state: AuthState): { headline: string; canSubmit: bool
 ```
 
 ここ、**`state.kind` を見るだけで、必要なプロパティが自動で安全に扱える**のが気持ちいいポイント🫶
-（これが narrowing だよ〜！）\n\n![Narrowing Key](./picture/tdd_ts_study_035_narrowing_key.png) ([typescriptlang.org][2])
+（これが narrowing だよ〜！）\n\n ([typescriptlang.org][2])
 
 ---
 
@@ -188,7 +188,7 @@ export function viewModel(state: AuthState): { headline: string; canSubmit: bool
 
 ## 🤖 AIの使いどころ（この章の勝ちパターン）💪🤖
 
-AIに丸投げじゃなくて、「案を量産させて、選ぶ」感じが強いよ〜✨\n\n![AI Options Proposal](./picture/tdd_ts_study_035_ai_options.png)
+AIに丸投げじゃなくて、「案を量産させて、選ぶ」感じが強いよ〜✨\n\n
 
 ## 💬 プロンプト例（コピペOK）📎
 

@@ -1,4 +1,4 @@
-﻿# 第08章：良いログ / ダメログ 😇😱（検索できるログ）
+# 第08章：良いログ / ダメログ 😇😱（検索できるログ）
 
 > この章のテーマはひとことで言うと
 > **「未来の自分（or チーム）が、迷子にならないログ」**だよ〜👀🧭✨
@@ -23,7 +23,6 @@
 
 ## 1) ダメログあるある 😱🪵（調査を殺すログ）
 
-![Search Difficulty](./picture/observer_ts_study_008_needle_in_haystack.png)
 
 ### ダメ①：気持ちログ（情報が無い）
 
@@ -37,7 +36,6 @@
 
 ### ダメ②：文章に全部埋め込む（検索しにくい）
 
-![Embedded Numbers](./picture/observer_ts_study_008_embedded_numbers.png)
 
 * `User 12345 purchased item 98765 price 1200 ...`
 
@@ -75,7 +73,6 @@
 
 ## 2) 良いログの合言葉：**イベント + 文脈 + 結果** ✅✨
 
-![Log Structure Formula](./picture/observer_ts_study_008_log_structure_formula.png)
 
 ログを「検索できる形」にするコツはこれ👇
 
@@ -130,7 +127,6 @@ OpenTelemetry 側もログとトレースを結びたいので、**trace/span �
 
 ## 3) “検索できるログ”の最小セット（まずはこれだけでOK）🧩✨
 
-![Starter Kit 8 Items](./picture/observer_ts_study_008_starter_kit.png)
 
 最初は欲張らずに、この **8点セット** だけ固定しよ👇
 
@@ -149,7 +145,6 @@ OpenTelemetry 側もログとトレースを結びたいので、**trace/span �
 
 ## 4) 例で体感！ダメログ → 良いログ ✍️✨
 
-![Log Transformation](./picture/observer_ts_study_008_log_transformation.png)
 
 ### ケース①：外部APIが失敗した
 
@@ -219,7 +214,6 @@ logger.info(
 
 ## 6) 秘密をログに出さない！“マスキング”の基本 🫣🔒✨
 
-![Redacting Secrets](./picture/observer_ts_study_008_redact_secrets.png)
 
 Pino には **redact（伏せ字）**があるよ👍
 ドキュメントでも `redact` は公式に案内されてる📌 ([GitHub][5])
@@ -294,7 +288,6 @@ OpenTelemetry の例外系セマンティクスも、ログに例外属性を載
 
 ## 9) AIに頼るときの“良いお願いの仕方”🤖📝✨
 
-![AI Prompt Magic](./picture/observer_ts_study_008_ai_prompt_magic.png)
 
 コピペで使えるよ👇
 

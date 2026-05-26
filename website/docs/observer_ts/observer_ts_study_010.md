@@ -17,7 +17,6 @@
 
 ## 1. ログレベルって何のためにあるの？🤔
 
-![Log Audience](./picture/observer_ts_study_010_log_audience.png)
 
 ズバリ、**「読む人と目的」**を分けるためだよ！👀✨
 
@@ -36,7 +35,6 @@
 Pino や一般的なロガーで使われる標準的なレベルはこの4つ！
 （Trace や Fatal もあるけど、まずはこの4つで十分だよ😊）
 
-![Volume vs Importance](./picture/observer_ts_study_010_volume_vs_importance.png)
 
 | レベル | 意味 | 出す頻度（目安） | アクション（見た時） |
 | :--- | :--- | :--- | :--- |
@@ -63,7 +61,6 @@ graph TD
 
 ## 3. レベル別「出すログ」の具体例 📝
 
-![Debug vs Info Details](./picture/observer_ts_study_010_debug_vs_info_desk.png)
 
 「迷ったらこうする」の基準を持っておこう！🏃‍♀️💨
 
@@ -92,7 +89,6 @@ graph TD
 
 ### ✅ ERROR (Action Required)
 
-![Error Alarm](./picture/observer_ts_study_010_error_alarm.png)
 
 「誰かが対応しないといけない」やつ🚑
 
@@ -107,14 +103,12 @@ graph TD
 
 ### 鉄則①：本番は `INFO` 以上にする 🚀
 
-![Production Switch](./picture/observer_ts_study_010_prod_switch.png)
 
 `DEBUG` を本番で出すと、ログ代（SaaS料金）が爆発するし、I/O負荷でアプリが遅くなるよ💸🐢
 環境変数 `LOG_LEVEL=info` で制御できるように実装しよう！
 
 ### 鉄則②：`ERROR` は「深夜に電話していい時」だけ ☎️
 
-![Wolf Boy Effect](./picture/observer_ts_study_010_wolf_boy.png)
 
 「ユーザーの入力ミス（400）」で `ERROR` を出してると、アラートが鳴りすぎて**オオカミ少年**になるよ🐺💦
 「システム側の不具合」だけを `ERROR` にしよう！
@@ -127,7 +121,6 @@ graph TD
 
 ## 5. 実装例：環境変数で切り替える 💻🎛️
 
-![Env Var Knob](./picture/observer_ts_study_010_env_var_knob.png)
 
 Pino ならこう書くだけでOK！🌲✨
 

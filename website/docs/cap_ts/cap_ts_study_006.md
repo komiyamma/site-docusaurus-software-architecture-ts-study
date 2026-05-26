@@ -1,4 +1,4 @@
-﻿# 第06章：CAPを日常例で理解する（まずは暗記しない）🍞📦
+# 第06章：CAPを日常例で理解する（まずは暗記しない）🍞📦
 
 ## この章の結論1行📝✨
 
@@ -8,7 +8,6 @@
 
 ## 6.1 CAPって、まず“日常語”にしてみよ〜🍞☕️
 
-![CAP Definition Icons](./picture/cap_ts_study_006_definitions.png)
 
 CAPの3文字は、こう言い換えるとスッと入ります😊
 
@@ -56,7 +55,6 @@ CAPは「3つのうち2つ選べ！」みたいに言われがちだけど、そ
 
 #### 🧩 C寄り（正しさ優先）：売らない/止める
 
-![Bread Shop C-Mode](./picture/cap_ts_study_006_bread_c_mode.png)
 
 「今この在庫が本当に残ってるか分からないなら、売らない（エラー返す）」
 
@@ -65,7 +63,6 @@ CAPは「3つのうち2つ選べ！」みたいに言われがちだけど、そ
 
 #### 📨 A寄り（応答優先）：とにかく売る
 
-![Bread Shop A-Mode](./picture/cap_ts_study_006_bread_a_mode.png)
 
 「とりあえず売って、あとで在庫が合わないかも」
 
@@ -92,7 +89,6 @@ flowchart TD
 
 ### たとえ②：グループチャット📱💬
 
-![Chat Consistency](./picture/cap_ts_study_006_chat_metaphor.png)
 
 通信が切れても「送信ボタン押したら送れた感」を出す（A寄り）と、
 あとで順番が前後したり、既読がズレたりしがち😵‍💫
@@ -125,7 +121,6 @@ flowchart TD
 
 ### 🎯 作るもの
 
-![Node A and B Architecture](./picture/cap_ts_study_006_hands_on_arch.png)
 
 * Node A（ポート 4001）🅰️
 * Node B（ポート 4002）🅱️
@@ -356,7 +351,6 @@ Invoke-RestMethod -Method Get  -Uri http://localhost:4002/stock
 
 #### ✅ CPモード（C寄り）だとどうなる？🧩
 
-![CP Mode Rejection](./picture/cap_ts_study_006_cp_behavior.png)
 
 * Aに /buy → **503で拒否**（返事はするけど成功しない）
 * Bの在庫も壊れない
@@ -364,7 +358,6 @@ Invoke-RestMethod -Method Get  -Uri http://localhost:4002/stock
 
 #### ✅ APモード（A寄り）に変えると？📨
 
-![AP Mode Queue](./picture/cap_ts_study_006_ap_behavior.png)
 
 * MODE="ap" で再起動して同じことをやると…
 * Aに /buy → **200で受付**（在庫が減る）

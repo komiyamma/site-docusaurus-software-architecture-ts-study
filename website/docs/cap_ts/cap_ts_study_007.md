@@ -1,4 +1,4 @@
-﻿# 第07章：Partition（分断）を実験で起こす🧪🔌
+# 第07章：Partition（分断）を実験で起こす🧪🔌
 
 ## 結論1行🧠✨
 
@@ -10,7 +10,6 @@
 
 分断＝**サービス同士が“生きてるのに繋がらない”状態**のことだよ🧟‍♂️📵
 
-![Partition Zombie](./picture/cap_ts_study_007_partition_zombie.png)
 
 ![稼働率99.9%](./picture/cap_ts_study_007_uptime_99.png)
 クラッシュ（落ちた）と違って、分断はやっかい…！
@@ -51,7 +50,6 @@ graph LR
 
 図にするとこんな感じ👇
 
-![Experiment Architecture](./picture/cap_ts_study_007_architecture.png)
 
 * 通常時🙂
   `Client → API → Worker → API(通知)`
@@ -65,7 +63,6 @@ graph LR
 
 分断は **ログが弱いと何も分からず詰む**ので、先に“観測できる体”を作るよ💪✨
 
-![Log Anatomy](./picture/cap_ts_study_007_log_anatomy.png)
 
 ポイントはこれ👇
 
@@ -302,7 +299,6 @@ Invoke-RestMethod http://localhost:4000/orders/$($o.orderId)
 
 ## 実験A：API→Worker を分断する（配送できない）📨❌
 
-![API to Worker Partition](./picture/cap_ts_study_007_experiment_a.png)
 
 API側だけ「Workerに繋がらない世界」にするよ！
 
@@ -323,7 +319,6 @@ $env:SIM_PARTITION_API_TO_WORKER = "1"
 
 ## 実験B：Worker→API（通知）を分断する（片方向だけ死ぬ）📣❌
 
-![Worker to API Partition](./picture/cap_ts_study_007_experiment_b.png)
 
 Worker側だけ「通知できない世界」にするよ！
 
@@ -344,7 +339,6 @@ $env:SIM_PARTITION_WORKER_TO_API = "1"
 
 ## 実験C：遅いだけ（落ちてない）🐢⏳
 
-![Slow Worker Timeout](./picture/cap_ts_study_007_experiment_c.png)
 
 Workerを“激遅”にして、APIが先に諦めるパターンを見るよ！
 
@@ -373,7 +367,6 @@ $env:SIM_SLOW_WORKER_MS = "5000"
 
 ## Worker(4001) を塞ぐ（API→Worker 分断）
 
-![Firewall Block](./picture/cap_ts_study_007_firewall.png)
 
 管理者権限のPowerShellで👇
 
